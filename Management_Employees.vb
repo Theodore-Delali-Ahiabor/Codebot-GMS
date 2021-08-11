@@ -15,7 +15,7 @@ Public Class Management_Employees
         Management_Employees_Add_New.btn_new_user_save.Text = "SAVE"
     End Sub
     Private Function get_new_user_id(ByRef user_id As String) As String
-
+        sql_con.Close()
         sql_con.Open()
         sql_da = New MySqlDataAdapter("SELECT ID FROM employee", sql_con)
         sql_dt = New DataTable
@@ -64,14 +64,17 @@ Public Class Management_Employees
     Public Sub add_update_user(ByRef text As String)
         Try
             If text = "UPDATE" Then
-                Dim repos As DialogResult = MessageBox.Show("You are about to add a new user,\n are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                Dim repos As DialogResult = MessageBox.Show("You are about to add a new user, are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                 If repos = DialogResult.Yes Then
                     sql_ds = New DataSet
-                    sql_da = New MySqlDataAdapter("UPDATE employee SET First_Name = '" & CStr(Management_Employees_Add_New.txt_new_first_name.Text) & "' Where CStr(ID) = '" & CStr(Management_Employees_Add_New.txt_new_id.Text) & "'", sql_con)
+                    sql_da = New MySqlDataAdapter("UPDATE employee SET First_Name = '" & Management_Employees_Add_New.txt_new_first_name.Text & "' Where ID = '" & Management_Employees_Add_New.txt_new_id.Text & "'", sql_con)
                     sql_da.Fill(sql_ds, "employee")
-
+                    'sidebar_active(sender)
+                    sidebar_form_loader(Me)
+                    datagrid_fill("employee", EmployeesDataGridView)
                 End If
             Else
+                sql_con.Close()
                 sql_con.Open()
 
                 sql_con.Close()

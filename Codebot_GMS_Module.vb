@@ -12,6 +12,7 @@ Module Codebot_GMS_Module
 
     Public Sub login()
         Try
+            sql_con.Close()
             sql_con.Open()
             sql_da = New MySqlDataAdapter("SELECT * FROM user WHERE Username = '" & Auth_Login.txt_login_username.Text & "'", sql_con)
             sql_dt = New DataTable
@@ -30,6 +31,9 @@ Module Codebot_GMS_Module
                     sql_da.Fill(sql_dt)
                     If sql_dt.Rows(0).Item("Active?").ToString() = True Then
                         gms_main_form_loader(Management)
+                        Management.sidebar_active(Management.btn_home)
+                        sidebar_form_loader(Management_Home)
+                        datagrid_fill("employee", Management_Employees.EmployeesDataGridView)
                         Dim login_full_name As String = sql_dt.Rows(0).Item("First_Name").ToString() & " " & sql_dt.Rows(0).Item("Other_Name(s)").ToString() & " " & sql_dt.Rows(0).Item("Last_Name").ToString()
                         Management.login_name.Text = login_full_name
                         Management.login_position.Text = sql_dt.Rows(0).Item("Position").ToString()
@@ -98,6 +102,7 @@ Module Codebot_GMS_Module
     End Sub
 
     Public Sub datagrid_fill(ByRef default_table As String, ByRef gridview_name As DataGridView)
+        sql_con.Close()
         sql_con.Open()
         sql_da = New MySqlDataAdapter("SELECT * FROM " & default_table, sql_con)
         sql_dt = New DataTable
