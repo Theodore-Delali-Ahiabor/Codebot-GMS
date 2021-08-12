@@ -29,12 +29,12 @@ Module Codebot_GMS_Module
                     sql_dt = New DataTable
                     sql_dt.Clear()
                     sql_da.Fill(sql_dt)
-                    If sql_dt.Rows(0).Item("Active?").ToString() = True Then
+                    If sql_dt.Rows(0).Item("Active").ToString() = True Then
                         gms_main_form_loader(Management)
                         Management.sidebar_active(Management.btn_home)
                         sidebar_form_loader(Management_Home)
                         datagrid_fill("employee", Management_Employees.EmployeesDataGridView)
-                        Dim login_full_name As String = sql_dt.Rows(0).Item("First_Name").ToString() & " " & sql_dt.Rows(0).Item("Other_Name(s)").ToString() & " " & sql_dt.Rows(0).Item("Last_Name").ToString()
+                        Dim login_full_name As String = sql_dt.Rows(0).Item("First_Name").ToString() & " " & sql_dt.Rows(0).Item("Other_Name").ToString() & " " & sql_dt.Rows(0).Item("Last_Name").ToString()
                         Management.login_name.Text = login_full_name
                         Management.login_position.Text = sql_dt.Rows(0).Item("Position").ToString()
                     Else
@@ -112,4 +112,13 @@ Module Codebot_GMS_Module
         gridview_name.DataSource = sql_dt
         sql_con.Close()
     End Sub
+
+    Public Sub datagrid_filter(ByRef filter_table As String, ByRef gridview_name As DataGridView)
+
+    End Sub
+
+    Public Sub clear_all_forms()
+
+    End Sub
+
 End Module

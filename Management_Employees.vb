@@ -2,11 +2,12 @@
 Public Class Management_Employees
     Dim new_user_id As String
     Dim id As Integer
+    Dim married As Byte
     'id.format = "N4"
     Private Sub Management_Employees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Generate New user id 
         get_new_user_id("HTU-JTMC0001")
-
+        EmployeesDataGridView.Columns(9).DefaultCellStyle.Format = "N2"
     End Sub
 
     Private Sub btn_add_new_employee_Click(sender As Object, e As EventArgs) Handles btn_add_new_employee.Click
@@ -46,9 +47,9 @@ Public Class Management_Employees
         Management_Employees_Add_New.txt_new_email.Text = EmployeesDataGridView.CurrentRow.Cells(4).Value.ToString()
         Management_Employees_Add_New.txt_new_number.Text = EmployeesDataGridView.CurrentRow.Cells(5).Value.ToString()
         Management_Employees_Add_New.txt_new_physical_address.Text = EmployeesDataGridView.CurrentRow.Cells(6).Value.ToString()
-        Management_Employees_Add_New.txt_new_birth_date.Text = EmployeesDataGridView.CurrentRow.Cells(7).Value.ToString()
+        Management_Employees_Add_New.txt_new_birth_date.Text = EmployeesDataGridView.CurrentRow.Cells(7).Value
         Management_Employees_Add_New.txt_new_position.Text = EmployeesDataGridView.CurrentRow.Cells(8).Value.ToString()
-        Management_Employees_Add_New.txt_new_salary.Text = EmployeesDataGridView.CurrentRow.Cells(9).Value.ToString()
+        Management_Employees_Add_New.txt_new_salary.Text = Format(EmployeesDataGridView.CurrentRow.Cells(9).Value, "N2")
         Management_Employees_Add_New.txt_new_gender.Text = EmployeesDataGridView.CurrentRow.Cells(10).Value.ToString()
         If EmployeesDataGridView.CurrentRow.Cells(11).Value.ToString() = True Then
             Management_Employees_Add_New.txt_new_married.Text = "Yes"
@@ -63,13 +64,22 @@ Public Class Management_Employees
     End Sub
     Public Sub add_update_user(ByRef text As String)
         Try
+            If Management_Employees_Add_New.txt_new_married.Text = "Yes" Then
+                married = 1
+            Else
+                married = 0
+            End If
             If text = "UPDATE" Then
-                Dim repos As DialogResult = MessageBox.Show("You are about to add a new user, are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                Dim repos As DialogResult = MessageBox.Show("You are about to Update info @ ID '" & EmployeesDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                 If repos = DialogResult.Yes Then
                     sql_ds = New DataSet
-                    sql_da = New MySqlDataAdapter("UPDATE employee SET First_Name = '" & Management_Employees_Add_New.txt_new_first_name.Text & "' Where ID = '" & Management_Employees_Add_New.txt_new_id.Text & "'", sql_con)
+                    sql_da = New MySqlDataAdapter("UPDATE employee SET First_Name = '" & Management_Employees_Add_New.txt_new_first_name.Text & "', Other_Name = '" & Management_Employees_Add_New.txt_new_other_names.Text & "',
+                            Last_Name = '" & Management_Employees_Add_New.txt_new_last_name.Text & "', Email = '" & Management_Employees_Add_New.txt_new_email.Text & "', Physical_Address_Area = '" & Management_Employees_Add_New.txt_new_physical_address.Text & "',
+                            Position = '" & Management_Employees_Add_New.txt_new_position.Text & "', Gender = '" & Management_Employees_Add_New.txt_new_gender.Text & "', Phone = '" & Management_Employees_Add_New.txt_new_number.Text & "',
+                            Married = '" & married & "', Active = '" & Management_Employees_Add_New.chkb_new_active.CheckState & "', Salary_GHC = '" & Management_Employees_Add_New.txt_new_salary.Text & "'
+                            Where ID = '" & Management_Employees_Add_New.txt_new_id.Text & "'", sql_con)
+                    'Birth_Date = '" & Management_Employees_Add_New.txt_new_birth_date.Value & "'
                     sql_da.Fill(sql_ds, "employee")
-                    'sidebar_active(sender)
                     sidebar_form_loader(Me)
                     datagrid_fill("employee", EmployeesDataGridView)
                 End If
@@ -83,6 +93,7 @@ Public Class Management_Employees
             MsgBox(ex.Message)
         End Try
     End Sub
+
     Public Sub menu_clear()
         Management_Employees_Add_New.txt_new_id.Clear()
         Management_Employees_Add_New.txt_new_first_name.Clear()
@@ -91,7 +102,7 @@ Public Class Management_Employees
         Management_Employees_Add_New.txt_new_email.Clear()
         Management_Employees_Add_New.txt_new_number.Clear()
         Management_Employees_Add_New.txt_new_physical_address.Clear()
-        Management_Employees_Add_New.txt_new_birth_date.Value = Date.Now
+        Management_Employees_Add_New.txt_new_birth_date .Value = Date.Now
         Management_Employees_Add_New.txt_new_position.Text = ""
         Management_Employees_Add_New.txt_new_salary.Clear()
         Management_Employees_Add_New.txt_new_gender.Text = ""

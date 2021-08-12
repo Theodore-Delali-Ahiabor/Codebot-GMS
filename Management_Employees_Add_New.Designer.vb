@@ -23,6 +23,11 @@ Partial Class Management_Employees_Add_New
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.add_new_userpanel = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txt_new_married = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txt_new_gender = New System.Windows.Forms.ComboBox()
+        Me.txt_new_salary = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -37,7 +42,6 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_position = New System.Windows.Forms.ComboBox()
         Me.btn_new_user_save = New System.Windows.Forms.Button()
         Me.chkb_new_active = New System.Windows.Forms.CheckBox()
-        Me.txt_new_birth_date = New System.Windows.Forms.DateTimePicker()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -52,17 +56,14 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_last_name = New System.Windows.Forms.TextBox()
         Me.txt_new_other_names = New System.Windows.Forms.TextBox()
         Me.txt_new_first_name = New System.Windows.Forms.TextBox()
-        Me.txt_new_salary = New System.Windows.Forms.TextBox()
-        Me.txt_new_gender = New System.Windows.Forms.ComboBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txt_new_married = New System.Windows.Forms.ComboBox()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txt_new_birth_date = New System.Windows.Forms.DateTimePicker()
         Me.add_new_userpanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'add_new_userpanel
         '
         Me.add_new_userpanel.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.add_new_userpanel.Controls.Add(Me.txt_new_birth_date)
         Me.add_new_userpanel.Controls.Add(Me.Label16)
         Me.add_new_userpanel.Controls.Add(Me.txt_new_married)
         Me.add_new_userpanel.Controls.Add(Me.Label17)
@@ -82,7 +83,6 @@ Partial Class Management_Employees_Add_New
         Me.add_new_userpanel.Controls.Add(Me.txt_new_position)
         Me.add_new_userpanel.Controls.Add(Me.btn_new_user_save)
         Me.add_new_userpanel.Controls.Add(Me.chkb_new_active)
-        Me.add_new_userpanel.Controls.Add(Me.txt_new_birth_date)
         Me.add_new_userpanel.Controls.Add(Me.Label12)
         Me.add_new_userpanel.Controls.Add(Me.Label11)
         Me.add_new_userpanel.Controls.Add(Me.Label10)
@@ -103,6 +103,61 @@ Partial Class Management_Employees_Add_New
         Me.add_new_userpanel.Name = "add_new_userpanel"
         Me.add_new_userpanel.Size = New System.Drawing.Size(973, 610)
         Me.add_new_userpanel.TabIndex = 1
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label16.AutoSize = True
+        Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label16.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.Red
+        Me.Label16.Location = New System.Drawing.Point(755, 339)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(20, 28)
+        Me.Label16.TabIndex = 50
+        Me.Label16.Text = "*"
+        '
+        'txt_new_married
+        '
+        Me.txt_new_married.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_married.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_married.FormattingEnabled = True
+        Me.txt_new_married.Items.AddRange(New Object() {"No", "Yes"})
+        Me.txt_new_married.Location = New System.Drawing.Point(688, 371)
+        Me.txt_new_married.Name = "txt_new_married"
+        Me.txt_new_married.Size = New System.Drawing.Size(146, 36)
+        Me.txt_new_married.TabIndex = 49
+        '
+        'Label17
+        '
+        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(684, 347)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(75, 20)
+        Me.Label17.TabIndex = 48
+        Me.Label17.Text = "Married ?"
+        '
+        'txt_new_gender
+        '
+        Me.txt_new_gender.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_gender.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_gender.FormattingEnabled = True
+        Me.txt_new_gender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.txt_new_gender.Location = New System.Drawing.Point(529, 371)
+        Me.txt_new_gender.Name = "txt_new_gender"
+        Me.txt_new_gender.Size = New System.Drawing.Size(146, 36)
+        Me.txt_new_gender.TabIndex = 46
+        '
+        'txt_new_salary
+        '
+        Me.txt_new_salary.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_salary.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_salary.Location = New System.Drawing.Point(529, 302)
+        Me.txt_new_salary.Name = "txt_new_salary"
+        Me.txt_new_salary.Size = New System.Drawing.Size(305, 35)
+        Me.txt_new_salary.TabIndex = 45
         '
         'Label15
         '
@@ -281,21 +336,6 @@ Partial Class Management_Employees_Add_New
         Me.chkb_new_active.TabIndex = 26
         Me.chkb_new_active.UseVisualStyleBackColor = True
         '
-        'txt_new_birth_date
-        '
-        Me.txt_new_birth_date.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_new_birth_date.CalendarFont = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_birth_date.Checked = False
-        Me.txt_new_birth_date.CustomFormat = "YYYY-MM-DD"
-        Me.txt_new_birth_date.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_birth_date.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txt_new_birth_date.Location = New System.Drawing.Point(529, 138)
-        Me.txt_new_birth_date.MaxDate = New Date(2021, 8, 10, 0, 0, 0, 0)
-        Me.txt_new_birth_date.Name = "txt_new_birth_date"
-        Me.txt_new_birth_date.Size = New System.Drawing.Size(304, 35)
-        Me.txt_new_birth_date.TabIndex = 8
-        Me.txt_new_birth_date.Value = New Date(2021, 8, 10, 0, 0, 0, 0)
-        '
         'Label12
         '
         Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -438,60 +478,16 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_first_name.Size = New System.Drawing.Size(305, 35)
         Me.txt_new_first_name.TabIndex = 2
         '
-        'txt_new_salary
+        'txt_new_birth_date
         '
-        Me.txt_new_salary.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_new_salary.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_salary.Location = New System.Drawing.Point(529, 302)
-        Me.txt_new_salary.Name = "txt_new_salary"
-        Me.txt_new_salary.Size = New System.Drawing.Size(305, 35)
-        Me.txt_new_salary.TabIndex = 45
-        '
-        'txt_new_gender
-        '
-        Me.txt_new_gender.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_new_gender.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_gender.FormattingEnabled = True
-        Me.txt_new_gender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.txt_new_gender.Location = New System.Drawing.Point(529, 371)
-        Me.txt_new_gender.Name = "txt_new_gender"
-        Me.txt_new_gender.Size = New System.Drawing.Size(146, 36)
-        Me.txt_new_gender.TabIndex = 46
-        '
-        'Label17
-        '
-        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(684, 347)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(75, 20)
-        Me.Label17.TabIndex = 48
-        Me.Label17.Text = "Married ?"
-        '
-        'txt_new_married
-        '
-        Me.txt_new_married.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_new_married.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_married.FormattingEnabled = True
-        Me.txt_new_married.Items.AddRange(New Object() {"No", "Yes"})
-        Me.txt_new_married.Location = New System.Drawing.Point(688, 371)
-        Me.txt_new_married.Name = "txt_new_married"
-        Me.txt_new_married.Size = New System.Drawing.Size(146, 36)
-        Me.txt_new_married.TabIndex = 49
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label16.AutoSize = True
-        Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label16.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(755, 339)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(20, 28)
-        Me.Label16.TabIndex = 50
-        Me.Label16.Text = "*"
+        Me.txt_new_birth_date.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_birth_date.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_birth_date.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.txt_new_birth_date.Location = New System.Drawing.Point(529, 138)
+        Me.txt_new_birth_date.Name = "txt_new_birth_date"
+        Me.txt_new_birth_date.Size = New System.Drawing.Size(305, 35)
+        Me.txt_new_birth_date.TabIndex = 51
+        Me.txt_new_birth_date.Value = New Date(2021, 8, 12, 16, 52, 25, 0)
         '
         'Management_Employees_Add_New
         '
