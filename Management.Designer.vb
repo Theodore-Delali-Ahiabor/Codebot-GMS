@@ -53,7 +53,7 @@ Partial Class Management
         Me.btn_calenders = New System.Windows.Forms.Button()
         Me.btn_invoice = New System.Windows.Forms.Button()
         Me.btn_work_orders = New System.Windows.Forms.Button()
-        Me.btn_sales = New System.Windows.Forms.Button()
+        Me.btn_market = New System.Windows.Forms.Button()
         Me.btn_home = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -64,6 +64,7 @@ Partial Class Management
         Me.btn_employees = New System.Windows.Forms.Button()
         Me.btn_purcahse_orders = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btn_management_message = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.lbl_current_tab = New System.Windows.Forms.Label()
@@ -241,7 +242,7 @@ Partial Class Management
         Me.UserBioStatusStrip.Location = New System.Drawing.Point(0, 0)
         Me.UserBioStatusStrip.Name = "UserBioStatusStrip"
         Me.UserBioStatusStrip.Padding = New System.Windows.Forms.Padding(1, 3, 1, 20)
-        Me.UserBioStatusStrip.Size = New System.Drawing.Size(221, 30)
+        Me.UserBioStatusStrip.Size = New System.Drawing.Size(190, 30)
         Me.UserBioStatusStrip.TabIndex = 0
         Me.UserBioStatusStrip.Text = "StatusStrip1"
         '
@@ -403,30 +404,30 @@ Partial Class Management
         Me.btn_work_orders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_work_orders.UseVisualStyleBackColor = False
         '
-        'btn_sales
+        'btn_market
         '
-        Me.btn_sales.AccessibleName = ""
-        Me.btn_sales.BackColor = System.Drawing.Color.Teal
-        Me.btn_sales.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_sales.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_sales.FlatAppearance.BorderSize = 0
-        Me.btn_sales.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_sales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_sales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_sales.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_sales.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_sales.ForeColor = System.Drawing.Color.White
-        Me.btn_sales.Image = CType(resources.GetObject("btn_sales.Image"), System.Drawing.Image)
-        Me.btn_sales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_sales.Location = New System.Drawing.Point(0, 117)
-        Me.btn_sales.Name = "btn_sales"
-        Me.btn_sales.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
-        Me.btn_sales.Size = New System.Drawing.Size(233, 48)
-        Me.btn_sales.TabIndex = 2
-        Me.btn_sales.Text = "Market"
-        Me.btn_sales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_sales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_sales.UseVisualStyleBackColor = False
+        Me.btn_market.AccessibleName = ""
+        Me.btn_market.BackColor = System.Drawing.Color.Teal
+        Me.btn_market.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_market.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_market.FlatAppearance.BorderSize = 0
+        Me.btn_market.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_market.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_market.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_market.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_market.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_market.ForeColor = System.Drawing.Color.White
+        Me.btn_market.Image = CType(resources.GetObject("btn_market.Image"), System.Drawing.Image)
+        Me.btn_market.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_market.Location = New System.Drawing.Point(0, 117)
+        Me.btn_market.Name = "btn_market"
+        Me.btn_market.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
+        Me.btn_market.Size = New System.Drawing.Size(233, 48)
+        Me.btn_market.TabIndex = 2
+        Me.btn_market.Text = "Market"
+        Me.btn_market.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_market.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_market.UseVisualStyleBackColor = False
         '
         'btn_home
         '
@@ -487,7 +488,7 @@ Partial Class Management
         Me.Panel1.Controls.Add(Me.btn_calenders)
         Me.Panel1.Controls.Add(Me.btn_invoice)
         Me.Panel1.Controls.Add(Me.btn_work_orders)
-        Me.Panel1.Controls.Add(Me.btn_sales)
+        Me.Panel1.Controls.Add(Me.btn_market)
         Me.Panel1.Controls.Add(Me.btn_home)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
@@ -621,6 +622,7 @@ Partial Class Management
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel5.Controls.Add(Me.btn_management_message)
         Me.Panel5.Controls.Add(Me.Button3)
         Me.Panel5.Controls.Add(Me.Button2)
         Me.Panel5.Controls.Add(Me.lbl_current_tab)
@@ -630,6 +632,26 @@ Partial Class Management
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1117, 69)
         Me.Panel5.TabIndex = 20
+        '
+        'btn_management_message
+        '
+        Me.btn_management_message.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_management_message.AutoSize = True
+        Me.btn_management_message.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_management_message.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_management_message.FlatAppearance.BorderSize = 0
+        Me.btn_management_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_management_message.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_management_message.ForeColor = System.Drawing.Color.White
+        Me.btn_management_message.Image = CType(resources.GetObject("btn_management_message.Image"), System.Drawing.Image)
+        Me.btn_management_message.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_management_message.Location = New System.Drawing.Point(247, 11)
+        Me.btn_management_message.Name = "btn_management_message"
+        Me.btn_management_message.Padding = New System.Windows.Forms.Padding(0, 0, 10, 0)
+        Me.btn_management_message.Size = New System.Drawing.Size(497, 52)
+        Me.btn_management_message.TabIndex = 36
+        Me.btn_management_message.UseVisualStyleBackColor = False
+        Me.btn_management_message.Visible = False
         '
         'Button3
         '
@@ -738,7 +760,7 @@ Partial Class Management
     Friend WithEvents btn_calenders As Button
     Friend WithEvents btn_invoice As Button
     Friend WithEvents btn_work_orders As Button
-    Friend WithEvents btn_sales As Button
+    Friend WithEvents btn_market As Button
     Friend WithEvents btn_home As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
@@ -770,4 +792,5 @@ Partial Class Management
     Friend WithEvents RestoreToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
     Friend WithEvents Button3 As Button
+    Friend WithEvents btn_management_message As Button
 End Class

@@ -23,6 +23,7 @@ Partial Class Management_Employees_Add_New
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.add_new_userpanel = New System.Windows.Forms.Panel()
+        Me.txt_new_birth_date = New System.Windows.Forms.DateTimePicker()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txt_new_married = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -56,7 +57,6 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_last_name = New System.Windows.Forms.TextBox()
         Me.txt_new_other_names = New System.Windows.Forms.TextBox()
         Me.txt_new_first_name = New System.Windows.Forms.TextBox()
-        Me.txt_new_birth_date = New System.Windows.Forms.DateTimePicker()
         Me.add_new_userpanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -104,6 +104,19 @@ Partial Class Management_Employees_Add_New
         Me.add_new_userpanel.Size = New System.Drawing.Size(973, 610)
         Me.add_new_userpanel.TabIndex = 1
         '
+        'txt_new_birth_date
+        '
+        Me.txt_new_birth_date.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_birth_date.CustomFormat = "yyyy-mm-dd"
+        Me.txt_new_birth_date.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.txt_new_birth_date.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_birth_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.txt_new_birth_date.Location = New System.Drawing.Point(529, 138)
+        Me.txt_new_birth_date.Name = "txt_new_birth_date"
+        Me.txt_new_birth_date.Size = New System.Drawing.Size(305, 35)
+        Me.txt_new_birth_date.TabIndex = 8
+        Me.txt_new_birth_date.Value = New Date(2019, 9, 18, 0, 0, 0, 0)
+        '
         'Label16
         '
         Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -124,9 +137,10 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_married.FormattingEnabled = True
         Me.txt_new_married.Items.AddRange(New Object() {"No", "Yes"})
         Me.txt_new_married.Location = New System.Drawing.Point(688, 371)
+        Me.txt_new_married.MaxLength = 3
         Me.txt_new_married.Name = "txt_new_married"
         Me.txt_new_married.Size = New System.Drawing.Size(146, 36)
-        Me.txt_new_married.TabIndex = 49
+        Me.txt_new_married.TabIndex = 12
         '
         'Label17
         '
@@ -146,9 +160,10 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_gender.FormattingEnabled = True
         Me.txt_new_gender.Items.AddRange(New Object() {"Male", "Female"})
         Me.txt_new_gender.Location = New System.Drawing.Point(529, 371)
+        Me.txt_new_gender.MaxLength = 6
         Me.txt_new_gender.Name = "txt_new_gender"
         Me.txt_new_gender.Size = New System.Drawing.Size(146, 36)
-        Me.txt_new_gender.TabIndex = 46
+        Me.txt_new_gender.TabIndex = 11
         '
         'txt_new_salary
         '
@@ -157,7 +172,7 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_salary.Location = New System.Drawing.Point(529, 302)
         Me.txt_new_salary.Name = "txt_new_salary"
         Me.txt_new_salary.Size = New System.Drawing.Size(305, 35)
-        Me.txt_new_salary.TabIndex = 45
+        Me.txt_new_salary.TabIndex = 10
         '
         'Label15
         '
@@ -247,7 +262,7 @@ Partial Class Management_Employees_Add_New
         Me.btn_new_user_cancel.Location = New System.Drawing.Point(492, 517)
         Me.btn_new_user_cancel.Name = "btn_new_user_cancel"
         Me.btn_new_user_cancel.Size = New System.Drawing.Size(156, 52)
-        Me.btn_new_user_cancel.TabIndex = 16
+        Me.btn_new_user_cancel.TabIndex = 15
         Me.btn_new_user_cancel.Text = "CANCEL"
         Me.btn_new_user_cancel.UseVisualStyleBackColor = False
         '
@@ -279,6 +294,7 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_id.Enabled = False
         Me.txt_new_id.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_id.Location = New System.Drawing.Point(77, 62)
+        Me.txt_new_id.MaxLength = 12
         Me.txt_new_id.Name = "txt_new_id"
         Me.txt_new_id.Size = New System.Drawing.Size(305, 35)
         Me.txt_new_id.TabIndex = 1
@@ -300,6 +316,7 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_position.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_position.FormattingEnabled = True
         Me.txt_new_position.Location = New System.Drawing.Point(529, 219)
+        Me.txt_new_position.MaxLength = 25
         Me.txt_new_position.Name = "txt_new_position"
         Me.txt_new_position.Size = New System.Drawing.Size(305, 36)
         Me.txt_new_position.TabIndex = 9
@@ -316,7 +333,7 @@ Partial Class Management_Employees_Add_New
         Me.btn_new_user_save.Location = New System.Drawing.Point(277, 517)
         Me.btn_new_user_save.Name = "btn_new_user_save"
         Me.btn_new_user_save.Size = New System.Drawing.Size(156, 52)
-        Me.btn_new_user_save.TabIndex = 15
+        Me.btn_new_user_save.TabIndex = 14
         Me.btn_new_user_save.Text = "SAVE"
         Me.btn_new_user_save.UseVisualStyleBackColor = False
         '
@@ -333,7 +350,7 @@ Partial Class Management_Employees_Add_New
         Me.chkb_new_active.Name = "chkb_new_active"
         Me.chkb_new_active.Padding = New System.Windows.Forms.Padding(10)
         Me.chkb_new_active.Size = New System.Drawing.Size(35, 34)
-        Me.chkb_new_active.TabIndex = 26
+        Me.chkb_new_active.TabIndex = 13
         Me.chkb_new_active.UseVisualStyleBackColor = True
         '
         'Label12
@@ -429,6 +446,7 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_physical_address.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_physical_address.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_physical_address.Location = New System.Drawing.Point(529, 64)
+        Me.txt_new_physical_address.MaxLength = 50
         Me.txt_new_physical_address.Name = "txt_new_physical_address"
         Me.txt_new_physical_address.Size = New System.Drawing.Size(305, 35)
         Me.txt_new_physical_address.TabIndex = 7
@@ -438,6 +456,7 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_number.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_number.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_number.Location = New System.Drawing.Point(79, 451)
+        Me.txt_new_number.MaxLength = 10
         Me.txt_new_number.Name = "txt_new_number"
         Me.txt_new_number.Size = New System.Drawing.Size(305, 35)
         Me.txt_new_number.TabIndex = 6
@@ -447,6 +466,7 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_email.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_email.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_email.Location = New System.Drawing.Point(79, 370)
+        Me.txt_new_email.MaxLength = 50
         Me.txt_new_email.Name = "txt_new_email"
         Me.txt_new_email.Size = New System.Drawing.Size(305, 35)
         Me.txt_new_email.TabIndex = 5
@@ -456,6 +476,7 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_last_name.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_last_name.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_last_name.Location = New System.Drawing.Point(77, 293)
+        Me.txt_new_last_name.MaxLength = 35
         Me.txt_new_last_name.Name = "txt_new_last_name"
         Me.txt_new_last_name.Size = New System.Drawing.Size(305, 35)
         Me.txt_new_last_name.TabIndex = 4
@@ -465,6 +486,7 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_other_names.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_other_names.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_other_names.Location = New System.Drawing.Point(77, 214)
+        Me.txt_new_other_names.MaxLength = 35
         Me.txt_new_other_names.Name = "txt_new_other_names"
         Me.txt_new_other_names.Size = New System.Drawing.Size(305, 35)
         Me.txt_new_other_names.TabIndex = 3
@@ -474,20 +496,10 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_first_name.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_first_name.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_first_name.Location = New System.Drawing.Point(77, 138)
+        Me.txt_new_first_name.MaxLength = 35
         Me.txt_new_first_name.Name = "txt_new_first_name"
         Me.txt_new_first_name.Size = New System.Drawing.Size(305, 35)
         Me.txt_new_first_name.TabIndex = 2
-        '
-        'txt_new_birth_date
-        '
-        Me.txt_new_birth_date.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_new_birth_date.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_birth_date.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txt_new_birth_date.Location = New System.Drawing.Point(529, 138)
-        Me.txt_new_birth_date.Name = "txt_new_birth_date"
-        Me.txt_new_birth_date.Size = New System.Drawing.Size(305, 35)
-        Me.txt_new_birth_date.TabIndex = 51
-        Me.txt_new_birth_date.Value = New Date(2021, 8, 12, 16, 52, 25, 0)
         '
         'Management_Employees_Add_New
         '

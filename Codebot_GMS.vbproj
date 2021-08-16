@@ -108,6 +108,12 @@
     <Compile Include="GMS_Main.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Management_Calendar.Designer.vb">
+      <DependentUpon>Management_Calendar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Calendar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Management_Market.Designer.vb">
       <DependentUpon>Management_Market.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management.resx">
       <DependentUpon>Management.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management_Calendar.resx">
+      <DependentUpon>Management_Calendar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Employees_Add_New.resx">
       <DependentUpon>Management_Employees_Add_New.vb</DependentUpon>

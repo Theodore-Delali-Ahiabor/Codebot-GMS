@@ -117,10 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="auth_message_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_auth_message.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAg1JREFUSEvdVctKw0AUnVbd6U7wEwSpdpK6FOvOJPUJFnXlzp+oULGiov+hUF3o
+        r7nQTFIaz5lOalpTMgou9EAWM3Mf557cuSP+HxIhSv0VzzFLayjXX6avWeYjaTanYie4iBz/vuc0jsx2
+        IZQMjuHTjZzgLBHtstkeBbMrBA9db/9txVuDcUs5XmESJb0T2kbwUY5/qKR/mVuJgiyR9B94mNTr06jE
+        g3EHAZrG5AsGzL1WKINd+tAXlTwqd9M1JqPogQHZpGXGcCSjvEp6CA7G5wzOdSpvLL0DbTAJLDMGc7DR
+        SRicSZlcGwCUJTTMuSZzHbzq72mDIpBFVssQjpSrJxtNyjIeHGc3YRHzcXzKJcrJUn32vbq5geruGAz7
+        61pzI8u3g6fIyFV6rW3N4weu8usv7swNZalZyjIJlAtJtFz9yvYCv1SWwh9qA2qOBDeUxGyJpHY6M5Ar
+        ODZbPwO7BYGus7Jk5YJEVzaXMRdkx+CqGshUlhjrrFy8nNi7ZXcZNzvo4LpbwJzB0S0cI9Sc3RXqmSPK
+        OgkI4My+kuFsQSumsqQzypiMdBdtotqW3ewi8/HZMpDla7dku8tqdvVXGxVI0uX84dpmtozPLt54xHjm
+        26ANsiCTqIoyUUUqS+w2hrJMgpELlbTLRl7+n/yHBwcw8juRDJ6+c4loC7+XQTVFrxrZ/9aT+QchxAce
+        92EQ3hYVEQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="auth_right_panel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAIQAABtbnRyUkdCIFhZ
@@ -11765,6 +11777,9 @@
         JFE8kUQH/9k=
 </value>
   </data>
+  <metadata name="message_timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>52</value>
   </metadata>

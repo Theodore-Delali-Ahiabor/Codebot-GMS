@@ -1,12 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Management_Employees
-    Dim new_user_id As String
-    Dim id As Integer
+    Dim initial_employee_id As String = "HTU-JTMC0001"
+    Dim new_employee_id As String
+    Dim integer_part As Integer = 1
     Dim married As Byte
-    'id.format = "N4"
+    Dim birth_date As Date
     Private Sub Management_Employees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Generate New user id 
-        get_new_user_id("HTU-JTMC0001")
         EmployeesDataGridView.Columns(9).DefaultCellStyle.Format = "N2"
     End Sub
 
@@ -14,26 +13,20 @@ Public Class Management_Employees
         sidebar_form_loader(Management_Employees_Add_New)
         Management.lbl_current_tab.Text = "Employees | Add New User"
         Management_Employees_Add_New.btn_new_user_save.Text = "SAVE"
+        employee_new_id()
+        add_new_employee_clear()
+        Management_Employees_Add_New.txt_new_id.Text = new_employee_id
     End Sub
-    Private Function get_new_user_id(ByRef user_id As String) As String
-        sql_con.Close()
-        sql_con.Open()
+    Private Function employee_new_id() As String
         sql_da = New MySqlDataAdapter("SELECT ID FROM employee", sql_con)
         sql_dt = New DataTable
         sql_dt.Clear()
         sql_da.Fill(sql_dt)
-        sql_con.Close()
-        For Each Row In sql_dt.Rows
-            If user_id = Row.ToString Then
-                new_user_id = user_id + 1
-            End If
-        Next
-        'For Each item In combo.Items
-        '    If office_title = item Then
-        '        found = True
-        '    End If
-        'Next
-        Return Management_Employees_Add_New.txt_new_id.Text = new_user_id
+        Dim id As Integer = sql_dt.Rows.Count
+        integer_part = CInt(initial_employee_id.Substring(8, 4))
+        id += 1
+        new_employee_id = initial_employee_id.Substring(0, 8) & id.ToString("0000")
+        Return new_employee_id
     End Function
 
     Private Sub btn_edit_employee_Click(sender As Object, e As EventArgs) Handles btn_edit_employee.Click
@@ -69,6 +62,11 @@ Public Class Management_Employees
             Else
                 married = 0
             End If
+            If Management_Employees_Add_New.txt_new_birth_date.Checked = True Then
+                birth_date = Management_Employees_Add_New.txt_new_birth_date.Value
+            Else
+                birth_date = " "
+            End If
             If text = "UPDATE" Then
                 Dim repos As DialogResult = MessageBox.Show("You are about to Update info @ ID '" & EmployeesDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                 If repos = DialogResult.Yes Then
@@ -84,17 +82,29 @@ Public Class Management_Employees
                     datagrid_fill("employee", EmployeesDataGridView)
                 End If
             Else
-                sql_con.Close()
-                sql_con.Open()
-
-                sql_con.Close()
+                Dim repos As DialogResult = MessageBox.Show("You are about to Add new Employee with ID '" & Management_Employees_Add_New.txt_new_id.Text & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                If repos = DialogResult.Yes Then
+                    sql_ds = New DataSet
+                    sql_da = New MySqlDataAdapter("INSERT INTO employee(First_Name,Other_Name,Last_Name,Email,Physical_Address_Area,Position,Gender,Phone,Married,Active,Salary_GHC,ID,Birth_Date)
+                            VALUES('" & Management_Employees_Add_New.txt_new_first_name.Text & "', '" & Management_Employees_Add_New.txt_new_other_names.Text & "', '" & Management_Employees_Add_New.txt_new_last_name.Text & "', '" & Management_Employees_Add_New.txt_new_email.Text & "',
+                            '" & Management_Employees_Add_New.txt_new_physical_address.Text & "', '" & Management_Employees_Add_New.txt_new_position.Text & "', '" & Management_Employees_Add_New.txt_new_gender.Text & "', '" & Management_Employees_Add_New.txt_new_number.Text & "',
+                            '" & married & "', '" & Management_Employees_Add_New.chkb_new_active.CheckState & "', '" & Management_Employees_Add_New.txt_new_salary.Text & "', '" & Management_Employees_Add_New.txt_new_id.Text & "','" & birth_date & "'
+                            )", sql_con)
+                    '
+                    sql_da.Fill(sql_ds, "employee")
+                    sidebar_form_loader(Me)
+                    datagrid_fill("employee", EmployeesDataGridView)
+                End If
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    Public Sub menu_clear()
+
+
+
+    Public Sub add_new_employee_clear()
         Management_Employees_Add_New.txt_new_id.Clear()
         Management_Employees_Add_New.txt_new_first_name.Clear()
         Management_Employees_Add_New.txt_new_other_names.Clear()
@@ -102,7 +112,7 @@ Public Class Management_Employees
         Management_Employees_Add_New.txt_new_email.Clear()
         Management_Employees_Add_New.txt_new_number.Clear()
         Management_Employees_Add_New.txt_new_physical_address.Clear()
-        Management_Employees_Add_New.txt_new_birth_date .Value = Date.Now
+        Management_Employees_Add_New.txt_new_birth_date.Value = Date.Now
         Management_Employees_Add_New.txt_new_position.Text = ""
         Management_Employees_Add_New.txt_new_salary.Clear()
         Management_Employees_Add_New.txt_new_gender.Text = ""

@@ -1,6 +1,7 @@
 ﻿Public Class Management_Employees_Add_New
     Private Sub btn_new_user_cancel_Click(sender As Object, e As EventArgs) Handles btn_new_user_cancel.Click
         sidebar_form_loader(Management_Employees)
+
     End Sub
 
     Private Sub btn_new_user_save_Click(sender As Object, e As EventArgs) Handles btn_new_user_save.Click

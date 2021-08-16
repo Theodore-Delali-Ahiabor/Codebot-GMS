@@ -91,6 +91,7 @@ Partial Class Auth_Signup
         Me.txt_signup_phone.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_signup_phone.ForeColor = System.Drawing.Color.Teal
         Me.txt_signup_phone.Location = New System.Drawing.Point(217, 260)
+        Me.txt_signup_phone.MaxLength = 10
         Me.txt_signup_phone.Name = "txt_signup_phone"
         Me.txt_signup_phone.Size = New System.Drawing.Size(350, 35)
         Me.txt_signup_phone.TabIndex = 16
@@ -202,6 +203,7 @@ Partial Class Auth_Signup
         Me.txt_signup_confirm_password.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_signup_confirm_password.ForeColor = System.Drawing.Color.Teal
         Me.txt_signup_confirm_password.Location = New System.Drawing.Point(217, 211)
+        Me.txt_signup_confirm_password.MaxLength = 25
         Me.txt_signup_confirm_password.Name = "txt_signup_confirm_password"
         Me.txt_signup_confirm_password.Size = New System.Drawing.Size(350, 35)
         Me.txt_signup_confirm_password.TabIndex = 14
@@ -216,6 +218,7 @@ Partial Class Auth_Signup
         Me.txt_signup_username.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_signup_username.ForeColor = System.Drawing.Color.Teal
         Me.txt_signup_username.Location = New System.Drawing.Point(217, 36)
+        Me.txt_signup_username.MaxLength = 25
         Me.txt_signup_username.Name = "txt_signup_username"
         Me.txt_signup_username.Size = New System.Drawing.Size(350, 35)
         Me.txt_signup_username.TabIndex = 12
@@ -230,6 +233,7 @@ Partial Class Auth_Signup
         Me.txt_signup_password.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_signup_password.ForeColor = System.Drawing.Color.Teal
         Me.txt_signup_password.Location = New System.Drawing.Point(217, 123)
+        Me.txt_signup_password.MaxLength = 25
         Me.txt_signup_password.Name = "txt_signup_password"
         Me.txt_signup_password.Size = New System.Drawing.Size(350, 35)
         Me.txt_signup_password.TabIndex = 13

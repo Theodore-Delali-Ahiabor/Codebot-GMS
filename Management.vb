@@ -8,7 +8,7 @@
         sidebar_active(sender)
         sidebar_form_loader(Management_Home)
     End Sub
-    Private Sub btn_sales_Click(sender As Object, e As EventArgs) Handles btn_sales.Click
+    Private Sub btn_sales_Click(sender As Object, e As EventArgs) Handles btn_market.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Market)
     End Sub
@@ -40,17 +40,21 @@
     End Sub
     Private Sub btn_calenders_Click(sender As Object, e As EventArgs) Handles btn_calenders.Click
         sidebar_active(sender)
+        sidebar_form_loader(Management_Calendar)
     End Sub
     Public Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
         gms_main_form_loader(Auth)
         Auth_Login.txt_login_username.Clear()
         Auth_Login.txt_login_password.Clear()
         Auth_Login.txt_login_username.Focus()
+        Auth.btn_auth_message.Text = "You Logged Out Successfuly"
+        Auth.btn_auth_message.Show()
+        message(Auth.btn_auth_message, "success")
     End Sub
     Public Sub sidebar_active(ByVal btn As Button)
         While btn.BackColor = Color.Teal
             btn_home.BackColor = Color.Teal
-            btn_sales.BackColor = Color.Teal
+            btn_market.BackColor = Color.Teal
             btn_calenders.BackColor = Color.Teal
             btn_employees.BackColor = Color.Teal
             btn_inventory.BackColor = Color.Teal
@@ -65,5 +69,9 @@
     Public Sub systemtime_Tick(sender As Object, e As EventArgs) Handles systemtime.Tick
         current_date.Text = Date.Now.ToShortDateString
         current_time.Text = TimeOfDay
+    End Sub
+
+    Private Sub btn_management_message_Click(sender As Object, e As EventArgs) Handles btn_management_message.Click
+        btn_management_message.Hide()
     End Sub
 End Class

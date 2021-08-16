@@ -50,3 +50,4 @@ C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\bin\Debug\K4os.Has
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\bin\Debug\MySql.Data.xml
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.vbproj.CopyComplete
+C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Management_Calendar.resources

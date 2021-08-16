@@ -23,17 +23,18 @@ Partial Class Auth_Password_Reset
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.txt_password_reset_email = New System.Windows.Forms.TextBox()
-        Me.txt_password_reset_name = New System.Windows.Forms.TextBox()
-        Me.txt_password_reset_mobile_number = New System.Windows.Forms.TextBox()
+        Me.txt_password_reset_phone_number = New System.Windows.Forms.TextBox()
+        Me.txt_password_reset_code = New System.Windows.Forms.TextBox()
         Me.btn_password_reset_cancel = New System.Windows.Forms.Button()
-        Me.btn_password_reset_send = New System.Windows.Forms.Button()
+        Me.btn_password_reset_reset = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.btn_password_reset_send_code = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label8
@@ -43,24 +44,11 @@ Partial Class Auth_Password_Reset
         Me.Label8.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label8.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Teal
-        Me.Label8.Location = New System.Drawing.Point(221, 246)
+        Me.Label8.Location = New System.Drawing.Point(205, 252)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(151, 28)
+        Me.Label8.Size = New System.Drawing.Size(144, 28)
         Me.Label8.TabIndex = 30
-        Me.Label8.Text = "Mobile Number"
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label9.AutoSize = True
-        Me.Label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label9.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label9.Location = New System.Drawing.Point(352, 336)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(20, 28)
-        Me.Label9.TabIndex = 35
-        Me.Label9.Text = "*"
+        Me.Label8.Text = "Phone Number"
         '
         'Label12
         '
@@ -69,7 +57,7 @@ Partial Class Auth_Password_Reset
         Me.Label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label12.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label12.Location = New System.Drawing.Point(370, 246)
+        Me.Label12.Location = New System.Drawing.Point(309, 339)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(20, 28)
         Me.Label12.TabIndex = 34
@@ -82,80 +70,70 @@ Partial Class Auth_Password_Reset
         Me.Label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label13.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label13.Location = New System.Drawing.Point(280, 159)
+        Me.Label13.Location = New System.Drawing.Point(346, 252)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(20, 28)
         Me.Label13.TabIndex = 33
         Me.Label13.Text = "*"
         '
-        'txt_password_reset_email
+        'txt_password_reset_phone_number
         '
-        Me.txt_password_reset_email.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_password_reset_email.BackColor = System.Drawing.Color.White
-        Me.txt_password_reset_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_password_reset_email.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_password_reset_email.ForeColor = System.Drawing.Color.Teal
-        Me.txt_password_reset_email.Location = New System.Drawing.Point(219, 369)
-        Me.txt_password_reset_email.Name = "txt_password_reset_email"
-        Me.txt_password_reset_email.Size = New System.Drawing.Size(350, 35)
-        Me.txt_password_reset_email.TabIndex = 26
-        Me.txt_password_reset_email.UseSystemPasswordChar = True
+        Me.txt_password_reset_phone_number.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_password_reset_phone_number.BackColor = System.Drawing.Color.White
+        Me.txt_password_reset_phone_number.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txt_password_reset_phone_number.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_password_reset_phone_number.ForeColor = System.Drawing.Color.Teal
+        Me.txt_password_reset_phone_number.Location = New System.Drawing.Point(210, 283)
+        Me.txt_password_reset_phone_number.MaxLength = 10
+        Me.txt_password_reset_phone_number.Name = "txt_password_reset_phone_number"
+        Me.txt_password_reset_phone_number.Size = New System.Drawing.Size(223, 35)
+        Me.txt_password_reset_phone_number.TabIndex = 1
+        Me.txt_password_reset_phone_number.WordWrap = False
         '
-        'txt_password_reset_name
+        'txt_password_reset_code
         '
-        Me.txt_password_reset_name.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_password_reset_name.BackColor = System.Drawing.Color.White
-        Me.txt_password_reset_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_password_reset_name.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_password_reset_name.ForeColor = System.Drawing.Color.Teal
-        Me.txt_password_reset_name.Location = New System.Drawing.Point(219, 194)
-        Me.txt_password_reset_name.Name = "txt_password_reset_name"
-        Me.txt_password_reset_name.Size = New System.Drawing.Size(350, 35)
-        Me.txt_password_reset_name.TabIndex = 24
-        Me.txt_password_reset_name.WordWrap = False
-        '
-        'txt_password_reset_mobile_number
-        '
-        Me.txt_password_reset_mobile_number.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_password_reset_mobile_number.BackColor = System.Drawing.Color.White
-        Me.txt_password_reset_mobile_number.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_password_reset_mobile_number.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_password_reset_mobile_number.ForeColor = System.Drawing.Color.Teal
-        Me.txt_password_reset_mobile_number.Location = New System.Drawing.Point(219, 281)
-        Me.txt_password_reset_mobile_number.Name = "txt_password_reset_mobile_number"
-        Me.txt_password_reset_mobile_number.Size = New System.Drawing.Size(350, 35)
-        Me.txt_password_reset_mobile_number.TabIndex = 25
-        Me.txt_password_reset_mobile_number.UseSystemPasswordChar = True
+        Me.txt_password_reset_code.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_password_reset_code.BackColor = System.Drawing.Color.White
+        Me.txt_password_reset_code.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txt_password_reset_code.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_password_reset_code.ForeColor = System.Drawing.Color.Teal
+        Me.txt_password_reset_code.Location = New System.Drawing.Point(210, 370)
+        Me.txt_password_reset_code.Name = "txt_password_reset_code"
+        Me.txt_password_reset_code.Size = New System.Drawing.Size(350, 35)
+        Me.txt_password_reset_code.TabIndex = 3
         '
         'btn_password_reset_cancel
         '
         Me.btn_password_reset_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btn_password_reset_cancel.BackColor = System.Drawing.Color.LightCoral
+        Me.btn_password_reset_cancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_password_reset_cancel.FlatAppearance.BorderSize = 0
         Me.btn_password_reset_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_password_reset_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_password_reset_cancel.ForeColor = System.Drawing.Color.White
-        Me.btn_password_reset_cancel.Location = New System.Drawing.Point(409, 437)
+        Me.btn_password_reset_cancel.Location = New System.Drawing.Point(388, 444)
         Me.btn_password_reset_cancel.Name = "btn_password_reset_cancel"
         Me.btn_password_reset_cancel.Size = New System.Drawing.Size(112, 40)
-        Me.btn_password_reset_cancel.TabIndex = 28
+        Me.btn_password_reset_cancel.TabIndex = 5
         Me.btn_password_reset_cancel.Text = "CANCEL"
         Me.btn_password_reset_cancel.UseVisualStyleBackColor = False
         '
-        'btn_password_reset_send
+        'btn_password_reset_reset
         '
-        Me.btn_password_reset_send.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_password_reset_send.BackColor = System.Drawing.Color.LightGreen
-        Me.btn_password_reset_send.FlatAppearance.BorderSize = 0
-        Me.btn_password_reset_send.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_password_reset_send.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_password_reset_send.ForeColor = System.Drawing.Color.White
-        Me.btn_password_reset_send.Location = New System.Drawing.Point(262, 437)
-        Me.btn_password_reset_send.Name = "btn_password_reset_send"
-        Me.btn_password_reset_send.Size = New System.Drawing.Size(103, 40)
-        Me.btn_password_reset_send.TabIndex = 27
-        Me.btn_password_reset_send.Text = "SEND"
-        Me.btn_password_reset_send.UseVisualStyleBackColor = False
+        Me.btn_password_reset_reset.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_password_reset_reset.BackColor = System.Drawing.Color.LightGreen
+        Me.btn_password_reset_reset.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_password_reset_reset.Enabled = False
+        Me.btn_password_reset_reset.FlatAppearance.BorderSize = 0
+        Me.btn_password_reset_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_password_reset_reset.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_password_reset_reset.ForeColor = System.Drawing.Color.White
+        Me.btn_password_reset_reset.Location = New System.Drawing.Point(250, 444)
+        Me.btn_password_reset_reset.Name = "btn_password_reset_reset"
+        Me.btn_password_reset_reset.Size = New System.Drawing.Size(103, 40)
+        Me.btn_password_reset_reset.TabIndex = 4
+        Me.btn_password_reset_reset.Text = "RESET"
+        Me.btn_password_reset_reset.UseVisualStyleBackColor = False
         '
         'Label15
         '
@@ -165,56 +143,95 @@ Partial Class Auth_Password_Reset
         Me.Label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label15.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Teal
-        Me.Label15.Location = New System.Drawing.Point(310, 71)
+        Me.Label15.Location = New System.Drawing.Point(241, 74)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(150, 49)
+        Me.Label15.Size = New System.Drawing.Size(303, 49)
         Me.Label15.TabIndex = 29
-        Me.Label15.Text = "RESET"
+        Me.Label15.Text = "LOGIN RESET"
         '
-        'Label16
+        'btn_password_reset_send_code
         '
-        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label16.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Teal
-        Me.Label16.Location = New System.Drawing.Point(221, 336)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(134, 28)
-        Me.Label16.TabIndex = 31
-        Me.Label16.Text = "Email Address"
+        Me.btn_password_reset_send_code.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_password_reset_send_code.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.btn_password_reset_send_code.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_password_reset_send_code.FlatAppearance.BorderSize = 0
+        Me.btn_password_reset_send_code.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_password_reset_send_code.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_password_reset_send_code.ForeColor = System.Drawing.Color.White
+        Me.btn_password_reset_send_code.Location = New System.Drawing.Point(439, 282)
+        Me.btn_password_reset_send_code.Name = "btn_password_reset_send_code"
+        Me.btn_password_reset_send_code.Size = New System.Drawing.Size(121, 36)
+        Me.btn_password_reset_send_code.TabIndex = 2
+        Me.btn_password_reset_send_code.Text = "SEND CODE"
+        Me.btn_password_reset_send_code.UseVisualStyleBackColor = False
         '
-        'Label14
+        'Label1
         '
-        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label14.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Teal
-        Me.Label14.Location = New System.Drawing.Point(221, 159)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(64, 28)
-        Me.Label14.TabIndex = 32
-        Me.Label14.Text = "Name"
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label1.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Teal
+        Me.Label1.Location = New System.Drawing.Point(205, 339)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(108, 28)
+        Me.Label1.TabIndex = 36
+        Me.Label1.Text = "Enter Code"
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.IndianRed
+        Me.Label2.Location = New System.Drawing.Point(207, 160)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(47, 13)
+        Me.Label2.TabIndex = 37
+        Me.Label2.Text = "NOTICE"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DimGray
+        Me.Label3.Location = New System.Drawing.Point(206, 182)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(363, 21)
+        Me.Label3.TabIndex = 38
+        Me.Label3.Text = "After a succesful login reset, you will be required to"
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.DimGray
+        Me.Label4.Location = New System.Drawing.Point(206, 207)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(276, 21)
+        Me.Label4.TabIndex = 39
+        Me.Label4.Text = "create a new Username and Password."
         '
         'Auth_Password_Reset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(800, 556)
+        Me.ClientSize = New System.Drawing.Size(796, 556)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btn_password_reset_send_code)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.txt_password_reset_email)
-        Me.Controls.Add(Me.txt_password_reset_name)
-        Me.Controls.Add(Me.txt_password_reset_mobile_number)
+        Me.Controls.Add(Me.txt_password_reset_phone_number)
+        Me.Controls.Add(Me.txt_password_reset_code)
         Me.Controls.Add(Me.btn_password_reset_cancel)
-        Me.Controls.Add(Me.btn_password_reset_send)
+        Me.Controls.Add(Me.btn_password_reset_reset)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.Label14)
         Me.Name = "Auth_Password_Reset"
         Me.Text = "Auth_Password_Reset"
         Me.ResumeLayout(False)
@@ -223,15 +240,16 @@ Partial Class Auth_Password_Reset
     End Sub
 
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents txt_password_reset_email As TextBox
-    Friend WithEvents txt_password_reset_name As TextBox
-    Friend WithEvents txt_password_reset_mobile_number As TextBox
+    Friend WithEvents txt_password_reset_phone_number As TextBox
+    Friend WithEvents txt_password_reset_code As TextBox
     Friend WithEvents btn_password_reset_cancel As Button
-    Friend WithEvents btn_password_reset_send As Button
+    Friend WithEvents btn_password_reset_reset As Button
     Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label14 As Label
+    Friend WithEvents btn_password_reset_send_code As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class

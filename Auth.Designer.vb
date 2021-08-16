@@ -25,10 +25,10 @@ Partial Class Auth
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Auth))
         Me.auth_left_panel = New System.Windows.Forms.Panel()
-        Me.btn_message = New System.Windows.Forms.Button()
-        Me.auth_message_timer = New System.Windows.Forms.Timer(Me.components)
+        Me.btn_auth_message = New System.Windows.Forms.Button()
         Me.auth_right_panel = New System.Windows.Forms.Panel()
         Me.Left_Panel_Main = New System.Windows.Forms.Panel()
+        Me.message_timer = New System.Windows.Forms.Timer(Me.components)
         Me.Left_Panel_Main.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,27 +41,26 @@ Partial Class Auth
         Me.auth_left_panel.Size = New System.Drawing.Size(475, 672)
         Me.auth_left_panel.TabIndex = 8
         '
-        'btn_message
+        'btn_auth_message
         '
-        Me.btn_message.AutoSize = True
-        Me.btn_message.BackColor = System.Drawing.Color.LightCoral
-        Me.btn_message.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_message.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_message.FlatAppearance.BorderSize = 0
-        Me.btn_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_message.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_message.ForeColor = System.Drawing.Color.Snow
-        Me.btn_message.Location = New System.Drawing.Point(0, 0)
-        Me.btn_message.Name = "btn_message"
-        Me.btn_message.Size = New System.Drawing.Size(472, 47)
-        Me.btn_message.TabIndex = 7
-        Me.btn_message.TabStop = False
-        Me.btn_message.UseVisualStyleBackColor = False
-        Me.btn_message.Visible = False
-        '
-        'auth_message_timer
-        '
-        Me.auth_message_timer.Interval = 1000
+        Me.btn_auth_message.AutoSize = True
+        Me.btn_auth_message.BackColor = System.Drawing.Color.LightCoral
+        Me.btn_auth_message.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_auth_message.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_auth_message.FlatAppearance.BorderSize = 0
+        Me.btn_auth_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_auth_message.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_auth_message.ForeColor = System.Drawing.Color.Snow
+        Me.btn_auth_message.Image = CType(resources.GetObject("btn_auth_message.Image"), System.Drawing.Image)
+        Me.btn_auth_message.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_auth_message.Location = New System.Drawing.Point(0, 0)
+        Me.btn_auth_message.Name = "btn_auth_message"
+        Me.btn_auth_message.Padding = New System.Windows.Forms.Padding(0, 0, 10, 0)
+        Me.btn_auth_message.Size = New System.Drawing.Size(472, 47)
+        Me.btn_auth_message.TabIndex = 7
+        Me.btn_auth_message.TabStop = False
+        Me.btn_auth_message.UseVisualStyleBackColor = False
+        Me.btn_auth_message.Visible = False
         '
         'auth_right_panel
         '
@@ -78,12 +77,16 @@ Partial Class Auth
         'Left_Panel_Main
         '
         Me.Left_Panel_Main.Controls.Add(Me.auth_left_panel)
-        Me.Left_Panel_Main.Controls.Add(Me.btn_message)
+        Me.Left_Panel_Main.Controls.Add(Me.btn_auth_message)
         Me.Left_Panel_Main.Dock = System.Windows.Forms.DockStyle.Left
         Me.Left_Panel_Main.Location = New System.Drawing.Point(0, 0)
         Me.Left_Panel_Main.Name = "Left_Panel_Main"
         Me.Left_Panel_Main.Size = New System.Drawing.Size(472, 719)
         Me.Left_Panel_Main.TabIndex = 10
+        '
+        'message_timer
+        '
+        Me.message_timer.Interval = 1000
         '
         'Auth
         '
@@ -103,8 +106,8 @@ Partial Class Auth
 
     End Sub
     Friend WithEvents auth_left_panel As Panel
-    Friend WithEvents btn_message As Button
-    Friend WithEvents auth_message_timer As Timer
     Friend WithEvents auth_right_panel As Panel
     Friend WithEvents Left_Panel_Main As Panel
+    Friend WithEvents message_timer As Timer
+    Public WithEvents btn_auth_message As Button
 End Class
