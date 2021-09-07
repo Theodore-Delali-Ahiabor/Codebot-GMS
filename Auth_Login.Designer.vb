@@ -27,9 +27,9 @@ Partial Class Auth_Login
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txt_login_username = New System.Windows.Forms.TextBox()
         Me.txt_login_password = New System.Windows.Forms.TextBox()
+        Me.Login = New System.Windows.Forms.Label()
         Me.btn_signup = New System.Windows.Forms.Button()
         Me.btn_login = New System.Windows.Forms.Button()
-        Me.Login = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lbl_password_reset
@@ -96,36 +96,6 @@ Partial Class Auth_Login
         Me.txt_login_password.TabIndex = 16
         Me.txt_login_password.UseSystemPasswordChar = True
         '
-        'btn_signup
-        '
-        Me.btn_signup.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_signup.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_signup.FlatAppearance.BorderSize = 0
-        Me.btn_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_signup.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_signup.ForeColor = System.Drawing.Color.White
-        Me.btn_signup.Location = New System.Drawing.Point(423, 393)
-        Me.btn_signup.Name = "btn_signup"
-        Me.btn_signup.Size = New System.Drawing.Size(112, 40)
-        Me.btn_signup.TabIndex = 18
-        Me.btn_signup.Text = "SIGNUP"
-        Me.btn_signup.UseVisualStyleBackColor = False
-        '
-        'btn_login
-        '
-        Me.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_login.BackColor = System.Drawing.Color.LightGreen
-        Me.btn_login.FlatAppearance.BorderSize = 0
-        Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_login.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_login.ForeColor = System.Drawing.Color.White
-        Me.btn_login.Location = New System.Drawing.Point(270, 393)
-        Me.btn_login.Name = "btn_login"
-        Me.btn_login.Size = New System.Drawing.Size(103, 40)
-        Me.btn_login.TabIndex = 17
-        Me.btn_login.Text = "LOGIN"
-        Me.btn_login.UseVisualStyleBackColor = False
-        '
         'Login
         '
         Me.Login.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -139,6 +109,42 @@ Partial Class Auth_Login
         Me.Login.Size = New System.Drawing.Size(116, 49)
         Me.Login.TabIndex = 14
         Me.Login.Text = "Login"
+        '
+        'btn_signup
+        '
+        Me.btn_signup.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_signup.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_signup.FlatAppearance.BorderSize = 0
+        Me.btn_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_signup.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_signup.ForeColor = System.Drawing.Color.White
+        Me.btn_signup.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_registration_White_24
+        Me.btn_signup.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_signup.Location = New System.Drawing.Point(398, 393)
+        Me.btn_signup.Name = "btn_signup"
+        Me.btn_signup.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_signup.Size = New System.Drawing.Size(137, 40)
+        Me.btn_signup.TabIndex = 18
+        Me.btn_signup.Text = "SIGNUP"
+        Me.btn_signup.UseVisualStyleBackColor = False
+        '
+        'btn_login
+        '
+        Me.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_login.BackColor = System.Drawing.Color.LightGreen
+        Me.btn_login.FlatAppearance.BorderSize = 0
+        Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_login.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_login.ForeColor = System.Drawing.Color.White
+        Me.btn_login.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_login_24
+        Me.btn_login.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_login.Location = New System.Drawing.Point(250, 393)
+        Me.btn_login.Name = "btn_login"
+        Me.btn_login.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_login.Size = New System.Drawing.Size(118, 40)
+        Me.btn_login.TabIndex = 17
+        Me.btn_login.Text = "LOGIN  "
+        Me.btn_login.UseVisualStyleBackColor = False
         '
         'Auth_Login
         '

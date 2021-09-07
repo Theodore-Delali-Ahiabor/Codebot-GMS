@@ -114,6 +114,18 @@
     <Compile Include="Management_Calendar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Management_Inventory.Designer.vb">
+      <DependentUpon>Management_Inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management_Inventory_Add_New.Designer.vb">
+      <DependentUpon>Management_Inventory_Add_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Inventory_Add_New.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Management_Market.Designer.vb">
       <DependentUpon>Management_Market.vb</DependentUpon>
     </Compile>
@@ -149,6 +161,12 @@
       <DependentUpon>Management_Work_Order.vb</DependentUpon>
     </Compile>
     <Compile Include="Management_Work_Order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management_Work_Order_Add_New.Designer.vb">
+      <DependentUpon>Management_Work_Order_Add_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Work_Order_Add_New.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -200,11 +218,20 @@
     <EmbeddedResource Include="Management_Employees.resx">
       <DependentUpon>Management_Employees.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Management_Inventory.resx">
+      <DependentUpon>Management_Inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management_Inventory_Add_New.resx">
+      <DependentUpon>Management_Inventory_Add_New.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Management_Market.resx">
       <DependentUpon>Management_Market.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Work_Order.resx">
       <DependentUpon>Management_Work_Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management_Work_Order_Add_New.resx">
+      <DependentUpon>Management_Work_Order_Add_New.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -224,6 +251,54 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-White-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-send-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reset-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-submit-for-approval-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-white-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-filter-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-math-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-car-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smiling-mechanic-with-arms-crossed-spanner.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

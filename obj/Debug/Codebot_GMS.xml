@@ -22,5 +22,85 @@ Codebot_GMS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_cancel_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_car_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_customer_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_delete_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_edit_white_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_filter_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_login_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_plus_math_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_registration_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_registration_White_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_reset_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_save_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_search_80">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_send_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_submit_for_approval_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

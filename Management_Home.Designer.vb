@@ -23,103 +23,106 @@ Partial Class Management_Home
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Home))
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.work_oders_due_panel = New System.Windows.Forms.Panel()
+        Me.PictureBoxWorkOrders = New System.Windows.Forms.PictureBox()
+        Me.work_order_overdue = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.work_order_due_soon = New System.Windows.Forms.Label()
+        Me.lbl_work_orders_due = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lbl_low_inventory = New System.Windows.Forms.Label()
+        Me.lbl_low_stock = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lbl_out_of_stock = New System.Windows.Forms.Label()
+        Me.low_inventory_panel = New System.Windows.Forms.Panel()
+        Me.PictureBoxInventory = New System.Windows.Forms.PictureBox()
+        Me.activebar_inventory = New System.Windows.Forms.Button()
+        Me.activebar_work_orders = New System.Windows.Forms.Button()
+        Me.HomeDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.work_oders_due_panel.SuspendLayout()
+        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.low_inventory_panel.SuspendLayout()
+        CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'work_oders_due_panel
         '
-        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel1.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(14, 13)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(206, 79)
-        Me.Panel1.TabIndex = 0
+        Me.work_oders_due_panel.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.work_oders_due_panel.BackColor = System.Drawing.Color.White
+        Me.work_oders_due_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.work_oders_due_panel.Controls.Add(Me.PictureBoxWorkOrders)
+        Me.work_oders_due_panel.Controls.Add(Me.work_order_overdue)
+        Me.work_oders_due_panel.Controls.Add(Me.Label7)
+        Me.work_oders_due_panel.Controls.Add(Me.work_order_due_soon)
+        Me.work_oders_due_panel.Controls.Add(Me.lbl_work_orders_due)
+        Me.work_oders_due_panel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.work_oders_due_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.work_oders_due_panel.Location = New System.Drawing.Point(35, 13)
+        Me.work_oders_due_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.work_oders_due_panel.Name = "work_oders_due_panel"
+        Me.work_oders_due_panel.Size = New System.Drawing.Size(235, 88)
+        Me.work_oders_due_panel.TabIndex = 0
         '
-        'PictureBox1
+        'PictureBoxWorkOrders
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(152, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 50)
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
+        Me.PictureBoxWorkOrders.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxWorkOrders.Image = CType(resources.GetObject("PictureBoxWorkOrders.Image"), System.Drawing.Image)
+        Me.PictureBoxWorkOrders.Location = New System.Drawing.Point(181, 3)
+        Me.PictureBoxWorkOrders.Name = "PictureBoxWorkOrders"
+        Me.PictureBoxWorkOrders.Size = New System.Drawing.Size(49, 50)
+        Me.PictureBoxWorkOrders.TabIndex = 9
+        Me.PictureBoxWorkOrders.TabStop = False
         '
-        'Label8
+        'work_order_overdue
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(4, 58)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(62, 19)
-        Me.Label8.TabIndex = 8
-        Me.Label8.Text = "Overdue"
+        Me.work_order_overdue.AutoSize = True
+        Me.work_order_overdue.ForeColor = System.Drawing.Color.Red
+        Me.work_order_overdue.Location = New System.Drawing.Point(14, 58)
+        Me.work_order_overdue.Name = "work_order_overdue"
+        Me.work_order_overdue.Size = New System.Drawing.Size(62, 19)
+        Me.work_order_overdue.TabIndex = 0
+        Me.work_order_overdue.Text = "Overdue"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(72, 58)
+        Me.Label7.Location = New System.Drawing.Point(82, 58)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(12, 19)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "|"
         '
-        'Label6
+        'work_order_due_soon
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(90, 58)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(17, 19)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "0"
+        Me.work_order_due_soon.AutoSize = True
+        Me.work_order_due_soon.ForeColor = System.Drawing.Color.DarkGray
+        Me.work_order_due_soon.Location = New System.Drawing.Point(101, 58)
+        Me.work_order_due_soon.Name = "work_order_due_soon"
+        Me.work_order_due_soon.Size = New System.Drawing.Size(69, 19)
+        Me.work_order_due_soon.TabIndex = 0
+        Me.work_order_due_soon.Text = "Due Soon"
         '
-        'Label1
+        'lbl_work_orders_due
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(136, 25)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Pending Orders"
+        Me.lbl_work_orders_due.AutoSize = True
+        Me.lbl_work_orders_due.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_work_orders_due.Location = New System.Drawing.Point(3, 0)
+        Me.lbl_work_orders_due.Name = "lbl_work_orders_due"
+        Me.lbl_work_orders_due.Size = New System.Drawing.Size(151, 25)
+        Me.lbl_work_orders_due.TabIndex = 0
+        Me.lbl_work_orders_due.Text = "Work Orders Due"
         '
         'Panel2
         '
@@ -129,10 +132,10 @@ Partial Class Management_Home
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Panel2.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(610, 295)
+        Me.Panel2.Location = New System.Drawing.Point(832, 13)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(426, 243)
+        Me.Panel2.Size = New System.Drawing.Size(235, 87)
         Me.Panel2.TabIndex = 1
         '
         'Label2
@@ -141,74 +144,9 @@ Partial Class Management_Home
         Me.Label2.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(145, 28)
+        Me.Label2.Size = New System.Drawing.Size(181, 28)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Order Statistics"
-        '
-        'Panel3
-        '
-        Me.Panel3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.PictureBox2)
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.Label10)
-        Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel3.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel3.Location = New System.Drawing.Point(238, 13)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(149, 79)
-        Me.Panel3.TabIndex = 1
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(96, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(48, 50)
-        Me.PictureBox2.TabIndex = 12
-        Me.PictureBox2.TabStop = False
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(4, 58)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(54, 19)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Unread"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(64, 58)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(12, 19)
-        Me.Label10.TabIndex = 10
-        Me.Label10.Text = "|"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(82, 58)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(17, 19)
-        Me.Label11.TabIndex = 9
-        Me.Label11.Text = "0"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 25)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Messages"
+        Me.Label2.Text = "Work Order Report"
         '
         'Panel4
         '
@@ -218,10 +156,10 @@ Partial Class Management_Home
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Panel4.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel4.Location = New System.Drawing.Point(610, 18)
+        Me.Panel4.Location = New System.Drawing.Point(565, 13)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(426, 236)
+        Me.Panel4.Size = New System.Drawing.Size(235, 87)
         Me.Panel4.TabIndex = 2
         '
         'Label4
@@ -230,143 +168,265 @@ Partial Class Management_Home
         Me.Label4.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(3, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(138, 28)
+        Me.Label4.Size = New System.Drawing.Size(160, 28)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Sales Statistics"
+        Me.Label4.Text = "Next Service Due"
         '
-        'Panel5
+        'lbl_low_inventory
         '
-        Me.Panel5.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Panel5.BackColor = System.Drawing.Color.White
-        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.Panel5.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel5.Location = New System.Drawing.Point(14, 126)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(554, 412)
-        Me.Panel5.TabIndex = 5
+        Me.lbl_low_inventory.AutoSize = True
+        Me.lbl_low_inventory.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_low_inventory.Location = New System.Drawing.Point(3, 0)
+        Me.lbl_low_inventory.Name = "lbl_low_inventory"
+        Me.lbl_low_inventory.Size = New System.Drawing.Size(129, 25)
+        Me.lbl_low_inventory.TabIndex = 0
+        Me.lbl_low_inventory.Text = "Low Inventory "
         '
-        'Label15
+        'lbl_low_stock
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(3, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(92, 25)
-        Me.Label15.TabIndex = 3
-        Me.Label15.Text = "Inventory "
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(108, 58)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(17, 19)
-        Me.Label14.TabIndex = 9
-        Me.Label14.Text = "0"
+        Me.lbl_low_stock.AutoSize = True
+        Me.lbl_low_stock.ForeColor = System.Drawing.Color.DarkGray
+        Me.lbl_low_stock.Location = New System.Drawing.Point(125, 58)
+        Me.lbl_low_stock.Name = "lbl_low_stock"
+        Me.lbl_low_stock.Size = New System.Drawing.Size(71, 19)
+        Me.lbl_low_stock.TabIndex = 0
+        Me.lbl_low_stock.Text = "Low Stock"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(91, 58)
+        Me.Label13.Location = New System.Drawing.Point(108, 58)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(12, 19)
         Me.Label13.TabIndex = 10
         Me.Label13.Text = "|"
         '
-        'Label12
+        'lbl_out_of_stock
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.ForeColor = System.Drawing.Color.Red
-        Me.Label12.Location = New System.Drawing.Point(3, 58)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(86, 19)
-        Me.Label12.TabIndex = 11
-        Me.Label12.Text = "Out of Stock"
+        Me.lbl_out_of_stock.AutoSize = True
+        Me.lbl_out_of_stock.ForeColor = System.Drawing.Color.Red
+        Me.lbl_out_of_stock.Location = New System.Drawing.Point(21, 58)
+        Me.lbl_out_of_stock.Name = "lbl_out_of_stock"
+        Me.lbl_out_of_stock.Size = New System.Drawing.Size(86, 19)
+        Me.lbl_out_of_stock.TabIndex = 0
+        Me.lbl_out_of_stock.Text = "Out of Stock"
         '
-        'Panel6
+        'low_inventory_panel
         '
-        Me.Panel6.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Panel6.BackColor = System.Drawing.Color.White
-        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel6.Controls.Add(Me.PictureBox3)
-        Me.Panel6.Controls.Add(Me.Label12)
-        Me.Panel6.Controls.Add(Me.Label13)
-        Me.Panel6.Controls.Add(Me.Label14)
-        Me.Panel6.Controls.Add(Me.Label15)
-        Me.Panel6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel6.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel6.Location = New System.Drawing.Point(403, 13)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(165, 79)
-        Me.Panel6.TabIndex = 6
+        Me.low_inventory_panel.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.low_inventory_panel.BackColor = System.Drawing.Color.White
+        Me.low_inventory_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.low_inventory_panel.Controls.Add(Me.PictureBoxInventory)
+        Me.low_inventory_panel.Controls.Add(Me.lbl_out_of_stock)
+        Me.low_inventory_panel.Controls.Add(Me.Label13)
+        Me.low_inventory_panel.Controls.Add(Me.lbl_low_stock)
+        Me.low_inventory_panel.Controls.Add(Me.lbl_low_inventory)
+        Me.low_inventory_panel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.low_inventory_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.low_inventory_panel.Location = New System.Drawing.Point(298, 13)
+        Me.low_inventory_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.low_inventory_panel.Name = "low_inventory_panel"
+        Me.low_inventory_panel.Size = New System.Drawing.Size(235, 88)
+        Me.low_inventory_panel.TabIndex = 0
         '
-        'PictureBox3
+        'PictureBoxInventory
         '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(112, 3)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(48, 50)
-        Me.PictureBox3.TabIndex = 12
-        Me.PictureBox3.TabStop = False
+        Me.PictureBoxInventory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxInventory.Image = CType(resources.GetObject("PictureBoxInventory.Image"), System.Drawing.Image)
+        Me.PictureBoxInventory.Location = New System.Drawing.Point(171, 4)
+        Me.PictureBoxInventory.Name = "PictureBoxInventory"
+        Me.PictureBoxInventory.Size = New System.Drawing.Size(48, 50)
+        Me.PictureBoxInventory.TabIndex = 12
+        Me.PictureBoxInventory.TabStop = False
+        '
+        'activebar_inventory
+        '
+        Me.activebar_inventory.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.activebar_inventory.BackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_inventory.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
+        Me.activebar_inventory.FlatAppearance.BorderSize = 0
+        Me.activebar_inventory.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_inventory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_inventory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.activebar_inventory.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.activebar_inventory.ForeColor = System.Drawing.Color.CadetBlue
+        Me.activebar_inventory.Location = New System.Drawing.Point(298, 5)
+        Me.activebar_inventory.Name = "activebar_inventory"
+        Me.activebar_inventory.Size = New System.Drawing.Size(235, 7)
+        Me.activebar_inventory.TabIndex = 0
+        Me.activebar_inventory.UseVisualStyleBackColor = False
+        Me.activebar_inventory.Visible = False
+        '
+        'activebar_work_orders
+        '
+        Me.activebar_work_orders.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.activebar_work_orders.BackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_work_orders.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
+        Me.activebar_work_orders.FlatAppearance.BorderSize = 0
+        Me.activebar_work_orders.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_work_orders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_work_orders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_work_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.activebar_work_orders.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.activebar_work_orders.ForeColor = System.Drawing.Color.CadetBlue
+        Me.activebar_work_orders.Location = New System.Drawing.Point(35, 5)
+        Me.activebar_work_orders.Name = "activebar_work_orders"
+        Me.activebar_work_orders.Size = New System.Drawing.Size(235, 7)
+        Me.activebar_work_orders.TabIndex = 0
+        Me.activebar_work_orders.UseVisualStyleBackColor = False
+        Me.activebar_work_orders.Visible = False
+        '
+        'HomeDataGridView
+        '
+        Me.HomeDataGridView.AllowUserToAddRows = False
+        Me.HomeDataGridView.AllowUserToDeleteRows = False
+        Me.HomeDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.HomeDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.HomeDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.HomeDataGridView.BackgroundColor = System.Drawing.Color.White
+        Me.HomeDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.HomeDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.HomeDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.HomeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCyan
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.HomeDataGridView.DefaultCellStyle = DataGridViewCellStyle2
+        Me.HomeDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.HomeDataGridView.EnableHeadersVisualStyles = False
+        Me.HomeDataGridView.GridColor = System.Drawing.Color.Silver
+        Me.HomeDataGridView.Location = New System.Drawing.Point(35, 132)
+        Me.HomeDataGridView.Name = "HomeDataGridView"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.HomeDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.HomeDataGridView.RowHeadersVisible = False
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.HomeDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.HomeDataGridView.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HomeDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+        Me.HomeDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.CadetBlue
+        Me.HomeDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.HomeDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.HomeDataGridView.RowTemplate.Height = 38
+        Me.HomeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.HomeDataGridView.Size = New System.Drawing.Size(1032, 394)
+        Me.HomeDataGridView.TabIndex = 9
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button1.BackColor = System.Drawing.Color.CadetBlue
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.CadetBlue
+        Me.Button1.Location = New System.Drawing.Point(565, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(235, 7)
+        Me.Button1.TabIndex = 10
+        Me.Button1.UseVisualStyleBackColor = False
+        Me.Button1.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button2.BackColor = System.Drawing.Color.CadetBlue
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.CadetBlue
+        Me.Button2.Location = New System.Drawing.Point(832, 5)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(235, 7)
+        Me.Button2.TabIndex = 11
+        Me.Button2.UseVisualStyleBackColor = False
+        Me.Button2.Visible = False
         '
         'Management_Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1058, 585)
-        Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.Panel5)
+        Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.HomeDataGridView)
+        Me.Controls.Add(Me.activebar_work_orders)
+        Me.Controls.Add(Me.activebar_inventory)
+        Me.Controls.Add(Me.low_inventory_panel)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.work_oders_due_panel)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Management_Home"
         Me.Text = "Home"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.work_oders_due_panel.ResumeLayout(False)
+        Me.work_oders_due_panel.PerformLayout()
+        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.low_inventory_panel.ResumeLayout(False)
+        Me.low_inventory_panel.PerformLayout()
+        CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents work_oders_due_panel As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lbl_work_orders_due As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label8 As Label
+    Friend WithEvents work_order_overdue As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label14 As Label
+    Friend WithEvents work_order_due_soon As Label
+    Friend WithEvents PictureBoxWorkOrders As PictureBox
+    Friend WithEvents lbl_low_inventory As Label
+    Friend WithEvents lbl_low_stock As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents lbl_out_of_stock As Label
+    Friend WithEvents low_inventory_panel As Panel
+    Friend WithEvents PictureBoxInventory As PictureBox
+    Friend WithEvents activebar_inventory As Button
+    Friend WithEvents activebar_work_orders As Button
+    Friend WithEvents HomeDataGridView As DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Management_Work_Order
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,131 +20,211 @@ Partial Class Management_Work_Order
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Work_Order))
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.cmbusertype = New System.Windows.Forms.ComboBox()
-        Me.txtnewfname = New System.Windows.Forms.TextBox()
-        Me.EmployeesDataGridView = New System.Windows.Forms.DataGridView()
-        Me.btn_add_new_Order = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.EmployeesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WorkOrderDataGridView = New System.Windows.Forms.DataGridView()
+        Me.cmb_work_order_assigned_to_filter = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmb_work_order_status_filter = New System.Windows.Forms.ComboBox()
+        Me.btn_add_new_work_order = New System.Windows.Forms.Button()
+        Me.txt_work_order_automobile_name_filter = New System.Windows.Forms.TextBox()
+        CType(Me.WorkOrderDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'WorkOrderDataGridView
         '
-        Me.ComboBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ComboBox1.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Waiter/Waitress", "Chef/Cook", "Manager/Supervisor", "Administrator"})
-        Me.ComboBox1.Location = New System.Drawing.Point(1145, 36)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(182, 36)
-        Me.ComboBox1.TabIndex = 36
-        '
-        'cmbusertype
-        '
-        Me.cmbusertype.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmbusertype.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbusertype.FormattingEnabled = True
-        Me.cmbusertype.Items.AddRange(New Object() {"Waiter/Waitress", "Chef/Cook", "Manager/Supervisor", "Administrator"})
-        Me.cmbusertype.Location = New System.Drawing.Point(930, 36)
-        Me.cmbusertype.Name = "cmbusertype"
-        Me.cmbusertype.Size = New System.Drawing.Size(182, 36)
-        Me.cmbusertype.TabIndex = 35
-        '
-        'txtnewfname
-        '
-        Me.txtnewfname.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtnewfname.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtnewfname.Location = New System.Drawing.Point(617, 39)
-        Me.txtnewfname.Name = "txtnewfname"
-        Me.txtnewfname.Size = New System.Drawing.Size(222, 35)
-        Me.txtnewfname.TabIndex = 34
-        '
-        'EmployeesDataGridView
-        '
-        Me.EmployeesDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.WorkOrderDataGridView.AllowUserToAddRows = False
+        Me.WorkOrderDataGridView.AllowUserToDeleteRows = False
+        Me.WorkOrderDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.EmployeesDataGridView.BackgroundColor = System.Drawing.Color.White
-        Me.EmployeesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.EmployeesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Copperplate Gothic Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WorkOrderDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.WorkOrderDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.WorkOrderDataGridView.BackgroundColor = System.Drawing.Color.White
+        Me.WorkOrderDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.WorkOrderDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightCyan
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.EmployeesDataGridView.DefaultCellStyle = DataGridViewCellStyle1
-        Me.EmployeesDataGridView.GridColor = System.Drawing.Color.Gainsboro
-        Me.EmployeesDataGridView.Location = New System.Drawing.Point(38, 94)
-        Me.EmployeesDataGridView.Name = "EmployeesDataGridView"
-        Me.EmployeesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.EmployeesDataGridView.Size = New System.Drawing.Size(1289, 562)
-        Me.EmployeesDataGridView.TabIndex = 33
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.WorkOrderDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.WorkOrderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCyan
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.WorkOrderDataGridView.DefaultCellStyle = DataGridViewCellStyle2
+        Me.WorkOrderDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.WorkOrderDataGridView.EnableHeadersVisualStyles = False
+        Me.WorkOrderDataGridView.GridColor = System.Drawing.Color.Silver
+        Me.WorkOrderDataGridView.Location = New System.Drawing.Point(32, 118)
+        Me.WorkOrderDataGridView.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.WorkOrderDataGridView.Name = "WorkOrderDataGridView"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.WorkOrderDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.WorkOrderDataGridView.RowHeadersVisible = False
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.WorkOrderDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.WorkOrderDataGridView.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WorkOrderDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+        Me.WorkOrderDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.CadetBlue
+        Me.WorkOrderDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.WorkOrderDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.WorkOrderDataGridView.RowTemplate.Height = 38
+        Me.WorkOrderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.WorkOrderDataGridView.Size = New System.Drawing.Size(1026, 379)
+        Me.WorkOrderDataGridView.TabIndex = 38
         '
-        'btn_add_new_Order
+        'cmb_work_order_assigned_to_filter
         '
-        Me.btn_add_new_Order.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_add_new_Order.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_add_new_Order.FlatAppearance.BorderSize = 0
-        Me.btn_add_new_Order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_add_new_Order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_add_new_Order.ForeColor = System.Drawing.Color.White
-        Me.btn_add_new_Order.Image = CType(resources.GetObject("btn_add_new_Order.Image"), System.Drawing.Image)
-        Me.btn_add_new_Order.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_add_new_Order.Location = New System.Drawing.Point(38, 12)
-        Me.btn_add_new_Order.Name = "btn_add_new_Order"
-        Me.btn_add_new_Order.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.btn_add_new_Order.Size = New System.Drawing.Size(105, 46)
-        Me.btn_add_new_Order.TabIndex = 32
-        Me.btn_add_new_Order.Text = "    New"
-        Me.btn_add_new_Order.UseVisualStyleBackColor = False
+        Me.cmb_work_order_assigned_to_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cmb_work_order_assigned_to_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_work_order_assigned_to_filter.FormattingEnabled = True
+        Me.cmb_work_order_assigned_to_filter.Location = New System.Drawing.Point(605, 61)
+        Me.cmb_work_order_assigned_to_filter.Margin = New System.Windows.Forms.Padding(10)
+        Me.cmb_work_order_assigned_to_filter.Name = "cmb_work_order_assigned_to_filter"
+        Me.cmb_work_order_assigned_to_filter.Size = New System.Drawing.Size(222, 29)
+        Me.cmb_work_order_assigned_to_filter.TabIndex = 64
         '
-        'Button1
+        'Label3
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.SeaGreen
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(836, 38)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(50, 36)
-        Me.Button1.TabIndex = 37
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Teal
+        Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
+        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label3.Location = New System.Drawing.Point(367, 32)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label3.Size = New System.Drawing.Size(146, 27)
+        Me.Label3.TabIndex = 63
+        Me.Label3.Text = "Automobile       "
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Teal
+        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label1.Location = New System.Drawing.Point(602, 32)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label1.Size = New System.Drawing.Size(160, 27)
+        Me.Label1.TabIndex = 62
+        Me.Label1.Text = "Assigned To :       "
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Teal
+        Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label2.Location = New System.Drawing.Point(833, 34)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label2.Size = New System.Drawing.Size(191, 27)
+        Me.Label2.TabIndex = 60
+        Me.Label2.Text = "Progress Status      "
+        '
+        'cmb_work_order_status_filter
+        '
+        Me.cmb_work_order_status_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cmb_work_order_status_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_work_order_status_filter.FormattingEnabled = True
+        Me.cmb_work_order_status_filter.Location = New System.Drawing.Point(836, 61)
+        Me.cmb_work_order_status_filter.Margin = New System.Windows.Forms.Padding(10)
+        Me.cmb_work_order_status_filter.Name = "cmb_work_order_status_filter"
+        Me.cmb_work_order_status_filter.Size = New System.Drawing.Size(222, 29)
+        Me.cmb_work_order_status_filter.TabIndex = 59
+        '
+        'btn_add_new_work_order
+        '
+        Me.btn_add_new_work_order.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_add_new_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_add_new_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_add_new_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_add_new_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_add_new_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_add_new_work_order.Image = CType(resources.GetObject("btn_add_new_work_order.Image"), System.Drawing.Image)
+        Me.btn_add_new_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_add_new_work_order.Location = New System.Drawing.Point(32, 18)
+        Me.btn_add_new_work_order.Name = "btn_add_new_work_order"
+        Me.btn_add_new_work_order.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.btn_add_new_work_order.Size = New System.Drawing.Size(105, 46)
+        Me.btn_add_new_work_order.TabIndex = 58
+        Me.btn_add_new_work_order.Text = "    New"
+        Me.btn_add_new_work_order.UseVisualStyleBackColor = False
+        '
+        'txt_work_order_automobile_name_filter
+        '
+        Me.txt_work_order_automobile_name_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_work_order_automobile_name_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_work_order_automobile_name_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_work_order_automobile_name_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_work_order_automobile_name_filter.Location = New System.Drawing.Point(370, 61)
+        Me.txt_work_order_automobile_name_filter.Name = "txt_work_order_automobile_name_filter"
+        Me.txt_work_order_automobile_name_filter.Size = New System.Drawing.Size(222, 29)
+        Me.txt_work_order_automobile_name_filter.TabIndex = 61
         '
         'Management_Work_Order
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1366, 749)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.cmbusertype)
-        Me.Controls.Add(Me.txtnewfname)
-        Me.Controls.Add(Me.EmployeesDataGridView)
-        Me.Controls.Add(Me.btn_add_new_Order)
+        Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.Controls.Add(Me.cmb_work_order_assigned_to_filter)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.cmb_work_order_status_filter)
+        Me.Controls.Add(Me.btn_add_new_work_order)
+        Me.Controls.Add(Me.txt_work_order_automobile_name_filter)
+        Me.Controls.Add(Me.WorkOrderDataGridView)
+        Me.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.Name = "Management_Work_Order"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Management_Work_Order"
-        CType(Me.EmployeesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WorkOrderDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents cmbusertype As ComboBox
-    Friend WithEvents txtnewfname As TextBox
-    Friend WithEvents EmployeesDataGridView As DataGridView
-    Friend WithEvents btn_add_new_Order As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents WorkOrderDataGridView As DataGridView
+    Friend WithEvents cmb_work_order_assigned_to_filter As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cmb_work_order_status_filter As ComboBox
+    Friend WithEvents btn_add_new_work_order As Button
+    Friend WithEvents txt_work_order_automobile_name_filter As TextBox
 End Class

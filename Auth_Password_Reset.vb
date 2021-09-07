@@ -3,6 +3,8 @@ Public Class Auth_Password_Reset
     Public reset_id As String
     Public null As String
     Public reset_code As Integer
+    Shared random As New Random()
+
     Private Sub btn_password_reset_cancel_Click(sender As Object, e As EventArgs) Handles btn_password_reset_cancel.Click
         auth_form_loader(Auth_Login)
     End Sub
@@ -16,7 +18,7 @@ Public Class Auth_Password_Reset
                     sql_da.Fill(sql_dt)
                     If sql_dt.Rows.Count() > 0 Then
                         reset_id = sql_dt.Rows(0).Item("Employee_ID")
-                        reset_code = 758425
+                        reset_code = random.Next(100000, 999999)
                         sql_ds = New DataSet
                         sql_da = New MySqlDataAdapter("INSERT INTO login_reset(Request_ID,	Reset_Code,Request_Time)
                         VALUES('" & reset_id & "', '" & reset_code & "', '" & Date.UtcNow & "')", sql_con)

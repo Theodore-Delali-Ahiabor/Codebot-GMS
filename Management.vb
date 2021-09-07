@@ -1,20 +1,31 @@
-﻿Public Class Management
+﻿Imports MySql.Data.MySqlClient
+Public Class Management
     Public Sub Management_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Codehbot Garage Management System"
         sidebar_active(btn_home)
         sidebar_form_loader(Management_Home)
+        box_collections_fill()
     End Sub
     Public Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Home)
+        lbl_current_tab.Text = "Dashboard | Work Oders Due"
+        Management_Home.activebar_work_orders.Visible = True
+        Management_Home.activebar_inventory.Visible = False
+        datagrid_fill_default("work_order_view", Management_Home.HomeDataGridView)
     End Sub
-    Private Sub btn_sales_Click(sender As Object, e As EventArgs) Handles btn_market.Click
+    Private Sub btn_market_Click(sender As Object, e As EventArgs) Handles btn_market.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Market)
     End Sub
     Public Sub btn_work_orders_Click(sender As Object, e As EventArgs) Handles btn_work_orders.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Work_Order)
+        datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)
+        Management_Work_Order.cmb_work_order_status_filter.Items.Clear()
+        Management_Work_Order.cmb_work_order_assigned_to_filter.Items.Clear()
+        add_combobox_items(Management_Work_Order.cmb_work_order_status_filter, "work_order", "Status")
+        add_combobox_items(Management_Work_Order.cmb_work_order_assigned_to_filter, "employee_view", "Name")
     End Sub
 
     Public Sub btn_invoice_Click(sender As Object, e As EventArgs) Handles btn_invoice.Click
@@ -23,6 +34,9 @@
 
     Public Sub btn_inventory_Click(sender As Object, e As EventArgs) Handles btn_inventory.Click
         sidebar_active(sender)
+        sidebar_form_loader(Management_Inventory)
+        datagrid_fill_default("inventory", Management_Inventory.InventoryDataGridView)
+        datagrif_fill_column_resize("inventory", Management_Inventory.InventoryDataGridView)
     End Sub
 
     Private Sub btn_purcahse_orders_Click(sender As Object, e As EventArgs) Handles btn_purcahse_orders.Click
@@ -32,7 +46,8 @@
     Public Sub btn_employees_Click(sender As Object, e As EventArgs) Handles btn_employees.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Employees)
-        datagrid_fill("employee", Management_Employees.EmployeesDataGridView)
+        datagrid_fill_default("employee_view", Management_Employees.EmployeesDataGridView)
+        datagrif_fill_column_resize("employee_view", Management_Employees.EmployeesDataGridView)
     End Sub
 
     Public Sub btn_statistics_Click(sender As Object, e As EventArgs) Handles btn_statistics.Click
@@ -63,8 +78,9 @@
             btn_statistics.BackColor = Color.Teal
             btn_invoice.BackColor = Color.Teal
             btn.BackColor = Color.CadetBlue
-            lbl_current_tab.Text = btn.Text
+            btn.Focus()
         End While
+        lbl_current_tab.Text = btn.Text
     End Sub
     Public Sub systemtime_Tick(sender As Object, e As EventArgs) Handles systemtime.Tick
         current_date.Text = Date.Now.ToShortDateString
@@ -74,4 +90,26 @@
     Private Sub btn_management_message_Click(sender As Object, e As EventArgs) Handles btn_management_message.Click
         btn_management_message.Hide()
     End Sub
+
+    Private Sub btn_refresh_Click(sender As Object, e As EventArgs) Handles btn_refresh.Click
+        If btn_home.BackColor = Color.CadetBlue Then
+            btn_home_Click(sender, e)
+            lbl_current_tab.Text = "Dashboard | Work Oders Due"
+        ElseIf btn_employees.BackColor = Color.CadetBlue Then
+            btn_employees_Click(sender, e)
+            lbl_current_tab.Text = "Employees"
+        ElseIf btn_inventory.BackColor = Color.CadetBlue Then
+            btn_inventory_Click(sender, e)
+            lbl_current_tab.Text = "Inventory"
+        ElseIf btn_work_orders.BackColor = Color.CadetBlue Then
+            btn_work_orders_Click(sender, e)
+        ElseIf btn_market.BackColor = Color.CadetBlue Then
+            btn_market_Click(sender, e)
+        ElseIf btn_calenders.BackColor = Color.CadetBlue Then
+            btn_calenders_Click(sender, e)
+        ElseIf btn_invoice.BackColor = Color.CadetBlue Then
+            btn_invoice_Click(sender, e)
+        End If
+    End Sub
+
 End Class

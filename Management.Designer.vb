@@ -49,12 +49,6 @@ Partial Class Management
         Me.login_position = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btn_inventory = New System.Windows.Forms.Button()
-        Me.btn_calenders = New System.Windows.Forms.Button()
-        Me.btn_invoice = New System.Windows.Forms.Button()
-        Me.btn_work_orders = New System.Windows.Forms.Button()
-        Me.btn_market = New System.Windows.Forms.Button()
-        Me.btn_home = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -63,9 +57,15 @@ Partial Class Management
         Me.btn_statistics = New System.Windows.Forms.Button()
         Me.btn_employees = New System.Windows.Forms.Button()
         Me.btn_purcahse_orders = New System.Windows.Forms.Button()
+        Me.btn_inventory = New System.Windows.Forms.Button()
+        Me.btn_calenders = New System.Windows.Forms.Button()
+        Me.btn_invoice = New System.Windows.Forms.Button()
+        Me.btn_work_orders = New System.Windows.Forms.Button()
+        Me.btn_market = New System.Windows.Forms.Button()
+        Me.btn_home = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btn_management_message = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btn_refresh = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.lbl_current_tab = New System.Windows.Forms.Label()
         Me.management_main_container = New System.Windows.Forms.Panel()
@@ -180,9 +180,9 @@ Partial Class Management
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel4.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel4.ForeColor = System.Drawing.Color.White
-        Me.Panel4.Location = New System.Drawing.Point(233, 689)
+        Me.Panel4.Location = New System.Drawing.Point(233, 674)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1117, 30)
+        Me.Panel4.Size = New System.Drawing.Size(1117, 45)
         Me.Panel4.TabIndex = 18
         '
         'DateTimeStatusStrip
@@ -192,43 +192,43 @@ Partial Class Management
         Me.DateTimeStatusStrip.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimeStatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel3, Me.current_date, Me.ToolStripStatusLabel7, Me.current_time})
         Me.DateTimeStatusStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
-        Me.DateTimeStatusStrip.Location = New System.Drawing.Point(933, 0)
+        Me.DateTimeStatusStrip.Location = New System.Drawing.Point(868, 0)
         Me.DateTimeStatusStrip.Name = "DateTimeStatusStrip"
         Me.DateTimeStatusStrip.Padding = New System.Windows.Forms.Padding(1, 3, 1, 20)
-        Me.DateTimeStatusStrip.Size = New System.Drawing.Size(184, 30)
+        Me.DateTimeStatusStrip.Size = New System.Drawing.Size(249, 45)
         Me.DateTimeStatusStrip.TabIndex = 2
         Me.DateTimeStatusStrip.Text = "StatusStrip1"
         '
         'ToolStripStatusLabel3
         '
-        Me.ToolStripStatusLabel3.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel3.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3"
-        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(45, 19)
+        Me.ToolStripStatusLabel3.Size = New System.Drawing.Size(62, 28)
         Me.ToolStripStatusLabel3.Text = "Date :"
         Me.ToolStripStatusLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'current_date
         '
-        Me.current_date.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.current_date.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.current_date.Name = "current_date"
-        Me.current_date.Size = New System.Drawing.Size(36, 19)
+        Me.current_date.Size = New System.Drawing.Size(51, 28)
         Me.current_date.Text = "date"
         Me.current_date.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'ToolStripStatusLabel7
         '
-        Me.ToolStripStatusLabel7.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel7.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel7.Name = "ToolStripStatusLabel7"
-        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(45, 19)
+        Me.ToolStripStatusLabel7.Size = New System.Drawing.Size(63, 28)
         Me.ToolStripStatusLabel7.Text = "Time :"
         Me.ToolStripStatusLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'current_time
         '
-        Me.current_time.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.current_time.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.current_time.Name = "current_time"
         Me.current_time.Padding = New System.Windows.Forms.Padding(0, 0, 20, 0)
-        Me.current_time.Size = New System.Drawing.Size(56, 19)
+        Me.current_time.Size = New System.Drawing.Size(71, 28)
         Me.current_time.Text = "time"
         Me.current_time.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -236,46 +236,46 @@ Partial Class Management
         '
         Me.UserBioStatusStrip.BackColor = System.Drawing.Color.Transparent
         Me.UserBioStatusStrip.Dock = System.Windows.Forms.DockStyle.Left
-        Me.UserBioStatusStrip.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UserBioStatusStrip.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserBioStatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.login_name, Me.ToolStripStatusLabel5, Me.login_position})
         Me.UserBioStatusStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
         Me.UserBioStatusStrip.Location = New System.Drawing.Point(0, 0)
         Me.UserBioStatusStrip.Name = "UserBioStatusStrip"
         Me.UserBioStatusStrip.Padding = New System.Windows.Forms.Padding(1, 3, 1, 20)
-        Me.UserBioStatusStrip.Size = New System.Drawing.Size(190, 30)
+        Me.UserBioStatusStrip.Size = New System.Drawing.Size(259, 45)
         Me.UserBioStatusStrip.TabIndex = 0
         Me.UserBioStatusStrip.Text = "StatusStrip1"
         '
         'ToolStripStatusLabel1
         '
-        Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(52, 19)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(73, 28)
         Me.ToolStripStatusLabel1.Text = "Name :"
         Me.ToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'login_name
         '
-        Me.login_name.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.login_name.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.login_name.Name = "login_name"
-        Me.login_name.Size = New System.Drawing.Size(43, 19)
+        Me.login_name.Size = New System.Drawing.Size(60, 28)
         Me.login_name.Text = "name"
         Me.login_name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'ToolStripStatusLabel5
         '
-        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(41, 19)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(58, 28)
         Me.ToolStripStatusLabel5.Text = "Title :"
         Me.ToolStripStatusLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'login_position
         '
-        Me.login_position.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.login_position.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.login_position.Name = "login_position"
         Me.login_position.Padding = New System.Windows.Forms.Padding(0, 0, 20, 0)
-        Me.login_position.Size = New System.Drawing.Size(52, 19)
+        Me.login_position.Size = New System.Drawing.Size(66, 28)
         Me.login_position.Text = "title"
         Me.login_position.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -303,156 +303,6 @@ Partial Class Management
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "HOME"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btn_inventory
-        '
-        Me.btn_inventory.AccessibleName = ""
-        Me.btn_inventory.BackColor = System.Drawing.Color.Teal
-        Me.btn_inventory.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_inventory.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_inventory.FlatAppearance.BorderSize = 0
-        Me.btn_inventory.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_inventory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_inventory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_inventory.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_inventory.ForeColor = System.Drawing.Color.White
-        Me.btn_inventory.Image = CType(resources.GetObject("btn_inventory.Image"), System.Drawing.Image)
-        Me.btn_inventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_inventory.Location = New System.Drawing.Point(0, 309)
-        Me.btn_inventory.Name = "btn_inventory"
-        Me.btn_inventory.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
-        Me.btn_inventory.Size = New System.Drawing.Size(233, 48)
-        Me.btn_inventory.TabIndex = 6
-        Me.btn_inventory.Text = "Inventory "
-        Me.btn_inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_inventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_inventory.UseVisualStyleBackColor = False
-        '
-        'btn_calenders
-        '
-        Me.btn_calenders.AccessibleName = ""
-        Me.btn_calenders.BackColor = System.Drawing.Color.Teal
-        Me.btn_calenders.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_calenders.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_calenders.FlatAppearance.BorderSize = 0
-        Me.btn_calenders.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_calenders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_calenders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_calenders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_calenders.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_calenders.ForeColor = System.Drawing.Color.White
-        Me.btn_calenders.Image = CType(resources.GetObject("btn_calenders.Image"), System.Drawing.Image)
-        Me.btn_calenders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_calenders.Location = New System.Drawing.Point(0, 261)
-        Me.btn_calenders.Name = "btn_calenders"
-        Me.btn_calenders.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
-        Me.btn_calenders.Size = New System.Drawing.Size(233, 48)
-        Me.btn_calenders.TabIndex = 5
-        Me.btn_calenders.Text = "Calenders "
-        Me.btn_calenders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_calenders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_calenders.UseVisualStyleBackColor = False
-        '
-        'btn_invoice
-        '
-        Me.btn_invoice.AccessibleName = ""
-        Me.btn_invoice.BackColor = System.Drawing.Color.Teal
-        Me.btn_invoice.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_invoice.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_invoice.FlatAppearance.BorderSize = 0
-        Me.btn_invoice.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_invoice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_invoice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_invoice.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_invoice.ForeColor = System.Drawing.Color.White
-        Me.btn_invoice.Image = CType(resources.GetObject("btn_invoice.Image"), System.Drawing.Image)
-        Me.btn_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_invoice.Location = New System.Drawing.Point(0, 213)
-        Me.btn_invoice.Name = "btn_invoice"
-        Me.btn_invoice.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
-        Me.btn_invoice.Size = New System.Drawing.Size(233, 48)
-        Me.btn_invoice.TabIndex = 4
-        Me.btn_invoice.Text = "Invoice"
-        Me.btn_invoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_invoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_invoice.UseVisualStyleBackColor = False
-        '
-        'btn_work_orders
-        '
-        Me.btn_work_orders.AccessibleName = ""
-        Me.btn_work_orders.BackColor = System.Drawing.Color.Teal
-        Me.btn_work_orders.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_work_orders.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_work_orders.FlatAppearance.BorderSize = 0
-        Me.btn_work_orders.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_work_orders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_work_orders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_work_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_work_orders.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_work_orders.ForeColor = System.Drawing.Color.White
-        Me.btn_work_orders.Image = CType(resources.GetObject("btn_work_orders.Image"), System.Drawing.Image)
-        Me.btn_work_orders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_work_orders.Location = New System.Drawing.Point(0, 165)
-        Me.btn_work_orders.Name = "btn_work_orders"
-        Me.btn_work_orders.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
-        Me.btn_work_orders.Size = New System.Drawing.Size(233, 48)
-        Me.btn_work_orders.TabIndex = 3
-        Me.btn_work_orders.Text = "Work Orders"
-        Me.btn_work_orders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_work_orders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_work_orders.UseVisualStyleBackColor = False
-        '
-        'btn_market
-        '
-        Me.btn_market.AccessibleName = ""
-        Me.btn_market.BackColor = System.Drawing.Color.Teal
-        Me.btn_market.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_market.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_market.FlatAppearance.BorderSize = 0
-        Me.btn_market.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_market.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_market.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_market.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_market.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_market.ForeColor = System.Drawing.Color.White
-        Me.btn_market.Image = CType(resources.GetObject("btn_market.Image"), System.Drawing.Image)
-        Me.btn_market.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_market.Location = New System.Drawing.Point(0, 117)
-        Me.btn_market.Name = "btn_market"
-        Me.btn_market.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
-        Me.btn_market.Size = New System.Drawing.Size(233, 48)
-        Me.btn_market.TabIndex = 2
-        Me.btn_market.Text = "Market"
-        Me.btn_market.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_market.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_market.UseVisualStyleBackColor = False
-        '
-        'btn_home
-        '
-        Me.btn_home.AccessibleName = ""
-        Me.btn_home.BackColor = System.Drawing.Color.Teal
-        Me.btn_home.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_home.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_home.FlatAppearance.BorderSize = 0
-        Me.btn_home.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_home.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_home.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_home.ForeColor = System.Drawing.Color.White
-        Me.btn_home.Image = CType(resources.GetObject("btn_home.Image"), System.Drawing.Image)
-        Me.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_home.Location = New System.Drawing.Point(0, 69)
-        Me.btn_home.Name = "btn_home"
-        Me.btn_home.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
-        Me.btn_home.Size = New System.Drawing.Size(233, 48)
-        Me.btn_home.TabIndex = 1
-        Me.btn_home.Text = "Home"
-        Me.btn_home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_home.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -619,11 +469,161 @@ Partial Class Management
         Me.btn_purcahse_orders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_purcahse_orders.UseVisualStyleBackColor = False
         '
+        'btn_inventory
+        '
+        Me.btn_inventory.AccessibleName = ""
+        Me.btn_inventory.BackColor = System.Drawing.Color.Teal
+        Me.btn_inventory.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_inventory.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_inventory.FlatAppearance.BorderSize = 0
+        Me.btn_inventory.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_inventory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_inventory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_inventory.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_inventory.ForeColor = System.Drawing.Color.White
+        Me.btn_inventory.Image = CType(resources.GetObject("btn_inventory.Image"), System.Drawing.Image)
+        Me.btn_inventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_inventory.Location = New System.Drawing.Point(0, 309)
+        Me.btn_inventory.Name = "btn_inventory"
+        Me.btn_inventory.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
+        Me.btn_inventory.Size = New System.Drawing.Size(233, 48)
+        Me.btn_inventory.TabIndex = 6
+        Me.btn_inventory.Text = "Inventory "
+        Me.btn_inventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_inventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_inventory.UseVisualStyleBackColor = False
+        '
+        'btn_calenders
+        '
+        Me.btn_calenders.AccessibleName = ""
+        Me.btn_calenders.BackColor = System.Drawing.Color.Teal
+        Me.btn_calenders.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_calenders.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_calenders.FlatAppearance.BorderSize = 0
+        Me.btn_calenders.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_calenders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_calenders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_calenders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_calenders.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_calenders.ForeColor = System.Drawing.Color.White
+        Me.btn_calenders.Image = CType(resources.GetObject("btn_calenders.Image"), System.Drawing.Image)
+        Me.btn_calenders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_calenders.Location = New System.Drawing.Point(0, 261)
+        Me.btn_calenders.Name = "btn_calenders"
+        Me.btn_calenders.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
+        Me.btn_calenders.Size = New System.Drawing.Size(233, 48)
+        Me.btn_calenders.TabIndex = 5
+        Me.btn_calenders.Text = "Calendar"
+        Me.btn_calenders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_calenders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_calenders.UseVisualStyleBackColor = False
+        '
+        'btn_invoice
+        '
+        Me.btn_invoice.AccessibleName = ""
+        Me.btn_invoice.BackColor = System.Drawing.Color.Teal
+        Me.btn_invoice.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_invoice.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_invoice.FlatAppearance.BorderSize = 0
+        Me.btn_invoice.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_invoice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_invoice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_invoice.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_invoice.ForeColor = System.Drawing.Color.White
+        Me.btn_invoice.Image = CType(resources.GetObject("btn_invoice.Image"), System.Drawing.Image)
+        Me.btn_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_invoice.Location = New System.Drawing.Point(0, 213)
+        Me.btn_invoice.Name = "btn_invoice"
+        Me.btn_invoice.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
+        Me.btn_invoice.Size = New System.Drawing.Size(233, 48)
+        Me.btn_invoice.TabIndex = 4
+        Me.btn_invoice.Text = "Invoice"
+        Me.btn_invoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_invoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_invoice.UseVisualStyleBackColor = False
+        '
+        'btn_work_orders
+        '
+        Me.btn_work_orders.AccessibleName = ""
+        Me.btn_work_orders.BackColor = System.Drawing.Color.Teal
+        Me.btn_work_orders.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_work_orders.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_work_orders.FlatAppearance.BorderSize = 0
+        Me.btn_work_orders.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_work_orders.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_work_orders.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_work_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_work_orders.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_work_orders.ForeColor = System.Drawing.Color.White
+        Me.btn_work_orders.Image = CType(resources.GetObject("btn_work_orders.Image"), System.Drawing.Image)
+        Me.btn_work_orders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_work_orders.Location = New System.Drawing.Point(0, 165)
+        Me.btn_work_orders.Name = "btn_work_orders"
+        Me.btn_work_orders.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
+        Me.btn_work_orders.Size = New System.Drawing.Size(233, 48)
+        Me.btn_work_orders.TabIndex = 3
+        Me.btn_work_orders.Text = "Work Orders"
+        Me.btn_work_orders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_work_orders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_work_orders.UseVisualStyleBackColor = False
+        '
+        'btn_market
+        '
+        Me.btn_market.AccessibleName = ""
+        Me.btn_market.BackColor = System.Drawing.Color.Teal
+        Me.btn_market.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_market.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_market.FlatAppearance.BorderSize = 0
+        Me.btn_market.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_market.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_market.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_market.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_market.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_market.ForeColor = System.Drawing.Color.White
+        Me.btn_market.Image = CType(resources.GetObject("btn_market.Image"), System.Drawing.Image)
+        Me.btn_market.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_market.Location = New System.Drawing.Point(0, 117)
+        Me.btn_market.Name = "btn_market"
+        Me.btn_market.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
+        Me.btn_market.Size = New System.Drawing.Size(233, 48)
+        Me.btn_market.TabIndex = 2
+        Me.btn_market.Text = "Market"
+        Me.btn_market.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_market.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_market.UseVisualStyleBackColor = False
+        '
+        'btn_home
+        '
+        Me.btn_home.AccessibleName = ""
+        Me.btn_home.BackColor = System.Drawing.Color.Teal
+        Me.btn_home.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_home.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btn_home.FlatAppearance.BorderSize = 0
+        Me.btn_home.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_home.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_home.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_home.ForeColor = System.Drawing.Color.White
+        Me.btn_home.Image = CType(resources.GetObject("btn_home.Image"), System.Drawing.Image)
+        Me.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_home.Location = New System.Drawing.Point(0, 69)
+        Me.btn_home.Name = "btn_home"
+        Me.btn_home.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
+        Me.btn_home.Size = New System.Drawing.Size(233, 48)
+        Me.btn_home.TabIndex = 1
+        Me.btn_home.Text = "Dashboard"
+        Me.btn_home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btn_home.UseVisualStyleBackColor = False
+        '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel5.Controls.Add(Me.btn_management_message)
-        Me.Panel5.Controls.Add(Me.Button3)
+        Me.Panel5.Controls.Add(Me.btn_refresh)
         Me.Panel5.Controls.Add(Me.Button2)
         Me.Panel5.Controls.Add(Me.lbl_current_tab)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
@@ -637,7 +637,7 @@ Partial Class Management
         '
         Me.btn_management_message.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btn_management_message.AutoSize = True
-        Me.btn_management_message.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_management_message.BackColor = System.Drawing.Color.Ivory
         Me.btn_management_message.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_management_message.FlatAppearance.BorderSize = 0
         Me.btn_management_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -645,29 +645,30 @@ Partial Class Management
         Me.btn_management_message.ForeColor = System.Drawing.Color.White
         Me.btn_management_message.Image = CType(resources.GetObject("btn_management_message.Image"), System.Drawing.Image)
         Me.btn_management_message.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_management_message.Location = New System.Drawing.Point(247, 11)
+        Me.btn_management_message.Location = New System.Drawing.Point(337, 21)
+        Me.btn_management_message.Margin = New System.Windows.Forms.Padding(0)
         Me.btn_management_message.Name = "btn_management_message"
         Me.btn_management_message.Padding = New System.Windows.Forms.Padding(0, 0, 10, 0)
-        Me.btn_management_message.Size = New System.Drawing.Size(497, 52)
+        Me.btn_management_message.Size = New System.Drawing.Size(377, 37)
         Me.btn_management_message.TabIndex = 36
         Me.btn_management_message.UseVisualStyleBackColor = False
         Me.btn_management_message.Visible = False
         '
-        'Button3
+        'btn_refresh
         '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.BackColor = System.Drawing.Color.CadetBlue
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(992, 11)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(73, 52)
-        Me.Button3.TabIndex = 35
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btn_refresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_refresh.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_refresh.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_refresh.FlatAppearance.BorderSize = 0
+        Me.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_refresh.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_refresh.ForeColor = System.Drawing.Color.White
+        Me.btn_refresh.Image = CType(resources.GetObject("btn_refresh.Image"), System.Drawing.Image)
+        Me.btn_refresh.Location = New System.Drawing.Point(992, 11)
+        Me.btn_refresh.Name = "btn_refresh"
+        Me.btn_refresh.Size = New System.Drawing.Size(73, 52)
+        Me.btn_refresh.TabIndex = 35
+        Me.btn_refresh.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -702,7 +703,7 @@ Partial Class Management
         Me.management_main_container.Dock = System.Windows.Forms.DockStyle.Fill
         Me.management_main_container.Location = New System.Drawing.Point(233, 112)
         Me.management_main_container.Name = "management_main_container"
-        Me.management_main_container.Size = New System.Drawing.Size(1117, 577)
+        Me.management_main_container.Size = New System.Drawing.Size(1117, 562)
         Me.management_main_container.TabIndex = 21
         '
         'systemtime
@@ -791,6 +792,6 @@ Partial Class Management
     Friend WithEvents Button1 As Button
     Friend WithEvents RestoreToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btn_refresh As Button
     Friend WithEvents btn_management_message As Button
 End Class

@@ -23,7 +23,6 @@ Partial Class Auth
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Auth))
         Me.auth_left_panel = New System.Windows.Forms.Panel()
         Me.btn_auth_message = New System.Windows.Forms.Button()
         Me.auth_right_panel = New System.Windows.Forms.Panel()
@@ -51,7 +50,7 @@ Partial Class Auth
         Me.btn_auth_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_auth_message.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_auth_message.ForeColor = System.Drawing.Color.Snow
-        Me.btn_auth_message.Image = CType(resources.GetObject("btn_auth_message.Image"), System.Drawing.Image)
+        Me.btn_auth_message.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
         Me.btn_auth_message.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_auth_message.Location = New System.Drawing.Point(0, 0)
         Me.btn_auth_message.Name = "btn_auth_message"
@@ -67,7 +66,7 @@ Partial Class Auth
         Me.auth_right_panel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.auth_right_panel.BackgroundImage = CType(resources.GetObject("auth_right_panel.BackgroundImage"), System.Drawing.Image)
+        Me.auth_right_panel.BackgroundImage = Global.Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner
         Me.auth_right_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.auth_right_panel.Location = New System.Drawing.Point(471, 0)
         Me.auth_right_panel.Name = "auth_right_panel"

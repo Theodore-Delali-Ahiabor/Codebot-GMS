@@ -270,11 +270,15 @@ Partial Class Auth_Signup
         Me.btn_signup_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_signup_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_signup_cancel.ForeColor = System.Drawing.Color.White
+        Me.btn_signup_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
+        Me.btn_signup_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_signup_cancel.Location = New System.Drawing.Point(404, 54)
         Me.btn_signup_cancel.Name = "btn_signup_cancel"
-        Me.btn_signup_cancel.Size = New System.Drawing.Size(112, 40)
+        Me.btn_signup_cancel.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.btn_signup_cancel.Size = New System.Drawing.Size(120, 40)
         Me.btn_signup_cancel.TabIndex = 8
         Me.btn_signup_cancel.Text = "CANCEL"
+        Me.btn_signup_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_signup_cancel.UseVisualStyleBackColor = False
         '
         'btn_signup_verify_create
@@ -285,11 +289,15 @@ Partial Class Auth_Signup
         Me.btn_signup_verify_create.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_signup_verify_create.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_signup_verify_create.ForeColor = System.Drawing.Color.White
-        Me.btn_signup_verify_create.Location = New System.Drawing.Point(257, 54)
+        Me.btn_signup_verify_create.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_submit_for_approval_24
+        Me.btn_signup_verify_create.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_signup_verify_create.Location = New System.Drawing.Point(258, 54)
         Me.btn_signup_verify_create.Name = "btn_signup_verify_create"
-        Me.btn_signup_verify_create.Size = New System.Drawing.Size(103, 40)
+        Me.btn_signup_verify_create.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.btn_signup_verify_create.Size = New System.Drawing.Size(120, 40)
         Me.btn_signup_verify_create.TabIndex = 7
         Me.btn_signup_verify_create.Text = "VERIFY"
+        Me.btn_signup_verify_create.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_signup_verify_create.UseVisualStyleBackColor = False
         '
         'Auth_Signup
