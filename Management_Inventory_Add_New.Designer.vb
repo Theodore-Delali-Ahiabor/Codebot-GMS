@@ -23,11 +23,8 @@ Partial Class Management_Inventory_Add_New
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.txt_new_unit_cost = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
@@ -44,9 +41,9 @@ Partial Class Management_Inventory_Add_New
         Me.txt_new_part_number = New System.Windows.Forms.TextBox()
         Me.txt_new_part_name = New System.Windows.Forms.TextBox()
         Me.txt_new_category = New System.Windows.Forms.ComboBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.btn_new_item_cancel = New System.Windows.Forms.Button()
         Me.btn_new_item_save = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txt_new_unit_cost
@@ -58,19 +55,6 @@ Partial Class Management_Inventory_Add_New
         Me.txt_new_unit_cost.Name = "txt_new_unit_cost"
         Me.txt_new_unit_cost.Size = New System.Drawing.Size(308, 33)
         Me.txt_new_unit_cost.TabIndex = 8
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label16.AutoSize = True
-        Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label16.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(619, 155)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(20, 28)
-        Me.Label16.TabIndex = 74
-        Me.Label16.Text = "*"
         '
         'Label15
         '
@@ -95,32 +79,6 @@ Partial Class Management_Inventory_Add_New
         Me.Label6.Size = New System.Drawing.Size(20, 28)
         Me.Label6.TabIndex = 72
         Me.Label6.Text = "*"
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label14.AutoSize = True
-        Me.Label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label14.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(561, 78)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(20, 28)
-        Me.Label14.TabIndex = 71
-        Me.Label14.Text = "*"
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label8.AutoSize = True
-        Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label8.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(236, 155)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(20, 28)
-        Me.Label8.TabIndex = 70
-        Me.Label8.Text = "*"
         '
         'Label2
         '
@@ -177,9 +135,9 @@ Partial Class Management_Inventory_Add_New
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(136, 320)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(122, 18)
+        Me.Label9.Size = New System.Drawing.Size(65, 18)
         Me.Label9.TabIndex = 65
-        Me.Label9.Text = "Location Number"
+        Me.Label9.Text = "Location"
         '
         'Label7
         '
@@ -210,9 +168,9 @@ Partial Class Management_Inventory_Add_New
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(138, 166)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 18)
+        Me.Label4.Size = New System.Drawing.Size(134, 18)
         Me.Label4.TabIndex = 62
-        Me.Label4.Text = "Part Number"
+        Me.Label4.Text = "Item Serial Number"
         '
         'Label3
         '
@@ -221,9 +179,9 @@ Partial Class Management_Inventory_Add_New
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(135, 83)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(166, 18)
+        Me.Label3.Size = New System.Drawing.Size(167, 18)
         Me.Label3.TabIndex = 59
-        Me.Label3.Text = "Part Name / Description"
+        Me.Label3.Text = "Item Name / Description"
         '
         'txt_new_quantity
         '
@@ -296,19 +254,6 @@ Partial Class Management_Inventory_Add_New
         Me.txt_new_category.Size = New System.Drawing.Size(308, 33)
         Me.txt_new_category.TabIndex = 1
         '
-        'Label10
-        '
-        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label10.AutoSize = True
-        Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label10.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(264, 310)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(20, 28)
-        Me.Label10.TabIndex = 75
-        Me.Label10.Text = "*"
-        '
         'btn_new_item_cancel
         '
         Me.btn_new_item_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -347,19 +292,29 @@ Partial Class Management_Inventory_Add_New
         Me.btn_new_item_save.Text = "SAVE"
         Me.btn_new_item_save.UseVisualStyleBackColor = False
         '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label8.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Location = New System.Drawing.Point(207, 310)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(20, 28)
+        Me.Label8.TabIndex = 69
+        Me.Label8.Text = "*"
+        '
         'Management_Inventory_Add_New
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1101, 523)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.txt_new_category)
         Me.Controls.Add(Me.txt_new_unit_cost)
-        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -386,11 +341,8 @@ Partial Class Management_Inventory_Add_New
     End Sub
 
     Friend WithEvents txt_new_unit_cost As TextBox
-    Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_new_item_cancel As Button
@@ -409,5 +361,5 @@ Partial Class Management_Inventory_Add_New
     Friend WithEvents txt_new_part_number As TextBox
     Friend WithEvents txt_new_part_name As TextBox
     Friend WithEvents txt_new_category As ComboBox
-    Friend WithEvents Label10 As Label
+    Friend WithEvents Label8 As Label
 End Class

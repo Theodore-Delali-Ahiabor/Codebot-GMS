@@ -30,7 +30,7 @@ Public Class Management_Inventory
         If txt_inventory_part_name_filter.Text = "" Then
             datagrid_fill_default("inventory", InventoryDataGridView)
         Else
-            datagrid_fill_filter_textbox("inventory", InventoryDataGridView, "Part_Name", Me.txt_inventory_part_name_filter)
+            datagrid_fill_filter_textbox("inventory", InventoryDataGridView, "Description", Me.txt_inventory_part_name_filter)
         End If
     End Sub
 
@@ -47,8 +47,8 @@ Public Class Management_Inventory
                 sql_da.Fill(sql_dt)
                 If sql_dt.Rows.Count() > 0 Then
                     Management_Inventory_Add_New.txt_new_category.Text = sql_dt.Rows(0).Item("Category").ToString()
-                    Management_Inventory_Add_New.txt_new_part_name.Text = sql_dt.Rows(0).Item("Part_Name").ToString()
-                    Management_Inventory_Add_New.txt_new_part_number.Text = sql_dt.Rows(0).Item("Part_Number").ToString()
+                    Management_Inventory_Add_New.txt_new_part_name.Text = sql_dt.Rows(0).Item("Description").ToString()
+                    Management_Inventory_Add_New.txt_new_part_number.Text = sql_dt.Rows(0).Item("Serial_no").ToString()
                     Management_Inventory_Add_New.txt_new_alternative.Text = sql_dt.Rows(0).Item("Alternative").ToString()
                     Management_Inventory_Add_New.txt_new_location.Text = sql_dt.Rows(0).Item("Location").ToString()
                     Management_Inventory_Add_New.txt_new_model.Text = sql_dt.Rows(0).Item("Model_Type").ToString()

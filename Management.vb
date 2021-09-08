@@ -9,10 +9,13 @@ Public Class Management
     Public Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Home)
-        lbl_current_tab.Text = "Dashboard | Work Oders Due"
         Management_Home.activebar_work_orders.Visible = True
-        Management_Home.activebar_inventory.Visible = False
-        datagrid_fill_default("work_order_view", Management_Home.HomeDataGridView)
+        Management_Home.work_order_due_soon_Click(Management_Home.work_order_due_soon, EventArgs.Empty)
+        Management_Home.work_order_overdue_Click(Management_Home.work_order_overdue, EventArgs.Empty)
+        Management_Home.low_inventory_low_stock_Click(Management_Home.low_inventory_low_stock, EventArgs.Empty)
+        Management_Home.low_inventory_out_of_stock_Click(Management_Home.low_inventory_out_of_stock, EventArgs.Empty)
+        work_order_overdue_filter("6")
+        datagrif_fill_column_resize("work_order_view", Management_Home.HomeDataGridView)
     End Sub
     Private Sub btn_market_Click(sender As Object, e As EventArgs) Handles btn_market.Click
         sidebar_active(sender)
@@ -22,10 +25,7 @@ Public Class Management
         sidebar_active(sender)
         sidebar_form_loader(Management_Work_Order)
         datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)
-        Management_Work_Order.cmb_work_order_status_filter.Items.Clear()
-        Management_Work_Order.cmb_work_order_assigned_to_filter.Items.Clear()
-        add_combobox_items(Management_Work_Order.cmb_work_order_status_filter, "work_order", "Status")
-        add_combobox_items(Management_Work_Order.cmb_work_order_assigned_to_filter, "employee_view", "Name")
+        datagrif_fill_column_resize("work_order_view", Management_Work_Order.WorkOrderDataGridView)
     End Sub
 
     Public Sub btn_invoice_Click(sender As Object, e As EventArgs) Handles btn_invoice.Click

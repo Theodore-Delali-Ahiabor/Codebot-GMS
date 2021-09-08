@@ -105,15 +105,6 @@ Public Class Management_Employees
             datagrid_fill_filter("employee_view", EmployeesDataGridView, "Role", Me.cmb_employee_position_filter)
         End If
     End Sub
-
-    Private Sub txt_employee_number_filter_TextChanged(sender As Object, e As EventArgs) Handles txt_employee_number_filter.TextChanged
-        If txt_employee_number_filter.Text = "" Then
-            datagrid_fill_default("employee_view", EmployeesDataGridView)
-        Else
-            datagrid_fill_filter_textbox("employee_view", EmployeesDataGridView, "Phone", Me.txt_employee_number_filter)
-        End If
-    End Sub
-
     Private Sub txt_employee_name_filter_TextChanged(sender As Object, e As EventArgs) Handles txt_employee_name_filter.TextChanged
         If txt_employee_name_filter.Text = "" Then
             datagrid_fill_default("employee_view", EmployeesDataGridView)
@@ -124,5 +115,65 @@ Public Class Management_Employees
 
     Private Sub EmployeesDataGridView_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles EmployeesDataGridView.ColumnHeaderMouseClick
         datagrid_fill_color_effect("employee_view", EmployeesDataGridView)
+    End Sub
+
+    Private Sub btn_activate_employee_Click(sender As Object, e As EventArgs) Handles btn_activate_employee.Click
+        Try
+            If Me.EmployeesDataGridView.SelectedRows.Count > 0 Then
+                If Me.EmployeesDataGridView.CurrentRow.Cells(7).Value.ToString = True Then
+                    Management.btn_management_message.Text = "Employee already active"
+                    Management.btn_management_message.Show()
+                    message(Management.btn_management_message, "success")
+                Else
+                    Dim repos As DialogResult = MessageBox.Show("You are about to Activate Employee '" & Me.EmployeesDataGridView.CurrentRow.Cells(1).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                    If repos = DialogResult.Yes Then
+                        sql_ds = New DataSet
+                        sql_da = New MySqlDataAdapter("UPDATE employee SET Active = '" & 1 & "' 
+                            Where ID = '" & Me.EmployeesDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
+                        sql_da.Fill(sql_ds, "employee")
+                        datagrid_fill_default("employee_view", Me.EmployeesDataGridView)
+                        Management.btn_management_message.Text = "Employee activated successfully"
+                        Management.btn_management_message.Show()
+                        message(Management.btn_management_message, "success")
+                    End If
+                End If
+            Else
+                Management.btn_management_message.Text = "No row was selected"
+                Management.btn_management_message.Show()
+                message(Management.btn_management_message, "warning")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btn_deactivate_employee_Click(sender As Object, e As EventArgs) Handles btn_deactivate_employee.Click
+        Try
+            If Me.EmployeesDataGridView.SelectedRows.Count > 0 Then
+                If Me.EmployeesDataGridView.CurrentRow.Cells(7).Value.ToString = False Then
+                    Management.btn_management_message.Text = "Employee already Inactive"
+                    Management.btn_management_message.Show()
+                    message(Management.btn_management_message, "success")
+                Else
+                    Dim repos As DialogResult = MessageBox.Show("You are about to Deactivate Employee '" & Me.EmployeesDataGridView.CurrentRow.Cells(1).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                    If repos = DialogResult.Yes Then
+                        sql_ds = New DataSet
+                        sql_da = New MySqlDataAdapter("UPDATE employee SET Active = '" & 0 & "' 
+                            Where ID = '" & Me.EmployeesDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
+                        sql_da.Fill(sql_ds, "employee")
+                        datagrid_fill_default("employee_view", Me.EmployeesDataGridView)
+                        Management.btn_management_message.Text = "Employee Deactivated successfully"
+                        Management.btn_management_message.Show()
+                        message(Management.btn_management_message, "success")
+                    End If
+                End If
+            Else
+                Management.btn_management_message.Text = "No row was selected"
+                Management.btn_management_message.Show()
+                message(Management.btn_management_message, "warning")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

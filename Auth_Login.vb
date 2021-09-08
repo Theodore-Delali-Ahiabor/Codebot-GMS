@@ -37,10 +37,16 @@ Public Class Auth_Login
                                     Management.lbl_current_tab.Text = "Dashboard | Work Oders Due"
                                     sidebar_form_loader(Management_Home)
                                     Management_Home.activebar_work_orders.Visible = True
-                                    datagrid_fill_default("work_order_view", Management_Home.HomeDataGridView)
+                                    Management_Home.work_order_due_soon_Click(Management_Home.work_order_due_soon, EventArgs.Empty)
+                                    Management_Home.work_order_overdue_Click(Management_Home.work_order_overdue, EventArgs.Empty)
+                                    Management_Home.low_inventory_low_stock_Click(Management_Home.low_inventory_low_stock, EventArgs.Empty)
+                                    Management_Home.low_inventory_out_of_stock_Click(Management_Home.low_inventory_out_of_stock, EventArgs.Empty)
+                                    work_order_overdue_filter("6")
+                                    datagrif_fill_column_resize("work_order_view", Management_Home.HomeDataGridView)
                                     Management.login_position.Text = login_as
                                     Management.login_name.Text = login_full_name
-                                    'show some administrative privilages
+
+                                    'display some administrative privilages
                                     Management.btn_employees.Visible = True
                                     Management.btn_inventory.Visible = True
                                     Management.btn_statistics.Visible = True

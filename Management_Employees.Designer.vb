@@ -28,16 +28,23 @@ Partial Class Management_Employees
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.cmb_employee_position_filter = New System.Windows.Forms.ComboBox()
-        Me.txt_employee_number_filter = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_edit_employee = New System.Windows.Forms.Button()
         Me.btn_add_new_employee = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt_employee_name_filter = New System.Windows.Forms.TextBox()
         Me.EmployeesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.btn_activate_employee = New System.Windows.Forms.Button()
+        Me.btn_deactivate_employee = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.EmployeesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmb_employee_position_filter
@@ -45,39 +52,11 @@ Partial Class Management_Employees
         Me.cmb_employee_position_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmb_employee_position_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_employee_position_filter.FormattingEnabled = True
-        Me.cmb_employee_position_filter.Location = New System.Drawing.Point(837, 49)
+        Me.cmb_employee_position_filter.Location = New System.Drawing.Point(837, 44)
         Me.cmb_employee_position_filter.Margin = New System.Windows.Forms.Padding(9, 14, 9, 14)
         Me.cmb_employee_position_filter.Name = "cmb_employee_position_filter"
         Me.cmb_employee_position_filter.Size = New System.Drawing.Size(222, 29)
         Me.cmb_employee_position_filter.TabIndex = 30
-        '
-        'txt_employee_number_filter
-        '
-        Me.txt_employee_number_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_employee_number_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txt_employee_number_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_employee_number_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_employee_number_filter.Location = New System.Drawing.Point(603, 49)
-        Me.txt_employee_number_filter.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txt_employee_number_filter.Name = "txt_employee_number_filter"
-        Me.txt_employee_number_filter.Size = New System.Drawing.Size(222, 29)
-        Me.txt_employee_number_filter.TabIndex = 36
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Teal
-        Me.Label1.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label1.Location = New System.Drawing.Point(600, 11)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(4, 7, 4, 7)
-        Me.Label1.Size = New System.Drawing.Size(152, 35)
-        Me.Label1.TabIndex = 37
-        Me.Label1.Text = "Moblie Number      "
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label2
         '
@@ -87,7 +66,7 @@ Partial Class Management_Employees
         Me.Label2.ForeColor = System.Drawing.Color.Teal
         Me.Label2.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_filter_24
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label2.Location = New System.Drawing.Point(834, 11)
+        Me.Label2.Location = New System.Drawing.Point(834, 6)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.Label2.Size = New System.Drawing.Size(73, 35)
@@ -131,20 +110,6 @@ Partial Class Management_Employees
         Me.btn_add_new_employee.Text = "    New"
         Me.btn_add_new_employee.UseVisualStyleBackColor = False
         '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label3.Location = New System.Drawing.Point(551, 58)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 21)
-        Me.Label3.TabIndex = 38
-        Me.Label3.Text = "+223"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'Label4
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -153,7 +118,7 @@ Partial Class Management_Employees
         Me.Label4.ForeColor = System.Drawing.Color.Teal
         Me.Label4.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label4.Location = New System.Drawing.Point(320, 11)
+        Me.Label4.Location = New System.Drawing.Point(583, 6)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.Label4.Size = New System.Drawing.Size(84, 35)
@@ -167,7 +132,7 @@ Partial Class Management_Employees
         Me.txt_employee_name_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_employee_name_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txt_employee_name_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_employee_name_filter.Location = New System.Drawing.Point(323, 49)
+        Me.txt_employee_name_filter.Location = New System.Drawing.Point(586, 44)
         Me.txt_employee_name_filter.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_employee_name_filter.Name = "txt_employee_name_filter"
         Me.txt_employee_name_filter.Size = New System.Drawing.Size(222, 29)
@@ -207,7 +172,7 @@ Partial Class Management_Employees
         Me.EmployeesDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.EmployeesDataGridView.EnableHeadersVisualStyles = False
         Me.EmployeesDataGridView.GridColor = System.Drawing.Color.Silver
-        Me.EmployeesDataGridView.Location = New System.Drawing.Point(33, 96)
+        Me.EmployeesDataGridView.Location = New System.Drawing.Point(33, 88)
         Me.EmployeesDataGridView.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.EmployeesDataGridView.Name = "EmployeesDataGridView"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -232,9 +197,142 @@ Partial Class Management_Employees
         Me.EmployeesDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.EmployeesDataGridView.RowTemplate.Height = 38
         Me.EmployeesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.EmployeesDataGridView.Size = New System.Drawing.Size(1026, 379)
+        Me.EmployeesDataGridView.Size = New System.Drawing.Size(1026, 357)
         Me.EmployeesDataGridView.TabIndex = 1
         Me.EmployeesDataGridView.VirtualMode = True
+        '
+        'btn_activate_employee
+        '
+        Me.btn_activate_employee.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_activate_employee.BackColor = System.Drawing.Color.SeaGreen
+        Me.btn_activate_employee.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_activate_employee.FlatAppearance.BorderSize = 0
+        Me.btn_activate_employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_activate_employee.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_activate_employee.Image = CType(resources.GetObject("btn_activate_employee.Image"), System.Drawing.Image)
+        Me.btn_activate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_activate_employee.Location = New System.Drawing.Point(33, 494)
+        Me.btn_activate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_activate_employee.Name = "btn_activate_employee"
+        Me.btn_activate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btn_activate_employee.Size = New System.Drawing.Size(139, 46)
+        Me.btn_activate_employee.TabIndex = 41
+        Me.btn_activate_employee.Text = "Activate"
+        Me.btn_activate_employee.UseVisualStyleBackColor = False
+        '
+        'btn_deactivate_employee
+        '
+        Me.btn_deactivate_employee.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_deactivate_employee.BackColor = System.Drawing.Color.Coral
+        Me.btn_deactivate_employee.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_deactivate_employee.FlatAppearance.BorderSize = 0
+        Me.btn_deactivate_employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_deactivate_employee.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_deactivate_employee.Image = CType(resources.GetObject("btn_deactivate_employee.Image"), System.Drawing.Image)
+        Me.btn_deactivate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_deactivate_employee.Location = New System.Drawing.Point(197, 494)
+        Me.btn_deactivate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_deactivate_employee.Name = "btn_deactivate_employee"
+        Me.btn_deactivate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btn_deactivate_employee.Size = New System.Drawing.Size(155, 46)
+        Me.btn_deactivate_employee.TabIndex = 42
+        Me.btn_deactivate_employee.Text = "Deactivate"
+        Me.btn_deactivate_employee.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(401, 494)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(658, 46)
+        Me.Panel1.TabIndex = 43
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(40, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(103, 17)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Active Employee"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(40, 29)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(112, 17)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Inactive Employee"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(231, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(118, 17)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Selected Employee"
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.BackColor = System.Drawing.Color.Coral
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(18, 29)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button1.Size = New System.Drawing.Size(16, 17)
+        Me.Button1.TabIndex = 43
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button2.BackColor = System.Drawing.Color.White
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(18, -1)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button2.Size = New System.Drawing.Size(16, 17)
+        Me.Button2.TabIndex = 44
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button3.BackColor = System.Drawing.Color.CadetBlue
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(209, 0)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button3.Size = New System.Drawing.Size(16, 17)
+        Me.Button3.TabIndex = 45
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Management_Employees
         '
@@ -243,12 +341,12 @@ Partial Class Management_Employees
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.ClientSize = New System.Drawing.Size(1101, 523)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.btn_deactivate_employee)
+        Me.Controls.Add(Me.btn_activate_employee)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txt_employee_name_filter)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txt_employee_number_filter)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btn_edit_employee)
         Me.Controls.Add(Me.cmb_employee_position_filter)
@@ -261,6 +359,8 @@ Partial Class Management_Employees
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.EmployeesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -270,10 +370,16 @@ Partial Class Management_Employees
     Friend WithEvents cmb_employee_position_filter As ComboBox
     Friend WithEvents btn_edit_employee As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents txt_employee_number_filter As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents txt_employee_name_filter As TextBox
     Friend WithEvents EmployeesDataGridView As DataGridView
+    Friend WithEvents btn_activate_employee As Button
+    Friend WithEvents btn_deactivate_employee As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label1 As Label
 End Class

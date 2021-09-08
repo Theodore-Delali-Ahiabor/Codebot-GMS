@@ -2,6 +2,7 @@
 Public Class Management_Home
     Private Sub work_oders_due_panel_Click(sender As Object, e As EventArgs) Handles work_oders_due_panel.Click
         work_order_overdue_filter("6")
+        datagrif_fill_column_resize("work_order_view", Me.HomeDataGridView)
     End Sub
 
     Private Sub low_inventory_panel_Click(sender As Object, e As EventArgs) Handles low_inventory_panel.Click
@@ -28,21 +29,48 @@ Public Class Management_Home
         work_oders_due_panel_Click(sender, e)
     End Sub
 
-    Private Sub work_order_overdue_Click(sender As Object, e As EventArgs) Handles work_order_overdue.Click
+    Public Sub work_order_overdue_Click(sender As Object, e As EventArgs) Handles work_order_overdue.Click
         work_order_overdue_filter("1")
-        work_order_overdue.Text = HomeDataGridView.Rows().Count & " Overdue"
+        Me.work_order_overdue.Text = HomeDataGridView.Rows().Count & " Overdue"
+        datagrif_fill_column_resize("work_order_view", Me.HomeDataGridView)
     End Sub
 
-    Private Sub work_order_due_soon_Click(sender As Object, e As EventArgs) Handles work_order_due_soon.Click
+    Public Sub work_order_due_soon_Click(sender As Object, e As EventArgs) Handles work_order_due_soon.Click
         activebar_work_orders.Visible = True
         activebar_inventory.Visible = False
-        sql_da = New MySqlDataAdapter("SELECT * FROM work_order_view WHERE Due_In < 6 AND Due_In > -1 AND Progress_Status <>'" & "Done" & "' ", sql_con)
+        sql_da = New MySqlDataAdapter("SELECT * FROM work_order_view WHERE Due_In < 6 AND Due_In > -1 AND Progress_Status <>'" & "Done" & "' ORDER BY ID DESC ", sql_con)
         sql_dt = New DataTable
         sql_dt.Clear()
         sql_da.Fill(sql_dt)
-        HomeDataGridView.DataSource = sql_dt
+        Me.HomeDataGridView.DataSource = sql_dt
         datagrid_fill_color_effect("work_order_view", Me.HomeDataGridView)
-        work_order_due_soon.Text = HomeDataGridView.Rows().Count & " Due Soon"
+        Me.work_order_due_soon.Text = HomeDataGridView.Rows().Count & " Due Soon"
         Management.lbl_current_tab.Text = "Dashboard | Work Oders Due"
+        clear_gridview_default_selection(Me.HomeDataGridView)
+        datagrif_fill_column_resize("work_order_view", Me.HomeDataGridView)
+    End Sub
+
+    Public Sub low_inventory_out_of_stock_Click(sender As Object, e As EventArgs) Handles low_inventory_out_of_stock.Click
+        activebar_work_orders.Visible = False
+        activebar_inventory.Visible = True
+        datagrid_fill_flter_with_variable("inventory", Me.HomeDataGridView, "Stock", "=", "0")
+        Me.low_inventory_out_of_stock.Text = HomeDataGridView.Rows.Count & " Out of Stock"
+        datagrif_fill_column_resize("inventory", Me.HomeDataGridView)
+        Management.lbl_current_tab.Text = "Dashboard | Inventory Low"
+    End Sub
+
+    Public Sub low_inventory_low_stock_Click(sender As Object, e As EventArgs) Handles low_inventory_low_stock.Click
+        activebar_work_orders.Visible = False
+        activebar_inventory.Visible = True
+        sql_da = New MySqlDataAdapter("SELECT * FROM inventory WHERE Stock < 10 AND Stock <> 0  ORDER BY ID DESC", sql_con)
+        sql_dt = New DataTable
+        sql_dt.Clear()
+        sql_da.Fill(sql_dt)
+        Me.HomeDataGridView.DataSource = sql_dt
+        datagrid_fill_color_effect("inventory", Me.HomeDataGridView)
+        datagrif_fill_column_resize("inventory", Me.HomeDataGridView)
+        Me.low_inventory_low_stock.Text = HomeDataGridView.Rows.Count & " Low Stock"
+        Management.lbl_current_tab.Text = "Dashboard | Inventory Low"
+        clear_gridview_default_selection(Me.HomeDataGridView)
     End Sub
 End Class
