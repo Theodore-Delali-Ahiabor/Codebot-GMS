@@ -22,14 +22,13 @@ Partial Class Management_Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Home))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Home))
         Me.work_oders_due_panel = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.PictureBoxWorkOrders = New System.Windows.Forms.PictureBox()
         Me.lbl_work_orders_due = New System.Windows.Forms.Label()
         Me.work_order_overdue = New System.Windows.Forms.Label()
         Me.work_order_due_soon = New System.Windows.Forms.Label()
@@ -42,19 +41,20 @@ Partial Class Management_Home
         Me.Label13 = New System.Windows.Forms.Label()
         Me.low_inventory_out_of_stock = New System.Windows.Forms.Label()
         Me.low_inventory_panel = New System.Windows.Forms.Panel()
-        Me.PictureBoxInventory = New System.Windows.Forms.PictureBox()
         Me.activebar_inventory = New System.Windows.Forms.Button()
         Me.activebar_work_orders = New System.Windows.Forms.Button()
         Me.HomeDataGridView = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBoxInventory = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxWorkOrders = New System.Windows.Forms.PictureBox()
         Me.work_oders_due_panel.SuspendLayout()
-        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.low_inventory_panel.SuspendLayout()
-        CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'work_oders_due_panel
@@ -83,16 +83,6 @@ Partial Class Management_Home
         Me.Label7.Size = New System.Drawing.Size(12, 19)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "|"
-        '
-        'PictureBoxWorkOrders
-        '
-        Me.PictureBoxWorkOrders.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBoxWorkOrders.Image = CType(resources.GetObject("PictureBoxWorkOrders.Image"), System.Drawing.Image)
-        Me.PictureBoxWorkOrders.Location = New System.Drawing.Point(181, 3)
-        Me.PictureBoxWorkOrders.Name = "PictureBoxWorkOrders"
-        Me.PictureBoxWorkOrders.Size = New System.Drawing.Size(49, 50)
-        Me.PictureBoxWorkOrders.TabIndex = 9
-        Me.PictureBoxWorkOrders.TabStop = False
         '
         'lbl_work_orders_due
         '
@@ -229,16 +219,6 @@ Partial Class Management_Home
         Me.low_inventory_panel.Size = New System.Drawing.Size(235, 88)
         Me.low_inventory_panel.TabIndex = 0
         '
-        'PictureBoxInventory
-        '
-        Me.PictureBoxInventory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBoxInventory.Image = CType(resources.GetObject("PictureBoxInventory.Image"), System.Drawing.Image)
-        Me.PictureBoxInventory.Location = New System.Drawing.Point(171, 4)
-        Me.PictureBoxInventory.Name = "PictureBoxInventory"
-        Me.PictureBoxInventory.Size = New System.Drawing.Size(48, 50)
-        Me.PictureBoxInventory.TabIndex = 12
-        Me.PictureBoxInventory.TabStop = False
-        '
         'activebar_inventory
         '
         Me.activebar_inventory.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -373,6 +353,26 @@ Partial Class Management_Home
         Me.Button2.UseVisualStyleBackColor = False
         Me.Button2.Visible = False
         '
+        'PictureBoxInventory
+        '
+        Me.PictureBoxInventory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxInventory.Image = CType(resources.GetObject("PictureBoxInventory.Image"), System.Drawing.Image)
+        Me.PictureBoxInventory.Location = New System.Drawing.Point(171, 4)
+        Me.PictureBoxInventory.Name = "PictureBoxInventory"
+        Me.PictureBoxInventory.Size = New System.Drawing.Size(48, 50)
+        Me.PictureBoxInventory.TabIndex = 12
+        Me.PictureBoxInventory.TabStop = False
+        '
+        'PictureBoxWorkOrders
+        '
+        Me.PictureBoxWorkOrders.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxWorkOrders.Image = CType(resources.GetObject("PictureBoxWorkOrders.Image"), System.Drawing.Image)
+        Me.PictureBoxWorkOrders.Location = New System.Drawing.Point(181, 3)
+        Me.PictureBoxWorkOrders.Name = "PictureBoxWorkOrders"
+        Me.PictureBoxWorkOrders.Size = New System.Drawing.Size(49, 50)
+        Me.PictureBoxWorkOrders.TabIndex = 9
+        Me.PictureBoxWorkOrders.TabStop = False
+        '
         'Management_Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -395,15 +395,15 @@ Partial Class Management_Home
         Me.Text = "Home"
         Me.work_oders_due_panel.ResumeLayout(False)
         Me.work_oders_due_panel.PerformLayout()
-        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.low_inventory_panel.ResumeLayout(False)
         Me.low_inventory_panel.PerformLayout()
-        CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

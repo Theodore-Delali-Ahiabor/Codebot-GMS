@@ -184,9 +184,9 @@ Module Codebot_GMS_Module
         End Try
     End Sub
     'FILL THE DATAGRID WITH INFORMATIONS BASED ON THE SELECTED TEXT FROM A COMBO BOX
-    Public Sub datagrid_fill_filter(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef filter As String, ByRef filter_combox As ComboBox)
+    Public Sub datagrid_fill_filter(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef db_column As String, ByRef filter_combox As ComboBox)
         Try
-            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & filter & " = '" & filter_combox.Text & "' ORDER BY ID DESC", sql_con)
+            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & " = '" & filter_combox.Text & "' ORDER BY ID DESC", sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
             sql_da.Fill(sql_dt)
@@ -198,9 +198,9 @@ Module Codebot_GMS_Module
         End Try
     End Sub
     'FILL THE DATAGRID WITH INFORMATIONS BASED ON THE TEXT FROM A TEXT BOX
-    Public Sub datagrid_fill_filter_textbox(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef filter As String, ByRef filter_txt As TextBox)
+    Public Sub datagrid_fill_filter_textbox(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef db_column As String, ByRef filter_txt As TextBox)
         Try
-            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & filter & " = '" & filter_txt.Text & "' ORDER BY ID DESC", sql_con)
+            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & " = '" & filter_txt.Text & "' ORDER BY ID DESC", sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
             sql_da.Fill(sql_dt)
@@ -216,14 +216,13 @@ Module Codebot_GMS_Module
         Try
             Management_Home.activebar_work_orders.Visible = True
             Management_Home.activebar_inventory.Visible = False
-            sql_da = New MySqlDataAdapter("SELECT * FROM work_order_view WHERE Due_In < " & variable & " AND Progress_Status <>'" & "Done" & "' ORDER BY ID DESC ", sql_con)
+            sql_da = New MySqlDataAdapter("SELECT * FROM work_order_view WHERE Due_In < " & variable & " AND Progress_Status <> '" & "Done" & "' ORDER BY ID DESC ", sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
             sql_da.Fill(sql_dt)
             Management_Home.HomeDataGridView.DataSource = sql_dt
             datagrid_fill_color_effect("work_order_view", Management_Home.HomeDataGridView)
             Management.lbl_current_tab.Text = "Dashboard | Work Oders Due"
-            Management_Home.HomeDataGridView.Rows(0).Selected = False
             clear_gridview_default_selection(Management_Home.HomeDataGridView)
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -234,44 +233,49 @@ Module Codebot_GMS_Module
         Try
             If gridview_name.Rows.Count > 0 Then
                 gridview_name.Rows(0).Selected = False
-            Else
-
             End If
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
     End Sub
     'APPLY COLOR EFFECTS TO ROWS IN THE DATAGRID BASED ON THE TABLE IT IS
     Public Sub datagrid_fill_color_effect(ByRef db_table As String, ByRef gridview_name As DataGridView)
         Try
-            If db_table = "employee_view" Then
-                For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
-                    If gridview_name.Rows(i).Cells(7).Value.ToString = False Then
-                        gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
-                    Else
-                        'gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.PaleGreen
-                    End If
-                Next
-            ElseIf db_table = "inventory" Then
-                For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
-                    If gridview_name.Rows(i).Cells(7).Value < 11 Then
-                        gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
-                        If gridview_name.Rows(i).Cells(7).Value < 1 Then
+            If gridview_name.Rows.Count > 0 Then
+                If db_table = "employee_view" Then
+                    For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
+                        If gridview_name.Rows(i).Cells(7).Value.ToString = False Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
+                        Else
+                            'gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.PaleGreen
                         End If
-                    End If
-                Next
-            ElseIf db_table = "work_order_view" Then
-                For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
-                    If gridview_name.Rows(i).Cells(5).Value < 6 Then
-                        gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
+                    Next
+                ElseIf db_table = "inventory" Then
+                    For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
+                        If gridview_name.Rows(i).Cells(7).Value < 11 Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
+                            If gridview_name.Rows(i).Cells(7).Value < 1 Then
+                                gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
+                            End If
+                        End If
+                    Next
+                ElseIf db_table = "work_order_view" Then
+                    For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
+                        If gridview_name.Rows(i).Cells(5).Value < 6 And gridview_name.Rows(i).Cells(6).Value <> "Done" Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
 
-                        If gridview_name.Rows(i).Cells(5).Value < 1 Then
-                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
+                            If gridview_name.Rows(i).Cells(5).Value < 1 Then
+                                gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
+                            End If
+                        ElseIf gridview_name.Rows(i).Cells(6).Value = "Pending" Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
+                        ElseIf gridview_name.Rows(i).Cells(6).Value = "In Progress" Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
                         End If
-                    End If
-                Next
+                    Next
+                End If
             End If
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -295,15 +299,15 @@ Module Codebot_GMS_Module
             Management_Employees.cmb_employee_position_filter.Items.Clear()
             Management_Employees.cmb_employee_position_filter.Items.Add("All Roles")
             Management_Employees.cmb_employee_position_filter.SelectedIndex() = 0
-            'add_search_suggestion(Management_Employees.txt_employee_number_filter, "employee_view", "Phone")
             add_search_suggestion(Management_Employees.txt_employee_name_filter, "employee_view", "Name")
             add_combobox_items(Management_Employees.cmb_employee_position_filter, "employee_view", "Role")
             add_combobox_items(Management_Employees_Add_New.txt_new_position, "employee_view", "Role")
             'work order
             Management_Work_Order.cmb_work_order_status_filter.Items.Clear()
-            Management_Work_Order.cmb_work_order_assigned_to_filter.Items.Clear()
-            add_combobox_items(Management_Work_Order.cmb_work_order_status_filter, "work_order", "Status")
-            add_combobox_items(Management_Work_Order.cmb_work_order_assigned_to_filter, "employee_view", "Name")
+            Management_Work_Order.cmb_work_order_status_filter.Items.Add("All")
+            Management_Work_Order.cmb_work_order_status_filter.SelectedIndex() = 0
+            add_search_suggestion(Management_Work_Order.txt_work_order_automobile_name_filter, "work_order_view", "ID")
+            add_combobox_items(Management_Work_Order.cmb_work_order_status_filter, "work_order_view", "Progress_Status")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

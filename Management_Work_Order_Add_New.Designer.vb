@@ -37,16 +37,16 @@ Partial Class Management_Work_Order_Add_New
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_new_part_number = New System.Windows.Forms.TextBox()
         Me.txt_new_quantity = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btn_ = New System.Windows.Forms.Button()
+        Me.btn_new_work_order_new_automobile = New System.Windows.Forms.Button()
+        Me.btn_new_work_order_new_cusromer = New System.Windows.Forms.Button()
         Me.btn_new_item_cancel = New System.Windows.Forms.Button()
         Me.btn_new_item_save = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.btn_new_work_order_existing_cusromer = New System.Windows.Forms.Button()
+        Me.txt_work_order_new_customer = New System.Windows.Forms.TextBox()
+        Me.txt_work_order_new_automobile = New System.Windows.Forms.TextBox()
+        Me.btn_new_work_order_existing_automobile = New System.Windows.Forms.Button()
+        Me.cmb_work_order_new_assign = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.txt_new_birth_date = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -203,9 +203,9 @@ Partial Class Management_Work_Order_Add_New
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(29, 141)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 18)
+        Me.Label3.Size = New System.Drawing.Size(82, 18)
         Me.Label3.TabIndex = 86
-        Me.Label3.Text = "Authomobile"
+        Me.Label3.Text = "Automobile"
         '
         'txt_new_part_number
         '
@@ -232,45 +232,45 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_new_quantity.Size = New System.Drawing.Size(673, 198)
         Me.txt_new_quantity.TabIndex = 10
         '
-        'Button1
+        'btn_new_work_order_new_automobile
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_car_24
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(197, 165)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Button1.Size = New System.Drawing.Size(88, 33)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "NEW"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_new_work_order_new_automobile.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_work_order_new_automobile.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.btn_new_work_order_new_automobile.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_work_order_new_automobile.FlatAppearance.BorderSize = 0
+        Me.btn_new_work_order_new_automobile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_work_order_new_automobile.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_work_order_new_automobile.ForeColor = System.Drawing.Color.White
+        Me.btn_new_work_order_new_automobile.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_car_24
+        Me.btn_new_work_order_new_automobile.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_work_order_new_automobile.Location = New System.Drawing.Point(197, 165)
+        Me.btn_new_work_order_new_automobile.Name = "btn_new_work_order_new_automobile"
+        Me.btn_new_work_order_new_automobile.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_work_order_new_automobile.Size = New System.Drawing.Size(88, 33)
+        Me.btn_new_work_order_new_automobile.TabIndex = 5
+        Me.btn_new_work_order_new_automobile.Text = "NEW"
+        Me.btn_new_work_order_new_automobile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new_work_order_new_automobile.UseVisualStyleBackColor = False
         '
-        'btn_
+        'btn_new_work_order_new_cusromer
         '
-        Me.btn_.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.btn_.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_.FlatAppearance.BorderSize = 0
-        Me.btn_.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_.ForeColor = System.Drawing.Color.White
-        Me.btn_.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_customer_24
-        Me.btn_.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_.Location = New System.Drawing.Point(197, 44)
-        Me.btn_.Name = "btn_"
-        Me.btn_.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_.Size = New System.Drawing.Size(88, 33)
-        Me.btn_.TabIndex = 2
-        Me.btn_.Text = "NEW"
-        Me.btn_.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_.UseVisualStyleBackColor = False
+        Me.btn_new_work_order_new_cusromer.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_work_order_new_cusromer.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.btn_new_work_order_new_cusromer.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_work_order_new_cusromer.FlatAppearance.BorderSize = 0
+        Me.btn_new_work_order_new_cusromer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_work_order_new_cusromer.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_work_order_new_cusromer.ForeColor = System.Drawing.Color.White
+        Me.btn_new_work_order_new_cusromer.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_customer_24
+        Me.btn_new_work_order_new_cusromer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_work_order_new_cusromer.Location = New System.Drawing.Point(197, 44)
+        Me.btn_new_work_order_new_cusromer.Name = "btn_new_work_order_new_cusromer"
+        Me.btn_new_work_order_new_cusromer.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_work_order_new_cusromer.Size = New System.Drawing.Size(88, 33)
+        Me.btn_new_work_order_new_cusromer.TabIndex = 2
+        Me.btn_new_work_order_new_cusromer.Text = "NEW"
+        Me.btn_new_work_order_new_cusromer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new_work_order_new_cusromer.UseVisualStyleBackColor = False
         '
         'btn_new_item_cancel
         '
@@ -283,10 +283,10 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_item_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_new_item_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_new_item_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_item_cancel.Location = New System.Drawing.Point(563, 459)
+        Me.btn_new_item_cancel.Location = New System.Drawing.Point(563, 470)
         Me.btn_new_item_cancel.Name = "btn_new_item_cancel"
         Me.btn_new_item_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_item_cancel.Size = New System.Drawing.Size(141, 52)
+        Me.btn_new_item_cancel.Size = New System.Drawing.Size(141, 41)
         Me.btn_new_item_cancel.TabIndex = 15
         Me.btn_new_item_cancel.Text = "CANCEL"
         Me.btn_new_item_cancel.UseVisualStyleBackColor = False
@@ -302,10 +302,10 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_item_save.ForeColor = System.Drawing.Color.White
         Me.btn_new_item_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
         Me.btn_new_item_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_item_save.Location = New System.Drawing.Point(395, 459)
+        Me.btn_new_item_save.Location = New System.Drawing.Point(395, 470)
         Me.btn_new_item_save.Name = "btn_new_item_save"
         Me.btn_new_item_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_item_save.Size = New System.Drawing.Size(141, 52)
+        Me.btn_new_item_save.Size = New System.Drawing.Size(141, 41)
         Me.btn_new_item_save.TabIndex = 14
         Me.btn_new_item_save.Text = "SAVE"
         Me.btn_new_item_save.UseVisualStyleBackColor = False
@@ -330,76 +330,76 @@ Partial Class Management_Work_Order_Add_New
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btn_new_work_order_existing_cusromer
         '
-        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button3.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_customer_24
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.Location = New System.Drawing.Point(33, 44)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Button3.Size = New System.Drawing.Size(130, 33)
-        Me.Button3.TabIndex = 1
-        Me.Button3.Text = "EXISTING"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btn_new_work_order_existing_cusromer.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_work_order_existing_cusromer.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btn_new_work_order_existing_cusromer.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_work_order_existing_cusromer.FlatAppearance.BorderSize = 0
+        Me.btn_new_work_order_existing_cusromer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_work_order_existing_cusromer.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_work_order_existing_cusromer.ForeColor = System.Drawing.Color.White
+        Me.btn_new_work_order_existing_cusromer.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_customer_24
+        Me.btn_new_work_order_existing_cusromer.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_work_order_existing_cusromer.Location = New System.Drawing.Point(33, 44)
+        Me.btn_new_work_order_existing_cusromer.Name = "btn_new_work_order_existing_cusromer"
+        Me.btn_new_work_order_existing_cusromer.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_work_order_existing_cusromer.Size = New System.Drawing.Size(130, 33)
+        Me.btn_new_work_order_existing_cusromer.TabIndex = 1
+        Me.btn_new_work_order_existing_cusromer.Text = "EXISTING"
+        Me.btn_new_work_order_existing_cusromer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new_work_order_existing_cusromer.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'txt_work_order_new_customer
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(32, 88)
-        Me.TextBox1.MaxLength = 35
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(309, 33)
-        Me.TextBox1.TabIndex = 3
+        Me.txt_work_order_new_customer.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_work_order_new_customer.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_work_order_new_customer.Location = New System.Drawing.Point(32, 88)
+        Me.txt_work_order_new_customer.MaxLength = 35
+        Me.txt_work_order_new_customer.Name = "txt_work_order_new_customer"
+        Me.txt_work_order_new_customer.Size = New System.Drawing.Size(309, 33)
+        Me.txt_work_order_new_customer.TabIndex = 3
         '
-        'TextBox2
+        'txt_work_order_new_automobile
         '
-        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox2.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(31, 211)
-        Me.TextBox2.MaxLength = 35
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(309, 33)
-        Me.TextBox2.TabIndex = 6
+        Me.txt_work_order_new_automobile.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_work_order_new_automobile.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_work_order_new_automobile.Location = New System.Drawing.Point(31, 211)
+        Me.txt_work_order_new_automobile.MaxLength = 35
+        Me.txt_work_order_new_automobile.Name = "txt_work_order_new_automobile"
+        Me.txt_work_order_new_automobile.Size = New System.Drawing.Size(309, 33)
+        Me.txt_work_order_new_automobile.TabIndex = 6
         '
-        'Button4
+        'btn_new_work_order_existing_automobile
         '
-        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button4.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_car_24
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button4.Location = New System.Drawing.Point(31, 165)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Button4.Size = New System.Drawing.Size(130, 33)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "EXISTING"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btn_new_work_order_existing_automobile.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_work_order_existing_automobile.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btn_new_work_order_existing_automobile.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_work_order_existing_automobile.FlatAppearance.BorderSize = 0
+        Me.btn_new_work_order_existing_automobile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_work_order_existing_automobile.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_work_order_existing_automobile.ForeColor = System.Drawing.Color.White
+        Me.btn_new_work_order_existing_automobile.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_car_24
+        Me.btn_new_work_order_existing_automobile.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_work_order_existing_automobile.Location = New System.Drawing.Point(31, 165)
+        Me.btn_new_work_order_existing_automobile.Name = "btn_new_work_order_existing_automobile"
+        Me.btn_new_work_order_existing_automobile.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_work_order_existing_automobile.Size = New System.Drawing.Size(130, 33)
+        Me.btn_new_work_order_existing_automobile.TabIndex = 4
+        Me.btn_new_work_order_existing_automobile.Text = "EXISTING"
+        Me.btn_new_work_order_existing_automobile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new_work_order_existing_automobile.UseVisualStyleBackColor = False
         '
-        'ComboBox2
+        'cmb_work_order_new_assign
         '
-        Me.ComboBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ComboBox2.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(32, 294)
-        Me.ComboBox2.MaxLength = 25
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(219, 33)
-        Me.ComboBox2.TabIndex = 102
+        Me.cmb_work_order_new_assign.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cmb_work_order_new_assign.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_work_order_new_assign.FormattingEnabled = True
+        Me.cmb_work_order_new_assign.Location = New System.Drawing.Point(32, 294)
+        Me.cmb_work_order_new_assign.MaxLength = 25
+        Me.cmb_work_order_new_assign.Name = "cmb_work_order_new_assign"
+        Me.cmb_work_order_new_assign.Size = New System.Drawing.Size(219, 33)
+        Me.cmb_work_order_new_assign.TabIndex = 102
         '
         'ComboBox1
         '
@@ -452,12 +452,12 @@ Partial Class Management_Work_Order_Add_New
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.txt_new_birth_date)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btn_new_work_order_existing_automobile)
+        Me.Controls.Add(Me.btn_new_work_order_existing_cusromer)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.btn_)
+        Me.Controls.Add(Me.btn_new_work_order_new_automobile)
+        Me.Controls.Add(Me.cmb_work_order_new_assign)
+        Me.Controls.Add(Me.btn_new_work_order_new_cusromer)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
@@ -474,8 +474,8 @@ Partial Class Management_Work_Order_Add_New
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txt_new_quantity)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_work_order_new_automobile)
+        Me.Controls.Add(Me.txt_work_order_new_customer)
         Me.Controls.Add(Me.txt_new_part_number)
         Me.Name = "Management_Work_Order_Add_New"
         Me.Text = "Management_Work_Order_Add_New"
@@ -501,14 +501,14 @@ Partial Class Management_Work_Order_Add_New
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_new_part_number As TextBox
     Friend WithEvents txt_new_quantity As TextBox
-    Friend WithEvents btn_ As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_new_work_order_new_cusromer As Button
+    Friend WithEvents btn_new_work_order_new_automobile As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button4 As Button
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents btn_new_work_order_existing_cusromer As Button
+    Friend WithEvents txt_work_order_new_customer As TextBox
+    Friend WithEvents txt_work_order_new_automobile As TextBox
+    Friend WithEvents btn_new_work_order_existing_automobile As Button
+    Friend WithEvents cmb_work_order_new_assign As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents txt_new_birth_date As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker

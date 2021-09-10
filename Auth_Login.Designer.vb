@@ -75,11 +75,11 @@ Partial Class Auth_Login
         Me.txt_login_username.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_login_username.BackColor = System.Drawing.Color.White
         Me.txt_login_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_login_username.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_login_username.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_login_username.ForeColor = System.Drawing.Color.DarkSlateGray
         Me.txt_login_username.Location = New System.Drawing.Point(246, 221)
         Me.txt_login_username.Name = "txt_login_username"
-        Me.txt_login_username.Size = New System.Drawing.Size(309, 35)
+        Me.txt_login_username.Size = New System.Drawing.Size(309, 31)
         Me.txt_login_username.TabIndex = 15
         Me.txt_login_username.WordWrap = False
         '
@@ -88,11 +88,11 @@ Partial Class Auth_Login
         Me.txt_login_password.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_login_password.BackColor = System.Drawing.Color.White
         Me.txt_login_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_login_password.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_login_password.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_login_password.ForeColor = System.Drawing.Color.DarkSlateGray
         Me.txt_login_password.Location = New System.Drawing.Point(246, 308)
         Me.txt_login_password.Name = "txt_login_password"
-        Me.txt_login_password.Size = New System.Drawing.Size(309, 35)
+        Me.txt_login_password.Size = New System.Drawing.Size(309, 31)
         Me.txt_login_password.TabIndex = 16
         Me.txt_login_password.UseSystemPasswordChar = True
         '

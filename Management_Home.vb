@@ -73,4 +73,14 @@ Public Class Management_Home
         Management.lbl_current_tab.Text = "Dashboard | Inventory Low"
         clear_gridview_default_selection(Me.HomeDataGridView)
     End Sub
+
+    Private Sub HomeDataGridView_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles HomeDataGridView.ColumnHeaderMouseClick
+        If activebar_work_orders.Visible = True Then
+            datagrid_fill_color_effect("work_order_view", Me.HomeDataGridView)
+            clear_gridview_default_selection(Me.HomeDataGridView)
+        ElseIf activebar_inventory.Visible = True Then
+            datagrid_fill_color_effect("inventory", Me.HomeDataGridView)
+            clear_gridview_default_selection(Me.HomeDataGridView)
+        End If
+    End Sub
 End Class

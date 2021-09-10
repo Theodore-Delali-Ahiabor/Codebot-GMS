@@ -85,6 +85,7 @@ Public Class Management_Inventory
     End Sub
 
     Private Sub InventoryDataGridView_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles InventoryDataGridView.ColumnHeaderMouseClick
-        datagrid_fill_color_effect("inventory", InventoryDataGridView)
+        datagrid_fill_color_effect("inventory", Me.InventoryDataGridView)
+        clear_gridview_default_selection(Me.InventoryDataGridView)
     End Sub
 End Class

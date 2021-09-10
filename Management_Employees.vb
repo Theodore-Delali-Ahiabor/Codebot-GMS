@@ -114,7 +114,8 @@ Public Class Management_Employees
     End Sub
 
     Private Sub EmployeesDataGridView_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles EmployeesDataGridView.ColumnHeaderMouseClick
-        datagrid_fill_color_effect("employee_view", EmployeesDataGridView)
+        datagrid_fill_color_effect("employee_view", Me.EmployeesDataGridView)
+        clear_gridview_default_selection(Me.EmployeesDataGridView)
     End Sub
 
     Private Sub btn_activate_employee_Click(sender As Object, e As EventArgs) Handles btn_activate_employee.Click

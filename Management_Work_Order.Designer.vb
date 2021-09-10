@@ -28,14 +28,24 @@ Partial Class Management_Work_Order
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Work_Order))
         Me.WorkOrderDataGridView = New System.Windows.Forms.DataGridView()
-        Me.cmb_work_order_assigned_to_filter = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.cmb_work_order_status_filter = New System.Windows.Forms.ComboBox()
-        Me.btn_add_new_work_order = New System.Windows.Forms.Button()
         Me.txt_work_order_automobile_name_filter = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btn_add_new_work_order = New System.Windows.Forms.Button()
         CType(Me.WorkOrderDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'WorkOrderDataGridView
@@ -71,7 +81,7 @@ Partial Class Management_Work_Order
         Me.WorkOrderDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.WorkOrderDataGridView.EnableHeadersVisualStyles = False
         Me.WorkOrderDataGridView.GridColor = System.Drawing.Color.Silver
-        Me.WorkOrderDataGridView.Location = New System.Drawing.Point(32, 118)
+        Me.WorkOrderDataGridView.Location = New System.Drawing.Point(45, 89)
         Me.WorkOrderDataGridView.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.WorkOrderDataGridView.Name = "WorkOrderDataGridView"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -96,19 +106,183 @@ Partial Class Management_Work_Order
         Me.WorkOrderDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.WorkOrderDataGridView.RowTemplate.Height = 38
         Me.WorkOrderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.WorkOrderDataGridView.Size = New System.Drawing.Size(1026, 379)
+        Me.WorkOrderDataGridView.Size = New System.Drawing.Size(1005, 347)
         Me.WorkOrderDataGridView.TabIndex = 38
         '
-        'cmb_work_order_assigned_to_filter
+        'cmb_work_order_status_filter
         '
-        Me.cmb_work_order_assigned_to_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmb_work_order_assigned_to_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_work_order_assigned_to_filter.FormattingEnabled = True
-        Me.cmb_work_order_assigned_to_filter.Location = New System.Drawing.Point(605, 61)
-        Me.cmb_work_order_assigned_to_filter.Margin = New System.Windows.Forms.Padding(10)
-        Me.cmb_work_order_assigned_to_filter.Name = "cmb_work_order_assigned_to_filter"
-        Me.cmb_work_order_assigned_to_filter.Size = New System.Drawing.Size(222, 29)
-        Me.cmb_work_order_assigned_to_filter.TabIndex = 64
+        Me.cmb_work_order_status_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cmb_work_order_status_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_work_order_status_filter.FormattingEnabled = True
+        Me.cmb_work_order_status_filter.Location = New System.Drawing.Point(828, 46)
+        Me.cmb_work_order_status_filter.Margin = New System.Windows.Forms.Padding(10)
+        Me.cmb_work_order_status_filter.Name = "cmb_work_order_status_filter"
+        Me.cmb_work_order_status_filter.Size = New System.Drawing.Size(222, 29)
+        Me.cmb_work_order_status_filter.TabIndex = 59
+        '
+        'txt_work_order_automobile_name_filter
+        '
+        Me.txt_work_order_automobile_name_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_work_order_automobile_name_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txt_work_order_automobile_name_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txt_work_order_automobile_name_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_work_order_automobile_name_filter.Location = New System.Drawing.Point(593, 46)
+        Me.txt_work_order_automobile_name_filter.Name = "txt_work_order_automobile_name_filter"
+        Me.txt_work_order_automobile_name_filter.Size = New System.Drawing.Size(222, 29)
+        Me.txt_work_order_automobile_name_filter.TabIndex = 61
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Location = New System.Drawing.Point(392, 493)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(658, 46)
+        Me.Panel1.TabIndex = 64
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button3.BackColor = System.Drawing.Color.Gold
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(209, 0)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button3.Size = New System.Drawing.Size(16, 17)
+        Me.Button3.TabIndex = 45
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button2.BackColor = System.Drawing.Color.White
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(18, -1)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button2.Size = New System.Drawing.Size(16, 17)
+        Me.Button2.TabIndex = 44
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.BackColor = System.Drawing.Color.Coral
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(18, 29)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button1.Size = New System.Drawing.Size(16, 17)
+        Me.Button1.TabIndex = 43
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(231, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(136, 19)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Pending Work Order"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(40, 29)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(139, 19)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Overdue Work Order"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(40, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(119, 19)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Done Work Order"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(231, 27)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(136, 19)
+        Me.Label6.TabIndex = 2
+        Me.Label6.Text = "Selected Work Order"
+        '
+        'Button4
+        '
+        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button4.BackColor = System.Drawing.Color.CadetBlue
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(209, 27)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button4.Size = New System.Drawing.Size(16, 17)
+        Me.Button4.TabIndex = 45
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(448, 1)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(151, 19)
+        Me.Label7.TabIndex = 2
+        Me.Label7.Text = "Inprogress Work Order"
+        '
+        'Button5
+        '
+        Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button5.BackColor = System.Drawing.Color.LightGreen
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(426, 1)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button5.Size = New System.Drawing.Size(16, 17)
+        Me.Button5.TabIndex = 45
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -118,27 +292,12 @@ Partial Class Management_Work_Order
         Me.Label3.ForeColor = System.Drawing.Color.Teal
         Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label3.Location = New System.Drawing.Point(367, 32)
+        Me.Label3.Location = New System.Drawing.Point(590, 17)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label3.Size = New System.Drawing.Size(146, 27)
+        Me.Label3.Size = New System.Drawing.Size(177, 27)
         Me.Label3.TabIndex = 63
-        Me.Label3.Text = "Automobile       "
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Teal
-        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label1.Location = New System.Drawing.Point(602, 32)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label1.Size = New System.Drawing.Size(160, 27)
-        Me.Label1.TabIndex = 62
-        Me.Label1.Text = "Assigned To :       "
+        Me.Label3.Text = "Work Order ID       "
         '
         'Label2
         '
@@ -148,23 +307,12 @@ Partial Class Management_Work_Order
         Me.Label2.ForeColor = System.Drawing.Color.Teal
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label2.Location = New System.Drawing.Point(833, 34)
+        Me.Label2.Location = New System.Drawing.Point(825, 19)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(5)
         Me.Label2.Size = New System.Drawing.Size(191, 27)
         Me.Label2.TabIndex = 60
         Me.Label2.Text = "Progress Status      "
-        '
-        'cmb_work_order_status_filter
-        '
-        Me.cmb_work_order_status_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmb_work_order_status_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_work_order_status_filter.FormattingEnabled = True
-        Me.cmb_work_order_status_filter.Location = New System.Drawing.Point(836, 61)
-        Me.cmb_work_order_status_filter.Margin = New System.Windows.Forms.Padding(10)
-        Me.cmb_work_order_status_filter.Name = "cmb_work_order_status_filter"
-        Me.cmb_work_order_status_filter.Size = New System.Drawing.Size(222, 29)
-        Me.cmb_work_order_status_filter.TabIndex = 59
         '
         'btn_add_new_work_order
         '
@@ -176,7 +324,7 @@ Partial Class Management_Work_Order
         Me.btn_add_new_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_add_new_work_order.Image = CType(resources.GetObject("btn_add_new_work_order.Image"), System.Drawing.Image)
         Me.btn_add_new_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_add_new_work_order.Location = New System.Drawing.Point(32, 18)
+        Me.btn_add_new_work_order.Location = New System.Drawing.Point(45, 18)
         Me.btn_add_new_work_order.Name = "btn_add_new_work_order"
         Me.btn_add_new_work_order.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
         Me.btn_add_new_work_order.Size = New System.Drawing.Size(105, 46)
@@ -184,26 +332,14 @@ Partial Class Management_Work_Order
         Me.btn_add_new_work_order.Text = "    New"
         Me.btn_add_new_work_order.UseVisualStyleBackColor = False
         '
-        'txt_work_order_automobile_name_filter
-        '
-        Me.txt_work_order_automobile_name_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_work_order_automobile_name_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txt_work_order_automobile_name_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txt_work_order_automobile_name_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_work_order_automobile_name_filter.Location = New System.Drawing.Point(370, 61)
-        Me.txt_work_order_automobile_name_filter.Name = "txt_work_order_automobile_name_filter"
-        Me.txt_work_order_automobile_name_filter.Size = New System.Drawing.Size(222, 29)
-        Me.txt_work_order_automobile_name_filter.TabIndex = 61
-        '
         'Management_Work_Order
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1101, 538)
-        Me.Controls.Add(Me.cmb_work_order_assigned_to_filter)
+        Me.ClientSize = New System.Drawing.Size(1101, 523)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cmb_work_order_status_filter)
         Me.Controls.Add(Me.btn_add_new_work_order)
@@ -215,16 +351,27 @@ Partial Class Management_Work_Order
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Management_Work_Order"
         CType(Me.WorkOrderDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents WorkOrderDataGridView As DataGridView
-    Friend WithEvents cmb_work_order_assigned_to_filter As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents cmb_work_order_status_filter As ComboBox
     Friend WithEvents btn_add_new_work_order As Button
     Friend WithEvents txt_work_order_automobile_name_filter As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
 End Class
