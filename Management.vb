@@ -93,22 +93,19 @@ Public Class Management
 
     Private Sub btn_refresh_Click(sender As Object, e As EventArgs) Handles btn_refresh.Click
         If btn_home.BackColor = Color.CadetBlue Then
-            btn_home_Click(sender, e)
-            lbl_current_tab.Text = "Dashboard | Work Oders Due"
+            Me.btn_home_Click(Me.btn_home, EventArgs.Empty)
         ElseIf btn_employees.BackColor = Color.CadetBlue Then
-            btn_employees_Click(sender, e)
-            lbl_current_tab.Text = "Employees"
+            Me.btn_employees_Click(Me.btn_employees, EventArgs.Empty)
         ElseIf btn_inventory.BackColor = Color.CadetBlue Then
-            btn_inventory_Click(sender, e)
-            lbl_current_tab.Text = "Inventory"
+            Me.btn_inventory_Click(Me.btn_inventory, EventArgs.Empty)
         ElseIf btn_work_orders.BackColor = Color.CadetBlue Then
-            btn_work_orders_Click(sender, e)
+            Me.btn_work_orders_Click(Me.btn_work_orders, EventArgs.Empty)
         ElseIf btn_market.BackColor = Color.CadetBlue Then
-            btn_market_Click(sender, e)
+            Me.btn_market_Click(Me.btn_market, EventArgs.Empty)
         ElseIf btn_calenders.BackColor = Color.CadetBlue Then
-            btn_calenders_Click(sender, e)
+            Me.btn_calenders_Click(Me.btn_calenders, EventArgs.Empty)
         ElseIf btn_invoice.BackColor = Color.CadetBlue Then
-            btn_invoice_Click(sender, e)
+            Me.btn_invoice_Click(Me.btn_invoice, EventArgs.Empty)
         End If
     End Sub
 

@@ -32,6 +32,11 @@ Codebot_GMS
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_checkmark_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Codebot_GMS.My.Resources.Resources.icons8_customer_24">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -93,6 +98,16 @@ Codebot_GMS
 </summary>
 </member>
 <member name="P:Codebot_GMS.My.Resources.Resources.icons8_submit_for_approval_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_toggle_off_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_toggle_on_32">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

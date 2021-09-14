@@ -31,12 +31,12 @@ Public Class Management_Employees
     End Function
 
     Private Sub btn_edit_employee_Click(sender As Object, e As EventArgs) Handles btn_edit_employee.Click
-        sidebar_form_loader(Management_Employees_Add_New)
-        Management.lbl_current_tab.Text = "Employees | Edit User"
-        Management_Employees_Add_New.btn_new_user_save.Text = "UPDATE"
-
         Try
             If EmployeesDataGridView.SelectedRows.Count > 0 Then
+                sidebar_form_loader(Management_Employees_Add_New)
+                Management.lbl_current_tab.Text = "Employees | Edit User"
+                Management_Employees_Add_New.btn_new_user_save.Text = "UPDATE"
+
                 sql_da = New MySqlDataAdapter("SELECT * FROM employee WHERE ID = '" & EmployeesDataGridView.CurrentRow.Cells(0).Value.ToString() & "'", sql_con)
                 sql_dt = New DataTable
                 sql_dt.Clear()
@@ -72,11 +72,7 @@ Public Class Management_Employees
                 Management.btn_management_message.Text = "No Row was selected"
                 Management.btn_management_message.Show()
                 message(Management.btn_management_message, "warning")
-                '
-                Management.sidebar_active(Management.btn_employees)
-                sidebar_form_loader(Me)
-                datagrid_fill_default("employee_view", EmployeesDataGridView)
-                'datagrif_fill_column_resize("employee_view")
+
             End If
 
         Catch ex As Exception
@@ -124,7 +120,7 @@ Public Class Management_Employees
                 If Me.EmployeesDataGridView.CurrentRow.Cells(7).Value.ToString = True Then
                     Management.btn_management_message.Text = "Employee already active"
                     Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "success")
+                    message(Management.btn_management_message, "information")
                 Else
                     Dim repos As DialogResult = MessageBox.Show("You are about to Activate Employee '" & Me.EmployeesDataGridView.CurrentRow.Cells(1).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then
@@ -139,7 +135,7 @@ Public Class Management_Employees
                     End If
                 End If
             Else
-                Management.btn_management_message.Text = "No row was selected"
+                Management.btn_management_message.Text = "No Employee selected"
                 Management.btn_management_message.Show()
                 message(Management.btn_management_message, "warning")
             End If
@@ -154,7 +150,7 @@ Public Class Management_Employees
                 If Me.EmployeesDataGridView.CurrentRow.Cells(7).Value.ToString = False Then
                     Management.btn_management_message.Text = "Employee already Inactive"
                     Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "success")
+                    message(Management.btn_management_message, "information")
                 Else
                     Dim repos As DialogResult = MessageBox.Show("You are about to Deactivate Employee '" & Me.EmployeesDataGridView.CurrentRow.Cells(1).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then
@@ -169,7 +165,7 @@ Public Class Management_Employees
                     End If
                 End If
             Else
-                Management.btn_management_message.Text = "No row was selected"
+                Management.btn_management_message.Text = "No Employee selected"
                 Management.btn_management_message.Show()
                 message(Management.btn_management_message, "warning")
             End If

@@ -63,11 +63,6 @@ Public Class Management_Inventory
                 Management.btn_management_message.Text = "No Row was selected"
                 Management.btn_management_message.Show()
                 message(Management.btn_management_message, "warning")
-                '
-                Management.sidebar_active(Management.btn_inventory)
-                sidebar_form_loader(Me)
-                datagrid_fill_default("inventory", InventoryDataGridView)
-                'datagrif_fill_column_resize()
             End If
         Catch ex As Exception
             MsgBox(ex.Message)

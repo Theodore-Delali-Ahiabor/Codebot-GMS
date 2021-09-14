@@ -318,5 +318,14 @@
   <ItemGroup>
     <None Include="Resources\smiling-mechanic-with-arms-crossed-spanner.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-toggle-off-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-toggle-on-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-checkmark-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

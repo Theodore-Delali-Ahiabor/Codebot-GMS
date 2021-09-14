@@ -48,9 +48,8 @@ Partial Class Auth
         Me.btn_auth_message.Dock = System.Windows.Forms.DockStyle.Top
         Me.btn_auth_message.FlatAppearance.BorderSize = 0
         Me.btn_auth_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_auth_message.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_auth_message.Font = New System.Drawing.Font("Copperplate Gothic Light", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_auth_message.ForeColor = System.Drawing.Color.Snow
-        Me.btn_auth_message.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
         Me.btn_auth_message.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btn_auth_message.Location = New System.Drawing.Point(0, 0)
         Me.btn_auth_message.Name = "btn_auth_message"

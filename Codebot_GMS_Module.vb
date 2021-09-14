@@ -268,9 +268,11 @@ Module Codebot_GMS_Module
                                 gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
                             End If
                         ElseIf gridview_name.Rows(i).Cells(6).Value = "Pending" Then
-                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Silver
                         ElseIf gridview_name.Rows(i).Cells(6).Value = "In Progress" Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
+                        ElseIf gridview_name.Rows(i).Cells(6).Value = "Done" Then
+                            gridview_name.Rows(i).Cells(5).Value = 0
                         End If
                     Next
                 End If
@@ -337,13 +339,15 @@ Module Codebot_GMS_Module
                 gridview_name.Columns(7).Width = 60   'Stock
                 gridview_name.Columns(8).Width = 80   'Unit cost
             ElseIf db_table = "work_order_view" Then
-                gridview_name.Columns(0).Width = 70
-                gridview_name.Columns(1).Width = 210
-                gridview_name.Columns(2).Width = 220
-                gridview_name.Columns(3).Width = 180
-                gridview_name.Columns(4).Width = 200
-                gridview_name.Columns(5).Width = 60
-                gridview_name.Columns(6).Width = 150 '
+                gridview_name.Columns(0).Width = 50
+                gridview_name.Columns(1).Width = 170
+                gridview_name.Columns(2).Width = 180
+                gridview_name.Columns(3).Width = 170
+                gridview_name.Columns(4).Width = 300
+                gridview_name.Columns(5).Width = 100
+                gridview_name.Columns(5).HeaderText = "Due In / Days"
+                gridview_name.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                gridview_name.Columns(6).Width = 120 '
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
