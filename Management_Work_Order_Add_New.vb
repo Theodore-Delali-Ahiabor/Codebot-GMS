@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Management_Work_Order_Add_New
+    Public customer, automobile As Integer
     Private Sub btn_new_work_order_new_cusromer_Click(sender As Object, e As EventArgs) Handles btn_new_work_order_new_cusromer.Click
         Management_Work_Order_Add_New_Customer.customer_new_datails_panel.Dock = DockStyle.Fill
         Management_Work_Order_Add_New_Customer.customer_select_edit_panel.Visible = False
@@ -22,6 +23,31 @@ Public Class Management_Work_Order_Add_New
     End Sub
 
     Private Sub btn_new_item_save_Click(sender As Object, e As EventArgs) Handles btn_new_item_save.Click
+        Try
+            If txt_work_order_new_customer.Text <> "" And txt_work_order_new_automobile.Text <> "" And txt_new_work_order_technicians.Text <> "" And
+           txt_new_work_order_services.Text <> "" And txt_new_work_order_date_in.Checked = True And txt_new_work_order_date_out.Checked = True And
+           txt_new_work_order_mileage.Text <> "" And txt_new_work_order_progress_stats.Text <> "" Then
+                Dim repos As DialogResult = MessageBox.Show("You are about to Add a new Work Order, are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                If repos = DialogResult.Yes Then
+                    sql_ds = New DataSet
+                    sql_da = New MySqlDataAdapter("INSERT INTO work_order(Customer,Automobile,Technician,Services,Date_In,Date_Due_Out,Mileage,Status)
+                            VALUES('" & customer & "','" & automobile & "','" & txt_new_work_order_technicians.Text & "', '" & txt_new_work_order_services.Text & "', '" & txt_new_work_order_date_in.Text & "',
+                            '" & txt_new_work_order_date_out.Text & "', '" & txt_new_work_order_mileage.Text & "', '" & txt_new_work_order_progress_stats.Text & "')", sql_con)
+                    sql_da.Fill(sql_ds, "work_order")
+                    sidebar_form_loader(Management_Work_Order)
+                    datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)
+                    Management.btn_management_message.Text = "Work Order Added Successflly"
+                    Management.btn_management_message.Show()
+                    message(Management.btn_management_message, "success")
+                End If
+            Else
+                Management.btn_management_message.Text = "Please fill out all required (*) fields"
+                Management.btn_management_message.Show()
+                message(Management.btn_management_message, "warning")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 
@@ -41,5 +67,23 @@ Public Class Management_Work_Order_Add_New
         datagrid_fill_default("customer_info", Management_Work_Order_Add_New_Customer.CustomerDataGridView)
         Management_Work_Order_Add_New_Customer.Show()
         Management_Work_Order_Add_New_Customer.CustomerDataGridView.Rows(0).Selected = True
+    End Sub
+
+    Private Sub work_order_clear_customer_Click(sender As Object, e As EventArgs) Handles work_order_clear_customer.Click
+        txt_work_order_new_customer.Clear()
+    End Sub
+
+    Private Sub work_order_cleartechnician_Click(sender As Object, e As EventArgs) Handles work_order_cleartechnician.Click
+        txt_new_work_order_technicians.Clear()
+    End Sub
+
+    Private Sub work_order_clear_automobile_Click(sender As Object, e As EventArgs) Handles work_order_clear_automobile.Click
+        txt_work_order_new_automobile.Clear()
+    End Sub
+
+    Private Sub btn_new_work_order_add_technician_Click(sender As Object, e As EventArgs) Handles btn_new_work_order_add_technician.Click
+        datagrid_fill_default("employee_view", Management_Work_Order_Add_New_Technician.TechnicianDataGridView)
+        Management_Work_Order_Add_New_Technician.TechnicianDataGridView.Rows(0).Selected = True
+        Management_Work_Order_Add_New_Technician.Show()
     End Sub
 End Class

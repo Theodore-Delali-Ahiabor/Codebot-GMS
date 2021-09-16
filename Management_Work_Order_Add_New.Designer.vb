@@ -36,12 +36,12 @@ Partial Class Management_Work_Order_Add_New
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_new_work_order_technicians = New System.Windows.Forms.TextBox()
-        Me.txt_new_quantity = New System.Windows.Forms.TextBox()
+        Me.txt_new_work_order_services = New System.Windows.Forms.TextBox()
         Me.txt_work_order_new_customer = New System.Windows.Forms.TextBox()
         Me.txt_work_order_new_automobile = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.txt_new_birth_date = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.txt_new_work_order_progress_stats = New System.Windows.Forms.ComboBox()
+        Me.txt_new_work_order_date_in = New System.Windows.Forms.DateTimePicker()
+        Me.txt_new_work_order_date_out = New System.Windows.Forms.DateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txt_new_work_order_mileage = New System.Windows.Forms.TextBox()
         Me.btn_new_work_order_existing_automobile = New System.Windows.Forms.Button()
@@ -50,6 +50,9 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_work_order_new_automobile = New System.Windows.Forms.Button()
         Me.btn_new_work_order_new_cusromer = New System.Windows.Forms.Button()
         Me.btn_new_item_cancel = New System.Windows.Forms.Button()
+        Me.work_order_cleartechnician = New System.Windows.Forms.Label()
+        Me.work_order_clear_automobile = New System.Windows.Forms.Label()
+        Me.work_order_clear_customer = New System.Windows.Forms.Label()
         Me.btn_new_item_save = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -220,18 +223,18 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_new_work_order_technicians.Size = New System.Drawing.Size(308, 144)
         Me.txt_new_work_order_technicians.TabIndex = 9
         '
-        'txt_new_quantity
+        'txt_new_work_order_services
         '
-        Me.txt_new_quantity.AcceptsReturn = True
-        Me.txt_new_quantity.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_new_quantity.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_quantity.Location = New System.Drawing.Point(406, 45)
-        Me.txt_new_quantity.MaxLength = 5000
-        Me.txt_new_quantity.Multiline = True
-        Me.txt_new_quantity.Name = "txt_new_quantity"
-        Me.txt_new_quantity.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txt_new_quantity.Size = New System.Drawing.Size(673, 200)
-        Me.txt_new_quantity.TabIndex = 10
+        Me.txt_new_work_order_services.AcceptsReturn = True
+        Me.txt_new_work_order_services.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_work_order_services.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_work_order_services.Location = New System.Drawing.Point(406, 45)
+        Me.txt_new_work_order_services.MaxLength = 5000
+        Me.txt_new_work_order_services.Multiline = True
+        Me.txt_new_work_order_services.Name = "txt_new_work_order_services"
+        Me.txt_new_work_order_services.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txt_new_work_order_services.Size = New System.Drawing.Size(673, 200)
+        Me.txt_new_work_order_services.TabIndex = 10
         '
         'txt_work_order_new_customer
         '
@@ -253,48 +256,48 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_work_order_new_automobile.Size = New System.Drawing.Size(309, 33)
         Me.txt_work_order_new_automobile.TabIndex = 6
         '
-        'ComboBox1
+        'txt_new_work_order_progress_stats
         '
-        Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ComboBox1.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(770, 379)
-        Me.ComboBox1.MaxLength = 25
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(309, 33)
-        Me.ComboBox1.TabIndex = 13
+        Me.txt_new_work_order_progress_stats.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_work_order_progress_stats.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_work_order_progress_stats.FormattingEnabled = True
+        Me.txt_new_work_order_progress_stats.Location = New System.Drawing.Point(770, 379)
+        Me.txt_new_work_order_progress_stats.MaxLength = 25
+        Me.txt_new_work_order_progress_stats.Name = "txt_new_work_order_progress_stats"
+        Me.txt_new_work_order_progress_stats.Size = New System.Drawing.Size(309, 33)
+        Me.txt_new_work_order_progress_stats.TabIndex = 13
         '
-        'txt_new_birth_date
+        'txt_new_work_order_date_in
         '
-        Me.txt_new_birth_date.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_new_birth_date.Checked = False
-        Me.txt_new_birth_date.CustomFormat = ""
-        Me.txt_new_birth_date.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.txt_new_birth_date.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_birth_date.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txt_new_birth_date.Location = New System.Drawing.Point(406, 295)
-        Me.txt_new_birth_date.MaxDate = New Date(2029, 12, 31, 0, 0, 0, 0)
-        Me.txt_new_birth_date.MinDate = New Date(2021, 1, 1, 0, 0, 0, 0)
-        Me.txt_new_birth_date.Name = "txt_new_birth_date"
-        Me.txt_new_birth_date.Size = New System.Drawing.Size(308, 33)
-        Me.txt_new_birth_date.TabIndex = 11
-        Me.txt_new_birth_date.Value = New Date(2021, 9, 4, 0, 0, 0, 0)
+        Me.txt_new_work_order_date_in.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_work_order_date_in.Checked = False
+        Me.txt_new_work_order_date_in.CustomFormat = ""
+        Me.txt_new_work_order_date_in.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.txt_new_work_order_date_in.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_work_order_date_in.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.txt_new_work_order_date_in.Location = New System.Drawing.Point(406, 295)
+        Me.txt_new_work_order_date_in.MaxDate = New Date(2029, 12, 31, 0, 0, 0, 0)
+        Me.txt_new_work_order_date_in.MinDate = New Date(2021, 1, 1, 0, 0, 0, 0)
+        Me.txt_new_work_order_date_in.Name = "txt_new_work_order_date_in"
+        Me.txt_new_work_order_date_in.Size = New System.Drawing.Size(308, 33)
+        Me.txt_new_work_order_date_in.TabIndex = 11
+        Me.txt_new_work_order_date_in.Value = New Date(2021, 9, 15, 0, 0, 0, 0)
         '
-        'DateTimePicker1
+        'txt_new_work_order_date_out
         '
-        Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DateTimePicker1.Checked = False
-        Me.DateTimePicker1.CustomFormat = ""
-        Me.DateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(406, 379)
-        Me.DateTimePicker1.MaxDate = New Date(2029, 12, 31, 0, 0, 0, 0)
-        Me.DateTimePicker1.MinDate = New Date(2021, 1, 1, 0, 0, 0, 0)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(308, 33)
-        Me.DateTimePicker1.TabIndex = 12
-        Me.DateTimePicker1.Value = New Date(2021, 9, 4, 0, 0, 0, 0)
+        Me.txt_new_work_order_date_out.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_work_order_date_out.Checked = False
+        Me.txt_new_work_order_date_out.CustomFormat = ""
+        Me.txt_new_work_order_date_out.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.txt_new_work_order_date_out.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_work_order_date_out.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.txt_new_work_order_date_out.Location = New System.Drawing.Point(406, 379)
+        Me.txt_new_work_order_date_out.MaxDate = New Date(2029, 12, 31, 0, 0, 0, 0)
+        Me.txt_new_work_order_date_out.MinDate = New Date(2021, 1, 1, 0, 0, 0, 0)
+        Me.txt_new_work_order_date_out.Name = "txt_new_work_order_date_out"
+        Me.txt_new_work_order_date_out.Size = New System.Drawing.Size(308, 33)
+        Me.txt_new_work_order_date_out.TabIndex = 12
+        Me.txt_new_work_order_date_out.Value = New Date(2021, 9, 15, 0, 0, 0, 0)
         '
         'Label11
         '
@@ -303,9 +306,9 @@ Partial Class Management_Work_Order_Add_New
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(770, 272)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(59, 18)
+        Me.Label11.Size = New System.Drawing.Size(96, 18)
         Me.Label11.TabIndex = 88
-        Me.Label11.Text = "Mileage"
+        Me.Label11.Text = "Mileage (Km)"
         '
         'txt_new_work_order_mileage
         '
@@ -436,6 +439,51 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_item_cancel.Text = "CANCEL"
         Me.btn_new_item_cancel.UseVisualStyleBackColor = False
         '
+        'work_order_cleartechnician
+        '
+        Me.work_order_cleartechnician.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.work_order_cleartechnician.AutoSize = True
+        Me.work_order_cleartechnician.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.work_order_cleartechnician.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.work_order_cleartechnician.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
+        Me.work_order_cleartechnician.Location = New System.Drawing.Point(340, 347)
+        Me.work_order_cleartechnician.Name = "work_order_cleartechnician"
+        Me.work_order_cleartechnician.Padding = New System.Windows.Forms.Padding(5)
+        Me.work_order_cleartechnician.Size = New System.Drawing.Size(30, 34)
+        Me.work_order_cleartechnician.TabIndex = 92
+        Me.work_order_cleartechnician.Text = "  "
+        Me.work_order_cleartechnician.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'work_order_clear_automobile
+        '
+        Me.work_order_clear_automobile.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.work_order_clear_automobile.AutoSize = True
+        Me.work_order_clear_automobile.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.work_order_clear_automobile.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.work_order_clear_automobile.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
+        Me.work_order_clear_automobile.Location = New System.Drawing.Point(340, 211)
+        Me.work_order_clear_automobile.Name = "work_order_clear_automobile"
+        Me.work_order_clear_automobile.Padding = New System.Windows.Forms.Padding(5)
+        Me.work_order_clear_automobile.Size = New System.Drawing.Size(30, 34)
+        Me.work_order_clear_automobile.TabIndex = 92
+        Me.work_order_clear_automobile.Text = "  "
+        Me.work_order_clear_automobile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'work_order_clear_customer
+        '
+        Me.work_order_clear_customer.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.work_order_clear_customer.AutoSize = True
+        Me.work_order_clear_customer.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.work_order_clear_customer.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.work_order_clear_customer.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
+        Me.work_order_clear_customer.Location = New System.Drawing.Point(341, 89)
+        Me.work_order_clear_customer.Name = "work_order_clear_customer"
+        Me.work_order_clear_customer.Padding = New System.Windows.Forms.Padding(5)
+        Me.work_order_clear_customer.Size = New System.Drawing.Size(30, 34)
+        Me.work_order_clear_customer.TabIndex = 92
+        Me.work_order_clear_customer.Text = "  "
+        Me.work_order_clear_customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'btn_new_item_save
         '
         Me.btn_new_item_save.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -460,9 +508,9 @@ Partial Class Management_Work_Order_Add_New
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1101, 523)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.txt_new_birth_date)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.txt_new_work_order_date_out)
+        Me.Controls.Add(Me.txt_new_work_order_date_in)
+        Me.Controls.Add(Me.txt_new_work_order_progress_stats)
         Me.Controls.Add(Me.btn_new_work_order_existing_automobile)
         Me.Controls.Add(Me.btn_new_work_order_existing_cusromer)
         Me.Controls.Add(Me.btn_new_work_order_add_technician)
@@ -476,6 +524,9 @@ Partial Class Management_Work_Order_Add_New
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_new_item_cancel)
+        Me.Controls.Add(Me.work_order_cleartechnician)
+        Me.Controls.Add(Me.work_order_clear_automobile)
+        Me.Controls.Add(Me.work_order_clear_customer)
         Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.btn_new_item_save)
         Me.Controls.Add(Me.Label9)
@@ -484,7 +535,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txt_new_quantity)
+        Me.Controls.Add(Me.txt_new_work_order_services)
         Me.Controls.Add(Me.txt_new_work_order_mileage)
         Me.Controls.Add(Me.txt_work_order_new_automobile)
         Me.Controls.Add(Me.txt_work_order_new_customer)
@@ -512,7 +563,7 @@ Partial Class Management_Work_Order_Add_New
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_new_work_order_technicians As TextBox
-    Friend WithEvents txt_new_quantity As TextBox
+    Friend WithEvents txt_new_work_order_services As TextBox
     Friend WithEvents btn_new_work_order_new_cusromer As Button
     Friend WithEvents btn_new_work_order_new_automobile As Button
     Friend WithEvents btn_new_work_order_add_technician As Button
@@ -520,9 +571,12 @@ Partial Class Management_Work_Order_Add_New
     Friend WithEvents txt_work_order_new_customer As TextBox
     Friend WithEvents txt_work_order_new_automobile As TextBox
     Friend WithEvents btn_new_work_order_existing_automobile As Button
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents txt_new_birth_date As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents txt_new_work_order_progress_stats As ComboBox
+    Friend WithEvents txt_new_work_order_date_in As DateTimePicker
+    Friend WithEvents txt_new_work_order_date_out As DateTimePicker
     Friend WithEvents Label11 As Label
     Friend WithEvents txt_new_work_order_mileage As TextBox
+    Friend WithEvents work_order_clear_customer As Label
+    Friend WithEvents work_order_clear_automobile As Label
+    Friend WithEvents work_order_cleartechnician As Label
 End Class

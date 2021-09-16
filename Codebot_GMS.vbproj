@@ -181,6 +181,12 @@
     <Compile Include="Management_Work_Order_Add_New_Customer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Management_Work_Order_Add_New_Technician.Designer.vb">
+      <DependentUpon>Management_Work_Order_Add_New_Technician.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Work_Order_Add_New_Technician.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Work_Order_Add_New_Customer.resx">
       <DependentUpon>Management_Work_Order_Add_New_Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management_Work_Order_Add_New_Technician.resx">
+      <DependentUpon>Management_Work_Order_Add_New_Technician.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

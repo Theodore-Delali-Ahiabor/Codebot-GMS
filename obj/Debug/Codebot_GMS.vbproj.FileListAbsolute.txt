@@ -56,3 +56,4 @@ C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Management_Work_Order_Add_New.resources
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Management_Work_Order_Add_New_Automobile.resources
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Management_Work_Order_Add_New_Customer.resources
+C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Management_Work_Order_Add_New_Technician.resources

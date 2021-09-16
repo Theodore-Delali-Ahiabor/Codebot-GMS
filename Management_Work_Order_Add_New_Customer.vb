@@ -97,6 +97,7 @@ Public Class Management_Work_Order_Add_New_Customer
 
     Private Sub btn_customer_select_select_Click(sender As Object, e As EventArgs) Handles btn_customer_select_select.Click
         Management_Work_Order_Add_New.txt_work_order_new_customer.Text = CustomerDataGridView.CurrentRow.Cells(1).Value & " " & CustomerDataGridView.CurrentRow.Cells(2).Value & " " & CustomerDataGridView.CurrentRow.Cells(3).Value
+        Management_Work_Order_Add_New.customer = CustomerDataGridView.CurrentRow.Cells(0).Value
         Me.Close()
     End Sub
 

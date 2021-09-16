@@ -38,6 +38,7 @@ Public Class Management_Work_Order_Add_New_Automobile
             If AutomobileDataGridView.SelectedRows.Count > 0 Then
                 Management_Work_Order_Add_New.txt_work_order_new_automobile.Text = CStr(AutomobileDataGridView.CurrentRow.Cells(2).Value & " " & AutomobileDataGridView.CurrentRow.Cells(5).Value & " " &
                     AutomobileDataGridView.CurrentRow.Cells(3).Value & " " & AutomobileDataGridView.CurrentRow.Cells(4).Value)
+                Management_Work_Order_Add_New.automobile = AutomobileDataGridView.CurrentRow.Cells(0).Value
                 Me.Close()
             Else
                 Management.btn_management_message.Text = "No Automobile Selected"
