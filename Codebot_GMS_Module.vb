@@ -310,6 +310,7 @@ Module Codebot_GMS_Module
             Management_Work_Order.cmb_work_order_status_filter.SelectedIndex() = 0
             add_search_suggestion(Management_Work_Order.txt_work_order_automobile_name_filter, "work_order_view", "ID")
             add_combobox_items(Management_Work_Order.cmb_work_order_status_filter, "work_order_view", "Progress_Status")
+            add_combobox_items(Management_Work_Order_Add_New.txt_new_work_order_progress_stats, "work_order_view", "Progress_Status")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

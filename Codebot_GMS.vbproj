@@ -114,6 +114,12 @@
     <Compile Include="Management_Calendar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Management_Calendar_Add_New_Event.Designer.vb">
+      <DependentUpon>Management_Calendar_Add_New_Event.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Calendar_Add_New_Event.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Management_Inventory.Designer.vb">
       <DependentUpon>Management_Inventory.vb</DependentUpon>
     </Compile>
@@ -227,6 +233,9 @@
     <EmbeddedResource Include="Management_Calendar.resx">
       <DependentUpon>Management_Calendar.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Management_Calendar_Add_New_Event.resx">
+      <DependentUpon>Management_Calendar_Add_New_Event.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Management_Employees_Add_New.resx">
       <DependentUpon>Management_Employees_Add_New.vb</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +344,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-checkmark-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-forward-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

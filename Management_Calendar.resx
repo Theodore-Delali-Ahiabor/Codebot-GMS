@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_calendar_current_month.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAVVJREFUSEvtlb1KA1EQhTeK+AMRRSsRFBtLG19FEKxs0tsKkiCCDyAIARMFC30D
+        KxHsrHyjXb+zHCRmkvVuErDxwMedmTv3zP4kbPZnKopiN8/zC9h2KSilZ6w43OLgiVaXglJ6fojmNvSg
+        C+8cPNLqfBTDPT3yju2iaLhzqPgYnmXgUtCoHvK+wyg2uw51+w1Y0upS0KieQY8gNnXLrWmQh+2i2Hyi
+        aW8a5GG7qMrbS1SlR90BXLHewYLTUjMdQP8p3DotNbMBXLle6CdsuFSq1gDyVbiGRZdkPEd+Bh/Emy5/
+        i3r6AAzmqd2A/kzlsyY+hzdolk1Dop4+QMK4oTrrA+sVvBKveDuo9gBJV8/eI7xUmUsTDZA0RDgdq4kH
+        pOrXAbAPW7Dj+BAOHKfUKwfoW9CEZT1rxazrsJZah3vbRdHUoaEPgx+VZDivX9ql7f6Voiz7AoLkeU5g
+        y4pbAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

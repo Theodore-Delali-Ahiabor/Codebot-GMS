@@ -22,6 +22,11 @@ Codebot_GMS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_back_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Codebot_GMS.My.Resources.Resources.icons8_cancel_24">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -53,6 +58,11 @@ Codebot_GMS
 </summary>
 </member>
 <member name="P:Codebot_GMS.My.Resources.Resources.icons8_filter_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.icons8_forward_24">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

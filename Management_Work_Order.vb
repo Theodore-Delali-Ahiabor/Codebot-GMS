@@ -11,7 +11,7 @@ Public Class Management_Work_Order
     Private Sub btn_add_new_work_order_Click(sender As Object, e As EventArgs) Handles btn_add_new_work_order.Click
         Management.lbl_current_tab.Text = "Work Orders | Add New Order"
         sidebar_form_loader(Management_Work_Order_Add_New)
-        'Management_Inventory_Add_New.btn_new_item_save.Text = "SAVE"
+        work_order_clear_form()
     End Sub
 
     Private Sub txt_work_order_automobile_name_filter_TextChanged(sender As Object, e As EventArgs) Handles txt_work_order_automobile_name_filter.TextChanged
@@ -92,5 +92,15 @@ Public Class Management_Work_Order
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+    Public Sub work_order_clear_form()
+        Management_Work_Order_Add_New.txt_work_order_new_customer.Clear()
+        Management_Work_Order_Add_New.txt_work_order_new_automobile.Clear()
+        Management_Work_Order_Add_New.txt_new_work_order_technicians.Clear()
+        Management_Work_Order_Add_New.txt_new_work_order_services.Clear()
+        Management_Work_Order_Add_New.txt_new_work_order_date_in.Checked = False
+        Management_Work_Order_Add_New.txt_new_work_order_date_out.Checked = False
+        Management_Work_Order_Add_New.txt_new_work_order_mileage.Clear()
+        Management_Work_Order_Add_New.txt_new_work_order_progress_stats.Text = ""
     End Sub
 End Class
