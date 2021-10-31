@@ -8,8 +8,6 @@ Public Class Auth_Login
                 message(Auth.btn_auth_message, "warning")
             Else
                 Try
-                    'sql_con.Close()
-                    'sql_con.Open()
                     sql_da = New MySqlDataAdapter("SELECT * FROM user WHERE Username = '" & txt_login_username.Text & "'", sql_con)
                     sql_dt = New DataTable
                     sql_dt.Clear()
@@ -83,8 +81,29 @@ Public Class Auth_Login
                         Auth.btn_auth_message.Text = "Invalid Username or Password"
                         Auth.btn_auth_message.Show()
                         message(Auth.btn_auth_message, "warning")
+                        invalid_login += 1
+                        If invalid_login = 0 Then
+                            lbl_attempts.Text = "Attempts: 0/3"
+                        ElseIf invalid_login = 1 Then
+                            lbl_attempts.Text = "Attempts: 1/3"
+                        ElseIf invalid_login = 2 Then
+                            lbl_attempts.Text = "Attempts: 2/3"
+                        ElseIf invalid_login > 2 Then
+                            lbl_attempts.Text = "Attempts: 3/3"
+                            btn_signup.Hide()
+                            btn_login.Hide()
+                            txt_login_password.Enabled = False
+                            txt_login_username.Enabled = False
+                            txt_login_username.Clear()
+                            txt_login_password.Clear()
+                            txt_invalid_display.Show()
+                            invalid_login_ts = New TimeSpan(0, 2, 59)
+                            invalid_login_timer.Enabled = True
+                            Auth.btn_auth_message.Text = "You are out of attemps"
+                            Auth.btn_auth_message.Show()
+                            message(Auth.btn_auth_message, "warning")
+                        End If
                     End If
-                    'sql_con.Close()
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
@@ -103,7 +122,7 @@ Public Class Auth_Login
 
     End Sub
 
-    Private Sub btn_signup_Click(sender As Object, e As EventArgs) Handles btn_signup.Click
+    Public Sub btn_signup_Click(sender As Object, e As EventArgs) Handles btn_signup.Click
         txt_login_username.Clear()
         txt_login_password.Clear()
         Auth_Signup.txt_signup_phone.Clear()
@@ -120,7 +139,7 @@ Public Class Auth_Login
         Auth_Signup.btn_signup_verify_create.Text = "VERIFY"
     End Sub
 
-    Private Sub lbl_password_reset_Click(sender As Object, e As EventArgs) Handles lbl_password_reset.Click
+    Private Sub lbl_password_reset_Click(sender As Object, e As EventArgs) Handles lbl_password_reset.Click, txt_invalid_display.Click
         auth_form_loader(Auth_Password_Reset)
         Auth_Password_Reset.txt_password_reset_phone_number.Clear()
         Auth_Password_Reset.txt_password_reset_code.Clear()
@@ -129,5 +148,22 @@ Public Class Auth_Login
         Auth_Password_Reset.btn_password_reset_send_code.Text = "SEND CODE"
         Auth_Password_Reset.txt_password_reset_phone_number.Enabled = True
         Auth_Password_Reset.txt_password_reset_phone_number.Focus()
+    End Sub
+
+    Private Sub invalid_login_timer_Tick(sender As Object, e As EventArgs) Handles invalid_login_timer.Tick
+        If invalid_login_ts.Minutes = 0 AndAlso invalid_login_ts.Seconds = 0 Then
+            txt_invalid_display.Hide()
+            btn_login.Show()
+            btn_signup.Show()
+            txt_login_password.Enabled = True
+            txt_login_username.Enabled = True
+            txt_login_username.Focus()
+            invalid_login_timer.Stop()
+            invalid_login = 0
+            lbl_attempts.Text = "Attempts: 0/3"
+        Else
+            invalid_login_ts = invalid_login_ts.Subtract(New TimeSpan(0, 0, 1))
+            txt_invalid_display.Text = String.Format("Try Again in  {0} Mins : {1} Secs", invalid_login_ts.Minutes, invalid_login_ts.Seconds)
+        End If
     End Sub
 End Class

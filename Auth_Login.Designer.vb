@@ -22,6 +22,7 @@ Partial Class Auth_Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lbl_password_reset = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -30,6 +31,9 @@ Partial Class Auth_Login
         Me.Login = New System.Windows.Forms.Label()
         Me.btn_signup = New System.Windows.Forms.Button()
         Me.btn_login = New System.Windows.Forms.Button()
+        Me.invalid_login_timer = New System.Windows.Forms.Timer(Me.components)
+        Me.txt_invalid_display = New System.Windows.Forms.Label()
+        Me.lbl_attempts = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lbl_password_reset
@@ -120,7 +124,7 @@ Partial Class Auth_Login
         Me.btn_signup.ForeColor = System.Drawing.Color.White
         Me.btn_signup.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_registration_White_24
         Me.btn_signup.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_signup.Location = New System.Drawing.Point(398, 393)
+        Me.btn_signup.Location = New System.Drawing.Point(406, 393)
         Me.btn_signup.Name = "btn_signup"
         Me.btn_signup.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_signup.Size = New System.Drawing.Size(137, 40)
@@ -138,13 +142,42 @@ Partial Class Auth_Login
         Me.btn_login.ForeColor = System.Drawing.Color.White
         Me.btn_login.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_login_24
         Me.btn_login.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_login.Location = New System.Drawing.Point(250, 393)
+        Me.btn_login.Location = New System.Drawing.Point(258, 393)
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_login.Size = New System.Drawing.Size(118, 40)
         Me.btn_login.TabIndex = 17
         Me.btn_login.Text = "LOGIN  "
         Me.btn_login.UseVisualStyleBackColor = False
+        '
+        'invalid_login_timer
+        '
+        Me.invalid_login_timer.Interval = 1000
+        '
+        'txt_invalid_display
+        '
+        Me.txt_invalid_display.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_invalid_display.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.txt_invalid_display.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.txt_invalid_display.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_invalid_display.ForeColor = System.Drawing.Color.Red
+        Me.txt_invalid_display.Location = New System.Drawing.Point(246, 393)
+        Me.txt_invalid_display.Name = "txt_invalid_display"
+        Me.txt_invalid_display.Size = New System.Drawing.Size(309, 40)
+        Me.txt_invalid_display.TabIndex = 21
+        Me.txt_invalid_display.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_attempts
+        '
+        Me.lbl_attempts.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbl_attempts.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_attempts.ForeColor = System.Drawing.Color.Teal
+        Me.lbl_attempts.Location = New System.Drawing.Point(456, 346)
+        Me.lbl_attempts.Name = "lbl_attempts"
+        Me.lbl_attempts.Size = New System.Drawing.Size(99, 28)
+        Me.lbl_attempts.TabIndex = 20
+        Me.lbl_attempts.Text = "Attempts: 0/3"
+        Me.lbl_attempts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Auth_Login
         '
@@ -153,6 +186,7 @@ Partial Class Auth_Login
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(800, 548)
         Me.Controls.Add(Me.lbl_password_reset)
+        Me.Controls.Add(Me.lbl_attempts)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.txt_login_username)
@@ -160,6 +194,7 @@ Partial Class Auth_Login
         Me.Controls.Add(Me.btn_signup)
         Me.Controls.Add(Me.btn_login)
         Me.Controls.Add(Me.Login)
+        Me.Controls.Add(Me.txt_invalid_display)
         Me.Name = "Auth_Login"
         Me.Text = "Auth_Login"
         Me.ResumeLayout(False)
@@ -175,4 +210,7 @@ Partial Class Auth_Login
     Friend WithEvents Login As Label
     Public WithEvents txt_login_username As TextBox
     Public WithEvents txt_login_password As TextBox
+    Friend WithEvents invalid_login_timer As Timer
+    Friend WithEvents txt_invalid_display As Label
+    Friend WithEvents lbl_attempts As Label
 End Class

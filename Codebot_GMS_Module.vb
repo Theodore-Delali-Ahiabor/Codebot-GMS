@@ -6,8 +6,10 @@ Module Codebot_GMS_Module
     Public sql_da As MySqlDataAdapter
     Public sql_ds As DataSet
     Public sql_cmd As MySqlCommand
-    Public message_ts As TimeSpan
-    Public signup_id, signup_name, login_id, login_full_name, login_as, default_query, filter_query As String
+    Public message_ts, invalid_login_ts As TimeSpan
+    Public signup_id, signup_name, login_id, login_full_name, login_as, default_query, filter_query, img_path As String
+    Public invalid_login As Integer = 0
+    Public arr_image As Byte
     'LOADS FORMS INTO GMS_Main  
     Public Sub gms_main_form_loader(ByVal main_form As Form)
         Try
@@ -46,6 +48,7 @@ Module Codebot_GMS_Module
                 Management_Inventory.Visible = False
                 Management_Inventory_Add_New.Visible = False
                 Management_Work_Order_Add_New.Visible = False
+                Management_Invoice.Visible = False
                 form.Visible = True
             Else
                 form.Visible = False
@@ -82,19 +85,19 @@ Module Codebot_GMS_Module
                 btn_name.BackColor = Color.LightPink
                 btn_name.ForeColor = Color.Red
                 Auth.message_timer.Enabled = True
-                message_ts = New TimeSpan(0, 0, 3)
+                message_ts = New TimeSpan(0, 0, 5)
             ElseIf message_type = "success" Then
                 btn_name.Show()
                 btn_name.BackColor = Color.PaleGreen
                 btn_name.ForeColor = Color.Green
                 Auth.message_timer.Enabled = True
-                message_ts = New TimeSpan(0, 0, 3)
+                message_ts = New TimeSpan(0, 0, 5)
             ElseIf message_type = "information" Then
                 btn_name.Show()
                 btn_name.BackColor = Color.LightBlue
                 btn_name.ForeColor = Color.Blue
                 Auth.message_timer.Enabled = True
-                message_ts = New TimeSpan(0, 0, 3)
+                message_ts = New TimeSpan(0, 0, 5)
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -152,8 +155,6 @@ Module Codebot_GMS_Module
     '    Next
     '    Return found
     'End Function
-
-
     'FILL THE DATAGRID WITH A DEFAULT INFORMATION
     Public Sub datagrid_fill_default(ByRef db_table As String, ByRef gridview_name As DataGridView)
         Try
@@ -167,7 +168,6 @@ Module Codebot_GMS_Module
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
     End Sub
     'FILL THE DATAGRID WITH INFORMATIONS BASE ON SOME FILTER VARIABLE
     Public Sub datagrid_fill_flter_with_variable(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef db_column As String, ByRef symbol As String, ByRef variable As String)
@@ -246,8 +246,9 @@ Module Codebot_GMS_Module
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
                         If gridview_name.Rows(i).Cells(7).Value.ToString = False Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
+
                         Else
-                            'gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.PaleGreen
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
                         End If
                     Next
                 ElseIf db_table = "inventory" Then

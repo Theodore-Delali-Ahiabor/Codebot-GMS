@@ -6,7 +6,7 @@ Public Class Management_Work_Order_Add_New
         Management_Work_Order_Add_New_Customer.customer_new_datails_panel.Dock = DockStyle.Fill
         Management_Work_Order_Add_New_Customer.customer_select_edit_panel.Visible = False
         Management_Work_Order_Add_New_Customer.customer_new_datails_panel.Visible = True
-        Management_Work_Order_Add_New_Customer.Show()
+        Management_Work_Order_Add_New_Customer.ShowDialog()
         Management_Work_Order_Add_New_Customer.btn_new_customer_save.Text = "SAVE"
     End Sub
 
@@ -14,7 +14,7 @@ Public Class Management_Work_Order_Add_New
         Management_Work_Order_Add_New_Automobile.automobile_new_datails_panel.Dock = DockStyle.Fill
         Management_Work_Order_Add_New_Automobile.automobile_select_edit_panel.Visible = False
         Management_Work_Order_Add_New_Automobile.automobile_new_datails_panel.Visible = True
-        Management_Work_Order_Add_New_Automobile.Show()
+        Management_Work_Order_Add_New_Automobile.ShowDialog()
         Management_Work_Order_Add_New_Automobile.btn_new_automobile_save.Text = "SAVE"
     End Sub
 
@@ -59,7 +59,7 @@ Public Class Management_Work_Order_Add_New
         Management_Work_Order_Add_New_Automobile.automobile_select_edit_panel.Visible = True
         Management_Work_Order_Add_New_Automobile.automobile_new_datails_panel.Visible = False
         datagrid_fill_default("automobile_info", Management_Work_Order_Add_New_Automobile.AutomobileDataGridView)
-        Management_Work_Order_Add_New_Automobile.Show()
+        Management_Work_Order_Add_New_Automobile.ShowDialog()
         Management_Work_Order_Add_New_Automobile.AutomobileDataGridView.Rows(0).Selected = True
     End Sub
 
@@ -68,7 +68,7 @@ Public Class Management_Work_Order_Add_New
         Management_Work_Order_Add_New_Customer.customer_select_edit_panel.Visible = True
         Management_Work_Order_Add_New_Customer.customer_new_datails_panel.Visible = False
         datagrid_fill_default("customer_info", Management_Work_Order_Add_New_Customer.CustomerDataGridView)
-        Management_Work_Order_Add_New_Customer.Show()
+        Management_Work_Order_Add_New_Customer.ShowDialog()
         Management_Work_Order_Add_New_Customer.CustomerDataGridView.Rows(0).Selected = True
     End Sub
 
@@ -85,8 +85,9 @@ Public Class Management_Work_Order_Add_New
     End Sub
 
     Private Sub btn_new_work_order_add_technician_Click(sender As Object, e As EventArgs) Handles btn_new_work_order_add_technician.Click
-        datagrid_fill_default("employee_view", Management_Work_Order_Add_New_Technician.TechnicianDataGridView)
-        Management_Work_Order_Add_New_Technician.TechnicianDataGridView.Rows(0).Selected = True
-        Management_Work_Order_Add_New_Technician.Show()
+        datagrid_fill_flter_with_variable("employee_view", Management_Work_Order_Add_New_Technician.TechnicianDataGridView, "Active", "=", "1")
+        datagrif_fill_column_resize("technician_view", Management_Work_Order_Add_New_Technician.TechnicianDataGridView)
+        Management_Work_Order_Add_New_Technician.ShowDialog()
+
     End Sub
 End Class

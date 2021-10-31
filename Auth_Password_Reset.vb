@@ -66,7 +66,7 @@ Public Class Auth_Password_Reset
                                 sql_ds = New DataSet
                                 sql_da = New MySqlDataAdapter("UPDATE user SET Username = '" & null & "' , Password = '" & null & "'  WHERE Employee_ID = '" & reset_id & "'", sql_con)
                                 sql_da.Fill(sql_ds, "employee")
-                                auth_form_loader(Auth_Signup)
+                                Auth_Login.btn_signup_Click(Auth_Login.btn_signup, EventArgs.Empty)
                                 Auth.btn_auth_message.Text = "Create New Username & Password"
                                 Auth.btn_auth_message.Show()
                                 message(Auth.btn_auth_message, "success")
@@ -74,7 +74,7 @@ Public Class Auth_Password_Reset
                             End If
 
                         Else
-                            Auth.btn_auth_message.Text = "Number NOT an Employee"
+                            Auth.btn_auth_message.Text = "Employee NOT found"
                             Auth.btn_auth_message.Show()
                             message(Auth.btn_auth_message, "warning")
                         End If

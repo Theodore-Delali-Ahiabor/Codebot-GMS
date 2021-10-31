@@ -30,6 +30,7 @@ Public Class Management
 
     Public Sub btn_invoice_Click(sender As Object, e As EventArgs) Handles btn_invoice.Click
         sidebar_active(sender)
+        sidebar_form_loader(Management_Invoice)
     End Sub
 
     Public Sub btn_inventory_Click(sender As Object, e As EventArgs) Handles btn_inventory.Click
@@ -56,6 +57,7 @@ Public Class Management
     Private Sub btn_calenders_Click(sender As Object, e As EventArgs) Handles btn_calenders.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Calendar)
+        Management_Calendar.display_current_date()
     End Sub
     Public Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
         gms_main_form_loader(Auth)

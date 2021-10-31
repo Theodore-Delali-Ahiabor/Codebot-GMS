@@ -132,6 +132,12 @@
     <Compile Include="Management_Inventory_Add_New.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Management_Invoice.Designer.vb">
+      <DependentUpon>Management_Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Management_Market.Designer.vb">
       <DependentUpon>Management_Market.vb</DependentUpon>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Inventory_Add_New.resx">
       <DependentUpon>Management_Inventory_Add_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management_Invoice.resx">
+      <DependentUpon>Management_Invoice.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Market.resx">
       <DependentUpon>Management_Market.vb</DependentUpon>

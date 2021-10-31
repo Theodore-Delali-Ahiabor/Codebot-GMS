@@ -684,6 +684,7 @@ Partial Class Management
         Me.Button2.Size = New System.Drawing.Size(73, 52)
         Me.Button2.TabIndex = 34
         Me.Button2.UseVisualStyleBackColor = False
+        Me.Button2.Visible = False
         '
         'lbl_current_tab
         '

@@ -1,8 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.IO
 Public Class Management_Employees
     Dim initial_employee_id As String = "HTU-JMTC0001"
     Dim new_employee_id As String
-    'Dim integer_part As Integer = 1
     Private Sub Management_Employees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -42,7 +42,11 @@ Public Class Management_Employees
                 sql_dt.Clear()
                 sql_da.Fill(sql_dt)
                 If sql_dt.Rows.Count() > 0 Then
-                    Management_Employees_Add_New.txt_new_id.Text = sql_dt.Rows(0).Item("ID").ToString()
+                    Dim mstream As New System.IO.MemoryStream(arr_image)
+                    If sql_dt.Rows(0).Item("Image").ToString = "" Then
+                        MsgBox("yes")
+                    End If
+                    'Management_Employees_Add_New.pb_new_user_image.Image = sql_dt.Rows(0).Item("Image")
                     Management_Employees_Add_New.txt_new_first_name.Text = sql_dt.Rows(0).Item("First_Name").ToString()
                     Management_Employees_Add_New.txt_new_other_names.Text = sql_dt.Rows(0).Item("Other_Name").ToString()
                     Management_Employees_Add_New.txt_new_last_name.Text = sql_dt.Rows(0).Item("Last_Name").ToString()
