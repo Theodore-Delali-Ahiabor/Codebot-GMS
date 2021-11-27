@@ -54,12 +54,12 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_last_name = New System.Windows.Forms.TextBox()
         Me.txt_new_other_names = New System.Windows.Forms.TextBox()
         Me.txt_new_first_name = New System.Windows.Forms.TextBox()
-        Me.btn_new_user_cancel = New System.Windows.Forms.Button()
-        Me.btn_new_user_save = New System.Windows.Forms.Button()
-        Me.pb_new_user_image = New System.Windows.Forms.PictureBox()
-        Me.new_user_open_file_dialog = New System.Windows.Forms.OpenFileDialog()
         Me.btn_new_user_select_image = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.employee_clear_image = New System.Windows.Forms.Label()
+        Me.pb_new_user_image = New System.Windows.Forms.PictureBox()
+        Me.btn_new_user_cancel = New System.Windows.Forms.Button()
+        Me.btn_new_user_save = New System.Windows.Forms.Button()
         CType(Me.pb_new_user_image, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -98,7 +98,7 @@ Partial Class Management_Employees_Add_New
         Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label16.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(979, 3)
+        Me.Label16.Location = New System.Drawing.Point(809, 254)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(20, 28)
         Me.Label16.TabIndex = 84
@@ -429,6 +429,60 @@ Partial Class Management_Employees_Add_New
         Me.txt_new_first_name.Size = New System.Drawing.Size(308, 33)
         Me.txt_new_first_name.TabIndex = 52
         '
+        'btn_new_user_select_image
+        '
+        Me.btn_new_user_select_image.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_user_select_image.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn_new_user_select_image.FlatAppearance.BorderSize = 0
+        Me.btn_new_user_select_image.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_user_select_image.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_user_select_image.Location = New System.Drawing.Point(224, 137)
+        Me.btn_new_user_select_image.Name = "btn_new_user_select_image"
+        Me.btn_new_user_select_image.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.btn_new_user_select_image.Size = New System.Drawing.Size(97, 33)
+        Me.btn_new_user_select_image.TabIndex = 86
+        Me.btn_new_user_select_image.Text = "Select Image"
+        Me.btn_new_user_select_image.UseVisualStyleBackColor = False
+        '
+        'Label18
+        '
+        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(233, 117)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(78, 17)
+        Me.Label18.TabIndex = 87
+        Me.Label18.Text = "Max: 10KiB"
+        '
+        'employee_clear_image
+        '
+        Me.employee_clear_image.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.employee_clear_image.AutoSize = True
+        Me.employee_clear_image.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.employee_clear_image.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.employee_clear_image.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
+        Me.employee_clear_image.Location = New System.Drawing.Point(61, 23)
+        Me.employee_clear_image.Name = "employee_clear_image"
+        Me.employee_clear_image.Padding = New System.Windows.Forms.Padding(5)
+        Me.employee_clear_image.Size = New System.Drawing.Size(30, 34)
+        Me.employee_clear_image.TabIndex = 93
+        Me.employee_clear_image.Text = "  "
+        Me.employee_clear_image.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'pb_new_user_image
+        '
+        Me.pb_new_user_image.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.pb_new_user_image.BackColor = System.Drawing.Color.White
+        Me.pb_new_user_image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pb_new_user_image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pb_new_user_image.InitialImage = Global.Codebot_GMS.My.Resources.Resources.initial_employee_image
+        Me.pb_new_user_image.Location = New System.Drawing.Point(97, 23)
+        Me.pb_new_user_image.Name = "pb_new_user_image"
+        Me.pb_new_user_image.Size = New System.Drawing.Size(110, 147)
+        Me.pb_new_user_image.TabIndex = 85
+        Me.pb_new_user_image.TabStop = False
+        '
         'btn_new_user_cancel
         '
         Me.btn_new_user_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -440,7 +494,7 @@ Partial Class Management_Employees_Add_New
         Me.btn_new_user_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_new_user_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_new_user_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_user_cancel.Location = New System.Drawing.Point(518, 462)
+        Me.btn_new_user_cancel.Location = New System.Drawing.Point(509, 462)
         Me.btn_new_user_cancel.Name = "btn_new_user_cancel"
         Me.btn_new_user_cancel.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.btn_new_user_cancel.Size = New System.Drawing.Size(141, 52)
@@ -467,53 +521,13 @@ Partial Class Management_Employees_Add_New
         Me.btn_new_user_save.Text = "SAVE"
         Me.btn_new_user_save.UseVisualStyleBackColor = False
         '
-        'pb_new_user_image
-        '
-        Me.pb_new_user_image.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.pb_new_user_image.BackColor = System.Drawing.Color.White
-        Me.pb_new_user_image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pb_new_user_image.Location = New System.Drawing.Point(78, 20)
-        Me.pb_new_user_image.Name = "pb_new_user_image"
-        Me.pb_new_user_image.Size = New System.Drawing.Size(140, 150)
-        Me.pb_new_user_image.TabIndex = 85
-        Me.pb_new_user_image.TabStop = False
-        '
-        'new_user_open_file_dialog
-        '
-        Me.new_user_open_file_dialog.FileName = "new_user_open_file_dialog"
-        '
-        'btn_new_user_select_image
-        '
-        Me.btn_new_user_select_image.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_new_user_select_image.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.btn_new_user_select_image.FlatAppearance.BorderSize = 0
-        Me.btn_new_user_select_image.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_user_select_image.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_user_select_image.Location = New System.Drawing.Point(224, 137)
-        Me.btn_new_user_select_image.Name = "btn_new_user_select_image"
-        Me.btn_new_user_select_image.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.btn_new_user_select_image.Size = New System.Drawing.Size(97, 33)
-        Me.btn_new_user_select_image.TabIndex = 86
-        Me.btn_new_user_select_image.Text = "Select Image"
-        Me.btn_new_user_select_image.UseVisualStyleBackColor = False
-        '
-        'Label18
-        '
-        Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(233, 117)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(78, 17)
-        Me.Label18.TabIndex = 87
-        Me.Label18.Text = "Max: 64KiB"
-        '
         'Management_Employees_Add_New
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.Controls.Add(Me.employee_clear_image)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.btn_new_user_select_image)
         Me.Controls.Add(Me.pb_new_user_image)
@@ -594,7 +608,7 @@ Partial Class Management_Employees_Add_New
     Friend WithEvents txt_new_other_names As TextBox
     Friend WithEvents txt_new_first_name As TextBox
     Friend WithEvents pb_new_user_image As PictureBox
-    Friend WithEvents new_user_open_file_dialog As OpenFileDialog
     Friend WithEvents btn_new_user_select_image As Button
     Friend WithEvents Label18 As Label
+    Friend WithEvents employee_clear_image As Label
 End Class

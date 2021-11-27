@@ -263,9 +263,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property smiling_mechanic_with_arms_crossed_spanner() As System.Drawing.Bitmap
+        Friend ReadOnly Property initial_employee_image() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("smiling-mechanic-with-arms-crossed-spanner", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("initial_employee_image", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property smiling_mechanic_with_arms_crossed_spanner1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("smiling-mechanic-with-arms-crossed-spanner1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property smiling_mechanic_with_arms_crossed_spanner3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("smiling-mechanic-with-arms-crossed-spanner3", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

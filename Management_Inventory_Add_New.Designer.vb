@@ -186,6 +186,7 @@ Partial Class Management_Inventory_Add_New
         'txt_new_quantity
         '
         Me.txt_new_quantity.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_quantity.Enabled = False
         Me.txt_new_quantity.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_quantity.Location = New System.Drawing.Point(505, 107)
         Me.txt_new_quantity.MaxLength = 50

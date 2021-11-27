@@ -34,8 +34,11 @@ Partial Class Management_Home
         Me.work_order_due_soon = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.upcoming_events_panel = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lbl_upcoming_events = New System.Windows.Forms.Label()
+        Me.upcoming_events_soon = New System.Windows.Forms.Label()
+        Me.upcoming_events_today = New System.Windows.Forms.Label()
         Me.lbl_low_inventory = New System.Windows.Forms.Label()
         Me.low_inventory_low_stock = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -44,13 +47,13 @@ Partial Class Management_Home
         Me.activebar_inventory = New System.Windows.Forms.Button()
         Me.activebar_work_orders = New System.Windows.Forms.Button()
         Me.HomeDataGridView = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.activebar_events = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBoxInventory = New System.Windows.Forms.PictureBox()
         Me.PictureBoxWorkOrders = New System.Windows.Forms.PictureBox()
         Me.work_oders_due_panel.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel4.SuspendLayout()
+        Me.upcoming_events_panel.SuspendLayout()
         Me.low_inventory_panel.SuspendLayout()
         CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -138,29 +141,61 @@ Partial Class Management_Home
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Work Order Report"
         '
-        'Panel4
+        'upcoming_events_panel
         '
-        Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Panel4.BackColor = System.Drawing.Color.White
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.Label4)
-        Me.Panel4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel4.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel4.Location = New System.Drawing.Point(564, 13)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(235, 87)
-        Me.Panel4.TabIndex = 2
+        Me.upcoming_events_panel.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.upcoming_events_panel.BackColor = System.Drawing.Color.White
+        Me.upcoming_events_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.upcoming_events_panel.Controls.Add(Me.Label5)
+        Me.upcoming_events_panel.Controls.Add(Me.lbl_upcoming_events)
+        Me.upcoming_events_panel.Controls.Add(Me.upcoming_events_soon)
+        Me.upcoming_events_panel.Controls.Add(Me.upcoming_events_today)
+        Me.upcoming_events_panel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.upcoming_events_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.upcoming_events_panel.Location = New System.Drawing.Point(564, 13)
+        Me.upcoming_events_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.upcoming_events_panel.Name = "upcoming_events_panel"
+        Me.upcoming_events_panel.Size = New System.Drawing.Size(235, 87)
+        Me.upcoming_events_panel.TabIndex = 2
         '
-        'Label4
+        'Label5
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(160, 28)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Next Service Due"
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(78, 58)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(12, 19)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "|"
+        '
+        'lbl_upcoming_events
+        '
+        Me.lbl_upcoming_events.AutoSize = True
+        Me.lbl_upcoming_events.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_upcoming_events.Location = New System.Drawing.Point(3, 0)
+        Me.lbl_upcoming_events.Name = "lbl_upcoming_events"
+        Me.lbl_upcoming_events.Size = New System.Drawing.Size(165, 28)
+        Me.lbl_upcoming_events.TabIndex = 4
+        Me.lbl_upcoming_events.Text = "Upcoming Events"
+        '
+        'upcoming_events_soon
+        '
+        Me.upcoming_events_soon.AutoSize = True
+        Me.upcoming_events_soon.ForeColor = System.Drawing.Color.DarkOrange
+        Me.upcoming_events_soon.Location = New System.Drawing.Point(99, 58)
+        Me.upcoming_events_soon.Name = "upcoming_events_soon"
+        Me.upcoming_events_soon.Size = New System.Drawing.Size(40, 19)
+        Me.upcoming_events_soon.TabIndex = 0
+        Me.upcoming_events_soon.Text = "Soon"
+        '
+        'upcoming_events_today
+        '
+        Me.upcoming_events_today.AutoSize = True
+        Me.upcoming_events_today.ForeColor = System.Drawing.Color.Red
+        Me.upcoming_events_today.Location = New System.Drawing.Point(22, 58)
+        Me.upcoming_events_today.Name = "upcoming_events_today"
+        Me.upcoming_events_today.Size = New System.Drawing.Size(46, 19)
+        Me.upcoming_events_today.TabIndex = 0
+        Me.upcoming_events_today.Text = "Today"
         '
         'lbl_low_inventory
         '
@@ -315,24 +350,24 @@ Partial Class Management_Home
         Me.HomeDataGridView.Size = New System.Drawing.Size(1043, 394)
         Me.HomeDataGridView.TabIndex = 9
         '
-        'Button1
+        'activebar_events
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.BackColor = System.Drawing.Color.CadetBlue
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.CadetBlue
-        Me.Button1.Location = New System.Drawing.Point(564, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(235, 7)
-        Me.Button1.TabIndex = 10
-        Me.Button1.UseVisualStyleBackColor = False
-        Me.Button1.Visible = False
+        Me.activebar_events.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.activebar_events.BackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_events.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
+        Me.activebar_events.FlatAppearance.BorderSize = 0
+        Me.activebar_events.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_events.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_events.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_events.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.activebar_events.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.activebar_events.ForeColor = System.Drawing.Color.CadetBlue
+        Me.activebar_events.Location = New System.Drawing.Point(564, 5)
+        Me.activebar_events.Name = "activebar_events"
+        Me.activebar_events.Size = New System.Drawing.Size(235, 7)
+        Me.activebar_events.TabIndex = 10
+        Me.activebar_events.UseVisualStyleBackColor = False
+        Me.activebar_events.Visible = False
         '
         'Button2
         '
@@ -380,12 +415,12 @@ Partial Class Management_Home
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1101, 538)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.activebar_events)
         Me.Controls.Add(Me.HomeDataGridView)
         Me.Controls.Add(Me.activebar_work_orders)
         Me.Controls.Add(Me.activebar_inventory)
         Me.Controls.Add(Me.low_inventory_panel)
-        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.upcoming_events_panel)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.work_oders_due_panel)
         Me.Cursor = System.Windows.Forms.Cursors.Default
@@ -397,8 +432,8 @@ Partial Class Management_Home
         Me.work_oders_due_panel.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
+        Me.upcoming_events_panel.ResumeLayout(False)
+        Me.upcoming_events_panel.PerformLayout()
         Me.low_inventory_panel.ResumeLayout(False)
         Me.low_inventory_panel.PerformLayout()
         CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -410,10 +445,10 @@ Partial Class Management_Home
 
     Friend WithEvents work_oders_due_panel As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents upcoming_events_panel As Panel
     Friend WithEvents lbl_work_orders_due As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lbl_upcoming_events As Label
     Friend WithEvents work_order_overdue As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents work_order_due_soon As Label
@@ -427,6 +462,9 @@ Partial Class Management_Home
     Friend WithEvents activebar_inventory As Button
     Friend WithEvents activebar_work_orders As Button
     Friend WithEvents HomeDataGridView As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents activebar_events As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents upcoming_events_soon As Label
+    Friend WithEvents upcoming_events_today As Label
 End Class

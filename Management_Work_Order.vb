@@ -38,14 +38,14 @@ Public Class Management_Work_Order
                     Management.btn_management_message.Show()
                     message(Management.btn_management_message, "information")
                 Else
-                    Dim repos As DialogResult = MessageBox.Show("You are about to end a Work Order @ ID '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                    Dim repos As DialogResult = MessageBox.Show("You are about to LUNCH a Work Order @ ID '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then
                         sql_ds = New DataSet
-                        sql_da = New MySqlDataAdapter("UPDATE work_order SET Status = '" & "Done" & "' 
+                        sql_da = New MySqlDataAdapter("UPDATE work_order SET Status = '" & "In Progress" & "' 
                             Where ID = '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                         sql_da.Fill(sql_ds, "work_order")
                         datagrid_fill_default("work_order_view", Me.WorkOrderDataGridView)
-                        Management.btn_management_message.Text = "Work Order ended successfully"
+                        Management.btn_management_message.Text = "Work Order LUNCHED successfully"
                         Management.btn_management_message.Show()
                         message(Management.btn_management_message, "success")
                     End If
@@ -72,16 +72,18 @@ Public Class Management_Work_Order
                     Management.btn_management_message.Show()
                     message(Management.btn_management_message, "information")
                 Else
-                    Dim repos As DialogResult = MessageBox.Show("You are about to Initiate a Work Order @ ID '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                    Dim repos As DialogResult = MessageBox.Show("You are about to CLOSE a Work Order @ ID '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then
+                        Management_Work_Order_Done_Work_Order.last_service_id = Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value
                         sql_ds = New DataSet
                         sql_da = New MySqlDataAdapter("UPDATE work_order SET Status = '" & "Done" & "' 
                             Where ID = '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                         sql_da.Fill(sql_ds, "work_order")
                         datagrid_fill_default("work_order_view", Me.WorkOrderDataGridView)
-                        Management.btn_management_message.Text = "Work Order Started successfully"
+                        Management.btn_management_message.Text = "Work Order ENDED successfully "
                         Management.btn_management_message.Show()
                         message(Management.btn_management_message, "success")
+                        Management_Work_Order_Done_Work_Order.ShowDialog()
                     End If
                 End If
             Else
@@ -94,13 +96,18 @@ Public Class Management_Work_Order
         End Try
     End Sub
     Public Sub work_order_clear_form()
-        Management_Work_Order_Add_New.txt_work_order_new_customer.Clear()
-        Management_Work_Order_Add_New.txt_work_order_new_automobile.Clear()
-        Management_Work_Order_Add_New.txt_new_work_order_technicians.Clear()
-        Management_Work_Order_Add_New.txt_new_work_order_services.Clear()
-        Management_Work_Order_Add_New.txt_new_work_order_date_in.Checked = False
-        Management_Work_Order_Add_New.txt_new_work_order_date_out.Checked = False
-        Management_Work_Order_Add_New.txt_new_work_order_mileage.Clear()
-        Management_Work_Order_Add_New.txt_new_work_order_progress_stats.Text = ""
+        With Management_Work_Order_Add_New
+            .txt_work_order_new_customer.Clear()
+            .txt_work_order_new_automobile.Clear()
+            .txt_new_work_order_technicians.Clear()
+            .txt_new_work_order_services.Clear()
+            .txt_new_work_order_date_in.Checked = False
+            .txt_new_work_order_date_out.Checked = False
+            .txt_new_work_order_mileage.Clear()
+            .txt_new_work_order_progress_stats.Text = ""
+            .automobile = 0
+            .customer = 0
+        End With
     End Sub
+
 End Class

@@ -28,9 +28,8 @@ Public Class Management_Work_Order_Add_New_Customer
                             VALUES('" & txt_new_customer_first_name.Text & "','" & txt_new_customer_other_name.Text & "','" & txt_new_customer_last_name.Text & "', '" & gender & "', '" & txt_new_customer_pobox.Text & "',
                             '" & txt_new_customer_city_town.Text & "', '" & txt_new_customer_phone.Text & "', '" & txt_new_customer_email.Text & "')", sql_con)
                         sql_da.Fill(sql_ds, "customer_info")
-                        'sidebar_form_loader(Management_Employees)
-                        'datagrid_fill_default("employee_view", Management_Employees.EmployeesDataGridView)
                         Management_Work_Order_Add_New.txt_work_order_new_customer.Text = txt_new_customer_first_name.Text & " " & txt_new_customer_other_name.Text & " " & txt_new_customer_last_name.Text
+                        Management_Work_Order_Add_New.customer = CustomerDataGridView.CurrentRow.Cells(0).Value
                         Me.Close()
                     End If
                 Else

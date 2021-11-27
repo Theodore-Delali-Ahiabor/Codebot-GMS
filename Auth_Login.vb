@@ -31,16 +31,7 @@ Public Class Auth_Login
                             If sql_dt.Rows(0).Item("Active").ToString() = True Then
                                 If login_as = "Administrator" Or login_as = "Supervisor" Or login_as = "Manager" Or login_as = "Management Engineer" Or login_as = "Supervising Engineer" Then
                                     gms_main_form_loader(Management)
-                                    Management.sidebar_active(Management.btn_home)
-                                    Management.lbl_current_tab.Text = "Dashboard | Work Oders Due"
-                                    sidebar_form_loader(Management_Home)
-                                    Management_Home.activebar_work_orders.Visible = True
-                                    Management_Home.work_order_due_soon_Click(Management_Home.work_order_due_soon, EventArgs.Empty)
-                                    Management_Home.work_order_overdue_Click(Management_Home.work_order_overdue, EventArgs.Empty)
-                                    Management_Home.low_inventory_low_stock_Click(Management_Home.low_inventory_low_stock, EventArgs.Empty)
-                                    Management_Home.low_inventory_out_of_stock_Click(Management_Home.low_inventory_out_of_stock, EventArgs.Empty)
-                                    work_order_overdue_filter("6")
-                                    datagrif_fill_column_resize("work_order_view", Management_Home.HomeDataGridView)
+                                    Management.btn_home_Click(Management.btn_home, EventArgs.Empty)
                                     Management.login_position.Text = login_as
                                     Management.login_name.Text = login_full_name
 
@@ -141,13 +132,17 @@ Public Class Auth_Login
 
     Private Sub lbl_password_reset_Click(sender As Object, e As EventArgs) Handles lbl_password_reset.Click, txt_invalid_display.Click
         auth_form_loader(Auth_Password_Reset)
-        Auth_Password_Reset.txt_password_reset_phone_number.Clear()
-        Auth_Password_Reset.txt_password_reset_code.Clear()
-        Auth_Password_Reset.btn_password_reset_reset.Enabled = False
-        Auth_Password_Reset.btn_password_reset_send_code.Enabled = True
-        Auth_Password_Reset.btn_password_reset_send_code.Text = "SEND CODE"
-        Auth_Password_Reset.txt_password_reset_phone_number.Enabled = True
-        Auth_Password_Reset.txt_password_reset_phone_number.Focus()
+        With Auth_Password_Reset
+            .txt_password_reset_email.Clear()
+            .txt_password_reset_code.Clear()
+            .btn_password_reset_reset.Enabled = False
+            .btn_password_reset_send_code.Enabled = True
+            .btn_password_reset_send_code.Text = "SEND CODE"
+            .btn_password_reset_send_code.BackColor = Color.DarkTurquoise
+            .txt_password_reset_email.Enabled = True
+            .txt_password_reset_code.Enabled = False
+            .txt_password_reset_email.Focus()
+        End With
     End Sub
 
     Private Sub invalid_login_timer_Tick(sender As Object, e As EventArgs) Handles invalid_login_timer.Tick

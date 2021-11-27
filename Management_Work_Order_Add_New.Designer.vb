@@ -26,7 +26,6 @@ Partial Class Management_Work_Order_Add_New
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
@@ -63,7 +62,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label10.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(889, 340)
+        Me.Label10.Location = New System.Drawing.Point(887, 327)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(20, 28)
         Me.Label10.TabIndex = 100
@@ -76,7 +75,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label16.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(503, 336)
+        Me.Label16.Location = New System.Drawing.Point(870, 255)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(20, 28)
         Me.Label16.TabIndex = 99
@@ -87,7 +86,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(401, 13)
+        Me.Label15.Location = New System.Drawing.Point(398, 16)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(65, 18)
         Me.Label15.TabIndex = 98
@@ -100,24 +99,11 @@ Partial Class Management_Work_Order_Add_New
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label6.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(461, 253)
+        Me.Label6.Location = New System.Drawing.Point(456, 324)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(20, 28)
         Me.Label6.TabIndex = 97
         Me.Label6.Text = "*"
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label14.AutoSize = True
-        Me.Label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label14.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(463, 3)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(20, 28)
-        Me.Label14.TabIndex = 96
-        Me.Label14.Text = "*"
         '
         'Label2
         '
@@ -161,7 +147,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(399, 339)
+        Me.Label9.Location = New System.Drawing.Point(766, 258)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(98, 18)
         Me.Label9.TabIndex = 90
@@ -172,7 +158,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(401, 261)
+        Me.Label7.Location = New System.Drawing.Point(396, 332)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(54, 18)
         Me.Label7.TabIndex = 89
@@ -183,7 +169,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(768, 343)
+        Me.Label5.Location = New System.Drawing.Point(766, 329)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(115, 18)
         Me.Label5.TabIndex = 88
@@ -221,24 +207,25 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_new_work_order_technicians.Name = "txt_new_work_order_technicians"
         Me.txt_new_work_order_technicians.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txt_new_work_order_technicians.Size = New System.Drawing.Size(308, 144)
-        Me.txt_new_work_order_technicians.TabIndex = 9
+        Me.txt_new_work_order_technicians.TabIndex = 8
         '
         'txt_new_work_order_services
         '
         Me.txt_new_work_order_services.AcceptsReturn = True
         Me.txt_new_work_order_services.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_work_order_services.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_work_order_services.Location = New System.Drawing.Point(404, 34)
+        Me.txt_new_work_order_services.Location = New System.Drawing.Point(401, 37)
         Me.txt_new_work_order_services.MaxLength = 5000
         Me.txt_new_work_order_services.Multiline = True
         Me.txt_new_work_order_services.Name = "txt_new_work_order_services"
         Me.txt_new_work_order_services.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txt_new_work_order_services.Size = New System.Drawing.Size(673, 200)
-        Me.txt_new_work_order_services.TabIndex = 10
+        Me.txt_new_work_order_services.Size = New System.Drawing.Size(669, 197)
+        Me.txt_new_work_order_services.TabIndex = 9
         '
         'txt_work_order_new_customer
         '
         Me.txt_work_order_new_customer.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_work_order_new_customer.Enabled = False
         Me.txt_work_order_new_customer.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_work_order_new_customer.Location = New System.Drawing.Point(24, 78)
         Me.txt_work_order_new_customer.MaxLength = 35
@@ -249,6 +236,7 @@ Partial Class Management_Work_Order_Add_New
         'txt_work_order_new_automobile
         '
         Me.txt_work_order_new_automobile.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_work_order_new_automobile.Enabled = False
         Me.txt_work_order_new_automobile.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_work_order_new_automobile.Location = New System.Drawing.Point(23, 201)
         Me.txt_work_order_new_automobile.MaxLength = 35
@@ -261,7 +249,7 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_new_work_order_progress_stats.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_work_order_progress_stats.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_work_order_progress_stats.FormattingEnabled = True
-        Me.txt_new_work_order_progress_stats.Location = New System.Drawing.Point(768, 368)
+        Me.txt_new_work_order_progress_stats.Location = New System.Drawing.Point(766, 354)
         Me.txt_new_work_order_progress_stats.MaxLength = 25
         Me.txt_new_work_order_progress_stats.Name = "txt_new_work_order_progress_stats"
         Me.txt_new_work_order_progress_stats.Size = New System.Drawing.Size(309, 33)
@@ -275,7 +263,7 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_new_work_order_date_in.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.txt_new_work_order_date_in.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_work_order_date_in.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txt_new_work_order_date_in.Location = New System.Drawing.Point(404, 284)
+        Me.txt_new_work_order_date_in.Location = New System.Drawing.Point(399, 355)
         Me.txt_new_work_order_date_in.MaxDate = New Date(2029, 12, 31, 0, 0, 0, 0)
         Me.txt_new_work_order_date_in.MinDate = New Date(2021, 1, 1, 0, 0, 0, 0)
         Me.txt_new_work_order_date_in.Name = "txt_new_work_order_date_in"
@@ -291,7 +279,7 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_new_work_order_date_out.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.txt_new_work_order_date_out.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_work_order_date_out.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txt_new_work_order_date_out.Location = New System.Drawing.Point(404, 368)
+        Me.txt_new_work_order_date_out.Location = New System.Drawing.Point(765, 287)
         Me.txt_new_work_order_date_out.MaxDate = New Date(2029, 12, 31, 0, 0, 0, 0)
         Me.txt_new_work_order_date_out.MinDate = New Date(2021, 1, 1, 0, 0, 0, 0)
         Me.txt_new_work_order_date_out.Name = "txt_new_work_order_date_out"
@@ -304,7 +292,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(768, 261)
+        Me.Label11.Location = New System.Drawing.Point(398, 263)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(96, 18)
         Me.Label11.TabIndex = 88
@@ -314,11 +302,11 @@ Partial Class Management_Work_Order_Add_New
         '
         Me.txt_new_work_order_mileage.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_work_order_mileage.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_work_order_mileage.Location = New System.Drawing.Point(768, 282)
+        Me.txt_new_work_order_mileage.Location = New System.Drawing.Point(398, 284)
         Me.txt_new_work_order_mileage.MaxLength = 35
         Me.txt_new_work_order_mileage.Name = "txt_new_work_order_mileage"
         Me.txt_new_work_order_mileage.Size = New System.Drawing.Size(309, 33)
-        Me.txt_new_work_order_mileage.TabIndex = 6
+        Me.txt_new_work_order_mileage.TabIndex = 10
         '
         'btn_new_work_order_existing_automobile
         '
@@ -375,7 +363,7 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_work_order_add_technician.Name = "btn_new_work_order_add_technician"
         Me.btn_new_work_order_add_technician.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_new_work_order_add_technician.Size = New System.Drawing.Size(197, 33)
-        Me.btn_new_work_order_add_technician.TabIndex = 8
+        Me.btn_new_work_order_add_technician.TabIndex = 7
         Me.btn_new_work_order_add_technician.Text = "ADD TECHNICIAN"
         Me.btn_new_work_order_add_technician.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_new_work_order_add_technician.UseVisualStyleBackColor = False
@@ -431,7 +419,7 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_item_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_new_item_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_new_item_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_item_cancel.Location = New System.Drawing.Point(753, 439)
+        Me.btn_new_item_cancel.Location = New System.Drawing.Point(746, 429)
         Me.btn_new_item_cancel.Name = "btn_new_item_cancel"
         Me.btn_new_item_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_new_item_cancel.Size = New System.Drawing.Size(141, 41)
@@ -495,7 +483,7 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_item_save.ForeColor = System.Drawing.Color.White
         Me.btn_new_item_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
         Me.btn_new_item_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_item_save.Location = New System.Drawing.Point(585, 439)
+        Me.btn_new_item_save.Location = New System.Drawing.Point(578, 429)
         Me.btn_new_item_save.Name = "btn_new_item_save"
         Me.btn_new_item_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_new_item_save.Size = New System.Drawing.Size(141, 41)
@@ -520,7 +508,6 @@ Partial Class Management_Work_Order_Add_New
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_new_item_cancel)
@@ -541,7 +528,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Controls.Add(Me.txt_work_order_new_customer)
         Me.Controls.Add(Me.txt_new_work_order_technicians)
         Me.Name = "Management_Work_Order_Add_New"
-        Me.Text = "Management_Work_Order_Add_New"
+        Me.Text = "Management_Invoice_Add_New"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -551,7 +538,6 @@ Partial Class Management_Work_Order_Add_New
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label14 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_new_item_cancel As Button

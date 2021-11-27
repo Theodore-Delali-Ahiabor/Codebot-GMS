@@ -3,11 +3,6 @@ Imports System.IO
 Public Class Management_Employees
     Dim initial_employee_id As String = "HTU-JMTC0001"
     Dim new_employee_id As String
-    Private Sub Management_Employees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
-    End Sub
 
     Private Sub btn_add_new_employee_Click(sender As Object, e As EventArgs) Handles btn_add_new_employee.Click
         sidebar_form_loader(Management_Employees_Add_New)
@@ -31,6 +26,7 @@ Public Class Management_Employees
     End Function
 
     Private Sub btn_edit_employee_Click(sender As Object, e As EventArgs) Handles btn_edit_employee.Click
+        add_new_employee_clear()
         Try
             If EmployeesDataGridView.SelectedRows.Count > 0 Then
                 sidebar_form_loader(Management_Employees_Add_New)
@@ -42,21 +38,42 @@ Public Class Management_Employees
                 sql_dt.Clear()
                 sql_da.Fill(sql_dt)
                 If sql_dt.Rows.Count() > 0 Then
-                    Dim mstream As New System.IO.MemoryStream(arr_image)
-                    If sql_dt.Rows(0).Item("Image").ToString = "" Then
-                        MsgBox("yes")
+                    If sql_dt.Rows(0).Item("Image").Equals(DBNull.Value) Then
+                        With Management_Employees_Add_New
+                            .pb_new_user_image.BackgroundImage = Management_Employees_Add_New.pb_new_user_image.InitialImage
+                            .txt_new_id.Text = sql_dt.Rows(0).Item("ID").ToString()
+                            .txt_new_first_name.Text = sql_dt.Rows(0).Item("First_Name").ToString()
+                            .txt_new_other_names.Text = sql_dt.Rows(0).Item("Other_Name").ToString()
+                            .txt_new_last_name.Text = sql_dt.Rows(0).Item("Last_Name").ToString()
+                            .txt_new_email.Text = sql_dt.Rows(0).Item("Email").ToString()
+                            .txt_new_number.Text = sql_dt.Rows(0).Item("Phone").ToString()
+                            .txt_new_physical_address.Text = sql_dt.Rows(0).Item("Physical_Address_Area").ToString()
+                            .txt_new_birth_date.Value = CDate(sql_dt.Rows(0).Item("Birth_Date").ToString)
+                            .txt_new_position.Text = sql_dt.Rows(0).Item("Role").ToString()
+                            .txt_new_salary.Text = sql_dt.Rows(0).Item("Salary_GHC").ToString()
+                            .txt_new_gender.Text = sql_dt.Rows(0).Item("Gender").ToString()
+                        End With
+
+                    Else
+                        arr_image = sql_dt.Rows(0).Item(1)
+                        Dim mstream As New MemoryStream(arr_image)
+                        With Management_Employees_Add_New
+                            .pb_new_user_image.BackgroundImage = Image.FromStream(mstream)
+                            .txt_new_id.Text = sql_dt.Rows(0).Item("ID").ToString()
+                            .txt_new_first_name.Text = sql_dt.Rows(0).Item("First_Name").ToString()
+                            .txt_new_other_names.Text = sql_dt.Rows(0).Item("Other_Name").ToString()
+                            .txt_new_last_name.Text = sql_dt.Rows(0).Item("Last_Name").ToString()
+                            .txt_new_email.Text = sql_dt.Rows(0).Item("Email").ToString()
+                            .txt_new_number.Text = sql_dt.Rows(0).Item("Phone").ToString()
+                            .txt_new_physical_address.Text = sql_dt.Rows(0).Item("Physical_Address_Area").ToString()
+                            .txt_new_birth_date.Value = CDate(sql_dt.Rows(0).Item("Birth_Date").ToString)
+                            .txt_new_position.Text = sql_dt.Rows(0).Item("Role").ToString()
+                            .txt_new_salary.Text = sql_dt.Rows(0).Item("Salary_GHC").ToString()
+                            .txt_new_gender.Text = sql_dt.Rows(0).Item("Gender").ToString()
+                        End With
+
                     End If
-                    'Management_Employees_Add_New.pb_new_user_image.Image = sql_dt.Rows(0).Item("Image")
-                    Management_Employees_Add_New.txt_new_first_name.Text = sql_dt.Rows(0).Item("First_Name").ToString()
-                    Management_Employees_Add_New.txt_new_other_names.Text = sql_dt.Rows(0).Item("Other_Name").ToString()
-                    Management_Employees_Add_New.txt_new_last_name.Text = sql_dt.Rows(0).Item("Last_Name").ToString()
-                    Management_Employees_Add_New.txt_new_email.Text = sql_dt.Rows(0).Item("Email").ToString()
-                    Management_Employees_Add_New.txt_new_number.Text = sql_dt.Rows(0).Item("Phone").ToString()
-                    Management_Employees_Add_New.txt_new_physical_address.Text = sql_dt.Rows(0).Item("Physical_Address_Area").ToString()
-                    Management_Employees_Add_New.txt_new_birth_date.Value = CDate(sql_dt.Rows(0).Item("Birth_Date").ToString)
-                    Management_Employees_Add_New.txt_new_position.Text = sql_dt.Rows(0).Item("Role").ToString()
-                    Management_Employees_Add_New.txt_new_salary.Text = sql_dt.Rows(0).Item("Salary_GHC").ToString()
-                    Management_Employees_Add_New.txt_new_gender.Text = sql_dt.Rows(0).Item("Gender").ToString()
+
                     If sql_dt.Rows(0).Item("Married").ToString() = True Then
                         Management_Employees_Add_New.txt_new_married.Text = "Yes"
                     Else
@@ -84,19 +101,23 @@ Public Class Management_Employees
         End Try
     End Sub
     Public Sub add_new_employee_clear()
-        Management_Employees_Add_New.txt_new_id.Clear()
-        Management_Employees_Add_New.txt_new_first_name.Clear()
-        Management_Employees_Add_New.txt_new_other_names.Clear()
-        Management_Employees_Add_New.txt_new_last_name.Clear()
-        Management_Employees_Add_New.txt_new_email.Clear()
-        Management_Employees_Add_New.txt_new_number.Clear()
-        Management_Employees_Add_New.txt_new_physical_address.Clear()
-        Management_Employees_Add_New.txt_new_birth_date.Checked = False
-        Management_Employees_Add_New.txt_new_position.Text = ""
-        Management_Employees_Add_New.txt_new_salary.Clear()
-        Management_Employees_Add_New.txt_new_gender.Text = ""
-        Management_Employees_Add_New.txt_new_married.Text = ""
-        Management_Employees_Add_New.txt_new_active.SelectedIndex = 0
+        With Management_Employees_Add_New
+            .pb_new_user_image.BackgroundImage = .pb_new_user_image.InitialImage
+            .txt_new_id.Clear()
+            .txt_new_first_name.Clear()
+            .txt_new_other_names.Clear()
+            .txt_new_last_name.Clear()
+            .txt_new_email.Clear()
+            .txt_new_number.Clear()
+            .txt_new_physical_address.Clear()
+            .txt_new_birth_date.Checked = False
+            .txt_new_position.Text = ""
+            .txt_new_salary.Clear()
+            .txt_new_gender.Text = ""
+            .txt_new_married.Text = ""
+            .txt_new_active.SelectedIndex = 0
+        End With
+
     End Sub
     Private Sub cmb_employee_position_filter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_employee_position_filter.SelectedIndexChanged
         If cmb_employee_position_filter.SelectedIndex = 0 Then
@@ -176,5 +197,9 @@ Public Class Management_Employees
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub EmployeesDataGridView_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles EmployeesDataGridView.CellMouseDoubleClick
+        btn_edit_employee_Click(btn_edit_employee, EventArgs.Empty)
     End Sub
 End Class

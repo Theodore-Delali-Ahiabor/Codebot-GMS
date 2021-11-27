@@ -122,7 +122,17 @@ Codebot_GMS
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner">
+<member name="P:Codebot_GMS.My.Resources.Resources.initial_employee_image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner3">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

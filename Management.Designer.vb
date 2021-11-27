@@ -25,17 +25,6 @@ Partial Class Management
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CcToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FfToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuickAccessToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DocumentationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RestoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.DateTimeStatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -52,6 +41,13 @@ Partial Class Management
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btn_management_message = New System.Windows.Forms.Button()
+        Me.lbl_current_tab = New System.Windows.Forms.Label()
+        Me.management_main_container = New System.Windows.Forms.Panel()
+        Me.systemtime = New System.Windows.Forms.Timer(Me.components)
+        Me.btn_refresh = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.btn_logout = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btn_statistics = New System.Windows.Forms.Button()
@@ -63,13 +59,17 @@ Partial Class Management
         Me.btn_work_orders = New System.Windows.Forms.Button()
         Me.btn_market = New System.Windows.Forms.Button()
         Me.btn_home = New System.Windows.Forms.Button()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btn_management_message = New System.Windows.Forms.Button()
-        Me.btn_refresh = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.lbl_current_tab = New System.Windows.Forms.Label()
-        Me.management_main_container = New System.Windows.Forms.Panel()
-        Me.systemtime = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CcToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FfToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuickAccessToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DocumentationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RestoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.DateTimeStatusStrip.SuspendLayout()
@@ -91,86 +91,6 @@ Partial Class Management
         Me.MenuStrip.Size = New System.Drawing.Size(1350, 43)
         Me.MenuStrip.TabIndex = 0
         Me.MenuStrip.Text = "MenuStrip1"
-        '
-        'ToolsToolStripMenuItem
-        '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CcToolStripMenuItem})
-        Me.ToolsToolStripMenuItem.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolsToolStripMenuItem.Image = CType(resources.GetObject("ToolsToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ToolsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Padding = New System.Windows.Forms.Padding(10)
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(128, 43)
-        Me.ToolsToolStripMenuItem.Text = "Quick Access"
-        '
-        'CcToolStripMenuItem
-        '
-        Me.CcToolStripMenuItem.Name = "CcToolStripMenuItem"
-        Me.CcToolStripMenuItem.Size = New System.Drawing.Size(90, 24)
-        Me.CcToolStripMenuItem.Text = "cc"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FfToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Image = CType(resources.GetObject("HelpToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(82, 43)
-        Me.HelpToolStripMenuItem.Text = "Reports"
-        '
-        'FfToolStripMenuItem
-        '
-        Me.FfToolStripMenuItem.Name = "FfToolStripMenuItem"
-        Me.FfToolStripMenuItem.Size = New System.Drawing.Size(84, 22)
-        Me.FfToolStripMenuItem.Text = "ff"
-        '
-        'QuickAccessToolStripMenuItem
-        '
-        Me.QuickAccessToolStripMenuItem.Image = CType(resources.GetObject("QuickAccessToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.QuickAccessToolStripMenuItem.Name = "QuickAccessToolStripMenuItem"
-        Me.QuickAccessToolStripMenuItem.Size = New System.Drawing.Size(68, 43)
-        Me.QuickAccessToolStripMenuItem.Text = "More"
-        '
-        'ReportsToolStripMenuItem
-        '
-        Me.ReportsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DdToolStripMenuItem, Me.DocumentationToolStripMenuItem})
-        Me.ReportsToolStripMenuItem.Image = CType(resources.GetObject("ReportsToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(63, 43)
-        Me.ReportsToolStripMenuItem.Text = "Help"
-        '
-        'DdToolStripMenuItem
-        '
-        Me.DdToolStripMenuItem.Name = "DdToolStripMenuItem"
-        Me.DdToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.DdToolStripMenuItem.Text = "Getting Started"
-        '
-        'DocumentationToolStripMenuItem
-        '
-        Me.DocumentationToolStripMenuItem.Name = "DocumentationToolStripMenuItem"
-        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.DocumentationToolStripMenuItem.Text = "Documentation"
-        '
-        'MoreToolStripMenuItem
-        '
-        Me.MoreToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.MoreToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AaToolStripMenuItem, Me.RestoreToolStripMenuItem})
-        Me.MoreToolStripMenuItem.Image = CType(resources.GetObject("MoreToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.MoreToolStripMenuItem.Name = "MoreToolStripMenuItem"
-        Me.MoreToolStripMenuItem.Size = New System.Drawing.Size(68, 43)
-        Me.MoreToolStripMenuItem.Text = "Tools"
-        '
-        'AaToolStripMenuItem
-        '
-        Me.AaToolStripMenuItem.Name = "AaToolStripMenuItem"
-        Me.AaToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
-        Me.AaToolStripMenuItem.Text = "Backup"
-        '
-        'RestoreToolStripMenuItem
-        '
-        Me.RestoreToolStripMenuItem.Name = "RestoreToolStripMenuItem"
-        Me.RestoreToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
-        Me.RestoreToolStripMenuItem.Text = "Restore"
         '
         'Panel4
         '
@@ -348,6 +268,98 @@ Partial Class Management
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(233, 676)
         Me.Panel1.TabIndex = 16
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel5.Controls.Add(Me.btn_management_message)
+        Me.Panel5.Controls.Add(Me.btn_refresh)
+        Me.Panel5.Controls.Add(Me.Button2)
+        Me.Panel5.Controls.Add(Me.lbl_current_tab)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Font = New System.Drawing.Font("Ebrima", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel5.Location = New System.Drawing.Point(233, 43)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1117, 69)
+        Me.Panel5.TabIndex = 20
+        '
+        'btn_management_message
+        '
+        Me.btn_management_message.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_management_message.AutoSize = True
+        Me.btn_management_message.BackColor = System.Drawing.Color.Ivory
+        Me.btn_management_message.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_management_message.FlatAppearance.BorderSize = 0
+        Me.btn_management_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_management_message.Font = New System.Drawing.Font("Copperplate Gothic Light", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_management_message.ForeColor = System.Drawing.Color.White
+        Me.btn_management_message.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_management_message.Location = New System.Drawing.Point(332, 11)
+        Me.btn_management_message.Margin = New System.Windows.Forms.Padding(0)
+        Me.btn_management_message.Name = "btn_management_message"
+        Me.btn_management_message.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_management_message.Size = New System.Drawing.Size(342, 50)
+        Me.btn_management_message.TabIndex = 36
+        Me.btn_management_message.UseVisualStyleBackColor = False
+        Me.btn_management_message.Visible = False
+        '
+        'lbl_current_tab
+        '
+        Me.lbl_current_tab.AutoSize = True
+        Me.lbl_current_tab.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_current_tab.ForeColor = System.Drawing.Color.Teal
+        Me.lbl_current_tab.Location = New System.Drawing.Point(37, 22)
+        Me.lbl_current_tab.Name = "lbl_current_tab"
+        Me.lbl_current_tab.Size = New System.Drawing.Size(121, 28)
+        Me.lbl_current_tab.TabIndex = 1
+        Me.lbl_current_tab.Text = "Currenrt Tab"
+        '
+        'management_main_container
+        '
+        Me.management_main_container.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.management_main_container.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.management_main_container.Location = New System.Drawing.Point(233, 112)
+        Me.management_main_container.Name = "management_main_container"
+        Me.management_main_container.Size = New System.Drawing.Size(1117, 562)
+        Me.management_main_container.TabIndex = 21
+        '
+        'systemtime
+        '
+        Me.systemtime.Enabled = True
+        Me.systemtime.Interval = 1000
+        '
+        'btn_refresh
+        '
+        Me.btn_refresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_refresh.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_refresh.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_refresh.FlatAppearance.BorderSize = 0
+        Me.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_refresh.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_refresh.ForeColor = System.Drawing.Color.White
+        Me.btn_refresh.Image = CType(resources.GetObject("btn_refresh.Image"), System.Drawing.Image)
+        Me.btn_refresh.Location = New System.Drawing.Point(992, 11)
+        Me.btn_refresh.Name = "btn_refresh"
+        Me.btn_refresh.Size = New System.Drawing.Size(73, 52)
+        Me.btn_refresh.TabIndex = 35
+        Me.btn_refresh.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.BackColor = System.Drawing.Color.CadetBlue
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(896, 11)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(73, 52)
+        Me.Button2.TabIndex = 34
+        Me.Button2.UseVisualStyleBackColor = False
+        Me.Button2.Visible = False
         '
         'btn_logout
         '
@@ -589,7 +601,7 @@ Partial Class Management
         Me.btn_market.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
         Me.btn_market.Size = New System.Drawing.Size(233, 48)
         Me.btn_market.TabIndex = 2
-        Me.btn_market.Text = "Market"
+        Me.btn_market.Text = "Parts Requisition"
         Me.btn_market.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_market.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_market.UseVisualStyleBackColor = False
@@ -619,97 +631,85 @@ Partial Class Management
         Me.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_home.UseVisualStyleBackColor = False
         '
-        'Panel5
+        'ToolsToolStripMenuItem
         '
-        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel5.Controls.Add(Me.btn_management_message)
-        Me.Panel5.Controls.Add(Me.btn_refresh)
-        Me.Panel5.Controls.Add(Me.Button2)
-        Me.Panel5.Controls.Add(Me.lbl_current_tab)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Font = New System.Drawing.Font("Ebrima", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel5.Location = New System.Drawing.Point(233, 43)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1117, 69)
-        Me.Panel5.TabIndex = 20
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CcToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolsToolStripMenuItem.Image = CType(resources.GetObject("ToolsToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ToolsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+        Me.ToolsToolStripMenuItem.Padding = New System.Windows.Forms.Padding(10)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(128, 43)
+        Me.ToolsToolStripMenuItem.Text = "Quick Access"
         '
-        'btn_management_message
+        'CcToolStripMenuItem
         '
-        Me.btn_management_message.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_management_message.AutoSize = True
-        Me.btn_management_message.BackColor = System.Drawing.Color.Ivory
-        Me.btn_management_message.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_management_message.FlatAppearance.BorderSize = 0
-        Me.btn_management_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_management_message.Font = New System.Drawing.Font("Copperplate Gothic Light", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_management_message.ForeColor = System.Drawing.Color.White
-        Me.btn_management_message.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_management_message.Location = New System.Drawing.Point(332, 11)
-        Me.btn_management_message.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_management_message.Name = "btn_management_message"
-        Me.btn_management_message.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_management_message.Size = New System.Drawing.Size(342, 50)
-        Me.btn_management_message.TabIndex = 36
-        Me.btn_management_message.UseVisualStyleBackColor = False
-        Me.btn_management_message.Visible = False
+        Me.CcToolStripMenuItem.Name = "CcToolStripMenuItem"
+        Me.CcToolStripMenuItem.Size = New System.Drawing.Size(90, 24)
+        Me.CcToolStripMenuItem.Text = "cc"
         '
-        'btn_refresh
+        'HelpToolStripMenuItem
         '
-        Me.btn_refresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_refresh.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_refresh.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_refresh.FlatAppearance.BorderSize = 0
-        Me.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_refresh.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_refresh.ForeColor = System.Drawing.Color.White
-        Me.btn_refresh.Image = CType(resources.GetObject("btn_refresh.Image"), System.Drawing.Image)
-        Me.btn_refresh.Location = New System.Drawing.Point(992, 11)
-        Me.btn_refresh.Name = "btn_refresh"
-        Me.btn_refresh.Size = New System.Drawing.Size(73, 52)
-        Me.btn_refresh.TabIndex = 35
-        Me.btn_refresh.UseVisualStyleBackColor = False
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FfToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Image = CType(resources.GetObject("HelpToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(82, 43)
+        Me.HelpToolStripMenuItem.Text = "Reports"
         '
-        'Button2
+        'FfToolStripMenuItem
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.Color.CadetBlue
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(896, 11)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(73, 52)
-        Me.Button2.TabIndex = 34
-        Me.Button2.UseVisualStyleBackColor = False
-        Me.Button2.Visible = False
+        Me.FfToolStripMenuItem.Name = "FfToolStripMenuItem"
+        Me.FfToolStripMenuItem.Size = New System.Drawing.Size(84, 22)
+        Me.FfToolStripMenuItem.Text = "ff"
         '
-        'lbl_current_tab
+        'QuickAccessToolStripMenuItem
         '
-        Me.lbl_current_tab.AutoSize = True
-        Me.lbl_current_tab.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_current_tab.ForeColor = System.Drawing.Color.Teal
-        Me.lbl_current_tab.Location = New System.Drawing.Point(37, 22)
-        Me.lbl_current_tab.Name = "lbl_current_tab"
-        Me.lbl_current_tab.Size = New System.Drawing.Size(121, 28)
-        Me.lbl_current_tab.TabIndex = 1
-        Me.lbl_current_tab.Text = "Currenrt Tab"
+        Me.QuickAccessToolStripMenuItem.Image = CType(resources.GetObject("QuickAccessToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.QuickAccessToolStripMenuItem.Name = "QuickAccessToolStripMenuItem"
+        Me.QuickAccessToolStripMenuItem.Size = New System.Drawing.Size(68, 43)
+        Me.QuickAccessToolStripMenuItem.Text = "More"
         '
-        'management_main_container
+        'ReportsToolStripMenuItem
         '
-        Me.management_main_container.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.management_main_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.management_main_container.Location = New System.Drawing.Point(233, 112)
-        Me.management_main_container.Name = "management_main_container"
-        Me.management_main_container.Size = New System.Drawing.Size(1117, 562)
-        Me.management_main_container.TabIndex = 21
+        Me.ReportsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DdToolStripMenuItem, Me.DocumentationToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.Image = CType(resources.GetObject("ReportsToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(63, 43)
+        Me.ReportsToolStripMenuItem.Text = "Help"
         '
-        'systemtime
+        'DdToolStripMenuItem
         '
-        Me.systemtime.Enabled = True
-        Me.systemtime.Interval = 1000
+        Me.DdToolStripMenuItem.Name = "DdToolStripMenuItem"
+        Me.DdToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DdToolStripMenuItem.Text = "Getting Started"
+        '
+        'DocumentationToolStripMenuItem
+        '
+        Me.DocumentationToolStripMenuItem.Name = "DocumentationToolStripMenuItem"
+        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DocumentationToolStripMenuItem.Text = "Documentation"
+        '
+        'MoreToolStripMenuItem
+        '
+        Me.MoreToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.MoreToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AaToolStripMenuItem, Me.RestoreToolStripMenuItem})
+        Me.MoreToolStripMenuItem.Image = CType(resources.GetObject("MoreToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.MoreToolStripMenuItem.Name = "MoreToolStripMenuItem"
+        Me.MoreToolStripMenuItem.Size = New System.Drawing.Size(68, 43)
+        Me.MoreToolStripMenuItem.Text = "Tools"
+        '
+        'AaToolStripMenuItem
+        '
+        Me.AaToolStripMenuItem.Name = "AaToolStripMenuItem"
+        Me.AaToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.AaToolStripMenuItem.Text = "Backup"
+        '
+        'RestoreToolStripMenuItem
+        '
+        Me.RestoreToolStripMenuItem.Name = "RestoreToolStripMenuItem"
+        Me.RestoreToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
+        Me.RestoreToolStripMenuItem.Text = "Restore"
         '
         'Management
         '

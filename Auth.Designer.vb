@@ -25,9 +25,9 @@ Partial Class Auth
         Me.components = New System.ComponentModel.Container()
         Me.auth_left_panel = New System.Windows.Forms.Panel()
         Me.btn_auth_message = New System.Windows.Forms.Button()
-        Me.auth_right_panel = New System.Windows.Forms.Panel()
         Me.Left_Panel_Main = New System.Windows.Forms.Panel()
         Me.message_timer = New System.Windows.Forms.Timer(Me.components)
+        Me.auth_right_panel = New System.Windows.Forms.Panel()
         Me.Left_Panel_Main.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,18 +60,6 @@ Partial Class Auth
         Me.btn_auth_message.UseVisualStyleBackColor = False
         Me.btn_auth_message.Visible = False
         '
-        'auth_right_panel
-        '
-        Me.auth_right_panel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.auth_right_panel.BackgroundImage = Global.Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner
-        Me.auth_right_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.auth_right_panel.Location = New System.Drawing.Point(471, 0)
-        Me.auth_right_panel.Name = "auth_right_panel"
-        Me.auth_right_panel.Size = New System.Drawing.Size(879, 719)
-        Me.auth_right_panel.TabIndex = 9
-        '
         'Left_Panel_Main
         '
         Me.Left_Panel_Main.Controls.Add(Me.auth_left_panel)
@@ -85,6 +73,16 @@ Partial Class Auth
         'message_timer
         '
         Me.message_timer.Interval = 1000
+        '
+        'auth_right_panel
+        '
+        Me.auth_right_panel.BackgroundImage = Global.Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner3
+        Me.auth_right_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.auth_right_panel.Dock = System.Windows.Forms.DockStyle.Right
+        Me.auth_right_panel.Location = New System.Drawing.Point(471, 0)
+        Me.auth_right_panel.Name = "auth_right_panel"
+        Me.auth_right_panel.Size = New System.Drawing.Size(879, 719)
+        Me.auth_right_panel.TabIndex = 9
         '
         'Auth
         '

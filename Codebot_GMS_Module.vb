@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Net.Mail
+Imports System.IO
 Module Codebot_GMS_Module
     Public sql_con As New MySqlConnection("server=localhost;user id=root;password=;database=codebot_gms_schema;sslMode=none;Allow Zero Datetime=True")
     Public sql_rdr As MySqlDataReader
@@ -7,9 +8,11 @@ Module Codebot_GMS_Module
     Public sql_ds As DataSet
     Public sql_cmd As MySqlCommand
     Public message_ts, invalid_login_ts As TimeSpan
-    Public signup_id, signup_name, login_id, login_full_name, login_as, default_query, filter_query, img_path As String
+    Public signup_id, signup_name, login_id, login_full_name, login_as, default_query, filter_query, img_path, sql_stmt, null As String
     Public invalid_login As Integer = 0
-    Public arr_image As Byte
+    Public arr_image() As Byte
+    Public open_image_file_dialog As New OpenFileDialog()
+    Public mstream As New MemoryStream()
     'LOADS FORMS INTO GMS_Main  
     Public Sub gms_main_form_loader(ByVal main_form As Form)
         Try
@@ -49,6 +52,7 @@ Module Codebot_GMS_Module
                 Management_Inventory_Add_New.Visible = False
                 Management_Work_Order_Add_New.Visible = False
                 Management_Invoice.Visible = False
+                Management_Invoice_Add_New.Visible = False
                 form.Visible = True
             Else
                 form.Visible = False
@@ -146,16 +150,22 @@ Module Codebot_GMS_Module
         Next
         Return found
     End Function
-    'Public Function filter_textbox(ByRef txt_name As TextBox, ByRef filter_item As String) As Boolean
-    '    Dim found As Boolean = False
-    '    For Each item In txt_name.AutoCompleteCustomSource
-    '        If filter_item = item Then
-    '            found = True
-    '        End If
-    '    Next
-    '    Return found
-    'End Function
+
     'FILL THE DATAGRID WITH A DEFAULT INFORMATION
+    Public Sub datagrid_fill(ByRef db_table As String, ByRef gridview_name As DataGridView)
+        Try
+            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table, sql_con)
+            sql_dt = New DataTable
+            sql_dt.Clear()
+            sql_da.Fill(sql_dt)
+            gridview_name.DataSource = sql_dt
+            datagrid_fill_color_effect(db_table, gridview_name)
+            clear_gridview_default_selection(gridview_name)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
     Public Sub datagrid_fill_default(ByRef db_table As String, ByRef gridview_name As DataGridView)
         Try
             sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " ORDER BY ID DESC", sql_con)
@@ -172,7 +182,7 @@ Module Codebot_GMS_Module
     'FILL THE DATAGRID WITH INFORMATIONS BASE ON SOME FILTER VARIABLE
     Public Sub datagrid_fill_flter_with_variable(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef db_column As String, ByRef symbol As String, ByRef variable As String)
         Try
-            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & symbol & variable & " ORDER BY ID DESC", sql_con)
+            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & symbol & variable, sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
             sql_da.Fill(sql_dt)
@@ -216,6 +226,7 @@ Module Codebot_GMS_Module
         Try
             Management_Home.activebar_work_orders.Visible = True
             Management_Home.activebar_inventory.Visible = False
+            Management_Home.activebar_events.Visible = False
             sql_da = New MySqlDataAdapter("SELECT * FROM work_order_view WHERE Due_In < " & variable & " AND Progress_Status <> '" & "Done" & "' ORDER BY ID DESC ", sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
@@ -258,13 +269,14 @@ Module Codebot_GMS_Module
                             If gridview_name.Rows(i).Cells(7).Value < 1 Then
                                 gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
                             End If
+                        Else
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
                         End If
                     Next
                 ElseIf db_table = "work_order_view" Then
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
                         If gridview_name.Rows(i).Cells(5).Value < 6 And gridview_name.Rows(i).Cells(6).Value <> "Done" Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
-
                             If gridview_name.Rows(i).Cells(5).Value < 1 Then
                                 gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
                             End If
@@ -274,6 +286,16 @@ Module Codebot_GMS_Module
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
                         ElseIf gridview_name.Rows(i).Cells(6).Value = "Done" Then
                             gridview_name.Rows(i).Cells(5).Value = 0
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
+                        End If
+                    Next
+                ElseIf db_table = "events_view" Then
+                    For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
+                        If gridview_name.Rows(i).Cells(1).Value < 11 Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
+                            If gridview_name.Rows(i).Cells(1).Value = 0 Then
+                                gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
+                            End If
                         End If
                     Next
                 End If

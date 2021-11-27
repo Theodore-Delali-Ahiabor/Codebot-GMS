@@ -1,52 +1,112 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Net.Mail
+'Imports Amazon.SimpleNotificationService
+'Imports Amazon.SimpleNotificationService.Model
 Public Class Auth_Password_Reset
     Public reset_id As String
-    Public null As String
     Public reset_code As Integer
+    Public reset_email As String
+
     Shared random As New Random()
 
     Private Sub btn_password_reset_cancel_Click(sender As Object, e As EventArgs) Handles btn_password_reset_cancel.Click
         auth_form_loader(Auth_Login)
     End Sub
     Private Sub btn_password_reset_send_code_Click(sender As Object, e As EventArgs) Handles btn_password_reset_send_code.Click
-        If txt_password_reset_phone_number.Text <> "" Then
-            If IsNumeric(txt_password_reset_phone_number.Text) Then
-                Try
-                    sql_da = New MySqlDataAdapter("SELECT  employee.*, `user`.* FROM employee INNER JOIN `user` ON employee.ID = `user`.Employee_ID WHERE phone = '" & txt_password_reset_phone_number.Text & "'", sql_con)
-                    sql_dt = New DataTable
-                    sql_dt.Clear()
-                    sql_da.Fill(sql_dt)
-                    If sql_dt.Rows.Count() > 0 Then
-                        reset_id = sql_dt.Rows(0).Item("Employee_ID")
-                        reset_code = random.Next(100000, 999999)
-                        sql_ds = New DataSet
-                        sql_da = New MySqlDataAdapter("INSERT INTO login_reset(Request_ID,	Reset_Code,Request_Time)
-                        VALUES('" & reset_id & "', '" & reset_code & "', '" & Date.UtcNow & "')", sql_con)
-                        sql_da.Fill(sql_ds, "user")
-                        btn_password_reset_reset.Enabled = True
-                        btn_password_reset_send_code.Enabled = False
-                        btn_password_reset_send_code.Text = "CODE SENT"
-                        txt_password_reset_phone_number.Enabled = False
-                        txt_password_reset_code.Focus()
-                        Auth.btn_auth_message.Text = "Reset Code was Sent to '" & txt_password_reset_phone_number.Text & "'"
-                        Auth.btn_auth_message.Show()
-                        message(Auth.btn_auth_message, "success")
-                    Else
-                        Auth.btn_auth_message.Text = "Number NOT an Employee"
-                        Auth.btn_auth_message.Show()
-                        message(Auth.btn_auth_message, "warning")
-                    End If
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-            Else
-                Auth.btn_auth_message.Text = "Enter numeric values ONLY"
+        If txt_password_reset_email.Text <> "" Then
+            If txt_password_reset_email.Text.Contains("'") Then
+                Auth.btn_auth_message.Text = "Unexpected symbol ' in email"
                 Auth.btn_auth_message.Show()
-                message(Auth.btn_auth_message, "warning")
-                txt_password_reset_phone_number.Focus()
+                message(Auth.btn_auth_message, "warning") '
+                txt_password_reset_email.Focus()
+            Else
+                If txt_password_reset_email.Text.Contains("@") And txt_password_reset_email.Text.Contains(".") Then
+                    Try
+                        sql_da = New MySqlDataAdapter("SELECT  employee.*, `user`.* FROM employee INNER JOIN `user` ON employee.ID = `user`.Employee_ID WHERE email = '" & txt_password_reset_email.Text & "'", sql_con)
+                        sql_dt = New DataTable
+                        sql_dt.Clear()
+                        sql_da.Fill(sql_dt)
+                        If sql_dt.Rows.Count() > 0 Then
+                            reset_id = sql_dt.Rows(0).Item("Employee_ID")
+                            reset_code = random.Next(100000, 999999)
+                            reset_email = sql_dt.Rows(0).Item("email")
+                            'Sends an email  to the user requesting the password reset
+                            Try
+                                Dim Smtp_Server As New SmtpClient
+                                Dim e_mail As New MailMessage()
+                                Smtp_Server.UseDefaultCredentials = False
+                                Smtp_Server.Credentials = New Net.NetworkCredential("theodoredela@gmail.com", "@DrahKulaH98")
+                                Smtp_Server.Port = 587
+                                Smtp_Server.EnableSsl = True
+                                Smtp_Server.Host = "smtp.gmail.com"
+
+                                e_mail = New MailMessage()
+                                e_mail.From = New MailAddress("theodoredela@gmail.com")
+                                e_mail.To.Add(txt_password_reset_email.Text)
+                                e_mail.Subject = "Email Sending"
+                                e_mail.IsBodyHtml = False
+                                e_mail.Body = "Your login reset code is "
+                                Smtp_Server.Send(e_mail)
+                                MsgBox("Mail Sent")
+
+
+                                'Dim smtp_server As New SmtpClient
+                                'Dim email As New MailMessage()
+                                'smtp_server.UseDefaultCredentials = False
+                                'smtp_server.Credentials = New Net.NetworkCredential("theodoredela@gmail.com", "DrahKulaH98")
+                                'smtp_server.Port = 587
+                                'smtp_server.EnableSsl = True
+                                'smtp_server.Host = "smtp.gmail.com"
+                                'email = New MailMessage()
+                                'email.From = New MailAddress("theodoredela@gmail.com")
+                                'email.To.Add(txt_password_reset_email.Text)
+                                'email.Subject = " HTU-JMTC Password Reset"
+                                'email.IsBodyHtml = False
+                                'email.Body = "Your login reset code is " + reset_code.ToString
+                                'smtp_server.Send(email)
+                                MsgBox("check point")
+                                sql_ds = New DataSet
+                                sql_da = New MySqlDataAdapter("INSERT INTO login_reset(Request_ID,	Reset_Code,Request_Time)
+                                                VALUES('" & reset_id & "', '" & reset_code & "', '" & Date.UtcNow & "')", sql_con)
+                                sql_da.Fill(sql_ds, "user")
+                                'Displays a message in the application
+                                btn_password_reset_reset.Enabled = True
+                                btn_password_reset_send_code.Enabled = False
+                                btn_password_reset_send_code.Text = "CODE SENT"
+                                btn_password_reset_send_code.BackColor = Color.LightGreen
+                                txt_password_reset_email.Enabled = False
+                                txt_password_reset_code.Enabled = True
+                                txt_password_reset_code.Focus()
+                                MessageBox.Show("Login reset code has been successfully sent to " + txt_password_reset_email.Text + ". Check  your mail and enter reset code", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                            Catch ex As Exception
+                                'MessageBox.Show("Something went wrong while attempting to send email. Kindly check your connection and try again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                'btn_password_reset_reset.Enabled = False
+                                'btn_password_reset_send_code.Enabled = True
+                                'btn_password_reset_send_code.Text = "SEND CODE"
+                                'btn_password_reset_send_code.BackColor = Color.DarkTurquoise
+                                'txt_password_reset_email.Enabled = True
+                                'txt_password_reset_email.Focus()
+                                MsgBox(ex.ToString)
+                            End Try
+                        Else
+                            Auth.btn_auth_message.Text = "Email NOT an Employee"
+                            Auth.btn_auth_message.Show()
+                            message(Auth.btn_auth_message, "warning")
+                        End If
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+                Else
+                    Auth.btn_auth_message.Text = "Enter a valid email address"
+                    Auth.btn_auth_message.Show()
+                    message(Auth.btn_auth_message, "warning")
+                    txt_password_reset_email.Focus()
+                End If
             End If
+
         Else
-            Auth.btn_auth_message.Text = "Phone number field is empty"
+            Auth.btn_auth_message.Text = "Email address field is empty"
             Auth.btn_auth_message.Show()
             message(Auth.btn_auth_message, "warning")
         End If
@@ -99,9 +159,6 @@ Public Class Auth_Password_Reset
             message(Auth.btn_auth_message, "warning")
         End If
     End Sub
-
-
-
 
 
 End Class

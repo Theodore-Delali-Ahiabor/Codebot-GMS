@@ -65,9 +65,8 @@ Public Class Management_Work_Order_Add_New_Automobile
                             VALUES('" & txt_new_category.Text & "','" & txt_new_year.Text & "','" & txt_new_make.Text & "', '" & txt_new_model.Text & "', '" & txt_new_color.Text & "',
                             '" & txt_new_fuel.Text & "', '" & txt_new_vin.Text & "', '" & txt_new_reg_number.Text & "')", sql_con)
                         sql_da.Fill(sql_ds, "automobile_info")
-                        'sidebar_form_loader(Management_Employees)
-                        'datagrid_fill_default("employee_view", Management_Employees.EmployeesDataGridView)
                         Management_Work_Order_Add_New.txt_work_order_new_automobile.Text = CStr(txt_new_year.Text & " " & txt_new_color.Text & " " & txt_new_make.Text & " " & txt_new_model.Text)
+                        Management_Work_Order_Add_New.automobile = AutomobileDataGridView.CurrentRow.Cells(0).Value
                         Me.Close()
                         datagrid_fill_default("automobile_info", Me.AutomobileDataGridView)
                         Management.btn_management_message.Text = "Automobile Updated Successflly"
@@ -75,7 +74,6 @@ Public Class Management_Work_Order_Add_New_Automobile
                         message(Management.btn_management_message, "success")
 
                     End If
-                    'Management_Work_Order_Add_New.txt_work_order_new_automobile.Text = CStr(txt_new_year.Text & ", " & txt_new_color.Text & ", " & txt_new_make.Text & ", " & txt_new_model.Text)
                 Else
                     Dim repos As DialogResult = MessageBox.Show("You are about to Update Autoombile @ ID '" & Me.AutomobileDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then

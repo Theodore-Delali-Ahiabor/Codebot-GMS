@@ -43,11 +43,11 @@ Partial Class Management_Work_Order
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btn_end_work_order = New System.Windows.Forms.Button()
+        Me.btn_start_work_order = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_add_new_work_order = New System.Windows.Forms.Button()
-        Me.btn_end_work_order = New System.Windows.Forms.Button()
-        Me.btn_start_work_order = New System.Windows.Forms.Button()
         CType(Me.WorkOrderDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -160,7 +160,7 @@ Partial Class Management_Work_Order
         Me.Button6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button6.BackColor = System.Drawing.Color.Silver
         Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.Silver
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -177,11 +177,11 @@ Partial Class Management_Work_Order
         Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button5.BackColor = System.Drawing.Color.LightGreen
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(426, 1)
+        Me.Button5.Location = New System.Drawing.Point(426, 3)
         Me.Button5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button5.Name = "Button5"
         Me.Button5.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -194,7 +194,7 @@ Partial Class Management_Work_Order
         Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button4.BackColor = System.Drawing.Color.CadetBlue
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Silver
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -211,11 +211,11 @@ Partial Class Management_Work_Order
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button3.BackColor = System.Drawing.Color.Gold
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Silver
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(209, 0)
+        Me.Button3.Location = New System.Drawing.Point(209, 2)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
         Me.Button3.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -226,13 +226,13 @@ Partial Class Management_Work_Order
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button2.BackColor = System.Drawing.Color.White
+        Me.Button2.BackColor = System.Drawing.Color.Honeydew
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(18, -1)
+        Me.Button2.Location = New System.Drawing.Point(18, 2)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -245,7 +245,7 @@ Partial Class Management_Work_Order
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button1.BackColor = System.Drawing.Color.Coral
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -317,6 +317,48 @@ Partial Class Management_Work_Order
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Done Work Order"
         '
+        'btn_end_work_order
+        '
+        Me.btn_end_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_end_work_order.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btn_end_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_end_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_end_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_end_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_end_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_end_work_order.Image = CType(resources.GetObject("btn_end_work_order.Image"), System.Drawing.Image)
+        Me.btn_end_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_end_work_order.Location = New System.Drawing.Point(198, 487)
+        Me.btn_end_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_end_work_order.Name = "btn_end_work_order"
+        Me.btn_end_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_end_work_order.Size = New System.Drawing.Size(116, 46)
+        Me.btn_end_work_order.TabIndex = 66
+        Me.btn_end_work_order.Text = "Done"
+        Me.btn_end_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_end_work_order.UseVisualStyleBackColor = False
+        '
+        'btn_start_work_order
+        '
+        Me.btn_start_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_start_work_order.BackColor = System.Drawing.Color.LightGreen
+        Me.btn_start_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_start_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_start_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_start_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_start_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_start_work_order.Image = CType(resources.GetObject("btn_start_work_order.Image"), System.Drawing.Image)
+        Me.btn_start_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_start_work_order.Location = New System.Drawing.Point(62, 486)
+        Me.btn_start_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_start_work_order.Name = "btn_start_work_order"
+        Me.btn_start_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_start_work_order.Size = New System.Drawing.Size(116, 46)
+        Me.btn_start_work_order.TabIndex = 65
+        Me.btn_start_work_order.Text = "Start"
+        Me.btn_start_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_start_work_order.UseVisualStyleBackColor = False
+        '
         'Label3
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -364,48 +406,6 @@ Partial Class Management_Work_Order
         Me.btn_add_new_work_order.TabIndex = 58
         Me.btn_add_new_work_order.Text = "    New"
         Me.btn_add_new_work_order.UseVisualStyleBackColor = False
-        '
-        'btn_end_work_order
-        '
-        Me.btn_end_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_end_work_order.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.btn_end_work_order.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_end_work_order.FlatAppearance.BorderSize = 0
-        Me.btn_end_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_end_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_end_work_order.ForeColor = System.Drawing.Color.White
-        Me.btn_end_work_order.Image = CType(resources.GetObject("btn_end_work_order.Image"), System.Drawing.Image)
-        Me.btn_end_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_end_work_order.Location = New System.Drawing.Point(198, 487)
-        Me.btn_end_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_end_work_order.Name = "btn_end_work_order"
-        Me.btn_end_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_end_work_order.Size = New System.Drawing.Size(116, 46)
-        Me.btn_end_work_order.TabIndex = 66
-        Me.btn_end_work_order.Text = "Done"
-        Me.btn_end_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_end_work_order.UseVisualStyleBackColor = False
-        '
-        'btn_start_work_order
-        '
-        Me.btn_start_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_start_work_order.BackColor = System.Drawing.Color.LightGreen
-        Me.btn_start_work_order.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_start_work_order.FlatAppearance.BorderSize = 0
-        Me.btn_start_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_start_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_start_work_order.ForeColor = System.Drawing.Color.White
-        Me.btn_start_work_order.Image = CType(resources.GetObject("btn_start_work_order.Image"), System.Drawing.Image)
-        Me.btn_start_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_start_work_order.Location = New System.Drawing.Point(62, 486)
-        Me.btn_start_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_start_work_order.Name = "btn_start_work_order"
-        Me.btn_start_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_start_work_order.Size = New System.Drawing.Size(116, 46)
-        Me.btn_start_work_order.TabIndex = 65
-        Me.btn_start_work_order.Text = "Start"
-        Me.btn_start_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_start_work_order.UseVisualStyleBackColor = False
         '
         'Management_Work_Order
         '

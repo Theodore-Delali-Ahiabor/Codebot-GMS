@@ -7,18 +7,24 @@ Public Class Management
         box_collections_fill()
     End Sub
     Public Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
+        Me.lbl_current_tab.Text = "Dashboard | Work Oders Due"
         sidebar_active(sender)
         sidebar_form_loader(Management_Home)
         Management_Home.activebar_work_orders.Visible = True
-        Management_Home.work_order_due_soon_Click(Management_Home.work_order_due_soon, EventArgs.Empty)
-        Management_Home.work_order_overdue_Click(Management_Home.work_order_overdue, EventArgs.Empty)
-        Management_Home.low_inventory_low_stock_Click(Management_Home.low_inventory_low_stock, EventArgs.Empty)
-        Management_Home.low_inventory_out_of_stock_Click(Management_Home.low_inventory_out_of_stock, EventArgs.Empty)
-        work_order_overdue_filter("6")
-        datagrif_fill_column_resize("work_order_view", Management_Home.HomeDataGridView)
+        With Management_Home
+            .work_order_due_soon_Click(.work_order_due_soon, EventArgs.Empty)
+            .work_order_overdue_Click(.work_order_overdue, EventArgs.Empty)
+            .low_inventory_low_stock_Click(.low_inventory_low_stock, EventArgs.Empty)
+            .low_inventory_out_of_stock_Click(.low_inventory_out_of_stock, EventArgs.Empty)
+            .upcoming_events_soon_Click(.upcoming_events_soon, EventArgs.Empty)
+            .upcoming_events_today_Click(.upcoming_events_today, EventArgs.Empty)
+            work_order_overdue_filter("6")
+            datagrif_fill_column_resize("work_order_view", .HomeDataGridView)
+        End With
     End Sub
     Private Sub btn_market_Click(sender As Object, e As EventArgs) Handles btn_market.Click
         sidebar_active(sender)
+        Management_Market.add_columns_to_market_datagridview()
         sidebar_form_loader(Management_Market)
     End Sub
     Public Sub btn_work_orders_Click(sender As Object, e As EventArgs) Handles btn_work_orders.Click
@@ -31,6 +37,8 @@ Public Class Management
     Public Sub btn_invoice_Click(sender As Object, e As EventArgs) Handles btn_invoice.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Invoice)
+        datagrid_fill_default("invoice", Management_Invoice.InvoiceDataGridView)
+
     End Sub
 
     Public Sub btn_inventory_Click(sender As Object, e As EventArgs) Handles btn_inventory.Click
@@ -50,15 +58,17 @@ Public Class Management
         datagrid_fill_default("employee_view", Management_Employees.EmployeesDataGridView)
         datagrif_fill_column_resize("employee_view", Management_Employees.EmployeesDataGridView)
     End Sub
-
+    '
     Public Sub btn_statistics_Click(sender As Object, e As EventArgs) Handles btn_statistics.Click
         sidebar_active(sender)
     End Sub
+    'CLICK EVENT FOR THE CALENDAR BUTTON ON THE SIDEBAR
     Private Sub btn_calenders_Click(sender As Object, e As EventArgs) Handles btn_calenders.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Calendar)
         Management_Calendar.display_current_date()
     End Sub
+    'TO LOG A USER OUT OF THE SYSTEM
     Public Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
         gms_main_form_loader(Auth)
         Auth_Login.txt_login_username.Clear()
@@ -68,6 +78,7 @@ Public Class Management
         Auth.btn_auth_message.Show()
         message(Auth.btn_auth_message, "success")
     End Sub
+    'CHANGES THE BACKGROUND COLOR OF THE SIDEBAR BUTTONS WHEN CLICKED
     Public Sub sidebar_active(ByVal btn As Button)
         While btn.BackColor = Color.Teal
             btn_home.BackColor = Color.Teal
@@ -84,15 +95,16 @@ Public Class Management
         End While
         lbl_current_tab.Text = btn.Text
     End Sub
+    'DISPLAYS THE CURRENT DATE AND TIME IN THE LOWER RIGHT CORNNER 
     Public Sub systemtime_Tick(sender As Object, e As EventArgs) Handles systemtime.Tick
         current_date.Text = Date.Now.ToShortDateString
         current_time.Text = TimeOfDay
     End Sub
-
+    'TO HIDE THE MESSAGE WHEN CLICKED 
     Private Sub btn_management_message_Click(sender As Object, e As EventArgs) Handles btn_management_message.Click
         btn_management_message.Hide()
     End Sub
-
+    'THE REFRESH BUTTON CALLS THE SIDEBAR CLICK EVENTS BASED ON THE ACTIVE BUTTON 
     Private Sub btn_refresh_Click(sender As Object, e As EventArgs) Handles btn_refresh.Click
         If btn_home.BackColor = Color.CadetBlue Then
             Me.btn_home_Click(Me.btn_home, EventArgs.Empty)

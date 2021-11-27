@@ -22,29 +22,29 @@ Partial Class Management_Inventory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Inventory))
         Me.InventoryDataGridView = New System.Windows.Forms.DataGridView()
         Me.cmb_inventory_category_filter = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_inventory_part_name_filter = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.cmb_inventory_location_filter = New System.Windows.Forms.ComboBox()
-        Me.btn_edit_inventory_item = New System.Windows.Forms.Button()
-        Me.btn_add_new_inventory_item = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btn_edit_inventory_item = New System.Windows.Forms.Button()
+        Me.btn_add_new_inventory_item = New System.Windows.Forms.Button()
         CType(Me.InventoryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -61,45 +61,45 @@ Partial Class Management_Inventory
         Me.InventoryDataGridView.BackgroundColor = System.Drawing.Color.White
         Me.InventoryDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.InventoryDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.InventoryDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.InventoryDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.InventoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightCyan
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Gray
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.InventoryDataGridView.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCyan
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.InventoryDataGridView.DefaultCellStyle = DataGridViewCellStyle2
         Me.InventoryDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.InventoryDataGridView.EnableHeadersVisualStyles = False
         Me.InventoryDataGridView.GridColor = System.Drawing.Color.Silver
         Me.InventoryDataGridView.Location = New System.Drawing.Point(51, 78)
         Me.InventoryDataGridView.Margin = New System.Windows.Forms.Padding(4)
         Me.InventoryDataGridView.Name = "InventoryDataGridView"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.InventoryDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.InventoryDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.InventoryDataGridView.RowHeadersVisible = False
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.CadetBlue
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.InventoryDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.InventoryDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.InventoryDataGridView.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InventoryDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.InventoryDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.CadetBlue
@@ -121,38 +121,6 @@ Partial Class Management_Inventory
         Me.cmb_inventory_category_filter.Size = New System.Drawing.Size(222, 29)
         Me.cmb_inventory_category_filter.TabIndex = 59
         '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label3.Location = New System.Drawing.Point(372, 5)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label3.Size = New System.Drawing.Size(91, 27)
-        Me.Label3.TabIndex = 58
-        Me.Label3.Text = "Name       "
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Teal
-        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
-        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label1.Location = New System.Drawing.Point(603, 5)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label1.Size = New System.Drawing.Size(127, 27)
-        Me.Label1.TabIndex = 57
-        Me.Label1.Text = "Category      "
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'txt_inventory_part_name_filter
         '
         Me.txt_inventory_part_name_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -164,22 +132,6 @@ Partial Class Management_Inventory
         Me.txt_inventory_part_name_filter.Size = New System.Drawing.Size(222, 29)
         Me.txt_inventory_part_name_filter.TabIndex = 56
         '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Teal
-        Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label2.Location = New System.Drawing.Point(834, 7)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label2.Size = New System.Drawing.Size(122, 27)
-        Me.Label2.TabIndex = 55
-        Me.Label2.Text = "Location      "
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'cmb_inventory_location_filter
         '
         Me.cmb_inventory_location_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -190,42 +142,6 @@ Partial Class Management_Inventory
         Me.cmb_inventory_location_filter.Name = "cmb_inventory_location_filter"
         Me.cmb_inventory_location_filter.Size = New System.Drawing.Size(222, 29)
         Me.cmb_inventory_location_filter.TabIndex = 54
-        '
-        'btn_edit_inventory_item
-        '
-        Me.btn_edit_inventory_item.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_edit_inventory_item.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_edit_inventory_item.FlatAppearance.BorderSize = 0
-        Me.btn_edit_inventory_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_edit_inventory_item.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_edit_inventory_item.ForeColor = System.Drawing.Color.White
-        Me.btn_edit_inventory_item.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_edit_white_24
-        Me.btn_edit_inventory_item.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_edit_inventory_item.Location = New System.Drawing.Point(162, 12)
-        Me.btn_edit_inventory_item.Name = "btn_edit_inventory_item"
-        Me.btn_edit_inventory_item.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.btn_edit_inventory_item.Size = New System.Drawing.Size(97, 46)
-        Me.btn_edit_inventory_item.TabIndex = 53
-        Me.btn_edit_inventory_item.Text = "   Edit"
-        Me.btn_edit_inventory_item.UseVisualStyleBackColor = False
-        '
-        'btn_add_new_inventory_item
-        '
-        Me.btn_add_new_inventory_item.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_add_new_inventory_item.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_add_new_inventory_item.FlatAppearance.BorderSize = 0
-        Me.btn_add_new_inventory_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_add_new_inventory_item.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_add_new_inventory_item.ForeColor = System.Drawing.Color.White
-        Me.btn_add_new_inventory_item.Image = CType(resources.GetObject("btn_add_new_inventory_item.Image"), System.Drawing.Image)
-        Me.btn_add_new_inventory_item.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_add_new_inventory_item.Location = New System.Drawing.Point(47, 12)
-        Me.btn_add_new_inventory_item.Name = "btn_add_new_inventory_item"
-        Me.btn_add_new_inventory_item.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.btn_add_new_inventory_item.Size = New System.Drawing.Size(97, 46)
-        Me.btn_add_new_inventory_item.TabIndex = 52
-        Me.btn_add_new_inventory_item.Text = "    Item"
-        Me.btn_add_new_inventory_item.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -243,16 +159,33 @@ Partial Class Management_Inventory
         Me.Panel1.Size = New System.Drawing.Size(658, 46)
         Me.Panel1.TabIndex = 60
         '
+        'Button4
+        '
+        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button4.BackColor = System.Drawing.Color.CadetBlue
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Silver
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(209, 27)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button4.Size = New System.Drawing.Size(16, 17)
+        Me.Button4.TabIndex = 45
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'Button3
         '
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button3.BackColor = System.Drawing.Color.Gold
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Silver
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(209, 0)
+        Me.Button3.Location = New System.Drawing.Point(209, 2)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
         Me.Button3.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -263,13 +196,13 @@ Partial Class Management_Inventory
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button2.BackColor = System.Drawing.Color.White
+        Me.Button2.BackColor = System.Drawing.Color.Honeydew
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(18, -1)
+        Me.Button2.Location = New System.Drawing.Point(18, 2)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -277,12 +210,22 @@ Partial Class Management_Inventory
         Me.Button2.TabIndex = 44
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(231, 27)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(90, 16)
+        Me.Label7.TabIndex = 2
+        Me.Label7.Text = "Selected Item"
+        '
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button1.BackColor = System.Drawing.Color.Coral
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -324,32 +267,89 @@ Partial Class Management_Inventory
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "In Stock Item"
         '
-        'Label7
+        'Label3
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(231, 27)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(90, 16)
-        Me.Label7.TabIndex = 2
-        Me.Label7.Text = "Selected Item"
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Teal
+        Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
+        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label3.Location = New System.Drawing.Point(372, 5)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label3.Size = New System.Drawing.Size(91, 27)
+        Me.Label3.TabIndex = 58
+        Me.Label3.Text = "Name       "
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Button4
+        'Label1
         '
-        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button4.BackColor = System.Drawing.Color.CadetBlue
-        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(209, 27)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Button4.Size = New System.Drawing.Size(16, 17)
-        Me.Button4.TabIndex = 45
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Teal
+        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label1.Location = New System.Drawing.Point(603, 5)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label1.Size = New System.Drawing.Size(127, 27)
+        Me.Label1.TabIndex = 57
+        Me.Label1.Text = "Category      "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Teal
+        Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label2.Location = New System.Drawing.Point(834, 7)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label2.Size = New System.Drawing.Size(122, 27)
+        Me.Label2.TabIndex = 55
+        Me.Label2.Text = "Location      "
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btn_edit_inventory_item
+        '
+        Me.btn_edit_inventory_item.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_edit_inventory_item.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_edit_inventory_item.FlatAppearance.BorderSize = 0
+        Me.btn_edit_inventory_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_edit_inventory_item.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_edit_inventory_item.ForeColor = System.Drawing.Color.White
+        Me.btn_edit_inventory_item.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_edit_white_24
+        Me.btn_edit_inventory_item.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_edit_inventory_item.Location = New System.Drawing.Point(162, 12)
+        Me.btn_edit_inventory_item.Name = "btn_edit_inventory_item"
+        Me.btn_edit_inventory_item.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.btn_edit_inventory_item.Size = New System.Drawing.Size(97, 46)
+        Me.btn_edit_inventory_item.TabIndex = 53
+        Me.btn_edit_inventory_item.Text = "   Edit"
+        Me.btn_edit_inventory_item.UseVisualStyleBackColor = False
+        '
+        'btn_add_new_inventory_item
+        '
+        Me.btn_add_new_inventory_item.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_add_new_inventory_item.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_add_new_inventory_item.FlatAppearance.BorderSize = 0
+        Me.btn_add_new_inventory_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_add_new_inventory_item.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_add_new_inventory_item.ForeColor = System.Drawing.Color.White
+        Me.btn_add_new_inventory_item.Image = CType(resources.GetObject("btn_add_new_inventory_item.Image"), System.Drawing.Image)
+        Me.btn_add_new_inventory_item.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_add_new_inventory_item.Location = New System.Drawing.Point(47, 12)
+        Me.btn_add_new_inventory_item.Name = "btn_add_new_inventory_item"
+        Me.btn_add_new_inventory_item.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.btn_add_new_inventory_item.Size = New System.Drawing.Size(97, 46)
+        Me.btn_add_new_inventory_item.TabIndex = 52
+        Me.btn_add_new_inventory_item.Text = "    Item"
+        Me.btn_add_new_inventory_item.UseVisualStyleBackColor = False
         '
         'Management_Inventory
         '

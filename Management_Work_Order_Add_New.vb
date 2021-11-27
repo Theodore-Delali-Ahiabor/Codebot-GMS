@@ -79,15 +79,12 @@ Public Class Management_Work_Order_Add_New
     Private Sub work_order_cleartechnician_Click(sender As Object, e As EventArgs) Handles work_order_cleartechnician.Click
         txt_new_work_order_technicians.Clear()
     End Sub
-
     Private Sub work_order_clear_automobile_Click(sender As Object, e As EventArgs) Handles work_order_clear_automobile.Click
         txt_work_order_new_automobile.Clear()
     End Sub
 
     Private Sub btn_new_work_order_add_technician_Click(sender As Object, e As EventArgs) Handles btn_new_work_order_add_technician.Click
-        datagrid_fill_flter_with_variable("employee_view", Management_Work_Order_Add_New_Technician.TechnicianDataGridView, "Active", "=", "1")
-        datagrif_fill_column_resize("technician_view", Management_Work_Order_Add_New_Technician.TechnicianDataGridView)
+        datagrid_fill("technician_view", Management_Work_Order_Add_New_Technician.TechnicianDataGridView)
         Management_Work_Order_Add_New_Technician.ShowDialog()
-
     End Sub
 End Class

@@ -17,6 +17,7 @@ Public Class Management_Inventory
     End Sub
 
     Private Sub btn_add_new_inventory_item_Click(sender As Object, e As EventArgs) Handles btn_add_new_inventory_item.Click
+        Management_Inventory_Add_New.txt_new_quantity.Enabled = False
         sidebar_form_loader(Management_Inventory_Add_New)
         Management.lbl_current_tab.Text = "Inventory | Add New Item"
         Management_Inventory_Add_New.btn_new_item_save.Text = "SAVE"
@@ -37,6 +38,7 @@ Public Class Management_Inventory
     Private Sub btn_edit_inventory_item_Click(sender As Object, e As EventArgs) Handles btn_edit_inventory_item.Click
         Try
             If InventoryDataGridView.SelectedRows.Count > 0 Then
+                Management_Inventory_Add_New.txt_new_quantity.Enabled = False
                 sidebar_form_loader(Management_Inventory_Add_New)
                 Management.lbl_current_tab.Text = "Inventory | Edit Item Info"
                 Management_Inventory_Add_New.btn_new_item_save.Text = "UPDATE"
@@ -82,5 +84,9 @@ Public Class Management_Inventory
     Private Sub InventoryDataGridView_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles InventoryDataGridView.ColumnHeaderMouseClick
         datagrid_fill_color_effect("inventory", Me.InventoryDataGridView)
         clear_gridview_default_selection(Me.InventoryDataGridView)
+    End Sub
+
+    Private Sub InventoryDataGridView_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles InventoryDataGridView.CellMouseDoubleClick
+        btn_edit_inventory_item_Click(btn_edit_inventory_item, EventArgs.Empty)
     End Sub
 End Class
