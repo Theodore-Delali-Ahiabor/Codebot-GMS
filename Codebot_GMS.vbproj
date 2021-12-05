@@ -270,6 +270,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Auth.resx">
       <DependentUpon>Auth.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Auth_Login.resx">
       <DependentUpon>Auth_Login.vb</DependentUpon>
@@ -279,6 +280,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Auth_Signup.resx">
       <DependentUpon>Auth_Signup.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GMS_Main.resx">
       <DependentUpon>GMS_Main.vb</DependentUpon>
@@ -327,6 +329,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Work_Order_Add_New_Customer.resx">
       <DependentUpon>Management_Work_Order_Add_New_Customer.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Work_Order_Add_New_Technician.resx">
       <DependentUpon>Management_Work_Order_Add_New_Technician.vb</DependentUpon>
@@ -438,6 +441,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\smiling-mechanic-with-arms-crossed-spanner1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smiling-mechanic-with-arms-crossed-spanner_edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Employee-Blue_4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

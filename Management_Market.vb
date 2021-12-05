@@ -1,8 +1,9 @@
 ﻿Public Class Management_Market
     Dim Parts_Name As New DataGridViewComboBoxColumn
+
     Private Sub MarketDataGridView_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles MarketDataGridView.CellValueChanged
         Try
-            If MarketDataGridView.CurrentRow.Cells(0).Value.ToString <> "" Then
+            If MarketDataGridView.CurrentRow.Cells(0).Value.ToString <> "" And MarketDataGridView.CurrentRow.Cells(0).Selected = True Then
                 '
                 Dim sql_cmd As New MySqlCommand("SELECT * FROM inventory WHERE `Description` = '" & MarketDataGridView.CurrentRow.Cells(0).Value.ToString & "'", sql_con)
                 sql_con.Close()
@@ -10,12 +11,15 @@
                 Dim sql_rdr As MySqlDataReader = sql_cmd.ExecuteReader()
                 '
                 If sql_rdr.Read = True Then
-                    MarketDataGridView.CurrentRow.Cells(2).Value = sql_rdr.Item("Stock")
+                    MarketDataGridView.CurrentRow.Cells(2).Value = sql_rdr.Item("Stock").ToString
                 End If
                 sql_con.Close()
 
-            ElseIf MarketDataGridView.CurrentRow.Cells(1).Value.GetType.ToString <> "system.Int32" Then
+            ElseIf MarketDataGridView.CurrentRow.Cells(1).Value.GetType.ToString <> "system.Int32" And MarketDataGridView.CurrentRow.Cells(1).Value.ToString <> "" Then
                 MessageBox.Show("Enter Integer values only", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MarketDataGridView.CurrentRow.Cells(1).Value = String.Empty
+                MarketDataGridView.CurrentRow.Cells(1).Selected = True
+                'MarketDataGridView.CurrentRow.Cells(1).
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -59,15 +63,15 @@
                                     If valid_count = (.Rows.Count - 1) * 3 Then
                                         For k As Integer = 0 To (.Rows.Count - 2)
                                             MsgBox("check point reached")
-                                            sql_da = New MySqlDataAdapter("INSERT INTO `parts_requisition`(`Employee_ID`, `work_order_ID`, `Parts_Name`, `Quantity`, `Available`, `Request_Time`) 
-                                        VALUES('" & login_id & "','" & txt_work_order_id.Text & "','" & .Rows.Item(k).Cells(0).Value.ToString & "','" & CInt(.Rows.Item(k).Cells(1).Value) & "','" & CInt(.Rows.Item(k).Cells(2).Value) & "', '" & Date.UtcNow & "')", sql_con)
-                                            sql_da.Fill(sql_ds, "parts_requisition")
+                                            '    sql_da = New MySqlDataAdapter("INSERT INTO `parts_requisition`(`Employee_ID`, `work_order_ID`, `Parts_Name`, `Quantity`, `Available`, `Request_Time`) 
+                                            'VALUES('" & login_id & "','" & txt_work_order_id.Text & "','" & .Rows.Item(k).Cells(0).Value.ToString & "','" & CInt(.Rows.Item(k).Cells(1).Value) & "','" & CInt(.Rows.Item(k).Cells(2).Value) & "', '" & Date.UtcNow & "')", sql_con)
+                                            '    sql_da.Fill(sql_ds, "parts_requisition")
                                             MsgBox(CInt(.Rows.Item(k).Cells(2).Value) - CInt(.Rows.Item(k).Cells(1).Value))
 
-                                            sql_ds = New DataSet
-                                            sql_da = New MySqlDataAdapter("UPDATE inventory SET  Stock = '" & CInt(.Rows.Item(k).Cells(2).Value) - CInt(.Rows.Item(k).Cells(1).Value) & "'
-                            Where ID = '" & "" & "'", sql_con)
-                                            sql_da.Fill(sql_ds, "inventory")
+                                            '                sql_ds = New DataSet
+                                            '                sql_da = New MySqlDataAdapter("UPDATE inventory SET  Stock = '" & CInt(.Rows.Item(k).Cells(2).Value) - CInt(.Rows.Item(k).Cells(1).Value) & "'
+                                            'Where ID = '" & "" & "'", sql_con)
+                                            '                sql_da.Fill(sql_ds, "inventory")
                                         Next
 
                                     End If
@@ -97,12 +101,28 @@
     End Sub
 
     Public Sub add_columns_to_market_datagridview()
-        sql_da = New MySqlDataAdapter("SELECT * FROM `parts_requisition` WHERE `work_order_ID` = '" & txt_work_order_id.Text & "'", sql_con)
         sql_dt = New DataTable
         sql_dt.Clear()
-        sql_da.Fill(sql_dt)
-        'MarketDataGridView.DataSource = 
-        'txt_work_order_id.Clear()
+        With sql_dt
+            Dim Parts_Name As New DataColumn
+            With Parts_Name
+                .Caption = "Parts Name / Description"
+                .ColumnName = "Parts_Name"
+            End With
+            .Columns.Add(Parts_Name)
+            Dim Quantity As New DataColumn
+            With Quantity
+                .Caption = "Quantity"
+                .ColumnName = "Quantity"
+            End With
+            .Columns.Add(Quantity)
+            Dim Available As New DataColumn
+            With Available
+                .ColumnName = "Available"
+                .Caption = "Available"
+            End With
+            .Columns.Add(Available)
+        End With
         Try
             With MarketDataGridView
                 .Columns.Clear()

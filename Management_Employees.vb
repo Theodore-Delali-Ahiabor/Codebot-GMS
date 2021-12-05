@@ -4,7 +4,7 @@ Public Class Management_Employees
     Dim initial_employee_id As String = "HTU-JMTC0001"
     Dim new_employee_id As String
 
-    Private Sub btn_add_new_employee_Click(sender As Object, e As EventArgs) Handles btn_add_new_employee.Click
+    Public Sub btn_add_new_employee_Click(sender As Object, e As EventArgs) Handles btn_add_new_employee.Click
         sidebar_form_loader(Management_Employees_Add_New)
         Management.lbl_current_tab.Text = "Employees | Add New User"
         Management_Employees_Add_New.btn_new_user_save.Text = "SAVE"

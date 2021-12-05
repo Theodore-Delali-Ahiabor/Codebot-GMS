@@ -145,7 +145,7 @@ Partial Class Management_Employees_Add_New
         '
         Me.txt_new_salary.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_salary.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_salary.Location = New System.Drawing.Point(748, 116)
+        Me.txt_new_salary.Location = New System.Drawing.Point(749, 117)
         Me.txt_new_salary.Name = "txt_new_salary"
         Me.txt_new_salary.Size = New System.Drawing.Size(308, 33)
         Me.txt_new_salary.TabIndex = 60
@@ -476,7 +476,7 @@ Partial Class Management_Employees_Add_New
         Me.pb_new_user_image.BackColor = System.Drawing.Color.White
         Me.pb_new_user_image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pb_new_user_image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pb_new_user_image.InitialImage = Global.Codebot_GMS.My.Resources.Resources.initial_employee_image
+        Me.pb_new_user_image.InitialImage = Global.Codebot_GMS.My.Resources.Resources.Employee_Blue_4
         Me.pb_new_user_image.Location = New System.Drawing.Point(97, 23)
         Me.pb_new_user_image.Name = "pb_new_user_image"
         Me.pb_new_user_image.Size = New System.Drawing.Size(110, 147)
@@ -513,7 +513,7 @@ Partial Class Management_Employees_Add_New
         Me.btn_new_user_save.ForeColor = System.Drawing.Color.White
         Me.btn_new_user_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
         Me.btn_new_user_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_user_save.Location = New System.Drawing.Point(345, 462)
+        Me.btn_new_user_save.Location = New System.Drawing.Point(348, 462)
         Me.btn_new_user_save.Name = "btn_new_user_save"
         Me.btn_new_user_save.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.btn_new_user_save.Size = New System.Drawing.Size(141, 52)

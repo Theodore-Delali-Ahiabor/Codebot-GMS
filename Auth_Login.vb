@@ -39,7 +39,6 @@ Public Class Auth_Login
                                     Management.btn_employees.Visible = True
                                     Management.btn_inventory.Visible = True
                                     Management.btn_statistics.Visible = True
-                                    Management.btn_market.Visible = True
 
                                     Management.btn_management_message.Text = "Login Was Successful"
                                     Management.btn_management_message.Show()
@@ -55,7 +54,6 @@ Public Class Auth_Login
                                     Management.btn_employees.Visible = False
                                     Management.btn_inventory.Visible = False
                                     Management.btn_statistics.Visible = False
-                                    Management.btn_market.Visible = False
 
                                     Management.btn_management_message.Text = "Login Was Successful"
                                     Management.btn_management_message.Show()

@@ -13,7 +13,7 @@ Public Class Management_Inventory_Add_New
                 If repos = DialogResult.Yes Then
                     sql_ds = New DataSet
                     sql_da = New MySqlDataAdapter("UPDATE inventory SET Category = '" & txt_new_category.Text & "', Description = '" & txt_new_part_name.Text & "', Serial_no = '" & txt_new_part_number.Text & "',
-                            Alternative = '" & txt_new_alternative.Text & "', Location = '" & txt_new_location.Text & "', Model_Type = '" & txt_new_model.Text & "', Stock = '" & txt_new_quantity.Text & "',
+                            Alternative = '" & txt_new_alternative.Text & "', Location = '" & txt_new_location.Text & "', Model_Type = '" & txt_new_model.Text & "',
                             Unit_Cost = '" & txt_new_unit_cost.Text & "'
                             Where ID = '" & Management_Inventory.InventoryDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                     sql_da.Fill(sql_ds, "inventory")
@@ -31,8 +31,16 @@ Public Class Management_Inventory_Add_New
                     sidebar_form_loader(Management_Inventory)
                     datagrid_fill_default("inventory", Management_Inventory.InventoryDataGridView)
                 End If
-            Else
-                MsgBox("Nothing to Do")
+            ElseIf btn_new_item_save.Text = "SAVE" Then
+                Dim repos As DialogResult = MessageBox.Show("You are about to Stock item @ ID '" & Management_Inventory.InventoryDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                If repos = DialogResult.Yes Then
+                    sql_ds = New DataSet
+                    sql_da = New MySqlDataAdapter("UPDATE inventory SET Stock = '" & txt_new_quantity.Text & "'
+                            Where ID = '" & Management_Inventory.InventoryDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
+                    sql_da.Fill(sql_ds, "inventory")
+                    sidebar_form_loader(Management_Inventory)
+                    datagrid_fill_default("inventory", Management_Inventory.InventoryDataGridView)
+                End If
             End If
         Catch ex As Exception
             MsgBox(ex.Message)

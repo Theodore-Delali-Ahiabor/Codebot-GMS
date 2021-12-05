@@ -22,49 +22,19 @@ Partial Class Management_Invoice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Invoice))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Invoice))
         Me.cmb_payment_status_filter = New System.Windows.Forms.ComboBox()
-        Me.btn_add_new_invoice = New System.Windows.Forms.Button()
         Me.txt_invoice_id_filter = New System.Windows.Forms.TextBox()
         Me.InvoiceDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btn_add_new_invoice = New System.Windows.Forms.Button()
         CType(Me.InvoiceDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label3.Location = New System.Drawing.Point(593, 19)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label3.Size = New System.Drawing.Size(131, 27)
-        Me.Label3.TabIndex = 69
-        Me.Label3.Text = "Invoice ID       "
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Teal
-        Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label2.Location = New System.Drawing.Point(828, 21)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label2.Size = New System.Drawing.Size(183, 27)
-        Me.Label2.TabIndex = 67
-        Me.Label2.Text = "Payment Status       "
         '
         'cmb_payment_status_filter
         '
@@ -76,24 +46,6 @@ Partial Class Management_Invoice
         Me.cmb_payment_status_filter.Name = "cmb_payment_status_filter"
         Me.cmb_payment_status_filter.Size = New System.Drawing.Size(222, 29)
         Me.cmb_payment_status_filter.TabIndex = 66
-        '
-        'btn_add_new_invoice
-        '
-        Me.btn_add_new_invoice.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_add_new_invoice.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_add_new_invoice.FlatAppearance.BorderSize = 0
-        Me.btn_add_new_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_add_new_invoice.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_add_new_invoice.ForeColor = System.Drawing.Color.White
-        Me.btn_add_new_invoice.Image = CType(resources.GetObject("btn_add_new_invoice.Image"), System.Drawing.Image)
-        Me.btn_add_new_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_add_new_invoice.Location = New System.Drawing.Point(48, 20)
-        Me.btn_add_new_invoice.Name = "btn_add_new_invoice"
-        Me.btn_add_new_invoice.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.btn_add_new_invoice.Size = New System.Drawing.Size(105, 46)
-        Me.btn_add_new_invoice.TabIndex = 65
-        Me.btn_add_new_invoice.Text = "    New"
-        Me.btn_add_new_invoice.UseVisualStyleBackColor = False
         '
         'txt_invoice_id_filter
         '
@@ -166,6 +118,54 @@ Partial Class Management_Invoice
         Me.InvoiceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.InvoiceDataGridView.Size = New System.Drawing.Size(1005, 347)
         Me.InvoiceDataGridView.TabIndex = 64
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Teal
+        Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
+        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label3.Location = New System.Drawing.Point(593, 19)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label3.Size = New System.Drawing.Size(131, 27)
+        Me.Label3.TabIndex = 69
+        Me.Label3.Text = "Invoice ID       "
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Teal
+        Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label2.Location = New System.Drawing.Point(828, 21)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label2.Size = New System.Drawing.Size(183, 27)
+        Me.Label2.TabIndex = 67
+        Me.Label2.Text = "Payment Status       "
+        '
+        'btn_add_new_invoice
+        '
+        Me.btn_add_new_invoice.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_add_new_invoice.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_add_new_invoice.FlatAppearance.BorderSize = 0
+        Me.btn_add_new_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_add_new_invoice.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_add_new_invoice.ForeColor = System.Drawing.Color.White
+        Me.btn_add_new_invoice.Image = CType(resources.GetObject("btn_add_new_invoice.Image"), System.Drawing.Image)
+        Me.btn_add_new_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_add_new_invoice.Location = New System.Drawing.Point(48, 20)
+        Me.btn_add_new_invoice.Name = "btn_add_new_invoice"
+        Me.btn_add_new_invoice.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.btn_add_new_invoice.Size = New System.Drawing.Size(105, 46)
+        Me.btn_add_new_invoice.TabIndex = 65
+        Me.btn_add_new_invoice.Text = "    New"
+        Me.btn_add_new_invoice.UseVisualStyleBackColor = False
         '
         'Management_Invoice
         '

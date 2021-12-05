@@ -16,7 +16,7 @@ Public Class Management_Inventory
         End If
     End Sub
 
-    Private Sub btn_add_new_inventory_item_Click(sender As Object, e As EventArgs) Handles btn_add_new_inventory_item.Click
+    Public Sub btn_add_new_inventory_item_Click(sender As Object, e As EventArgs) Handles btn_add_new_inventory_item.Click
         Management_Inventory_Add_New.txt_new_quantity.Enabled = False
         sidebar_form_loader(Management_Inventory_Add_New)
         Management.lbl_current_tab.Text = "Inventory | Add New Item"
@@ -37,9 +37,8 @@ Public Class Management_Inventory
 
     Private Sub btn_edit_inventory_item_Click(sender As Object, e As EventArgs) Handles btn_edit_inventory_item.Click
         Try
-            If InventoryDataGridView.SelectedRows.Count > 0 Then
+            If InventoryDataGridView.SelectedRows.Count = 1 Then
                 Management_Inventory_Add_New.txt_new_quantity.Enabled = False
-                sidebar_form_loader(Management_Inventory_Add_New)
                 Management.lbl_current_tab.Text = "Inventory | Edit Item Info"
                 Management_Inventory_Add_New.btn_new_item_save.Text = "UPDATE"
 
@@ -48,14 +47,26 @@ Public Class Management_Inventory
                 sql_dt.Clear()
                 sql_da.Fill(sql_dt)
                 If sql_dt.Rows.Count() > 0 Then
-                    Management_Inventory_Add_New.txt_new_category.Text = sql_dt.Rows(0).Item("Category").ToString()
-                    Management_Inventory_Add_New.txt_new_part_name.Text = sql_dt.Rows(0).Item("Description").ToString()
-                    Management_Inventory_Add_New.txt_new_part_number.Text = sql_dt.Rows(0).Item("Serial_no").ToString()
-                    Management_Inventory_Add_New.txt_new_alternative.Text = sql_dt.Rows(0).Item("Alternative").ToString()
-                    Management_Inventory_Add_New.txt_new_location.Text = sql_dt.Rows(0).Item("Location").ToString()
-                    Management_Inventory_Add_New.txt_new_model.Text = sql_dt.Rows(0).Item("Model_Type").ToString()
-                    Management_Inventory_Add_New.txt_new_quantity.Text = sql_dt.Rows(0).Item("Stock").ToString()
-                    Management_Inventory_Add_New.txt_new_unit_cost.Text = sql_dt.Rows(0).Item("Unit_Cost").ToString()
+                    sidebar_form_loader(Management_Inventory_Add_New)
+                    With Management_Inventory_Add_New
+                        .txt_new_category.Text = sql_dt.Rows(0).Item("Category").ToString()
+                        .txt_new_part_name.Text = sql_dt.Rows(0).Item("Description").ToString()
+                        .txt_new_part_number.Text = sql_dt.Rows(0).Item("Serial_no").ToString()
+                        .txt_new_alternative.Text = sql_dt.Rows(0).Item("Alternative").ToString()
+                        .txt_new_location.Text = sql_dt.Rows(0).Item("Location").ToString()
+                        .txt_new_model.Text = sql_dt.Rows(0).Item("Model_Type").ToString()
+                        .txt_new_quantity.Text = sql_dt.Rows(0).Item("Stock").ToString()
+                        .txt_new_unit_cost.Text = sql_dt.Rows(0).Item("Unit_Cost").ToString()
+
+                        .txt_new_category.Enabled = True
+                        .txt_new_part_name.Enabled = True
+                        .txt_new_part_number.Enabled = True
+                        .txt_new_alternative.Enabled = True
+                        .txt_new_location.Enabled = True
+                        .txt_new_model.Enabled = True
+                        .txt_new_quantity.Enabled = False
+                        .txt_new_unit_cost.Enabled = True
+                    End With
                 Else
                     Management.btn_management_message.Text = "No Data Found"
                     Management.btn_management_message.Show()
@@ -88,5 +99,49 @@ Public Class Management_Inventory
 
     Private Sub InventoryDataGridView_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles InventoryDataGridView.CellMouseDoubleClick
         btn_edit_inventory_item_Click(btn_edit_inventory_item, EventArgs.Empty)
+    End Sub
+
+    Private Sub btn_stock_item_Click(sender As Object, e As EventArgs) Handles btn_stock_item.Click
+        If InventoryDataGridView.SelectedRows.Count = 1 Then
+            sql_da = New MySqlDataAdapter("SELECT * FROM inventory WHERE ID = '" & InventoryDataGridView.CurrentRow.Cells(0).Value.ToString() & "'", sql_con)
+            sql_dt = New DataTable
+            sql_dt.Clear()
+            sql_da.Fill(sql_dt)
+            If sql_dt.Rows.Count() > 0 Then
+                sidebar_form_loader(Management_Inventory_Add_New)
+                With Management_Inventory_Add_New
+                    .txt_new_category.Text = sql_dt.Rows(0).Item("Category").ToString()
+                    .txt_new_part_name.Text = sql_dt.Rows(0).Item("Description").ToString()
+                    .txt_new_part_number.Text = sql_dt.Rows(0).Item("Serial_no").ToString()
+                    .txt_new_alternative.Text = sql_dt.Rows(0).Item("Alternative").ToString()
+                    .txt_new_location.Text = sql_dt.Rows(0).Item("Location").ToString()
+                    .txt_new_model.Text = sql_dt.Rows(0).Item("Model_Type").ToString()
+                    .txt_new_quantity.Text = sql_dt.Rows(0).Item("Stock").ToString()
+                    .txt_new_unit_cost.Text = sql_dt.Rows(0).Item("Unit_Cost").ToString()
+
+                    .txt_new_category.Enabled = False
+                    .txt_new_part_name.Enabled = False
+                    .txt_new_part_number.Enabled = False
+                    .txt_new_alternative.Enabled = False
+                    .txt_new_location.Enabled = False
+                    .txt_new_model.Enabled = False
+                    .txt_new_quantity.Enabled = True
+                    .txt_new_unit_cost.Enabled = False
+                End With
+
+            Else
+                Management.btn_management_message.Text = "No Data Found"
+                Management.btn_management_message.Show()
+                message(Management.btn_management_message, "warning")
+            End If
+        Else
+            Management.btn_management_message.Text = "No Item selected"
+            Management.btn_management_message.Show()
+            message(Management.btn_management_message, "warning")
+        End If
+    End Sub
+
+    Private Sub btn_make_items_requisition_Click(sender As Object, e As EventArgs) Handles btn_make_items_requisition.Click
+        'Management_Market.ShowDialog()
     End Sub
 End Class

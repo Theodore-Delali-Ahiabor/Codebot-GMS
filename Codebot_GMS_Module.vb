@@ -46,7 +46,7 @@ Module Codebot_GMS_Module
                 Management_Home.Visible = False
                 Management_Employees_Add_New.Visible = False
                 Management_Work_Order.Visible = False
-                Management_Market.Visible = False
+                'Management_Market.Visible = False
                 Management_Calendar.Visible = False
                 Management_Inventory.Visible = False
                 Management_Inventory_Add_New.Visible = False
@@ -227,7 +227,8 @@ Module Codebot_GMS_Module
             Management_Home.activebar_work_orders.Visible = True
             Management_Home.activebar_inventory.Visible = False
             Management_Home.activebar_events.Visible = False
-            sql_da = New MySqlDataAdapter("SELECT * FROM work_order_view WHERE Due_In < " & variable & " AND Progress_Status <> '" & "Done" & "' ORDER BY ID DESC ", sql_con)
+            Management_Home.activebar_payments.Visible = False
+            sql_da = New MySqlDataAdapter("SELECT * FROM work_order_view WHERE Due_In < " & variable & " AND Progress_Status <> '" & "Completed" & "' ORDER BY ID DESC ", sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
             sql_da.Fill(sql_dt)
@@ -275,17 +276,17 @@ Module Codebot_GMS_Module
                     Next
                 ElseIf db_table = "work_order_view" Then
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
-                        If gridview_name.Rows(i).Cells(5).Value < 6 And gridview_name.Rows(i).Cells(6).Value <> "Done" Then
+                        If gridview_name.Rows(i).Cells(4).Value < 6 And gridview_name.Rows(i).Cells(5).Value <> "Completed" Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
-                            If gridview_name.Rows(i).Cells(5).Value < 1 Then
+                            If gridview_name.Rows(i).Cells(4).Value < 1 Then
                                 gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
                             End If
-                        ElseIf gridview_name.Rows(i).Cells(6).Value = "Pending" Then
+                        ElseIf gridview_name.Rows(i).Cells(5).Value = "Pending Start" Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Silver
-                        ElseIf gridview_name.Rows(i).Cells(6).Value = "In Progress" Then
+                        ElseIf gridview_name.Rows(i).Cells(5).Value = "In Progress" Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
-                        ElseIf gridview_name.Rows(i).Cells(6).Value = "Done" Then
-                            gridview_name.Rows(i).Cells(5).Value = 0
+                        ElseIf gridview_name.Rows(i).Cells(5).Value = "Completed" Then
+                            gridview_name.Rows(i).Cells(4).Value = 0
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
                         End If
                     Next
@@ -333,7 +334,12 @@ Module Codebot_GMS_Module
             Management_Work_Order.cmb_work_order_status_filter.SelectedIndex() = 0
             add_search_suggestion(Management_Work_Order.txt_work_order_automobile_name_filter, "work_order_view", "ID")
             add_combobox_items(Management_Work_Order.cmb_work_order_status_filter, "work_order_view", "Progress_Status")
-            add_combobox_items(Management_Work_Order_Add_New.txt_new_work_order_progress_stats, "work_order_view", "Progress_Status")
+            'add_combobox_items(Management_Work_Order_Add_New.txt_new_work_order_progress_stats, "work_order_view", "Progress_Status")
+            'invoice
+            Management_Invoice.cmb_payment_status_filter.Items.Clear()
+            Management_Invoice.cmb_payment_status_filter.Items.Add("All")
+            Management_Invoice.cmb_payment_status_filter.SelectedIndex = 0
+            add_combobox_items(Management_Invoice.cmb_payment_status_filter, "invoice", "Payment_Status")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -363,15 +369,14 @@ Module Codebot_GMS_Module
                 gridview_name.Columns(7).Width = 60   'Stock
                 gridview_name.Columns(8).Width = 80   'Unit cost
             ElseIf db_table = "work_order_view" Then
-                gridview_name.Columns(0).Width = 50
-                gridview_name.Columns(1).Width = 170
-                gridview_name.Columns(2).Width = 180
-                gridview_name.Columns(3).Width = 170
-                gridview_name.Columns(4).Width = 300
-                gridview_name.Columns(5).Width = 100
-                gridview_name.Columns(5).HeaderText = "Due In / Days"
-                gridview_name.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                gridview_name.Columns(6).Width = 120 '
+                gridview_name.Columns.Item("ID").Width = 100
+                gridview_name.Columns.Item("Customer").Width = 225
+                gridview_name.Columns.Item("Automobile").Width = 300
+                gridview_name.Columns.Item("Technicians").Width = 225
+                gridview_name.Columns.Item("Due_In").Width = 115
+                gridview_name.Columns.Item("Due_In").HeaderText = "Due In / Days"
+                gridview_name.Columns.Item("Due_In").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                gridview_name.Columns.Item("Progress_Status").Width = 135
             End If
         Catch ex As Exception
             MsgBox(ex.Message)

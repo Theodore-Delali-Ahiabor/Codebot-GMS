@@ -135,21 +135,20 @@ Partial Class Management_Employees
         '
         'Panel1
         '
-        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(401, 518)
+        Me.Panel1.Location = New System.Drawing.Point(697, 513)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(658, 46)
+        Me.Panel1.Size = New System.Drawing.Size(362, 46)
         Me.Panel1.TabIndex = 43
         '
         'Button3
         '
-        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button3.BackColor = System.Drawing.Color.CadetBlue
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Silver
@@ -166,7 +165,6 @@ Partial Class Management_Employees
         '
         'Button2
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver
@@ -184,7 +182,6 @@ Partial Class Management_Employees
         '
         'Button1
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button1.BackColor = System.Drawing.Color.Coral
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver
@@ -231,7 +228,8 @@ Partial Class Management_Employees
         '
         'btn_deactivate_employee
         '
-        Me.btn_deactivate_employee.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_deactivate_employee.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_deactivate_employee.AutoEllipsis = True
         Me.btn_deactivate_employee.BackColor = System.Drawing.Color.Coral
         Me.btn_deactivate_employee.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_deactivate_employee.FlatAppearance.BorderSize = 0
@@ -239,7 +237,7 @@ Partial Class Management_Employees
         Me.btn_deactivate_employee.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_deactivate_employee.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_toggle_off_32
         Me.btn_deactivate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_deactivate_employee.Location = New System.Drawing.Point(197, 518)
+        Me.btn_deactivate_employee.Location = New System.Drawing.Point(197, 511)
         Me.btn_deactivate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_deactivate_employee.Name = "btn_deactivate_employee"
         Me.btn_deactivate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -251,7 +249,8 @@ Partial Class Management_Employees
         '
         'btn_activate_employee
         '
-        Me.btn_activate_employee.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_activate_employee.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_activate_employee.AutoEllipsis = True
         Me.btn_activate_employee.BackColor = System.Drawing.Color.SeaGreen
         Me.btn_activate_employee.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_activate_employee.FlatAppearance.BorderSize = 0
@@ -259,7 +258,7 @@ Partial Class Management_Employees
         Me.btn_activate_employee.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_activate_employee.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_toggle_on_32
         Me.btn_activate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_activate_employee.Location = New System.Drawing.Point(33, 518)
+        Me.btn_activate_employee.Location = New System.Drawing.Point(33, 511)
         Me.btn_activate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_activate_employee.Name = "btn_activate_employee"
         Me.btn_activate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)

@@ -50,7 +50,7 @@ Partial Class Management_Inventory_Add_New
         '
         Me.txt_new_unit_cost.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_unit_cost.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_unit_cost.Location = New System.Drawing.Point(508, 187)
+        Me.txt_new_unit_cost.Location = New System.Drawing.Point(509, 210)
         Me.txt_new_unit_cost.MaxLength = 50
         Me.txt_new_unit_cost.Name = "txt_new_unit_cost"
         Me.txt_new_unit_cost.Size = New System.Drawing.Size(308, 33)
@@ -61,7 +61,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(502, 86)
+        Me.Label15.Location = New System.Drawing.Point(503, 109)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(62, 18)
         Me.Label15.TabIndex = 73
@@ -74,7 +74,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label6.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(602, -13)
+        Me.Label6.Location = New System.Drawing.Point(603, 10)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(20, 28)
         Me.Label6.TabIndex = 72
@@ -87,7 +87,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(298, 73)
+        Me.Label2.Location = New System.Drawing.Point(299, 96)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(20, 28)
         Me.Label2.TabIndex = 69
@@ -100,7 +100,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(209, -11)
+        Me.Label1.Location = New System.Drawing.Point(210, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(20, 28)
         Me.Label1.TabIndex = 68
@@ -111,7 +111,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label35.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(135, -1)
+        Me.Label35.Location = New System.Drawing.Point(136, 22)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(68, 18)
         Me.Label35.TabIndex = 67
@@ -122,7 +122,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(504, 166)
+        Me.Label11.Location = New System.Drawing.Point(505, 189)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(118, 18)
         Me.Label11.TabIndex = 66
@@ -133,7 +133,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(136, 320)
+        Me.Label9.Location = New System.Drawing.Point(137, 343)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(65, 18)
         Me.Label9.TabIndex = 65
@@ -144,7 +144,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(503, -3)
+        Me.Label7.Location = New System.Drawing.Point(504, 20)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(93, 18)
         Me.Label7.TabIndex = 64
@@ -155,7 +155,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(137, 245)
+        Me.Label5.Location = New System.Drawing.Point(138, 268)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(75, 18)
         Me.Label5.TabIndex = 63
@@ -166,7 +166,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(138, 166)
+        Me.Label4.Location = New System.Drawing.Point(139, 189)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(134, 18)
         Me.Label4.TabIndex = 62
@@ -177,7 +177,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(135, 83)
+        Me.Label3.Location = New System.Drawing.Point(136, 106)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(167, 18)
         Me.Label3.TabIndex = 59
@@ -188,7 +188,7 @@ Partial Class Management_Inventory_Add_New
         Me.txt_new_quantity.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_quantity.Enabled = False
         Me.txt_new_quantity.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_quantity.Location = New System.Drawing.Point(505, 107)
+        Me.txt_new_quantity.Location = New System.Drawing.Point(506, 130)
         Me.txt_new_quantity.MaxLength = 50
         Me.txt_new_quantity.Name = "txt_new_quantity"
         Me.txt_new_quantity.Size = New System.Drawing.Size(308, 33)
@@ -198,7 +198,7 @@ Partial Class Management_Inventory_Add_New
         '
         Me.txt_new_model.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_model.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_model.Location = New System.Drawing.Point(505, 20)
+        Me.txt_new_model.Location = New System.Drawing.Point(506, 43)
         Me.txt_new_model.MaxLength = 35
         Me.txt_new_model.Name = "txt_new_model"
         Me.txt_new_model.Size = New System.Drawing.Size(309, 33)
@@ -208,7 +208,7 @@ Partial Class Management_Inventory_Add_New
         '
         Me.txt_new_location.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_location.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_location.Location = New System.Drawing.Point(138, 341)
+        Me.txt_new_location.Location = New System.Drawing.Point(139, 364)
         Me.txt_new_location.MaxLength = 50
         Me.txt_new_location.Name = "txt_new_location"
         Me.txt_new_location.Size = New System.Drawing.Size(308, 33)
@@ -218,7 +218,7 @@ Partial Class Management_Inventory_Add_New
         '
         Me.txt_new_alternative.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_alternative.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_alternative.Location = New System.Drawing.Point(138, 266)
+        Me.txt_new_alternative.Location = New System.Drawing.Point(139, 289)
         Me.txt_new_alternative.MaxLength = 45
         Me.txt_new_alternative.Name = "txt_new_alternative"
         Me.txt_new_alternative.Size = New System.Drawing.Size(308, 33)
@@ -228,7 +228,7 @@ Partial Class Management_Inventory_Add_New
         '
         Me.txt_new_part_number.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_part_number.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_part_number.Location = New System.Drawing.Point(140, 187)
+        Me.txt_new_part_number.Location = New System.Drawing.Point(141, 210)
         Me.txt_new_part_number.MaxLength = 35
         Me.txt_new_part_number.Name = "txt_new_part_number"
         Me.txt_new_part_number.Size = New System.Drawing.Size(308, 33)
@@ -238,7 +238,7 @@ Partial Class Management_Inventory_Add_New
         '
         Me.txt_new_part_name.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_part_name.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_part_name.Location = New System.Drawing.Point(138, 104)
+        Me.txt_new_part_name.Location = New System.Drawing.Point(139, 127)
         Me.txt_new_part_name.MaxLength = 35
         Me.txt_new_part_name.Name = "txt_new_part_name"
         Me.txt_new_part_name.Size = New System.Drawing.Size(308, 33)
@@ -249,7 +249,7 @@ Partial Class Management_Inventory_Add_New
         Me.txt_new_category.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_category.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_category.FormattingEnabled = True
-        Me.txt_new_category.Location = New System.Drawing.Point(138, 20)
+        Me.txt_new_category.Location = New System.Drawing.Point(139, 43)
         Me.txt_new_category.MaxLength = 25
         Me.txt_new_category.Name = "txt_new_category"
         Me.txt_new_category.Size = New System.Drawing.Size(308, 33)
@@ -257,7 +257,7 @@ Partial Class Management_Inventory_Add_New
         '
         'btn_new_item_cancel
         '
-        Me.btn_new_item_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_item_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btn_new_item_cancel.BackColor = System.Drawing.Color.LightCoral
         Me.btn_new_item_cancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_new_item_cancel.FlatAppearance.BorderSize = 0
@@ -269,14 +269,14 @@ Partial Class Management_Inventory_Add_New
         Me.btn_new_item_cancel.Location = New System.Drawing.Point(467, 447)
         Me.btn_new_item_cancel.Name = "btn_new_item_cancel"
         Me.btn_new_item_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_item_cancel.Size = New System.Drawing.Size(141, 52)
+        Me.btn_new_item_cancel.Size = New System.Drawing.Size(141, 44)
         Me.btn_new_item_cancel.TabIndex = 10
         Me.btn_new_item_cancel.Text = "CANCEL"
         Me.btn_new_item_cancel.UseVisualStyleBackColor = False
         '
         'btn_new_item_save
         '
-        Me.btn_new_item_save.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_item_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btn_new_item_save.BackColor = System.Drawing.Color.LightGreen
         Me.btn_new_item_save.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_new_item_save.FlatAppearance.BorderSize = 0
@@ -288,7 +288,7 @@ Partial Class Management_Inventory_Add_New
         Me.btn_new_item_save.Location = New System.Drawing.Point(290, 447)
         Me.btn_new_item_save.Name = "btn_new_item_save"
         Me.btn_new_item_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_item_save.Size = New System.Drawing.Size(141, 52)
+        Me.btn_new_item_save.Size = New System.Drawing.Size(141, 44)
         Me.btn_new_item_save.TabIndex = 9
         Me.btn_new_item_save.Text = "SAVE"
         Me.btn_new_item_save.UseVisualStyleBackColor = False
@@ -300,7 +300,7 @@ Partial Class Management_Inventory_Add_New
         Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label8.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(207, 310)
+        Me.Label8.Location = New System.Drawing.Point(208, 333)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(20, 28)
         Me.Label8.TabIndex = 69

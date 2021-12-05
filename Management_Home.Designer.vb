@@ -22,18 +22,22 @@ Partial Class Management_Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Home))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Home))
         Me.work_oders_due_panel = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.PictureBoxWorkOrders = New System.Windows.Forms.PictureBox()
         Me.lbl_work_orders_due = New System.Windows.Forms.Label()
         Me.work_order_overdue = New System.Windows.Forms.Label()
         Me.work_order_due_soon = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.invoice_payments_panel = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lbl_invoice_payments = New System.Windows.Forms.Label()
+        Me.invoice_payments_incomplete = New System.Windows.Forms.Label()
+        Me.invoice_payments_pending = New System.Windows.Forms.Label()
         Me.upcoming_events_panel = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lbl_upcoming_events = New System.Windows.Forms.Label()
@@ -44,20 +48,19 @@ Partial Class Management_Home
         Me.Label13 = New System.Windows.Forms.Label()
         Me.low_inventory_out_of_stock = New System.Windows.Forms.Label()
         Me.low_inventory_panel = New System.Windows.Forms.Panel()
+        Me.PictureBoxInventory = New System.Windows.Forms.PictureBox()
         Me.activebar_inventory = New System.Windows.Forms.Button()
         Me.activebar_work_orders = New System.Windows.Forms.Button()
         Me.HomeDataGridView = New System.Windows.Forms.DataGridView()
         Me.activebar_events = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.PictureBoxInventory = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxWorkOrders = New System.Windows.Forms.PictureBox()
+        Me.activebar_payments = New System.Windows.Forms.Button()
         Me.work_oders_due_panel.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.invoice_payments_panel.SuspendLayout()
         Me.upcoming_events_panel.SuspendLayout()
         Me.low_inventory_panel.SuspendLayout()
-        CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'work_oders_due_panel
@@ -81,11 +84,21 @@ Partial Class Management_Home
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(88, 58)
+        Me.Label7.Location = New System.Drawing.Point(90, 58)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(12, 19)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "|"
+        '
+        'PictureBoxWorkOrders
+        '
+        Me.PictureBoxWorkOrders.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxWorkOrders.Image = CType(resources.GetObject("PictureBoxWorkOrders.Image"), System.Drawing.Image)
+        Me.PictureBoxWorkOrders.Location = New System.Drawing.Point(181, 3)
+        Me.PictureBoxWorkOrders.Name = "PictureBoxWorkOrders"
+        Me.PictureBoxWorkOrders.Size = New System.Drawing.Size(49, 50)
+        Me.PictureBoxWorkOrders.TabIndex = 9
+        Me.PictureBoxWorkOrders.TabStop = False
         '
         'lbl_work_orders_due
         '
@@ -111,35 +124,67 @@ Partial Class Management_Home
         '
         Me.work_order_due_soon.AutoSize = True
         Me.work_order_due_soon.ForeColor = System.Drawing.Color.DarkOrange
-        Me.work_order_due_soon.Location = New System.Drawing.Point(109, 58)
+        Me.work_order_due_soon.Location = New System.Drawing.Point(114, 58)
         Me.work_order_due_soon.Name = "work_order_due_soon"
         Me.work_order_due_soon.Size = New System.Drawing.Size(69, 19)
         Me.work_order_due_soon.TabIndex = 0
         Me.work_order_due_soon.Text = "Due Soon"
         '
-        'Panel2
+        'invoice_payments_panel
         '
-        Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel2.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(832, 13)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(235, 87)
-        Me.Panel2.TabIndex = 1
+        Me.invoice_payments_panel.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.invoice_payments_panel.BackColor = System.Drawing.Color.White
+        Me.invoice_payments_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.invoice_payments_panel.Controls.Add(Me.Label4)
+        Me.invoice_payments_panel.Controls.Add(Me.lbl_invoice_payments)
+        Me.invoice_payments_panel.Controls.Add(Me.invoice_payments_incomplete)
+        Me.invoice_payments_panel.Controls.Add(Me.invoice_payments_pending)
+        Me.invoice_payments_panel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.invoice_payments_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.invoice_payments_panel.Location = New System.Drawing.Point(293, 13)
+        Me.invoice_payments_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.invoice_payments_panel.Name = "invoice_payments_panel"
+        Me.invoice_payments_panel.Size = New System.Drawing.Size(235, 87)
+        Me.invoice_payments_panel.TabIndex = 1
         '
-        'Label2
+        'Label4
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(181, 28)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Work Order Report"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(86, 58)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(12, 19)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "|"
+        '
+        'lbl_invoice_payments
+        '
+        Me.lbl_invoice_payments.AutoSize = True
+        Me.lbl_invoice_payments.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_invoice_payments.Location = New System.Drawing.Point(3, 0)
+        Me.lbl_invoice_payments.Name = "lbl_invoice_payments"
+        Me.lbl_invoice_payments.Size = New System.Drawing.Size(163, 28)
+        Me.lbl_invoice_payments.TabIndex = 2
+        Me.lbl_invoice_payments.Text = "Invoice Payments"
+        '
+        'invoice_payments_incomplete
+        '
+        Me.invoice_payments_incomplete.AutoSize = True
+        Me.invoice_payments_incomplete.ForeColor = System.Drawing.Color.DarkOrange
+        Me.invoice_payments_incomplete.Location = New System.Drawing.Point(107, 58)
+        Me.invoice_payments_incomplete.Name = "invoice_payments_incomplete"
+        Me.invoice_payments_incomplete.Size = New System.Drawing.Size(77, 19)
+        Me.invoice_payments_incomplete.TabIndex = 0
+        Me.invoice_payments_incomplete.Text = "Incomplete"
+        '
+        'invoice_payments_pending
+        '
+        Me.invoice_payments_pending.AutoSize = True
+        Me.invoice_payments_pending.ForeColor = System.Drawing.Color.Red
+        Me.invoice_payments_pending.Location = New System.Drawing.Point(15, 58)
+        Me.invoice_payments_pending.Name = "invoice_payments_pending"
+        Me.invoice_payments_pending.Size = New System.Drawing.Size(59, 19)
+        Me.invoice_payments_pending.TabIndex = 0
+        Me.invoice_payments_pending.Text = "Pending"
         '
         'upcoming_events_panel
         '
@@ -152,7 +197,7 @@ Partial Class Management_Home
         Me.upcoming_events_panel.Controls.Add(Me.upcoming_events_today)
         Me.upcoming_events_panel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.upcoming_events_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.upcoming_events_panel.Location = New System.Drawing.Point(564, 13)
+        Me.upcoming_events_panel.Location = New System.Drawing.Point(565, 13)
         Me.upcoming_events_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.upcoming_events_panel.Name = "upcoming_events_panel"
         Me.upcoming_events_panel.Size = New System.Drawing.Size(235, 87)
@@ -191,7 +236,7 @@ Partial Class Management_Home
         '
         Me.upcoming_events_today.AutoSize = True
         Me.upcoming_events_today.ForeColor = System.Drawing.Color.Red
-        Me.upcoming_events_today.Location = New System.Drawing.Point(22, 58)
+        Me.upcoming_events_today.Location = New System.Drawing.Point(17, 58)
         Me.upcoming_events_today.Name = "upcoming_events_today"
         Me.upcoming_events_today.Size = New System.Drawing.Size(46, 19)
         Me.upcoming_events_today.TabIndex = 0
@@ -230,7 +275,7 @@ Partial Class Management_Home
         '
         Me.low_inventory_out_of_stock.AutoSize = True
         Me.low_inventory_out_of_stock.ForeColor = System.Drawing.Color.Red
-        Me.low_inventory_out_of_stock.Location = New System.Drawing.Point(21, 58)
+        Me.low_inventory_out_of_stock.Location = New System.Drawing.Point(16, 58)
         Me.low_inventory_out_of_stock.Name = "low_inventory_out_of_stock"
         Me.low_inventory_out_of_stock.Size = New System.Drawing.Size(86, 19)
         Me.low_inventory_out_of_stock.TabIndex = 0
@@ -248,11 +293,21 @@ Partial Class Management_Home
         Me.low_inventory_panel.Controls.Add(Me.low_inventory_out_of_stock)
         Me.low_inventory_panel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.low_inventory_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.low_inventory_panel.Location = New System.Drawing.Point(295, 13)
+        Me.low_inventory_panel.Location = New System.Drawing.Point(840, 14)
         Me.low_inventory_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.low_inventory_panel.Name = "low_inventory_panel"
-        Me.low_inventory_panel.Size = New System.Drawing.Size(235, 88)
+        Me.low_inventory_panel.Size = New System.Drawing.Size(235, 86)
         Me.low_inventory_panel.TabIndex = 0
+        '
+        'PictureBoxInventory
+        '
+        Me.PictureBoxInventory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxInventory.Image = CType(resources.GetObject("PictureBoxInventory.Image"), System.Drawing.Image)
+        Me.PictureBoxInventory.Location = New System.Drawing.Point(171, 4)
+        Me.PictureBoxInventory.Name = "PictureBoxInventory"
+        Me.PictureBoxInventory.Size = New System.Drawing.Size(48, 50)
+        Me.PictureBoxInventory.TabIndex = 12
+        Me.PictureBoxInventory.TabStop = False
         '
         'activebar_inventory
         '
@@ -266,9 +321,9 @@ Partial Class Management_Home
         Me.activebar_inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.activebar_inventory.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.activebar_inventory.ForeColor = System.Drawing.Color.CadetBlue
-        Me.activebar_inventory.Location = New System.Drawing.Point(295, 5)
+        Me.activebar_inventory.Location = New System.Drawing.Point(840, 6)
         Me.activebar_inventory.Name = "activebar_inventory"
-        Me.activebar_inventory.Size = New System.Drawing.Size(235, 7)
+        Me.activebar_inventory.Size = New System.Drawing.Size(235, 10)
         Me.activebar_inventory.TabIndex = 0
         Me.activebar_inventory.UseVisualStyleBackColor = False
         Me.activebar_inventory.Visible = False
@@ -296,7 +351,9 @@ Partial Class Management_Home
         '
         Me.HomeDataGridView.AllowUserToAddRows = False
         Me.HomeDataGridView.AllowUserToDeleteRows = False
-        Me.HomeDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.HomeDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.HomeDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.HomeDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.HomeDataGridView.BackgroundColor = System.Drawing.Color.White
@@ -347,7 +404,7 @@ Partial Class Management_Home
         Me.HomeDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.HomeDataGridView.RowTemplate.Height = 38
         Me.HomeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.HomeDataGridView.Size = New System.Drawing.Size(1043, 394)
+        Me.HomeDataGridView.Size = New System.Drawing.Size(1051, 384)
         Me.HomeDataGridView.TabIndex = 9
         '
         'activebar_events
@@ -362,51 +419,31 @@ Partial Class Management_Home
         Me.activebar_events.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.activebar_events.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.activebar_events.ForeColor = System.Drawing.Color.CadetBlue
-        Me.activebar_events.Location = New System.Drawing.Point(564, 5)
+        Me.activebar_events.Location = New System.Drawing.Point(565, 5)
         Me.activebar_events.Name = "activebar_events"
-        Me.activebar_events.Size = New System.Drawing.Size(235, 7)
+        Me.activebar_events.Size = New System.Drawing.Size(235, 10)
         Me.activebar_events.TabIndex = 10
         Me.activebar_events.UseVisualStyleBackColor = False
         Me.activebar_events.Visible = False
         '
-        'Button2
+        'activebar_payments
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button2.BackColor = System.Drawing.Color.CadetBlue
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.CadetBlue
-        Me.Button2.Location = New System.Drawing.Point(832, 5)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(235, 7)
-        Me.Button2.TabIndex = 11
-        Me.Button2.UseVisualStyleBackColor = False
-        Me.Button2.Visible = False
-        '
-        'PictureBoxInventory
-        '
-        Me.PictureBoxInventory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBoxInventory.Image = CType(resources.GetObject("PictureBoxInventory.Image"), System.Drawing.Image)
-        Me.PictureBoxInventory.Location = New System.Drawing.Point(171, 4)
-        Me.PictureBoxInventory.Name = "PictureBoxInventory"
-        Me.PictureBoxInventory.Size = New System.Drawing.Size(48, 50)
-        Me.PictureBoxInventory.TabIndex = 12
-        Me.PictureBoxInventory.TabStop = False
-        '
-        'PictureBoxWorkOrders
-        '
-        Me.PictureBoxWorkOrders.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBoxWorkOrders.Image = CType(resources.GetObject("PictureBoxWorkOrders.Image"), System.Drawing.Image)
-        Me.PictureBoxWorkOrders.Location = New System.Drawing.Point(181, 3)
-        Me.PictureBoxWorkOrders.Name = "PictureBoxWorkOrders"
-        Me.PictureBoxWorkOrders.Size = New System.Drawing.Size(49, 50)
-        Me.PictureBoxWorkOrders.TabIndex = 9
-        Me.PictureBoxWorkOrders.TabStop = False
+        Me.activebar_payments.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.activebar_payments.BackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_payments.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
+        Me.activebar_payments.FlatAppearance.BorderSize = 0
+        Me.activebar_payments.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_payments.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_payments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_payments.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.activebar_payments.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.activebar_payments.ForeColor = System.Drawing.Color.CadetBlue
+        Me.activebar_payments.Location = New System.Drawing.Point(293, 5)
+        Me.activebar_payments.Name = "activebar_payments"
+        Me.activebar_payments.Size = New System.Drawing.Size(235, 7)
+        Me.activebar_payments.TabIndex = 11
+        Me.activebar_payments.UseVisualStyleBackColor = False
+        Me.activebar_payments.Visible = False
         '
         'Management_Home
         '
@@ -414,14 +451,14 @@ Partial Class Management_Home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1101, 538)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.activebar_payments)
         Me.Controls.Add(Me.activebar_events)
         Me.Controls.Add(Me.HomeDataGridView)
         Me.Controls.Add(Me.activebar_work_orders)
         Me.Controls.Add(Me.activebar_inventory)
         Me.Controls.Add(Me.low_inventory_panel)
         Me.Controls.Add(Me.upcoming_events_panel)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.invoice_payments_panel)
         Me.Controls.Add(Me.work_oders_due_panel)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -430,24 +467,24 @@ Partial Class Management_Home
         Me.Text = "Home"
         Me.work_oders_due_panel.ResumeLayout(False)
         Me.work_oders_due_panel.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.invoice_payments_panel.ResumeLayout(False)
+        Me.invoice_payments_panel.PerformLayout()
         Me.upcoming_events_panel.ResumeLayout(False)
         Me.upcoming_events_panel.PerformLayout()
         Me.low_inventory_panel.ResumeLayout(False)
         Me.low_inventory_panel.PerformLayout()
-        CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HomeDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents work_oders_due_panel As Panel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents invoice_payments_panel As Panel
     Friend WithEvents upcoming_events_panel As Panel
     Friend WithEvents lbl_work_orders_due As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lbl_invoice_payments As Label
     Friend WithEvents lbl_upcoming_events As Label
     Friend WithEvents work_order_overdue As Label
     Friend WithEvents Label7 As Label
@@ -463,8 +500,11 @@ Partial Class Management_Home
     Friend WithEvents activebar_work_orders As Button
     Friend WithEvents HomeDataGridView As DataGridView
     Friend WithEvents activebar_events As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents activebar_payments As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents upcoming_events_soon As Label
     Friend WithEvents upcoming_events_today As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents invoice_payments_incomplete As Label
+    Friend WithEvents invoice_payments_pending As Label
 End Class

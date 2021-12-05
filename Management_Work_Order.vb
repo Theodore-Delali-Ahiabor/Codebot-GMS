@@ -8,7 +8,7 @@ Public Class Management_Work_Order
         End If
     End Sub
 
-    Private Sub btn_add_new_work_order_Click(sender As Object, e As EventArgs) Handles btn_add_new_work_order.Click
+    Public Sub btn_add_new_work_order_Click(sender As Object, e As EventArgs) Handles btn_add_new_work_order.Click
         Management.lbl_current_tab.Text = "Work Orders | Add New Order"
         sidebar_form_loader(Management_Work_Order_Add_New)
         work_order_clear_form()
@@ -28,12 +28,12 @@ Public Class Management_Work_Order
 
     Private Sub btn_start_work_order_Click(sender As Object, e As EventArgs) Handles btn_start_work_order.Click
         Try
-            If Me.WorkOrderDataGridView.SelectedRows.Count > 0 Then
+            If Me.WorkOrderDataGridView.SelectedRows.Count = 1 Then
                 If Me.WorkOrderDataGridView.CurrentRow.Cells(6).Value.ToString = "In Progress" Then
                     Management.btn_management_message.Text = "Work Order already In Progress"
                     Management.btn_management_message.Show()
                     message(Management.btn_management_message, "information")
-                ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(6).Value.ToString = "Done" Then
+                ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(6).Value.ToString = "Complete" Then
                     Management.btn_management_message.Text = "Work Order already ended"
                     Management.btn_management_message.Show()
                     message(Management.btn_management_message, "information")
@@ -62,8 +62,8 @@ Public Class Management_Work_Order
 
     Private Sub btn_end_work_order_Click(sender As Object, e As EventArgs) Handles btn_end_work_order.Click
         Try
-            If Me.WorkOrderDataGridView.SelectedRows.Count > 0 Then
-                If Me.WorkOrderDataGridView.CurrentRow.Cells(6).Value.ToString = "Done" Then
+            If Me.WorkOrderDataGridView.SelectedRows.Count = 1 Then
+                If Me.WorkOrderDataGridView.CurrentRow.Cells(6).Value.ToString = "Complete" Then
                     Management.btn_management_message.Text = "Work Order already ended"
                     Management.btn_management_message.Show()
                     message(Management.btn_management_message, "information")
@@ -76,7 +76,7 @@ Public Class Management_Work_Order
                     If repos = DialogResult.Yes Then
                         Management_Work_Order_Done_Work_Order.last_service_id = Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value
                         sql_ds = New DataSet
-                        sql_da = New MySqlDataAdapter("UPDATE work_order SET Status = '" & "Done" & "' 
+                        sql_da = New MySqlDataAdapter("UPDATE work_order SET Status = '" & "Complete" & "' 
                             Where ID = '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                         sql_da.Fill(sql_ds, "work_order")
                         datagrid_fill_default("work_order_view", Me.WorkOrderDataGridView)
@@ -100,7 +100,6 @@ Public Class Management_Work_Order
             .txt_work_order_new_customer.Clear()
             .txt_work_order_new_automobile.Clear()
             .txt_new_work_order_technicians.Clear()
-            .txt_new_work_order_services.Clear()
             .txt_new_work_order_date_in.Checked = False
             .txt_new_work_order_date_out.Checked = False
             .txt_new_work_order_mileage.Clear()

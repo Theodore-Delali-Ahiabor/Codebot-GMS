@@ -7,7 +7,7 @@
     
     The primary goals of this format is to allow a simple XML format 
     that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+    various data types are Complete through the TypeConverter classes 
     associated with the data types.
     
     Example:
@@ -190,6 +190,12 @@
   <metadata name="UserBioStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>256, 13</value>
   </metadata>
+  <metadata name="DateTimeStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>407, 16</value>
+  </metadata>
+  <metadata name="UserBioStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>256, 13</value>
+  </metadata>
   <data name="btn_logout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -203,7 +209,7 @@
         LMI13EHdyK/B96/MP6JE4g23ijsw4t65xQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_messages.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAoRJREFUSEvFle9rTXEcx+/u7GJmCzeWdFmmRRjaAw8kRH5tPFJqLZZE1MiP4sFG
@@ -253,7 +259,7 @@
         gg==
 </value>
   </data>
-  <data name="btn_purcahse_orders.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_logs.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAaJJREFUSEvdlE0rRFEYxxkSzUzSqJEPMEMpKStlJLFQRk3ZoNmxkIVSI1mQhYWV
@@ -308,19 +314,6 @@
         7vdME8J7Lxg+bIGIvKT2rrwWyHD8nliFcxye7UwT8lqQRs9fQMEArnCh8OZ12KD2T9udFsitWEAT2tCH
         oUbJbefu/wEFHZhq6iTqtww1HyK+BTPzwCYKcxQc4Qfi9z2JFRzonRBPxJqOs4sC+bC62pyGLyjrmLdS
         EPwD3Cy8iKxCg6MAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btn_market.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAbxJREFUSEvNlTtLA1EQRhNRQW0UVIgSVLBL5QOLVCIIKURIGtP4AFuTTqxEK7EQ
-        YmNjYyGIBEEsRAsxhYViKyJYaGHln9h4ZpmbjZuNyWYjOnCYmTt3vtkd8gj9G7MsKwoFuCkWi716XJ/R
-        0ErjHH6lGtRPYR8O4cTrjoF6Ah9WefvplqTZfbFR9CHSKm8PSFLIwzbxOCy6Yz/Qcw4JlbdX1MLBC8SI
-        e/BD7tgnd/Q6KxLj8FnDmsbdAQSmDeRxLdlGXtDQMZ8DtuAAcbOSTy3ZFniAisY0rej1PYBaHN6kUXmH
-        YAPIozzpsECclqfWUnPegPwDjpSr3xhQuoSgfFqaMwA/iICs5V68xmnIleU5mC3LX9VHVKP6AC7uEpvV
-        +GVTtWqvKIj9OAB/qf4YZF3yRlOwBilIQgZGtdYBpsd4zwFPNMhvUlbzVfJuvIiOwAyMKRL3Q4o7bXjT
-        k1WNW8m/GYfrcAFeu/WDaGRU1jEmh6GTYpcHEXiEDZDfoQfog4q7oiFaKluf0bgDCzSaP5RlfOl7EcgQ
-        m4QzBGW38wJxO/4aP6HXGjeE5O8vKjGCskb79eUM9iT+QwuFvgAsMLiW7ocBfwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btn_home.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

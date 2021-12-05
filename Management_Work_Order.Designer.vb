@@ -137,7 +137,7 @@ Partial Class Management_Work_Order
         '
         'Panel1
         '
-        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.Button4)
@@ -150,14 +150,13 @@ Partial Class Management_Work_Order
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Location = New System.Drawing.Point(392, 488)
+        Me.Panel1.Location = New System.Drawing.Point(392, 464)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(658, 46)
         Me.Panel1.TabIndex = 64
         '
         'Button6
         '
-        Me.Button6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button6.BackColor = System.Drawing.Color.Silver
         Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.Silver
@@ -174,7 +173,6 @@ Partial Class Management_Work_Order
         '
         'Button5
         '
-        Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button5.BackColor = System.Drawing.Color.LightGreen
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver
@@ -191,7 +189,6 @@ Partial Class Management_Work_Order
         '
         'Button4
         '
-        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button4.BackColor = System.Drawing.Color.CadetBlue
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Silver
@@ -208,7 +205,6 @@ Partial Class Management_Work_Order
         '
         'Button3
         '
-        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button3.BackColor = System.Drawing.Color.Gold
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Silver
@@ -225,7 +221,6 @@ Partial Class Management_Work_Order
         '
         'Button2
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button2.BackColor = System.Drawing.Color.Honeydew
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver
@@ -242,7 +237,6 @@ Partial Class Management_Work_Order
         '
         'Button1
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button1.BackColor = System.Drawing.Color.Coral
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver
@@ -263,9 +257,9 @@ Partial Class Management_Work_Order
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(448, 27)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(136, 19)
+        Me.Label8.Size = New System.Drawing.Size(169, 19)
         Me.Label8.TabIndex = 2
-        Me.Label8.Text = "Pending Work Order"
+        Me.Label8.Text = "Pending Start Work Order"
         '
         'Label7
         '
@@ -273,9 +267,9 @@ Partial Class Management_Work_Order
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(448, 1)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(151, 19)
+        Me.Label7.Size = New System.Drawing.Size(155, 19)
         Me.Label7.TabIndex = 2
-        Me.Label7.Text = "Inprogress Work Order"
+        Me.Label7.Text = "In Progress Work Order"
         '
         'Label6
         '
@@ -313,13 +307,13 @@ Partial Class Management_Work_Order
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(40, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(119, 19)
+        Me.Label4.Size = New System.Drawing.Size(153, 19)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Done Work Order"
+        Me.Label4.Text = "Completed Work Order"
         '
         'btn_end_work_order
         '
-        Me.btn_end_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_end_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btn_end_work_order.BackColor = System.Drawing.Color.MediumAquamarine
         Me.btn_end_work_order.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_end_work_order.FlatAppearance.BorderSize = 0
@@ -328,19 +322,19 @@ Partial Class Management_Work_Order
         Me.btn_end_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_end_work_order.Image = CType(resources.GetObject("btn_end_work_order.Image"), System.Drawing.Image)
         Me.btn_end_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_end_work_order.Location = New System.Drawing.Point(198, 487)
+        Me.btn_end_work_order.Location = New System.Drawing.Point(181, 465)
         Me.btn_end_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_end_work_order.Name = "btn_end_work_order"
         Me.btn_end_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_end_work_order.Size = New System.Drawing.Size(116, 46)
+        Me.btn_end_work_order.Size = New System.Drawing.Size(140, 46)
         Me.btn_end_work_order.TabIndex = 66
-        Me.btn_end_work_order.Text = "Done"
+        Me.btn_end_work_order.Text = "Complete"
         Me.btn_end_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_end_work_order.UseVisualStyleBackColor = False
         '
         'btn_start_work_order
         '
-        Me.btn_start_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_start_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btn_start_work_order.BackColor = System.Drawing.Color.LightGreen
         Me.btn_start_work_order.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_start_work_order.FlatAppearance.BorderSize = 0
@@ -349,7 +343,7 @@ Partial Class Management_Work_Order
         Me.btn_start_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_start_work_order.Image = CType(resources.GetObject("btn_start_work_order.Image"), System.Drawing.Image)
         Me.btn_start_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_start_work_order.Location = New System.Drawing.Point(62, 486)
+        Me.btn_start_work_order.Location = New System.Drawing.Point(45, 464)
         Me.btn_start_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_start_work_order.Name = "btn_start_work_order"
         Me.btn_start_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)

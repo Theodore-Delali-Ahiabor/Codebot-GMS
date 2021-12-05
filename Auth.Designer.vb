@@ -33,8 +33,9 @@ Partial Class Auth
         '
         'auth_left_panel
         '
+        Me.auth_left_panel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.auth_left_panel.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.auth_left_panel.Dock = System.Windows.Forms.DockStyle.Left
         Me.auth_left_panel.Location = New System.Drawing.Point(0, 47)
         Me.auth_left_panel.Name = "auth_left_panel"
         Me.auth_left_panel.Size = New System.Drawing.Size(475, 672)
@@ -76,9 +77,10 @@ Partial Class Auth
         '
         'auth_right_panel
         '
-        Me.auth_right_panel.BackgroundImage = Global.Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner3
-        Me.auth_right_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.auth_right_panel.Dock = System.Windows.Forms.DockStyle.Right
+        Me.auth_right_panel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.auth_right_panel.BackgroundImage = Global.Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner_edit
+        Me.auth_right_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.auth_right_panel.Location = New System.Drawing.Point(471, 0)
         Me.auth_right_panel.Name = "auth_right_panel"
         Me.auth_right_panel.Size = New System.Drawing.Size(879, 719)
