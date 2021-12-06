@@ -22,9 +22,17 @@ Public Class Management_Inventory
         Management.lbl_current_tab.Text = "Inventory | Add New Item"
         Management_Inventory_Add_New.btn_new_item_save.Text = "SAVE"
         clear_inventory_form()
-        'add_new_employee_clear()
-        'Management_Employees_Add_New.txt_new_id.Text = new_employee_id
-        'Management_Employees_Add_New.txt_new_active.SelectedIndex = 0
+
+        With Management_Inventory_Add_New
+            .txt_new_alternative.Enabled = True
+            .txt_new_category.Enabled = True
+            .txt_new_location.Enabled = True
+            .txt_new_model.Enabled = True
+            .txt_new_part_name.Enabled = True
+            .txt_new_part_number.Enabled = True
+            .txt_new_quantity.Enabled = True
+            .txt_new_quantity.Enabled = True
+        End With
     End Sub
 
     Private Sub txt_inventory_part_name_filter_TextChanged(sender As Object, e As EventArgs) Handles txt_inventory_part_name_filter.TextChanged
@@ -78,7 +86,7 @@ Public Class Management_Inventory
                 message(Management.btn_management_message, "warning")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Edit Item Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Public Sub clear_inventory_form()

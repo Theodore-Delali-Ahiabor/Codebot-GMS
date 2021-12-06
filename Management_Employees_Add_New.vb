@@ -50,7 +50,7 @@ Public Class Management_Employees_Add_New
 
             End With
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Image Selection Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -168,7 +168,7 @@ Public Class Management_Employees_Add_New
                 btn_new_user_select_image_Click(btn_new_user_select_image, EventArgs.Empty)
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Save New Employee Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         Finally
             sql_con.Close()
         End Try

@@ -50,7 +50,7 @@ Public Class Management_Calendar_Add_New_Event
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Save New Events Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -69,7 +69,7 @@ Public Class Management_Calendar_Add_New_Event
 
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Delete Event Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub

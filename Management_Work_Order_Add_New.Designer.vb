@@ -53,6 +53,7 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_item_save = New System.Windows.Forms.Button()
         Me.txt_new_work_order_relevant_information = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.lbl_relevant_infomation_character_count = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label10
@@ -191,7 +192,6 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_new_work_order_technicians.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_work_order_technicians.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_work_order_technicians.Location = New System.Drawing.Point(19, 334)
-        Me.txt_new_work_order_technicians.MaxLength = 200
         Me.txt_new_work_order_technicians.Multiline = True
         Me.txt_new_work_order_technicians.Name = "txt_new_work_order_technicians"
         Me.txt_new_work_order_technicians.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -491,6 +491,17 @@ Partial Class Management_Work_Order_Add_New
         Me.Label8.TabIndex = 90
         Me.Label8.Text = "Other Relevant informations "
         '
+        'lbl_relevant_infomation_character_count
+        '
+        Me.lbl_relevant_infomation_character_count.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbl_relevant_infomation_character_count.AutoSize = True
+        Me.lbl_relevant_infomation_character_count.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_relevant_infomation_character_count.Location = New System.Drawing.Point(990, 230)
+        Me.lbl_relevant_infomation_character_count.Name = "lbl_relevant_infomation_character_count"
+        Me.lbl_relevant_infomation_character_count.Size = New System.Drawing.Size(70, 18)
+        Me.lbl_relevant_infomation_character_count.TabIndex = 90
+        Me.lbl_relevant_infomation_character_count.Text = "(200/200)"
+        '
         'Management_Work_Order_Add_New
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -515,6 +526,7 @@ Partial Class Management_Work_Order_Add_New
         Me.Controls.Add(Me.work_order_clear_customer)
         Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.btn_new_item_save)
+        Me.Controls.Add(Me.lbl_relevant_infomation_character_count)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label7)
@@ -565,4 +577,5 @@ Partial Class Management_Work_Order_Add_New
     Friend WithEvents work_order_cleartechnician As Label
     Friend WithEvents txt_new_work_order_relevant_information As TextBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents lbl_relevant_infomation_character_count As Label
 End Class

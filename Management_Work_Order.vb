@@ -29,11 +29,11 @@ Public Class Management_Work_Order
     Private Sub btn_start_work_order_Click(sender As Object, e As EventArgs) Handles btn_start_work_order.Click
         Try
             If Me.WorkOrderDataGridView.SelectedRows.Count = 1 Then
-                If Me.WorkOrderDataGridView.CurrentRow.Cells(6).Value.ToString = "In Progress" Then
+                If Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "In Progress" Then
                     Management.btn_management_message.Text = "Work Order already In Progress"
                     Management.btn_management_message.Show()
                     message(Management.btn_management_message, "information")
-                ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(6).Value.ToString = "Complete" Then
+                ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "Complete" Then
                     Management.btn_management_message.Text = "Work Order already ended"
                     Management.btn_management_message.Show()
                     message(Management.btn_management_message, "information")
@@ -45,7 +45,7 @@ Public Class Management_Work_Order
                             Where ID = '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                         sql_da.Fill(sql_ds, "work_order")
                         datagrid_fill_default("work_order_view", Me.WorkOrderDataGridView)
-                        Management.btn_management_message.Text = "Work Order LUNCHED successfully"
+                        Management.btn_management_message.Text = "Work Order INITIATED successfully"
                         Management.btn_management_message.Show()
                         message(Management.btn_management_message, "success")
                     End If
@@ -56,18 +56,18 @@ Public Class Management_Work_Order
                 message(Management.btn_management_message, "warning")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Initiating Work Order Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub btn_end_work_order_Click(sender As Object, e As EventArgs) Handles btn_end_work_order.Click
         Try
             If Me.WorkOrderDataGridView.SelectedRows.Count = 1 Then
-                If Me.WorkOrderDataGridView.CurrentRow.Cells(6).Value.ToString = "Complete" Then
+                If Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "Complete" Then
                     Management.btn_management_message.Text = "Work Order already ended"
                     Management.btn_management_message.Show()
                     message(Management.btn_management_message, "information")
-                ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(6).Value.ToString = "Pending" Then
+                ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "Pending" Then
                     Management.btn_management_message.Text = "Work Order can not end while pending"
                     Management.btn_management_message.Show()
                     message(Management.btn_management_message, "information")
@@ -92,7 +92,7 @@ Public Class Management_Work_Order
                 message(Management.btn_management_message, "warning")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Completing Work Order Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Public Sub work_order_clear_form()
@@ -103,7 +103,8 @@ Public Class Management_Work_Order
             .txt_new_work_order_date_in.Checked = False
             .txt_new_work_order_date_out.Checked = False
             .txt_new_work_order_mileage.Clear()
-            .txt_new_work_order_progress_stats.Text = ""
+            .txt_new_work_order_progress_stats.SelectedIndex = 0
+            .txt_new_work_order_relevant_information.Clear()
             .automobile = 0
             .customer = 0
         End With

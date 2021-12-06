@@ -35,7 +35,7 @@ Public Class Management_Work_Order_Add_New_Automobile
 
     Private Sub btn_automobile_select_select_Click(sender As Object, e As EventArgs) Handles btn_automobile_select_select.Click
         Try
-            If AutomobileDataGridView.SelectedRows.Count > 0 Then
+            If AutomobileDataGridView.SelectedRows.Count = 1 Then
                 Management_Work_Order_Add_New.txt_work_order_new_automobile.Text = CStr(AutomobileDataGridView.CurrentRow.Cells(2).Value & " " & AutomobileDataGridView.CurrentRow.Cells(5).Value & " " &
                     AutomobileDataGridView.CurrentRow.Cells(3).Value & " " & AutomobileDataGridView.CurrentRow.Cells(4).Value)
                 Management_Work_Order_Add_New.automobile = AutomobileDataGridView.CurrentRow.Cells(0).Value
@@ -46,7 +46,7 @@ Public Class Management_Work_Order_Add_New_Automobile
                 message(Management.btn_management_message, "information")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Automobile Selection Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -93,7 +93,7 @@ Public Class Management_Work_Order_Add_New_Automobile
                     End If
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message)
+                MessageBox.Show(ex.Message, "Save Automobile Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
             End Try
         Else
             Management.btn_management_message.Text = "Kindly fill out all required (*) fields"

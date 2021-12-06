@@ -79,7 +79,7 @@
                 .DataSource = parts_dt
                 '
                 Dim parts_name As New DataGridViewComboBoxColumn
-                With Parts_Name
+                With parts_name
                     .HeaderText = "Parts Name / Description"
                     .DataPropertyName = "Parts_Name"
                     .DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox
@@ -90,14 +90,14 @@
                     Dim sql_rdr As MySqlDataReader = sql_cmd.ExecuteReader()
                     'Add items to DataGridViewComboBoxColumn
                     While sql_rdr.Read
-                        If Parts_Name.Items.Contains(sql_rdr.Item("Description").ToString) = False Then
-                            Parts_Name.Items.Add(sql_rdr.Item("Description").ToString)
+                        If parts_name.Items.Contains(sql_rdr.Item("Description").ToString) = False Then
+                            parts_name.Items.Add(sql_rdr.Item("Description").ToString)
                         End If
                     End While
                     sql_con.Close()
 
                 End With
-                .Columns.Add(Parts_Name)
+                .Columns.Add(parts_name)
                 '
                 Dim Quantity As New DataGridViewTextBoxColumn
                 With Quantity
@@ -124,7 +124,7 @@
                 .Columns(0).Width = 500
             End With
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Add New Invoice Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

@@ -21,6 +21,9 @@ Public Class Management_Calendar
             fl.AutoScroll = True
             AddHandler fl.Click, AddressOf add_new_event_to_fl_day
             fl_days.Controls.Add(fl)
+            'If i % 5 = 0 Then
+            '    list_fl_day.Add(vbCrLf)
+            'End If
             list_fl_day.Add(fl)
         Next
     End Sub
@@ -73,7 +76,7 @@ Public Class Management_Calendar
                 End With
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Event Details Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -96,7 +99,7 @@ Public Class Management_Calendar
                 list_fl_day((row("Date").day) + (start_day_at_fl_number - 1)).Controls.Add(link)
             Next
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Event Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -106,6 +109,7 @@ Public Class Management_Calendar
             fl.Tag = 0
             fl.BackColor = Color.White
         Next
+
         For i As Integer = 1 To total_days_in_month
             Dim lbl As New Label
             lbl.Name = $"lbl_day{i}"
@@ -123,7 +127,7 @@ Public Class Management_Calendar
                 list_fl_day((i - 1) + (start_day_at_fl_number)).ForeColor = Color.White
             End If
         Next
-        
+
     End Sub
     Private Function get_first_day_of_week_of_current_date() As Integer
         Dim first_day_of_month As DateTime = New Date(current_date.Year, current_date.Month, 1)

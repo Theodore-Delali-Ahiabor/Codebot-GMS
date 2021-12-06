@@ -45,7 +45,7 @@ Partial Class Auth_Password_Reset
         Me.Label8.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label8.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Teal
-        Me.Label8.Location = New System.Drawing.Point(205, 275)
+        Me.Label8.Location = New System.Drawing.Point(145, 275)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(134, 28)
         Me.Label8.TabIndex = 30
@@ -58,7 +58,7 @@ Partial Class Auth_Password_Reset
         Me.Label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label12.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label12.Location = New System.Drawing.Point(309, 389)
+        Me.Label12.Location = New System.Drawing.Point(249, 389)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(20, 28)
         Me.Label12.TabIndex = 34
@@ -71,7 +71,7 @@ Partial Class Auth_Password_Reset
         Me.Label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label13.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label13.Location = New System.Drawing.Point(336, 275)
+        Me.Label13.Location = New System.Drawing.Point(276, 275)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(20, 28)
         Me.Label13.TabIndex = 33
@@ -84,7 +84,7 @@ Partial Class Auth_Password_Reset
         Me.txt_password_reset_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_password_reset_email.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_password_reset_email.ForeColor = System.Drawing.Color.Teal
-        Me.txt_password_reset_email.Location = New System.Drawing.Point(210, 306)
+        Me.txt_password_reset_email.Location = New System.Drawing.Point(150, 306)
         Me.txt_password_reset_email.MaxLength = 100
         Me.txt_password_reset_email.Name = "txt_password_reset_email"
         Me.txt_password_reset_email.Size = New System.Drawing.Size(350, 31)
@@ -98,7 +98,7 @@ Partial Class Auth_Password_Reset
         Me.txt_password_reset_code.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_password_reset_code.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_password_reset_code.ForeColor = System.Drawing.Color.Teal
-        Me.txt_password_reset_code.Location = New System.Drawing.Point(210, 420)
+        Me.txt_password_reset_code.Location = New System.Drawing.Point(150, 420)
         Me.txt_password_reset_code.MaxLength = 6
         Me.txt_password_reset_code.Name = "txt_password_reset_code"
         Me.txt_password_reset_code.Size = New System.Drawing.Size(129, 31)
@@ -112,7 +112,7 @@ Partial Class Auth_Password_Reset
         Me.Label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label15.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Teal
-        Me.Label15.Location = New System.Drawing.Point(241, 62)
+        Me.Label15.Location = New System.Drawing.Point(181, 62)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(303, 49)
         Me.Label15.TabIndex = 29
@@ -125,7 +125,7 @@ Partial Class Auth_Password_Reset
         Me.Label1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Label1.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Teal
-        Me.Label1.Location = New System.Drawing.Point(205, 389)
+        Me.Label1.Location = New System.Drawing.Point(145, 389)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(108, 28)
         Me.Label1.TabIndex = 36
@@ -136,7 +136,7 @@ Partial Class Auth_Password_Reset
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.IndianRed
-        Me.Label2.Location = New System.Drawing.Point(207, 148)
+        Me.Label2.Location = New System.Drawing.Point(147, 148)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
         Me.Label2.TabIndex = 37
@@ -148,7 +148,7 @@ Partial Class Auth_Password_Reset
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DimGray
-        Me.Label3.Location = New System.Drawing.Point(206, 205)
+        Me.Label3.Location = New System.Drawing.Point(146, 205)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(369, 21)
         Me.Label3.TabIndex = 38
@@ -160,7 +160,7 @@ Partial Class Auth_Password_Reset
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DimGray
-        Me.Label4.Location = New System.Drawing.Point(206, 230)
+        Me.Label4.Location = New System.Drawing.Point(146, 230)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(284, 21)
         Me.Label4.TabIndex = 39
@@ -172,7 +172,7 @@ Partial Class Auth_Password_Reset
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DimGray
-        Me.Label5.Location = New System.Drawing.Point(206, 171)
+        Me.Label5.Location = New System.Drawing.Point(146, 171)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(358, 21)
         Me.Label5.TabIndex = 38
@@ -189,7 +189,7 @@ Partial Class Auth_Password_Reset
         Me.btn_password_reset_send_code.ForeColor = System.Drawing.Color.White
         Me.btn_password_reset_send_code.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_send_24
         Me.btn_password_reset_send_code.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_password_reset_send_code.Location = New System.Drawing.Point(419, 343)
+        Me.btn_password_reset_send_code.Location = New System.Drawing.Point(359, 343)
         Me.btn_password_reset_send_code.Name = "btn_password_reset_send_code"
         Me.btn_password_reset_send_code.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_password_reset_send_code.Size = New System.Drawing.Size(141, 32)
@@ -209,7 +209,7 @@ Partial Class Auth_Password_Reset
         Me.btn_password_reset_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_password_reset_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_password_reset_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_password_reset_cancel.Location = New System.Drawing.Point(397, 494)
+        Me.btn_password_reset_cancel.Location = New System.Drawing.Point(337, 494)
         Me.btn_password_reset_cancel.Name = "btn_password_reset_cancel"
         Me.btn_password_reset_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_password_reset_cancel.Size = New System.Drawing.Size(128, 40)
@@ -230,7 +230,7 @@ Partial Class Auth_Password_Reset
         Me.btn_password_reset_reset.ForeColor = System.Drawing.Color.White
         Me.btn_password_reset_reset.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_reset_24
         Me.btn_password_reset_reset.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_password_reset_reset.Location = New System.Drawing.Point(250, 494)
+        Me.btn_password_reset_reset.Location = New System.Drawing.Point(190, 494)
         Me.btn_password_reset_reset.Name = "btn_password_reset_reset"
         Me.btn_password_reset_reset.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_password_reset_reset.Size = New System.Drawing.Size(116, 40)
@@ -244,7 +244,7 @@ Partial Class Auth_Password_Reset
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(796, 574)
+        Me.ClientSize = New System.Drawing.Size(677, 574)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)

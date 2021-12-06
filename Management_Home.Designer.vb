@@ -381,6 +381,7 @@ Partial Class Management_Home
         Me.HomeDataGridView.EnableHeadersVisualStyles = False
         Me.HomeDataGridView.GridColor = System.Drawing.Color.Silver
         Me.HomeDataGridView.Location = New System.Drawing.Point(24, 132)
+        Me.HomeDataGridView.MultiSelect = False
         Me.HomeDataGridView.Name = "HomeDataGridView"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal

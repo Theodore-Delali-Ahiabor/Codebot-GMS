@@ -87,7 +87,7 @@ Public Class Auth_Password_Reset
                                 'btn_password_reset_send_code.BackColor = Color.DarkTurquoise
                                 'txt_password_reset_email.Enabled = True
                                 'txt_password_reset_email.Focus()
-                                MsgBox(ex.ToString)
+                                MessageBox.Show(ex.Message, "SMTP Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             End Try
                         Else
                             Auth.btn_auth_message.Text = "Email NOT an Employee"
@@ -95,7 +95,7 @@ Public Class Auth_Password_Reset
                             message(Auth.btn_auth_message, "warning")
                         End If
                     Catch ex As Exception
-                        MsgBox(ex.Message)
+                        MessageBox.Show(ex.Message, "Email Verification Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
                 Else
                     Auth.btn_auth_message.Text = "Enter a valid email address"
@@ -145,7 +145,7 @@ Public Class Auth_Password_Reset
                     End If
 
                 Catch ex As Exception
-                    MsgBox(ex.Message)
+                    MessageBox.Show(ex.Message, "Reset Code Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
             Else
                 Auth.btn_auth_message.Text = "Enter numeric values only"

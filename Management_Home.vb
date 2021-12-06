@@ -121,7 +121,7 @@ Public Class Management_Home
         Me.upcoming_events_today.Text = HomeDataGridView.Rows.Count & " Today"
         Management.lbl_current_tab.Text = "Dashboard | Upcoming Events"
     End Sub
-    Public Sub invoice_payments_pending_Click(sender As Object, e As EventArgs)
+    Public Sub invoice_payments_pending_Click(sender As Object, e As EventArgs) Handles invoice_payments_pending.Click
         activebar_work_orders.Visible = False
         activebar_inventory.Visible = False
         activebar_events.Visible = False
@@ -131,7 +131,7 @@ Public Class Management_Home
         Management.lbl_current_tab.Text = "Dashboard | Invoice Payments"
     End Sub
 
-    Public Sub invoice_payments_incomplete_Click(sender As Object, e As EventArgs)
+    Public Sub invoice_payments_incomplete_Click(sender As Object, e As EventArgs) Handles invoice_payments_incomplete.Click
         activebar_work_orders.Visible = False
         activebar_inventory.Visible = False
         activebar_events.Visible = False
@@ -152,6 +152,5 @@ Public Class Management_Home
             clear_gridview_default_selection(Me.HomeDataGridView)
         End If
     End Sub
-
 
 End Class

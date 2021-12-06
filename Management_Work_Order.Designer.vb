@@ -87,6 +87,7 @@ Partial Class Management_Work_Order
         Me.WorkOrderDataGridView.GridColor = System.Drawing.Color.Silver
         Me.WorkOrderDataGridView.Location = New System.Drawing.Point(45, 89)
         Me.WorkOrderDataGridView.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.WorkOrderDataGridView.MultiSelect = False
         Me.WorkOrderDataGridView.Name = "WorkOrderDataGridView"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal

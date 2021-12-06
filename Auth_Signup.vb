@@ -5,8 +5,6 @@ Public Class Auth_Signup
             'check if the user is permited to signup to signup 
             If txt_signup_phone.Text <> "" And IsNumeric(txt_signup_phone.Text) Then
                 Try
-                    'sql_con.Close()
-                    'sql_con.Open()
                     sql_da = New MySqlDataAdapter("SELECT * FROM employee WHERE Phone = '" & CInt(txt_signup_phone.Text) & "'", sql_con)
                     sql_dt = New DataTable
                     sql_dt.Clear()
@@ -14,8 +12,6 @@ Public Class Auth_Signup
                     If sql_dt.Rows.Count() = 1 Then
                         signup_id = sql_dt.Rows(0).Item("ID").ToString()
                         signup_name = sql_dt.Rows(0).Item("First_Name") & " " & sql_dt.Rows(0).Item("Last_Name")
-                        'sql_con.Close()
-                        'sql_con.Open()
                         sql_da = New MySqlDataAdapter("SELECT * FROM user WHERE Employee_ID = '" & signup_id & "'", sql_con)
                         sql_dt = New DataTable
                         sql_dt.Clear()
@@ -54,7 +50,7 @@ Public Class Auth_Signup
                         message(Auth.btn_auth_message, "warning")
                     End If
                 Catch ex As Exception
-                    MsgBox(ex.Message)
+                    MessageBox.Show(ex.Message, "Employee Verification Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
             ElseIf txt_signup_phone.Text = "" Then
                 txt_signup_phone.Focus()
@@ -72,8 +68,6 @@ Public Class Auth_Signup
             'check if the details are valid then add user
             If txt_signup_phone.Text <> "" And txt_signup_username.Text <> "" And txt_signup_password.Text <> "" And txt_signup_confirm_password.Text <> "" Then
                 Try
-                    'sql_con.Close()
-                    'sql_con.Open()
                     sql_da = New MySqlDataAdapter("SELECT * FROM user WHERE Username = '" & txt_signup_username.Text & "'", sql_con)
                     sql_dt.Clear()
                     sql_da.Fill(sql_dt)
@@ -87,8 +81,8 @@ Public Class Auth_Signup
                             Dim repos As DialogResult = MessageBox.Show("You are about to Signup with Username '" & txt_signup_username.Text.ToString() & "', are you sure to continue ?", "Signup", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                             If repos = DialogResult.Yes Then
                                 sql_ds = New DataSet
-                                sql_da = New MySqlDataAdapter("INSERT INTO user(Employee_ID,Username,Password)
-                            VALUES('" & signup_id & "', '" & txt_signup_username.Text.ToString() & "', '" & txt_signup_confirm_password.Text.ToString() & "')", sql_con)
+                                sql_da = New MySqlDataAdapter("INSERT INTO user(Employee_ID,Username,Password,`Created_On`,`Last_Updated`)
+                            VALUES('" & signup_id & "', '" & txt_signup_username.Text.ToString() & "', '" & Encoding(txt_signup_confirm_password.Text.ToString()) & "','" & Date.UtcNow & "','" & Date.UtcNow & "')", sql_con)
                                 sql_da.Fill(sql_ds, "user")
                                 auth_form_loader(Auth_Login)
                             End If
@@ -99,7 +93,7 @@ Public Class Auth_Signup
                         message(Auth.btn_auth_message, "warning")
                     End If
                 Catch ex As Exception
-                    MsgBox(ex.Message)
+                    MessageBox.Show(ex.Message, "SignUp Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
             Else
                 txt_signup_phone.Focus()
@@ -111,8 +105,6 @@ Public Class Auth_Signup
             'check if the details are valid then add user
             If txt_signup_phone.Text <> "" And txt_signup_username.Text <> "" And txt_signup_password.Text <> "" And txt_signup_confirm_password.Text <> "" Then
                 Try
-                    'sql_con.Close()
-                    'sql_con.Open()
                     sql_da = New MySqlDataAdapter("SELECT * FROM user WHERE Username = '" & txt_signup_username.Text & "'", sql_con)
                     sql_dt.Clear()
                     sql_da.Fill(sql_dt)
@@ -126,7 +118,7 @@ Public Class Auth_Signup
                             Dim repos As DialogResult = MessageBox.Show("You are about to Signup with Username '" & txt_signup_username.Text.ToString() & "', are you sure to continue ?", "Signup", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                             If repos = DialogResult.Yes Then
                                 sql_ds = New DataSet
-                                sql_da = New MySqlDataAdapter("UPDATE user SET Username = '" & txt_signup_username.Text.ToString() & "', Password = '" & txt_signup_confirm_password.Text.ToString() & "' WHERE Employee_ID = '" & signup_id & "' ", sql_con)
+                                sql_da = New MySqlDataAdapter("UPDATE user SET Username = '" & txt_signup_username.Text.ToString() & "', Password = '" & Encoding(txt_signup_confirm_password.Text.ToString()) & "', `Last_Updated`='" & Date.UtcNow & "' WHERE Employee_ID = '" & signup_id & "' ", sql_con)
                                 sql_da.Fill(sql_ds, "user")
                                 auth_form_loader(Auth_Login)
                             End If
@@ -137,7 +129,7 @@ Public Class Auth_Signup
                         message(Auth.btn_auth_message, "warning")
                     End If
                 Catch ex As Exception
-                    MsgBox(ex.Message)
+                    MessageBox.Show(ex.Message, "Username Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
             Else
                 txt_signup_phone.Focus()

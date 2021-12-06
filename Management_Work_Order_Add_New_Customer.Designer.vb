@@ -515,6 +515,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.CustomerDataGridView.GridColor = System.Drawing.Color.Silver
         Me.CustomerDataGridView.Location = New System.Drawing.Point(34, 50)
         Me.CustomerDataGridView.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.CustomerDataGridView.MultiSelect = False
         Me.CustomerDataGridView.Name = "CustomerDataGridView"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal

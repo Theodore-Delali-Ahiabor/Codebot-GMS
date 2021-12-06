@@ -41,16 +41,21 @@
             End With
 
         Catch ex As Exception
-            ' MessageBox.Show(ex.Message, "Parts Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' MessageBox.Show(ex.Message, "Parts Selection Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
     Private Sub calculate()
-        'lbl_new_invoice_total_parts_cost.Text = ""
-        'lbl_new_invoice_total_services_cost.Text = ""
-        lbl_new_invoice_grand_total_cost.Text = CDec(lbl_new_invoice_total_parts_cost.Text) + CDec(lbl_new_invoice_total_services_cost.Text)
-        'lbl_new_invoice_tax.Text = ""
-        lbl_new_invoice_payable_amount.Text = CDec(lbl_new_invoice_grand_total_cost.Text) - CDec(lbl_new_invoice_tax.Text)
+        Try
+            'lbl_new_invoice_total_parts_cost.Text = ""
+            'lbl_new_invoice_total_services_cost.Text = ""
+            lbl_new_invoice_grand_total_cost.Text = CDec(lbl_new_invoice_total_parts_cost.Text) + CDec(lbl_new_invoice_total_services_cost.Text)
+            'lbl_new_invoice_tax.Text = ""
+            lbl_new_invoice_payable_amount.Text = CDec(lbl_new_invoice_grand_total_cost.Text) - CDec(lbl_new_invoice_tax.Text)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Invoice Calculation Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
+        End Try
+
     End Sub
 
     Private Sub InvoiceServicesDataGridView_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles InvoiceServicesDataGridView.CellValueChanged
@@ -67,7 +72,7 @@
                 calculate()
             End With
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message, "Enter Services Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

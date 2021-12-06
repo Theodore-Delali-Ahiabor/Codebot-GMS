@@ -93,6 +93,7 @@ Partial Class Management_Invoice
         Me.InvoiceDataGridView.GridColor = System.Drawing.Color.Silver
         Me.InvoiceDataGridView.Location = New System.Drawing.Point(48, 91)
         Me.InvoiceDataGridView.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.InvoiceDataGridView.MultiSelect = False
         Me.InvoiceDataGridView.Name = "InvoiceDataGridView"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal

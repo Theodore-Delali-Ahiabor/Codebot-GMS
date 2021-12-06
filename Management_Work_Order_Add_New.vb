@@ -48,7 +48,7 @@ Public Class Management_Work_Order_Add_New
                 message(Management.btn_management_message, "warning")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Save New Work Order Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -78,6 +78,11 @@ Public Class Management_Work_Order_Add_New
     Private Sub work_order_cleartechnician_Click(sender As Object, e As EventArgs) Handles work_order_cleartechnician.Click
         txt_new_work_order_technicians.Clear()
     End Sub
+
+    Private Sub txt_new_work_order_relevant_information_TextChanged(sender As Object, e As EventArgs) Handles txt_new_work_order_relevant_information.TextChanged
+        lbl_relevant_infomation_character_count.Text = "(" + (200 - txt_new_work_order_relevant_information.TextLength).ToString + "/200)"
+    End Sub
+
     Private Sub work_order_clear_automobile_Click(sender As Object, e As EventArgs) Handles work_order_clear_automobile.Click
         txt_work_order_new_automobile.Clear()
     End Sub

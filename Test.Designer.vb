@@ -22,80 +22,110 @@ Partial Class Test
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btn_save_img = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btn_retrieve_img = New System.Windows.Forms.Button()
         Me.btn_browse_img = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'btn_save_img
-        '
-        Me.btn_save_img.Location = New System.Drawing.Point(51, 266)
-        Me.btn_save_img.Name = "btn_save_img"
-        Me.btn_save_img.Size = New System.Drawing.Size(135, 37)
-        Me.btn_save_img.TabIndex = 0
-        Me.btn_save_img.Text = "Save"
-        Me.btn_save_img.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.PictureBox1.Location = New System.Drawing.Point(51, 27)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(227, 206)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'btn_retrieve_img
-        '
-        Me.btn_retrieve_img.Location = New System.Drawing.Point(223, 266)
-        Me.btn_retrieve_img.Name = "btn_retrieve_img"
-        Me.btn_retrieve_img.Size = New System.Drawing.Size(135, 37)
-        Me.btn_retrieve_img.TabIndex = 0
-        Me.btn_retrieve_img.Text = "Retrieev"
-        Me.btn_retrieve_img.UseVisualStyleBackColor = True
         '
         'btn_browse_img
         '
-        Me.btn_browse_img.Location = New System.Drawing.Point(364, 266)
+        Me.btn_browse_img.Location = New System.Drawing.Point(226, 246)
         Me.btn_browse_img.Name = "btn_browse_img"
         Me.btn_browse_img.Size = New System.Drawing.Size(135, 37)
         Me.btn_browse_img.TabIndex = 0
-        Me.btn_browse_img.Text = "Browse"
+        Me.btn_browse_img.Text = "encrypt"
         Me.btn_browse_img.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'TextBox1
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(322, 27)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(299, 206)
-        Me.DataGridView1.TabIndex = 2
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(75, 70)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(588, 30)
+        Me.TextBox1.TabIndex = 1
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(75, 117)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(588, 30)
+        Me.TextBox2.TabIndex = 1
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(75, 167)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(588, 30)
+        Me.TextBox3.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(11, 87)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Label1"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(11, 129)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Label1"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(11, 179)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Label1"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(392, 246)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(135, 37)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "decrypt"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Test
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(687, 339)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_browse_img)
-        Me.Controls.Add(Me.btn_retrieve_img)
-        Me.Controls.Add(Me.btn_save_img)
         Me.Name = "Test"
         Me.Text = "Test"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btn_save_img As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btn_retrieve_img As Button
     Friend WithEvents btn_browse_img As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Button1 As Button
 End Class

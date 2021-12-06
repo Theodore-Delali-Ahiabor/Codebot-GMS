@@ -106,6 +106,7 @@ Partial Class Management_Employees
         Me.EmployeesDataGridView.GridColor = System.Drawing.Color.Silver
         Me.EmployeesDataGridView.Location = New System.Drawing.Point(33, 88)
         Me.EmployeesDataGridView.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.EmployeesDataGridView.MultiSelect = False
         Me.EmployeesDataGridView.Name = "EmployeesDataGridView"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal

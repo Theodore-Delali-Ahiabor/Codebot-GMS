@@ -97,7 +97,7 @@ Public Class Management_Employees
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Edit Employee Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Public Sub add_new_employee_clear()
@@ -165,7 +165,7 @@ Public Class Management_Employees
                 message(Management.btn_management_message, "warning")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Activate Employee Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -195,7 +195,7 @@ Public Class Management_Employees
                 message(Management.btn_management_message, "warning")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Deactivate Employee Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 

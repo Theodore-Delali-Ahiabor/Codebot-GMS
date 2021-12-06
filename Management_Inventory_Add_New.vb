@@ -43,7 +43,7 @@ Public Class Management_Inventory_Add_New
                 End If
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Save New Item Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

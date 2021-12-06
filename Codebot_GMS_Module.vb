@@ -1,5 +1,5 @@
-﻿Imports System.Net.Mail
-Imports System.IO
+﻿Imports System.IO
+Imports System.Security.Cryptography
 Module Codebot_GMS_Module
     Public sql_con As New MySqlConnection("server=localhost;user id=root;password=;database=codebot_gms_schema;sslMode=none;Allow Zero Datetime=True")
     Public sql_rdr As MySqlDataReader
@@ -13,6 +13,7 @@ Module Codebot_GMS_Module
     Public arr_image() As Byte
     Public open_image_file_dialog As New OpenFileDialog()
     Public mstream As New MemoryStream()
+    Public triple_des As New TripleDESCryptoServiceProvider
     'LOADS FORMS INTO GMS_Main  
     Public Sub gms_main_form_loader(ByVal main_form As Form)
         Try
@@ -29,7 +30,7 @@ Module Codebot_GMS_Module
                 main_form.Visible = False
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Main Form Load Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -46,7 +47,6 @@ Module Codebot_GMS_Module
                 Management_Home.Visible = False
                 Management_Employees_Add_New.Visible = False
                 Management_Work_Order.Visible = False
-                'Management_Market.Visible = False
                 Management_Calendar.Visible = False
                 Management_Inventory.Visible = False
                 Management_Inventory_Add_New.Visible = False
@@ -58,7 +58,7 @@ Module Codebot_GMS_Module
                 form.Visible = False
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Sidebar Form Load Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'LOADS FORMS INTO THE AUTH FORM 
@@ -78,7 +78,7 @@ Module Codebot_GMS_Module
                 auth_form.Visible = False
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Authentication Form Load Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'DIPLAY POP UP MESSAGES 
@@ -104,7 +104,7 @@ Module Codebot_GMS_Module
                 message_ts = New TimeSpan(0, 0, 5)
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Message Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'ADD COMBOX ITEMS
@@ -121,7 +121,7 @@ Module Codebot_GMS_Module
             End While
             sql_con.Close()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Combox Items Add Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'ADD SEARCH SUGGESTIONS TO SEARCH TEXTBOXES
@@ -137,7 +137,7 @@ Module Codebot_GMS_Module
             End While
             sql_con.Close()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Search Suggestions Add Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'THIS PREVENTS REDUNDUNT DATA IN COMBOX ITMES 
@@ -162,7 +162,7 @@ Module Codebot_GMS_Module
             datagrid_fill_color_effect(db_table, gridview_name)
             clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Data Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -176,7 +176,7 @@ Module Codebot_GMS_Module
             datagrid_fill_color_effect(db_table, gridview_name)
             clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Data Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'FILL THE DATAGRID WITH INFORMATIONS BASE ON SOME FILTER VARIABLE
@@ -190,7 +190,7 @@ Module Codebot_GMS_Module
             datagrid_fill_color_effect(db_table, gridview_name)
             clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Query Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'FILL THE DATAGRID WITH INFORMATIONS BASED ON THE SELECTED TEXT FROM A COMBO BOX
@@ -204,7 +204,7 @@ Module Codebot_GMS_Module
             datagrid_fill_color_effect(db_table, gridview_name)
             clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Filter Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'FILL THE DATAGRID WITH INFORMATIONS BASED ON THE TEXT FROM A TEXT BOX
@@ -218,7 +218,7 @@ Module Codebot_GMS_Module
             datagrid_fill_color_effect(db_table, gridview_name)
             clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Search Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'FILL  THE HOME DATAGRID WITH THE PREFERED FILTER FOR THE WORK ORDDERS DUE TAB 
@@ -237,7 +237,7 @@ Module Codebot_GMS_Module
             Management.lbl_current_tab.Text = "Dashboard | Work Oders Due"
             clear_gridview_default_selection(Management_Home.HomeDataGridView)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Work Order Overdue Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'CLEAR THE DEFAULT ROW SELECTION
@@ -247,7 +247,7 @@ Module Codebot_GMS_Module
                 gridview_name.Rows(0).Selected = False
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Default Selection Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     'APPLY COLOR EFFECTS TO ROWS IN THE DATAGRID BASED ON THE TABLE IT IS
@@ -301,11 +301,11 @@ Module Codebot_GMS_Module
                     Next
                 End If
             End If
-
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Datagridview Color Effect Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+
     'FILL ALL COMBOBOXES WITH ITEMS AND FILL ALL FILTER TEXT BOXES WITH SEARCH SUGESTIONS
     Public Sub box_collections_fill()
         Try
@@ -341,10 +341,11 @@ Module Codebot_GMS_Module
             Management_Invoice.cmb_payment_status_filter.SelectedIndex = 0
             add_combobox_items(Management_Invoice.cmb_payment_status_filter, "invoice", "Payment_Status")
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "Box Collection Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
 
     End Sub
+
     'RESIZE THE COLUMNS IN THE DATAGRID TABLE BASED ON WHAT TABLE IT IS
     Public Sub datagrif_fill_column_resize(ByRef db_table As String, ByRef gridview_name As DataGridView)
         Try
@@ -379,7 +380,114 @@ Module Codebot_GMS_Module
                 gridview_name.Columns.Item("Progress_Status").Width = 135
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show(ex.Message, "DataGridView Collumn Resize Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    'To control user access to the application
+    Public Sub Access_Control(ByRef role As String)
+        With Management
+            gms_main_form_loader(Management)
+            .btn_home_Click(Management.btn_home, EventArgs.Empty)
+            .login_position.Text = login_as
+            .login_name.Text = login_full_name
+
+            If role = "Administrator" Or role = "Supervisor" Or role = "Manager" Or role = "Management Engineer" Or role = "Supervising Engineer" Then
+
+                'Give user administrative privilages
+                Management_Home.low_inventory_panel.Visible = True
+                .btn_employees.Visible = True
+                .btn_inventory.Visible = True
+                .btn_statistics.Visible = True
+                .btn_logs.Visible = True
+                .btn_messages.Visible = True
+
+            Else
+
+                'Give other user privilages 
+                Management_Home.low_inventory_panel.Visible = False
+                .btn_employees.Visible = False
+                .btn_inventory.Visible = False
+                .btn_statistics.Visible = False
+                .btn_logs.Visible = False
+                .btn_messages.Visible = False
+
+            End If
+            .btn_management_message.Text = "Login Was Successful"
+            .btn_management_message.Show()
+            message(.btn_management_message, "success")
+        End With
+    End Sub
+    Public Function Encoding(ByRef password As String)
+        Dim wrapper As New Simple3Des()
+
+        'Return Encrypted password
+        Return wrapper.EncryptData(password)
+    End Function
+    Public Function Decoding(ByRef password As String)
+        Dim wrapper As New Simple3Des()
+
+        ' Decrypt the Password
+        Return wrapper.DecryptData(password)
+    End Function
+
+
+    Public NotInheritable Class Simple3Des
+        Private TripleDes As New TripleDESCryptoServiceProvider
+        'a private method that creates a byte array of a specified length from the hash of the specified key.
+        Private Function TruncateHash(ByVal key As String, ByVal length As Integer) As Byte()
+            Dim sha1 As New SHA1CryptoServiceProvider
+
+            ' Hash the key.
+            Dim keyBytes() As Byte = System.Text.Encoding.Unicode.GetBytes(key)
+            Dim hash() As Byte = sha1.ComputeHash(keyBytes)
+
+            ' Truncate or pad the hash.
+            ReDim Preserve hash(length - 1)
+            Return hash
+        End Function
+
+        'constructor to initialize the 3DES cryptographic service provider.
+        Sub New()
+            ' Initialize the crypto provider.
+            TripleDes.Key = TruncateHash("Codebot_GMS", TripleDes.KeySize \ 8)
+            TripleDes.IV = TruncateHash("", TripleDes.BlockSize \ 8)
+        End Sub
+
+        Public Function EncryptData(ByVal plaintext As String) As String
+
+            ' Convert the plaintext string to a byte array.
+            Dim plaintextBytes() As Byte = System.Text.Encoding.Unicode.GetBytes(plaintext)
+
+            ' Create the stream.
+            Dim ms As New System.IO.MemoryStream
+            ' Create the encoder to write to the stream.
+            Dim encStream As New CryptoStream(ms,
+                TripleDes.CreateEncryptor(), System.Security.Cryptography.CryptoStreamMode.Write)
+
+            ' Use the crypto stream to write the byte array to the stream.
+            encStream.Write(plaintextBytes, 0, plaintextBytes.Length)
+            encStream.FlushFinalBlock()
+
+            ' Convert the encrypted stream to a printable string.
+            Return Convert.ToBase64String(ms.ToArray)
+        End Function
+
+        Public Function DecryptData(ByVal encryptedtext As String) As String
+
+            ' Convert the encrypted text string to a byte array.
+            Dim encryptedBytes() As Byte = Convert.FromBase64String(encryptedtext)
+
+            ' Create the stream.
+            Dim ms As New System.IO.MemoryStream
+            ' Create the decoder to write to the stream.
+            Dim decStream As New CryptoStream(ms, TripleDes.CreateDecryptor(), System.Security.Cryptography.CryptoStreamMode.Write)
+
+            ' Use the crypto stream to write the byte array to the stream.
+            decStream.Write(encryptedBytes, 0, encryptedBytes.Length)
+            decStream.FlushFinalBlock()
+
+            ' Convert the plaintext stream to a string.
+            Return System.Text.Encoding.Unicode.GetString(ms.ToArray)
+        End Function
+    End Class
 End Module

@@ -49,7 +49,7 @@ Public Class Management_Work_Order_Add_New_Customer
                 End If
 
             Catch ex As Exception
-                MsgBox(ex.Message)
+                MessageBox.Show(ex.Message, "Customer Save Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
             End Try
         Else
             Management.btn_management_message.Text = "Please fill out all REQUIRED '*' fields"

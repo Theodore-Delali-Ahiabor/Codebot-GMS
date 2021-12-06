@@ -3,7 +3,7 @@ Public Class Auth_Login
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         If txt_login_username.Text <> "" And txt_login_password.Text <> "" Then
             If txt_login_username.Text.Contains("'") Then
-                Auth.btn_auth_message.Text = "Unexpeted Character ' in username"
+                Auth.btn_auth_message.Text = "Unexpeted Character (') in username"
                 txt_login_username.Focus()
                 message(Auth.btn_auth_message, "warning")
             Else
@@ -16,7 +16,7 @@ Public Class Auth_Login
                         login_id = sql_dt.Rows(0).Item("Employee_ID").ToString()
 
                         If StrComp(txt_login_username.Text, sql_dt.Rows(0).Item("Username").ToString(), CompareMethod.Binary) _
-                       Or StrComp(txt_login_password.Text, sql_dt.Rows(0).Item("Password").ToString(), CompareMethod.Binary) Then
+                        Or StrComp(txt_login_password.Text, Decoding(sql_dt.Rows(0).Item("Password").ToString()), CompareMethod.Binary) Then
                             Auth.btn_auth_message.Text = "Invalid Username or Password"
                             Auth.btn_auth_message.Show()
                             message(Auth.btn_auth_message, "warning")
@@ -29,37 +29,7 @@ Public Class Auth_Login
                             login_as = sql_dt.Rows(0).Item("Role").ToString()
 
                             If sql_dt.Rows(0).Item("Active").ToString() = True Then
-                                If login_as = "Administrator" Or login_as = "Supervisor" Or login_as = "Manager" Or login_as = "Management Engineer" Or login_as = "Supervising Engineer" Then
-                                    gms_main_form_loader(Management)
-                                    Management.btn_home_Click(Management.btn_home, EventArgs.Empty)
-                                    Management.login_position.Text = login_as
-                                    Management.login_name.Text = login_full_name
-
-                                    'display some administrative privilages
-                                    Management.btn_employees.Visible = True
-                                    Management.btn_inventory.Visible = True
-                                    Management.btn_statistics.Visible = True
-
-                                    Management.btn_management_message.Text = "Login Was Successful"
-                                    Management.btn_management_message.Show()
-                                    message(Management.btn_management_message, "success")
-                                Else
-                                    gms_main_form_loader(Management)
-                                    Management.sidebar_active(Management.btn_home)
-                                    sidebar_form_loader(Management_Home)
-                                    datagrid_fill_default("employee", Management_Employees.EmployeesDataGridView)
-                                    Management.login_position.Text = login_as
-                                    Management.login_name.Text = login_full_name
-                                    'hide some administrative privilages
-                                    Management.btn_employees.Visible = False
-                                    Management.btn_inventory.Visible = False
-                                    Management.btn_statistics.Visible = False
-
-                                    Management.btn_management_message.Text = "Login Was Successful"
-                                    Management.btn_management_message.Show()
-                                    message(Management.btn_management_message, "success")
-                                End If
-
+                                Access_Control(login_as)
                             Else
                                 Auth.btn_auth_message.Text = "User is Deactivated, Contact Manager"
                                 Auth.btn_auth_message.Show()
@@ -94,7 +64,7 @@ Public Class Auth_Login
                         End If
                     End If
                 Catch ex As Exception
-                    MsgBox(ex.Message)
+                    MessageBox.Show(ex.Message, "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
             End If
         ElseIf txt_login_username.Text = "" Then
