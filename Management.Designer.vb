@@ -75,9 +75,8 @@ Partial Class Management
         Me.btn_work_orders = New System.Windows.Forms.Button()
         Me.btn_home = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btn_management_message = New System.Windows.Forms.Button()
-        Me.btn_refresh = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.pb_print = New System.Windows.Forms.PictureBox()
+        Me.pb_refresh = New System.Windows.Forms.PictureBox()
         Me.lbl_current_tab = New System.Windows.Forms.Label()
         Me.management_main_container = New System.Windows.Forms.Panel()
         Me.systemtime = New System.Windows.Forms.Timer(Me.components)
@@ -89,6 +88,8 @@ Partial Class Management
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        CType(Me.pb_print, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_refresh, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip
@@ -196,7 +197,7 @@ Partial Class Management
         'FfToolStripMenuItem
         '
         Me.FfToolStripMenuItem.Name = "FfToolStripMenuItem"
-        Me.FfToolStripMenuItem.Size = New System.Drawing.Size(84, 22)
+        Me.FfToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FfToolStripMenuItem.Text = "ff"
         '
         'QuickAccessToolStripMenuItem
@@ -218,13 +219,13 @@ Partial Class Management
         'DdToolStripMenuItem
         '
         Me.DdToolStripMenuItem.Name = "DdToolStripMenuItem"
-        Me.DdToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DdToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DdToolStripMenuItem.Text = "Getting Started"
         '
         'DocumentationToolStripMenuItem
         '
         Me.DocumentationToolStripMenuItem.Name = "DocumentationToolStripMenuItem"
-        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DocumentationToolStripMenuItem.Text = "Documentation"
         '
         'MoreToolStripMenuItem
@@ -239,14 +240,14 @@ Partial Class Management
         'AaToolStripMenuItem
         '
         Me.AaToolStripMenuItem.Name = "AaToolStripMenuItem"
-        Me.AaToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
-        Me.AaToolStripMenuItem.Text = "Backup"
+        Me.AaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AaToolStripMenuItem.Text = "Backup Database"
         '
         'RestoreToolStripMenuItem
         '
         Me.RestoreToolStripMenuItem.Name = "RestoreToolStripMenuItem"
-        Me.RestoreToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
-        Me.RestoreToolStripMenuItem.Text = "Restore"
+        Me.RestoreToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RestoreToolStripMenuItem.Text = "Restore Database"
         '
         'Panel4
         '
@@ -672,76 +673,50 @@ Partial Class Management
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel5.Controls.Add(Me.btn_management_message)
-        Me.Panel5.Controls.Add(Me.btn_refresh)
-        Me.Panel5.Controls.Add(Me.Button2)
+        Me.Panel5.Controls.Add(Me.pb_print)
+        Me.Panel5.Controls.Add(Me.pb_refresh)
         Me.Panel5.Controls.Add(Me.lbl_current_tab)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Font = New System.Drawing.Font("Ebrima", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel5.Location = New System.Drawing.Point(233, 43)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1117, 69)
+        Me.Panel5.Size = New System.Drawing.Size(1117, 63)
         Me.Panel5.TabIndex = 20
         '
-        'btn_management_message
+        'pb_print
         '
-        Me.btn_management_message.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_management_message.AutoSize = True
-        Me.btn_management_message.BackColor = System.Drawing.Color.Ivory
-        Me.btn_management_message.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_management_message.FlatAppearance.BorderSize = 0
-        Me.btn_management_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_management_message.Font = New System.Drawing.Font("Copperplate Gothic Light", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_management_message.ForeColor = System.Drawing.Color.White
-        Me.btn_management_message.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_management_message.Location = New System.Drawing.Point(332, 11)
-        Me.btn_management_message.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_management_message.Name = "btn_management_message"
-        Me.btn_management_message.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_management_message.Size = New System.Drawing.Size(342, 50)
-        Me.btn_management_message.TabIndex = 36
-        Me.btn_management_message.UseVisualStyleBackColor = False
-        Me.btn_management_message.Visible = False
+        Me.pb_print.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pb_print.BackColor = System.Drawing.Color.Transparent
+        Me.pb_print.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pb_print.Image = Global.Codebot_GMS.My.Resources.Resources.print_32_px
+        Me.pb_print.ImageLocation = ""
+        Me.pb_print.Location = New System.Drawing.Point(960, 9)
+        Me.pb_print.Name = "pb_print"
+        Me.pb_print.Padding = New System.Windows.Forms.Padding(5)
+        Me.pb_print.Size = New System.Drawing.Size(42, 42)
+        Me.pb_print.TabIndex = 36
+        Me.pb_print.TabStop = False
         '
-        'btn_refresh
+        'pb_refresh
         '
-        Me.btn_refresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_refresh.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_refresh.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_refresh.FlatAppearance.BorderSize = 0
-        Me.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_refresh.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_refresh.ForeColor = System.Drawing.Color.White
-        Me.btn_refresh.Image = CType(resources.GetObject("btn_refresh.Image"), System.Drawing.Image)
-        Me.btn_refresh.Location = New System.Drawing.Point(992, 11)
-        Me.btn_refresh.Name = "btn_refresh"
-        Me.btn_refresh.Size = New System.Drawing.Size(73, 52)
-        Me.btn_refresh.TabIndex = 35
-        Me.btn_refresh.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.Color.CadetBlue
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(896, 11)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(73, 52)
-        Me.Button2.TabIndex = 34
-        Me.Button2.UseVisualStyleBackColor = False
-        Me.Button2.Visible = False
+        Me.pb_refresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pb_refresh.BackColor = System.Drawing.Color.Transparent
+        Me.pb_refresh.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pb_refresh.Image = Global.Codebot_GMS.My.Resources.Resources.refresh_32_px
+        Me.pb_refresh.ImageLocation = ""
+        Me.pb_refresh.Location = New System.Drawing.Point(1025, 9)
+        Me.pb_refresh.Name = "pb_refresh"
+        Me.pb_refresh.Padding = New System.Windows.Forms.Padding(5)
+        Me.pb_refresh.Size = New System.Drawing.Size(42, 42)
+        Me.pb_refresh.TabIndex = 36
+        Me.pb_refresh.TabStop = False
         '
         'lbl_current_tab
         '
         Me.lbl_current_tab.AutoSize = True
         Me.lbl_current_tab.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_current_tab.ForeColor = System.Drawing.Color.Teal
-        Me.lbl_current_tab.Location = New System.Drawing.Point(37, 22)
+        Me.lbl_current_tab.Location = New System.Drawing.Point(37, 17)
         Me.lbl_current_tab.Name = "lbl_current_tab"
         Me.lbl_current_tab.Size = New System.Drawing.Size(121, 28)
         Me.lbl_current_tab.TabIndex = 1
@@ -751,9 +726,9 @@ Partial Class Management
         '
         Me.management_main_container.BackColor = System.Drawing.Color.WhiteSmoke
         Me.management_main_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.management_main_container.Location = New System.Drawing.Point(233, 112)
+        Me.management_main_container.Location = New System.Drawing.Point(233, 106)
         Me.management_main_container.Name = "management_main_container"
-        Me.management_main_container.Size = New System.Drawing.Size(1117, 562)
+        Me.management_main_container.Size = New System.Drawing.Size(1117, 568)
         Me.management_main_container.TabIndex = 21
         '
         'systemtime
@@ -793,6 +768,8 @@ Partial Class Management
         Me.Panel1.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        CType(Me.pb_print, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_refresh, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -836,13 +813,10 @@ Partial Class Management
     Friend WithEvents current_date As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel7 As ToolStripStatusLabel
     Friend WithEvents current_time As ToolStripStatusLabel
-    Friend WithEvents Button2 As Button
     Friend WithEvents btn_logout As Button
     Friend WithEvents btn_messages As Button
     Friend WithEvents RestoreToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
-    Friend WithEvents btn_refresh As Button
-    Friend WithEvents btn_management_message As Button
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents tsmi_part As ToolStripMenuItem
@@ -855,4 +829,6 @@ Partial Class Management
     Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
     Friend WithEvents tsmi_exit As ToolStripMenuItem
+    Friend WithEvents pb_refresh As PictureBox
+    Friend WithEvents pb_print As PictureBox
 End Class

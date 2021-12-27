@@ -22,7 +22,37 @@ Codebot_GMS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Codebot_GMS.My.Resources.Resources.approval_24px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.checked_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.checkmark_24px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.delete_24px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.email_24px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Codebot_GMS.My.Resources.Resources.Employee_Blue_4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.error_48px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -127,7 +157,22 @@ Codebot_GMS
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Codebot_GMS.My.Resources.Resources.information_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Codebot_GMS.My.Resources.Resources.initial_employee_image">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.print_32_px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.refresh_32_px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -143,6 +188,21 @@ Codebot_GMS
 </summary>
 </member>
 <member name="P:Codebot_GMS.My.Resources.Resources.smiling_mechanic_with_arms_crossed_spanner3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.sms_24px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.warning_shield_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Codebot_GMS.My.Resources.Resources.whatsapp_24px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

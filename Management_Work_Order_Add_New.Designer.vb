@@ -41,6 +41,9 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_new_work_order_date_out = New System.Windows.Forms.DateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txt_new_work_order_mileage = New System.Windows.Forms.TextBox()
+        Me.txt_new_work_order_relevant_information = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lbl_relevant_infomation_character_count = New System.Windows.Forms.Label()
         Me.btn_new_work_order_existing_automobile = New System.Windows.Forms.Button()
         Me.btn_new_work_order_existing_cusromer = New System.Windows.Forms.Button()
         Me.btn_new_work_order_add_technician = New System.Windows.Forms.Button()
@@ -51,9 +54,6 @@ Partial Class Management_Work_Order_Add_New
         Me.work_order_clear_automobile = New System.Windows.Forms.Label()
         Me.work_order_clear_customer = New System.Windows.Forms.Label()
         Me.btn_new_item_save = New System.Windows.Forms.Button()
-        Me.txt_new_work_order_relevant_information = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.lbl_relevant_infomation_character_count = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label10
@@ -285,6 +285,40 @@ Partial Class Management_Work_Order_Add_New
         Me.txt_new_work_order_mileage.Size = New System.Drawing.Size(309, 33)
         Me.txt_new_work_order_mileage.TabIndex = 10
         '
+        'txt_new_work_order_relevant_information
+        '
+        Me.txt_new_work_order_relevant_information.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_work_order_relevant_information.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_work_order_relevant_information.Location = New System.Drawing.Point(398, 256)
+        Me.txt_new_work_order_relevant_information.MaxLength = 200
+        Me.txt_new_work_order_relevant_information.Multiline = True
+        Me.txt_new_work_order_relevant_information.Name = "txt_new_work_order_relevant_information"
+        Me.txt_new_work_order_relevant_information.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txt_new_work_order_relevant_information.Size = New System.Drawing.Size(662, 184)
+        Me.txt_new_work_order_relevant_information.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(395, 230)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(196, 18)
+        Me.Label8.TabIndex = 90
+        Me.Label8.Text = "Other Relevant informations "
+        '
+        'lbl_relevant_infomation_character_count
+        '
+        Me.lbl_relevant_infomation_character_count.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbl_relevant_infomation_character_count.AutoSize = True
+        Me.lbl_relevant_infomation_character_count.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_relevant_infomation_character_count.Location = New System.Drawing.Point(990, 230)
+        Me.lbl_relevant_infomation_character_count.Name = "lbl_relevant_infomation_character_count"
+        Me.lbl_relevant_infomation_character_count.Size = New System.Drawing.Size(70, 18)
+        Me.lbl_relevant_infomation_character_count.TabIndex = 90
+        Me.lbl_relevant_infomation_character_count.Text = "(200/200)"
+        '
         'btn_new_work_order_existing_automobile
         '
         Me.btn_new_work_order_existing_automobile.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -390,6 +424,7 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_item_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btn_new_item_cancel.BackColor = System.Drawing.Color.LightCoral
         Me.btn_new_item_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_item_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btn_new_item_cancel.FlatAppearance.BorderSize = 0
         Me.btn_new_item_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_new_item_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -468,45 +503,15 @@ Partial Class Management_Work_Order_Add_New
         Me.btn_new_item_save.Text = "SAVE"
         Me.btn_new_item_save.UseVisualStyleBackColor = False
         '
-        'txt_new_work_order_relevant_information
-        '
-        Me.txt_new_work_order_relevant_information.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_new_work_order_relevant_information.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_work_order_relevant_information.Location = New System.Drawing.Point(398, 256)
-        Me.txt_new_work_order_relevant_information.MaxLength = 200
-        Me.txt_new_work_order_relevant_information.Multiline = True
-        Me.txt_new_work_order_relevant_information.Name = "txt_new_work_order_relevant_information"
-        Me.txt_new_work_order_relevant_information.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txt_new_work_order_relevant_information.Size = New System.Drawing.Size(662, 184)
-        Me.txt_new_work_order_relevant_information.TabIndex = 8
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(395, 230)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(196, 18)
-        Me.Label8.TabIndex = 90
-        Me.Label8.Text = "Other Relevant informations "
-        '
-        'lbl_relevant_infomation_character_count
-        '
-        Me.lbl_relevant_infomation_character_count.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lbl_relevant_infomation_character_count.AutoSize = True
-        Me.lbl_relevant_infomation_character_count.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_relevant_infomation_character_count.Location = New System.Drawing.Point(990, 230)
-        Me.lbl_relevant_infomation_character_count.Name = "lbl_relevant_infomation_character_count"
-        Me.lbl_relevant_infomation_character_count.Size = New System.Drawing.Size(70, 18)
-        Me.lbl_relevant_infomation_character_count.TabIndex = 90
-        Me.lbl_relevant_infomation_character_count.Text = "(200/200)"
-        '
         'Management_Work_Order_Add_New
         '
+        Me.AcceptButton = Me.btn_new_item_save
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.CancelButton = Me.btn_new_item_cancel
         Me.ClientSize = New System.Drawing.Size(1101, 589)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txt_new_work_order_date_out)
         Me.Controls.Add(Me.txt_new_work_order_date_in)
         Me.Controls.Add(Me.txt_new_work_order_progress_stats)

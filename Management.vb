@@ -16,6 +16,7 @@ Public Class Management
             .work_order_overdue_Click(.work_order_overdue, EventArgs.Empty)
             .low_inventory_low_stock_Click(.low_inventory_low_stock, EventArgs.Empty)
             .low_inventory_out_of_stock_Click(.low_inventory_out_of_stock, EventArgs.Empty)
+            .upcoming_events_past_Click(.upcoming_events_past, EventArgs.Empty)
             .upcoming_events_soon_Click(.upcoming_events_soon, EventArgs.Empty)
             .upcoming_events_today_Click(.upcoming_events_today, EventArgs.Empty)
             .invoice_payments_pending_Click(.invoice_payments_pending, EventArgs.Empty)
@@ -83,9 +84,7 @@ Public Class Management
         Auth_Login.txt_login_username.Clear()
         Auth_Login.txt_login_password.Clear()
         Auth_Login.txt_login_username.Focus()
-        Auth.btn_auth_message.Text = "You Logged Out Successfuly"
-        Auth.btn_auth_message.Show()
-        message(Auth.btn_auth_message, "success")
+        message("success", "Bye " + login_first_name + ", you logged-out successfuly")
     End Sub
     'CHANGES THE BACKGROUND COLOR OF THE SIDEBAR BUTTONS WHEN CLICKED
     Public Sub sidebar_active(ByVal btn As Button)
@@ -109,12 +108,8 @@ Public Class Management
         current_date.Text = Date.Now.ToShortDateString
         current_time.Text = TimeOfDay
     End Sub
-    'TO HIDE THE MESSAGE WHEN CLICKED 
-    Private Sub btn_management_message_Click(sender As Object, e As EventArgs) Handles btn_management_message.Click
-        btn_management_message.Hide()
-    End Sub
     'THE REFRESH BUTTON CALLS THE SIDEBAR CLICK EVENTS BASED ON THE ACTIVE BUTTON 
-    Private Sub btn_refresh_Click(sender As Object, e As EventArgs) Handles btn_refresh.Click
+    Private Sub pb_refresh_Click(sender As Object, e As EventArgs) Handles pb_refresh.Click
         If btn_home.BackColor = Color.CadetBlue Then
             Me.btn_home_Click(Me.btn_home, EventArgs.Empty)
         ElseIf btn_employees.BackColor = Color.CadetBlue Then
@@ -149,6 +144,5 @@ Public Class Management
     Private Sub tsmi_exit_Click(sender As Object, e As EventArgs) Handles tsmi_exit.Click
         GMS_Main.Close()
     End Sub
-
 
 End Class

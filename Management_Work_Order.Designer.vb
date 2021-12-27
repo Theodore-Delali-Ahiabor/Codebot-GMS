@@ -408,6 +408,7 @@ Partial Class Management_Work_Order
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1101, 523)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btn_end_work_order)
         Me.Controls.Add(Me.btn_start_work_order)
         Me.Controls.Add(Me.Panel1)

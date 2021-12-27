@@ -76,14 +76,10 @@ Public Class Management_Inventory
                         .txt_new_unit_cost.Enabled = True
                     End With
                 Else
-                    Management.btn_management_message.Text = "No Data Found"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "warning")
+                    message("warning", "No Data Found")
                 End If
             Else
-                Management.btn_management_message.Text = "No Row was selected"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "warning")
+                message("warning", "No Row was selected")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Edit Item Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
@@ -138,14 +134,10 @@ Public Class Management_Inventory
                 End With
 
             Else
-                Management.btn_management_message.Text = "No Data Found"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "warning")
+                message("warning", "No Data Found")
             End If
         Else
-            Management.btn_management_message.Text = "No Item selected"
-            Management.btn_management_message.Show()
-            message(Management.btn_management_message, "warning")
+            message("warning", "No Item selected")
         End If
     End Sub
 

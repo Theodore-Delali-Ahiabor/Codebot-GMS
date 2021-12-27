@@ -41,9 +41,9 @@ Partial Class Management_Inventory_Add_New
         Me.txt_new_part_number = New System.Windows.Forms.TextBox()
         Me.txt_new_part_name = New System.Windows.Forms.TextBox()
         Me.txt_new_category = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.btn_new_item_cancel = New System.Windows.Forms.Button()
         Me.btn_new_item_save = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txt_new_unit_cost
@@ -255,44 +255,6 @@ Partial Class Management_Inventory_Add_New
         Me.txt_new_category.Size = New System.Drawing.Size(308, 33)
         Me.txt_new_category.TabIndex = 1
         '
-        'btn_new_item_cancel
-        '
-        Me.btn_new_item_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btn_new_item_cancel.BackColor = System.Drawing.Color.LightCoral
-        Me.btn_new_item_cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_new_item_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_new_item_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_item_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_item_cancel.ForeColor = System.Drawing.Color.White
-        Me.btn_new_item_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
-        Me.btn_new_item_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_item_cancel.Location = New System.Drawing.Point(467, 447)
-        Me.btn_new_item_cancel.Name = "btn_new_item_cancel"
-        Me.btn_new_item_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_item_cancel.Size = New System.Drawing.Size(141, 44)
-        Me.btn_new_item_cancel.TabIndex = 10
-        Me.btn_new_item_cancel.Text = "CANCEL"
-        Me.btn_new_item_cancel.UseVisualStyleBackColor = False
-        '
-        'btn_new_item_save
-        '
-        Me.btn_new_item_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btn_new_item_save.BackColor = System.Drawing.Color.LightGreen
-        Me.btn_new_item_save.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_new_item_save.FlatAppearance.BorderSize = 0
-        Me.btn_new_item_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_item_save.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_item_save.ForeColor = System.Drawing.Color.White
-        Me.btn_new_item_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
-        Me.btn_new_item_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_item_save.Location = New System.Drawing.Point(290, 447)
-        Me.btn_new_item_save.Name = "btn_new_item_save"
-        Me.btn_new_item_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_item_save.Size = New System.Drawing.Size(141, 44)
-        Me.btn_new_item_save.TabIndex = 9
-        Me.btn_new_item_save.Text = "SAVE"
-        Me.btn_new_item_save.UseVisualStyleBackColor = False
-        '
         'Label8
         '
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -306,12 +268,56 @@ Partial Class Management_Inventory_Add_New
         Me.Label8.TabIndex = 69
         Me.Label8.Text = "*"
         '
+        'btn_new_item_cancel
+        '
+        Me.btn_new_item_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btn_new_item_cancel.BackColor = System.Drawing.Color.LightCoral
+        Me.btn_new_item_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_item_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btn_new_item_cancel.FlatAppearance.BorderSize = 0
+        Me.btn_new_item_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_item_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_item_cancel.ForeColor = System.Drawing.Color.White
+        Me.btn_new_item_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
+        Me.btn_new_item_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_item_cancel.Location = New System.Drawing.Point(506, 451)
+        Me.btn_new_item_cancel.Name = "btn_new_item_cancel"
+        Me.btn_new_item_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_item_cancel.Size = New System.Drawing.Size(130, 40)
+        Me.btn_new_item_cancel.TabIndex = 10
+        Me.btn_new_item_cancel.Text = "CANCEL"
+        Me.btn_new_item_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new_item_cancel.UseVisualStyleBackColor = False
+        '
+        'btn_new_item_save
+        '
+        Me.btn_new_item_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btn_new_item_save.BackColor = System.Drawing.Color.LightGreen
+        Me.btn_new_item_save.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_item_save.FlatAppearance.BorderSize = 0
+        Me.btn_new_item_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_item_save.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_item_save.ForeColor = System.Drawing.Color.White
+        Me.btn_new_item_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
+        Me.btn_new_item_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_item_save.Location = New System.Drawing.Point(329, 451)
+        Me.btn_new_item_save.Name = "btn_new_item_save"
+        Me.btn_new_item_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_item_save.Size = New System.Drawing.Size(130, 40)
+        Me.btn_new_item_save.TabIndex = 9
+        Me.btn_new_item_save.Text = "SAVE"
+        Me.btn_new_item_save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new_item_save.UseVisualStyleBackColor = False
+        '
         'Management_Inventory_Add_New
         '
+        Me.AcceptButton = Me.btn_new_item_save
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.CancelButton = Me.btn_new_item_cancel
         Me.ClientSize = New System.Drawing.Size(1101, 523)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txt_new_category)
         Me.Controls.Add(Me.txt_new_unit_cost)
         Me.Controls.Add(Me.Label15)

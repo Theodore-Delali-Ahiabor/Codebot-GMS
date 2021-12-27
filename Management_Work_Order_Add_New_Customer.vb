@@ -39,9 +39,7 @@ Public Class Management_Work_Order_Add_New_Customer
                             Where ID = '" & Me.CustomerDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                     sql_da.Fill(sql_ds, "customer_info")
                     datagrid_fill_default("customer_info", Me.CustomerDataGridView)
-                    Management.btn_management_message.Text = "Customer Info Updated successfully"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "success")
+                    message("success", "Customer Info Updated successfully")
                     Me.customer_new_datails_panel.Dock = DockStyle.Fill
                     Me.customer_new_datails_panel.Visible = False
                     Me.customer_select_edit_panel.Visible = True
@@ -52,9 +50,7 @@ Public Class Management_Work_Order_Add_New_Customer
                 MessageBox.Show(ex.Message, "Customer Save Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
             End Try
         Else
-            Management.btn_management_message.Text = "Please fill out all REQUIRED '*' fields"
-            Management.btn_management_message.Show()
-            message(Management.btn_management_message, "warning")
+            message("warning", "Please fill out all REQUIRED '*' fields")
         End If
     End Sub
 

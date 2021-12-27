@@ -18,9 +18,7 @@ Public Class Management_Work_Order_Add_New_Technician
                     End If
                 Next
             Else
-                Management.btn_management_message.Text = "No Technician selected"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "warning")
+                message("warning", "No Technician selected")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Technician(s) Selection Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)

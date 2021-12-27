@@ -41,9 +41,7 @@ Public Class Management_Work_Order_Add_New_Automobile
                 Management_Work_Order_Add_New.automobile = AutomobileDataGridView.CurrentRow.Cells(0).Value
                 Me.Close()
             Else
-                Management.btn_management_message.Text = "No Automobile Selected"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "information")
+                message("information", "No automobile selected")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Automobile Selection Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
@@ -69,9 +67,7 @@ Public Class Management_Work_Order_Add_New_Automobile
                         Management_Work_Order_Add_New.automobile = AutomobileDataGridView.CurrentRow.Cells(0).Value
                         Me.Close()
                         datagrid_fill_default("automobile_info", Me.AutomobileDataGridView)
-                        Management.btn_management_message.Text = "Automobile Updated Successflly"
-                        Management.btn_management_message.Show()
-                        message(Management.btn_management_message, "success")
+                        message("success", "Automobile Updated Successflly")
 
                     End If
                 Else
@@ -83,9 +79,7 @@ Public Class Management_Work_Order_Add_New_Automobile
                             Where ID = '" & Me.AutomobileDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                         sql_da.Fill(sql_ds, "automobile_info")
                         datagrid_fill_default("automobile_info", Me.AutomobileDataGridView)
-                        Management.btn_management_message.Text = "Automobile Info Updated successfully"
-                        Management.btn_management_message.Show()
-                        message(Management.btn_management_message, "success")
+                        message("success", "Automobile Info Updated successfully")
                         Me.automobile_new_datails_panel.Dock = DockStyle.Fill
                         Me.automobile_new_datails_panel.Visible = False
                         Me.automobile_select_edit_panel.Visible = True
@@ -96,9 +90,7 @@ Public Class Management_Work_Order_Add_New_Automobile
                 MessageBox.Show(ex.Message, "Save Automobile Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
             End Try
         Else
-            Management.btn_management_message.Text = "Kindly fill out all required (*) fields"
-            Management.btn_management_message.Show()
-            message(Management.btn_management_message, "warning")
+            message("warning", "Kindly fill out all required (*) fields")
         End If
     End Sub
 
@@ -109,5 +101,23 @@ Public Class Management_Work_Order_Add_New_Automobile
         add_combobox_items(Me.txt_new_fuel, "automobile_info", "Fuel")
         Me.txt_new_make.Items.Clear()
         add_combobox_items(Me.txt_new_make, "automobile_info", "Make")
+    End Sub
+
+    Private Sub Management_Work_Order_Add_New_Automobile_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+
+        If e.KeyValue = Keys.Return Then
+            MsgBox("Check-1")
+        End If
+        If Me.automobile_new_datails_panel.Visible = True Then
+            MsgBox("Check-2")
+            Me.AcceptButton = btn_new_automobile_save
+        ElseIf Me.automobile_select_edit_panel.Visible = True Then
+            MsgBox("Check-3")
+            Me.AcceptButton = btn_automobile_select_select
+        End If
+    End Sub
+
+    Private Sub Management_Work_Order_Add_New_Automobile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+        MsgBox("Check-1-Press")
     End Sub
 End Class

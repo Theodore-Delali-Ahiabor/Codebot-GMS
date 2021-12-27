@@ -60,6 +60,7 @@ Public Class Management_Home
     Public Sub work_order_due_soon_Click(sender As Object, e As EventArgs) Handles work_order_due_soon.Click
         activebar_work_orders.Visible = True
         activebar_inventory.Visible = False
+        activebar_payments.Visible = False
         activebar_events.Visible = False
         sql_da = New MySqlDataAdapter("SELECT * FROM work_order_view WHERE Due_In < 6 AND Due_In > -1 AND Progress_Status <>'" & "Complete" & "' ORDER BY ID DESC ", sql_con)
         sql_dt = New DataTable
@@ -76,6 +77,7 @@ Public Class Management_Home
     Public Sub low_inventory_out_of_stock_Click(sender As Object, e As EventArgs) Handles low_inventory_out_of_stock.Click
         activebar_work_orders.Visible = False
         activebar_inventory.Visible = True
+        activebar_payments.Visible = False
         activebar_events.Visible = False
         datagrid_fill_flter_with_variable("inventory", Me.HomeDataGridView, "Stock", "=", "0")
         Me.low_inventory_out_of_stock.Text = HomeDataGridView.Rows.Count & " Out of Stock"
@@ -86,8 +88,9 @@ Public Class Management_Home
     Public Sub low_inventory_low_stock_Click(sender As Object, e As EventArgs) Handles low_inventory_low_stock.Click
         activebar_work_orders.Visible = False
         activebar_inventory.Visible = True
+        activebar_payments.Visible = False
         activebar_events.Visible = False
-        sql_da = New MySqlDataAdapter("SELECT * FROM inventory WHERE Stock < 10 AND Stock <> 0  ORDER BY ID DESC", sql_con)
+        sql_da = New MySqlDataAdapter("SELECT * FROM inventory WHERE Stock < 10 AND Stock <> 0 ORDER BY ID DESC", sql_con)
         sql_dt = New DataTable
         sql_dt.Clear()
         sql_da.Fill(sql_dt)
@@ -98,11 +101,23 @@ Public Class Management_Home
         Management.lbl_current_tab.Text = "Dashboard | Inventory Low"
         clear_gridview_default_selection(Me.HomeDataGridView)
     End Sub
+    Public Sub upcoming_events_past_Click(sender As Object, e As EventArgs) Handles upcoming_events_past.Click
+        calendar_events("<", "0")
+
+        'activebar_work_orders.Visible = False
+        'activebar_inventory.Visible = False
+        'activebar_payments.Visible = False
+        'activebar_events.Visible = True
+        'datagrid_fill_flter_with_variable("events_view", Me.HomeDataGridView, "Due_In", "<", "0")
+        Me.upcoming_events_past.Text = HomeDataGridView.Rows.Count & " Past"
+        'Management.lbl_current_tab.Text = "Dashboard | Upcoming Events"
+    End Sub
     Public Sub upcoming_events_soon_Click(sender As Object, e As EventArgs) Handles upcoming_events_soon.Click
         activebar_work_orders.Visible = False
         activebar_inventory.Visible = False
+        activebar_payments.Visible = False
         activebar_events.Visible = True
-        sql_da = New MySqlDataAdapter("SELECT * FROM events_view WHERE Due_In < 11 AND Due_In <> 0 ORDER BY ID DESC", sql_con)
+        sql_da = New MySqlDataAdapter("SELECT * FROM events_view WHERE Due_In < 11 AND Due_In > 0 AND Added_by = '" & login_id & "' ORDER BY ID DESC", sql_con)
         sql_dt = New DataTable
         sql_dt.Clear()
         sql_da.Fill(sql_dt)
@@ -114,12 +129,8 @@ Public Class Management_Home
     End Sub
 
     Public Sub upcoming_events_today_Click(sender As Object, e As EventArgs) Handles upcoming_events_today.Click
-        activebar_work_orders.Visible = False
-        activebar_inventory.Visible = False
-        activebar_events.Visible = True
-        datagrid_fill_flter_with_variable("events_view", Me.HomeDataGridView, "Due_In", "=", " 0")
+        calendar_events("=", "0")
         Me.upcoming_events_today.Text = HomeDataGridView.Rows.Count & " Today"
-        Management.lbl_current_tab.Text = "Dashboard | Upcoming Events"
     End Sub
     Public Sub invoice_payments_pending_Click(sender As Object, e As EventArgs) Handles invoice_payments_pending.Click
         activebar_work_orders.Visible = False
@@ -152,5 +163,6 @@ Public Class Management_Home
             clear_gridview_default_selection(Me.HomeDataGridView)
         End If
     End Sub
+
 
 End Class

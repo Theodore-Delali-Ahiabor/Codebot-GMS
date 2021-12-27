@@ -30,19 +30,13 @@ Partial Class Management_Invoice_Add_New
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.btn_new_ivoice_cancel = New System.Windows.Forms.Button()
-        Me.btn_new_invoice_save = New System.Windows.Forms.Button()
-        Me.btn_new_incoice_existing_work_order = New System.Windows.Forms.Button()
-        Me.btn_new_invoice_new_work_order = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.work_order_clear_customer = New System.Windows.Forms.Label()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.txt_work_order_new_customer = New System.Windows.Forms.TextBox()
         Me.InvoicePartsDataGridView = New System.Windows.Forms.DataGridView()
         Me.InvoiceServicesDataGridView = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.cmb_payment_status_filter = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_new_invoice_total_services_cost = New System.Windows.Forms.Label()
@@ -61,88 +55,15 @@ Partial Class Management_Invoice_Add_New
         Me.Label18 = New System.Windows.Forms.Label()
         Me.lbl_new_invoice_payable_amount = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btn_new_incoice_existing_work_order = New System.Windows.Forms.Button()
+        Me.btn_new_invoice_new_work_order = New System.Windows.Forms.Button()
+        Me.work_order_clear_customer = New System.Windows.Forms.Label()
+        Me.btn_new_ivoice_cancel = New System.Windows.Forms.Button()
+        Me.btn_new_invoice_save = New System.Windows.Forms.Button()
         CType(Me.InvoicePartsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvoiceServicesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'btn_new_ivoice_cancel
-        '
-        Me.btn_new_ivoice_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btn_new_ivoice_cancel.BackColor = System.Drawing.Color.LightCoral
-        Me.btn_new_ivoice_cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_new_ivoice_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_new_ivoice_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_ivoice_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_ivoice_cancel.ForeColor = System.Drawing.Color.White
-        Me.btn_new_ivoice_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
-        Me.btn_new_ivoice_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_ivoice_cancel.Location = New System.Drawing.Point(662, 470)
-        Me.btn_new_ivoice_cancel.Name = "btn_new_ivoice_cancel"
-        Me.btn_new_ivoice_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_ivoice_cancel.Size = New System.Drawing.Size(141, 41)
-        Me.btn_new_ivoice_cancel.TabIndex = 17
-        Me.btn_new_ivoice_cancel.Text = "CANCEL"
-        Me.btn_new_ivoice_cancel.UseVisualStyleBackColor = False
-        '
-        'btn_new_invoice_save
-        '
-        Me.btn_new_invoice_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.btn_new_invoice_save.BackColor = System.Drawing.Color.LightGreen
-        Me.btn_new_invoice_save.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_new_invoice_save.FlatAppearance.BorderSize = 0
-        Me.btn_new_invoice_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_invoice_save.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_invoice_save.ForeColor = System.Drawing.Color.White
-        Me.btn_new_invoice_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
-        Me.btn_new_invoice_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_invoice_save.Location = New System.Drawing.Point(469, 470)
-        Me.btn_new_invoice_save.Name = "btn_new_invoice_save"
-        Me.btn_new_invoice_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_invoice_save.Size = New System.Drawing.Size(141, 41)
-        Me.btn_new_invoice_save.TabIndex = 16
-        Me.btn_new_invoice_save.Text = "SAVE"
-        Me.btn_new_invoice_save.UseVisualStyleBackColor = False
-        '
-        'btn_new_incoice_existing_work_order
-        '
-        Me.btn_new_incoice_existing_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_new_incoice_existing_work_order.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.btn_new_incoice_existing_work_order.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_new_incoice_existing_work_order.FlatAppearance.BorderSize = 0
-        Me.btn_new_incoice_existing_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_incoice_existing_work_order.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_incoice_existing_work_order.ForeColor = System.Drawing.Color.White
-        Me.btn_new_incoice_existing_work_order.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_customer_24
-        Me.btn_new_incoice_existing_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_incoice_existing_work_order.Location = New System.Drawing.Point(26, 30)
-        Me.btn_new_incoice_existing_work_order.Name = "btn_new_incoice_existing_work_order"
-        Me.btn_new_incoice_existing_work_order.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_incoice_existing_work_order.Size = New System.Drawing.Size(130, 33)
-        Me.btn_new_incoice_existing_work_order.TabIndex = 101
-        Me.btn_new_incoice_existing_work_order.Text = "EXISTING"
-        Me.btn_new_incoice_existing_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_new_incoice_existing_work_order.UseVisualStyleBackColor = False
-        '
-        'btn_new_invoice_new_work_order
-        '
-        Me.btn_new_invoice_new_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_new_invoice_new_work_order.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.btn_new_invoice_new_work_order.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_new_invoice_new_work_order.FlatAppearance.BorderSize = 0
-        Me.btn_new_invoice_new_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_invoice_new_work_order.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_invoice_new_work_order.ForeColor = System.Drawing.Color.White
-        Me.btn_new_invoice_new_work_order.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_customer_24
-        Me.btn_new_invoice_new_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_invoice_new_work_order.Location = New System.Drawing.Point(190, 30)
-        Me.btn_new_invoice_new_work_order.Name = "btn_new_invoice_new_work_order"
-        Me.btn_new_invoice_new_work_order.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_invoice_new_work_order.Size = New System.Drawing.Size(88, 33)
-        Me.btn_new_invoice_new_work_order.TabIndex = 102
-        Me.btn_new_invoice_new_work_order.Text = "NEW"
-        Me.btn_new_invoice_new_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_new_invoice_new_work_order.UseVisualStyleBackColor = False
         '
         'Label15
         '
@@ -167,21 +88,6 @@ Partial Class Management_Invoice_Add_New
         Me.Label1.Size = New System.Drawing.Size(20, 28)
         Me.Label1.TabIndex = 126
         Me.Label1.Text = "*"
-        '
-        'work_order_clear_customer
-        '
-        Me.work_order_clear_customer.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.work_order_clear_customer.AutoSize = True
-        Me.work_order_clear_customer.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.work_order_clear_customer.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.work_order_clear_customer.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
-        Me.work_order_clear_customer.Location = New System.Drawing.Point(340, 74)
-        Me.work_order_clear_customer.Name = "work_order_clear_customer"
-        Me.work_order_clear_customer.Padding = New System.Windows.Forms.Padding(5)
-        Me.work_order_clear_customer.Size = New System.Drawing.Size(30, 34)
-        Me.work_order_clear_customer.TabIndex = 124
-        Me.work_order_clear_customer.Text = "  "
-        Me.work_order_clear_customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label35
         '
@@ -334,24 +240,6 @@ Partial Class Management_Invoice_Add_New
         Me.Label4.TabIndex = 129
         Me.Label4.Text = "Services"
         '
-        'Button1
-        '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button1.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(272, 470)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.Button1.Size = New System.Drawing.Size(141, 41)
-        Me.Button1.TabIndex = 105
-        Me.Button1.Text = "Preview"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'cmb_payment_status_filter
         '
         Me.cmb_payment_status_filter.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -412,6 +300,7 @@ Partial Class Management_Invoice_Add_New
         '
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(26, 94)
         Me.Label9.Name = "Label9"
@@ -543,6 +432,7 @@ Partial Class Management_Invoice_Add_New
         'Panel1
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label12)
@@ -563,17 +453,114 @@ Partial Class Management_Invoice_Add_New
         Me.Panel1.Size = New System.Drawing.Size(353, 204)
         Me.Panel1.TabIndex = 133
         '
+        'btn_new_incoice_existing_work_order
+        '
+        Me.btn_new_incoice_existing_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_incoice_existing_work_order.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btn_new_incoice_existing_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_incoice_existing_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_new_incoice_existing_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_incoice_existing_work_order.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_incoice_existing_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_new_incoice_existing_work_order.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_customer_24
+        Me.btn_new_incoice_existing_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_incoice_existing_work_order.Location = New System.Drawing.Point(26, 30)
+        Me.btn_new_incoice_existing_work_order.Name = "btn_new_incoice_existing_work_order"
+        Me.btn_new_incoice_existing_work_order.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_incoice_existing_work_order.Size = New System.Drawing.Size(130, 33)
+        Me.btn_new_incoice_existing_work_order.TabIndex = 101
+        Me.btn_new_incoice_existing_work_order.Text = "EXISTING"
+        Me.btn_new_incoice_existing_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new_incoice_existing_work_order.UseVisualStyleBackColor = False
+        '
+        'btn_new_invoice_new_work_order
+        '
+        Me.btn_new_invoice_new_work_order.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_invoice_new_work_order.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.btn_new_invoice_new_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_invoice_new_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_new_invoice_new_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_invoice_new_work_order.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_invoice_new_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_new_invoice_new_work_order.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_customer_24
+        Me.btn_new_invoice_new_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_invoice_new_work_order.Location = New System.Drawing.Point(190, 30)
+        Me.btn_new_invoice_new_work_order.Name = "btn_new_invoice_new_work_order"
+        Me.btn_new_invoice_new_work_order.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_invoice_new_work_order.Size = New System.Drawing.Size(88, 33)
+        Me.btn_new_invoice_new_work_order.TabIndex = 102
+        Me.btn_new_invoice_new_work_order.Text = "NEW"
+        Me.btn_new_invoice_new_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_new_invoice_new_work_order.UseVisualStyleBackColor = False
+        '
+        'work_order_clear_customer
+        '
+        Me.work_order_clear_customer.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.work_order_clear_customer.AutoSize = True
+        Me.work_order_clear_customer.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.work_order_clear_customer.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.work_order_clear_customer.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
+        Me.work_order_clear_customer.Location = New System.Drawing.Point(340, 74)
+        Me.work_order_clear_customer.Name = "work_order_clear_customer"
+        Me.work_order_clear_customer.Padding = New System.Windows.Forms.Padding(5)
+        Me.work_order_clear_customer.Size = New System.Drawing.Size(30, 34)
+        Me.work_order_clear_customer.TabIndex = 124
+        Me.work_order_clear_customer.Text = "  "
+        Me.work_order_clear_customer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btn_new_ivoice_cancel
+        '
+        Me.btn_new_ivoice_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btn_new_ivoice_cancel.BackColor = System.Drawing.Color.LightCoral
+        Me.btn_new_ivoice_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_ivoice_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btn_new_ivoice_cancel.FlatAppearance.BorderSize = 0
+        Me.btn_new_ivoice_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_ivoice_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_ivoice_cancel.ForeColor = System.Drawing.Color.White
+        Me.btn_new_ivoice_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
+        Me.btn_new_ivoice_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_ivoice_cancel.Location = New System.Drawing.Point(657, 470)
+        Me.btn_new_ivoice_cancel.Name = "btn_new_ivoice_cancel"
+        Me.btn_new_ivoice_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_ivoice_cancel.Size = New System.Drawing.Size(141, 41)
+        Me.btn_new_ivoice_cancel.TabIndex = 17
+        Me.btn_new_ivoice_cancel.Text = "CANCEL"
+        Me.btn_new_ivoice_cancel.UseVisualStyleBackColor = False
+        '
+        'btn_new_invoice_save
+        '
+        Me.btn_new_invoice_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btn_new_invoice_save.BackColor = System.Drawing.Color.LightGreen
+        Me.btn_new_invoice_save.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_invoice_save.FlatAppearance.BorderSize = 0
+        Me.btn_new_invoice_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_invoice_save.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_invoice_save.ForeColor = System.Drawing.Color.White
+        Me.btn_new_invoice_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
+        Me.btn_new_invoice_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_invoice_save.Location = New System.Drawing.Point(464, 470)
+        Me.btn_new_invoice_save.Name = "btn_new_invoice_save"
+        Me.btn_new_invoice_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_invoice_save.Size = New System.Drawing.Size(141, 41)
+        Me.btn_new_invoice_save.TabIndex = 16
+        Me.btn_new_invoice_save.Text = "SAVE"
+        Me.btn_new_invoice_save.UseVisualStyleBackColor = False
+        '
         'Management_Invoice_Add_New
         '
+        Me.AcceptButton = Me.btn_new_invoice_save
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.CancelButton = Me.btn_new_ivoice_cancel
         Me.ClientSize = New System.Drawing.Size(1101, 523)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.cmb_payment_status_filter)
         Me.Controls.Add(Me.InvoiceServicesDataGridView)
         Me.Controls.Add(Me.InvoicePartsDataGridView)
         Me.Controls.Add(Me.btn_new_incoice_existing_work_order)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_new_invoice_new_work_order)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label15)
@@ -607,7 +594,6 @@ Partial Class Management_Invoice_Add_New
     Friend WithEvents InvoicePartsDataGridView As DataGridView
     Friend WithEvents InvoiceServicesDataGridView As DataGridView
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents cmb_payment_status_filter As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents lbl_new_invoice_total_services_cost As Label

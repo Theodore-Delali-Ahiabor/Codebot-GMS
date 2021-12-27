@@ -130,7 +130,7 @@ Partial Class Management_Employees
         Me.EmployeesDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.EmployeesDataGridView.RowTemplate.Height = 38
         Me.EmployeesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.EmployeesDataGridView.Size = New System.Drawing.Size(1026, 405)
+        Me.EmployeesDataGridView.Size = New System.Drawing.Size(1026, 406)
         Me.EmployeesDataGridView.TabIndex = 1
         Me.EmployeesDataGridView.VirtualMode = True
         '
@@ -143,7 +143,7 @@ Partial Class Management_Employees
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(697, 513)
+        Me.Panel1.Location = New System.Drawing.Point(697, 514)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(362, 46)
         Me.Panel1.TabIndex = 43
@@ -238,7 +238,7 @@ Partial Class Management_Employees
         Me.btn_deactivate_employee.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_deactivate_employee.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_toggle_off_32
         Me.btn_deactivate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_deactivate_employee.Location = New System.Drawing.Point(197, 511)
+        Me.btn_deactivate_employee.Location = New System.Drawing.Point(197, 512)
         Me.btn_deactivate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_deactivate_employee.Name = "btn_deactivate_employee"
         Me.btn_deactivate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -259,7 +259,7 @@ Partial Class Management_Employees
         Me.btn_activate_employee.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_activate_employee.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_toggle_on_32
         Me.btn_activate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_activate_employee.Location = New System.Drawing.Point(33, 511)
+        Me.btn_activate_employee.Location = New System.Drawing.Point(33, 512)
         Me.btn_activate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_activate_employee.Name = "btn_activate_employee"
         Me.btn_activate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -344,7 +344,8 @@ Partial Class Management_Employees
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1101, 571)
+        Me.ClientSize = New System.Drawing.Size(1101, 572)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btn_deactivate_employee)
         Me.Controls.Add(Me.btn_activate_employee)
@@ -360,6 +361,7 @@ Partial Class Management_Employees
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Management_Employees"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Management_Employees"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.EmployeesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)

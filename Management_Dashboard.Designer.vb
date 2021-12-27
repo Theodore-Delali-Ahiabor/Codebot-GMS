@@ -39,9 +39,11 @@ Partial Class Management_Home
         Me.invoice_payments_incomplete = New System.Windows.Forms.Label()
         Me.invoice_payments_pending = New System.Windows.Forms.Label()
         Me.upcoming_events_panel = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lbl_upcoming_events = New System.Windows.Forms.Label()
         Me.upcoming_events_soon = New System.Windows.Forms.Label()
+        Me.upcoming_events_past = New System.Windows.Forms.Label()
         Me.upcoming_events_today = New System.Windows.Forms.Label()
         Me.lbl_low_inventory = New System.Windows.Forms.Label()
         Me.low_inventory_low_stock = New System.Windows.Forms.Label()
@@ -114,7 +116,7 @@ Partial Class Management_Home
         '
         Me.work_order_overdue.AutoSize = True
         Me.work_order_overdue.ForeColor = System.Drawing.Color.Red
-        Me.work_order_overdue.Location = New System.Drawing.Point(14, 58)
+        Me.work_order_overdue.Location = New System.Drawing.Point(13, 58)
         Me.work_order_overdue.Name = "work_order_overdue"
         Me.work_order_overdue.Size = New System.Drawing.Size(62, 19)
         Me.work_order_overdue.TabIndex = 0
@@ -124,7 +126,7 @@ Partial Class Management_Home
         '
         Me.work_order_due_soon.AutoSize = True
         Me.work_order_due_soon.ForeColor = System.Drawing.Color.DarkOrange
-        Me.work_order_due_soon.Location = New System.Drawing.Point(114, 58)
+        Me.work_order_due_soon.Location = New System.Drawing.Point(112, 58)
         Me.work_order_due_soon.Name = "work_order_due_soon"
         Me.work_order_due_soon.Size = New System.Drawing.Size(69, 19)
         Me.work_order_due_soon.TabIndex = 0
@@ -180,7 +182,7 @@ Partial Class Management_Home
         '
         Me.invoice_payments_pending.AutoSize = True
         Me.invoice_payments_pending.ForeColor = System.Drawing.Color.Red
-        Me.invoice_payments_pending.Location = New System.Drawing.Point(15, 58)
+        Me.invoice_payments_pending.Location = New System.Drawing.Point(11, 58)
         Me.invoice_payments_pending.Name = "invoice_payments_pending"
         Me.invoice_payments_pending.Size = New System.Drawing.Size(59, 19)
         Me.invoice_payments_pending.TabIndex = 0
@@ -191,9 +193,11 @@ Partial Class Management_Home
         Me.upcoming_events_panel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.upcoming_events_panel.BackColor = System.Drawing.Color.White
         Me.upcoming_events_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.upcoming_events_panel.Controls.Add(Me.Label2)
         Me.upcoming_events_panel.Controls.Add(Me.Label5)
         Me.upcoming_events_panel.Controls.Add(Me.lbl_upcoming_events)
         Me.upcoming_events_panel.Controls.Add(Me.upcoming_events_soon)
+        Me.upcoming_events_panel.Controls.Add(Me.upcoming_events_past)
         Me.upcoming_events_panel.Controls.Add(Me.upcoming_events_today)
         Me.upcoming_events_panel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.upcoming_events_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -203,10 +207,19 @@ Partial Class Management_Home
         Me.upcoming_events_panel.Size = New System.Drawing.Size(235, 87)
         Me.upcoming_events_panel.TabIndex = 2
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(67, 59)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(12, 19)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "|"
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(78, 58)
+        Me.Label5.Location = New System.Drawing.Point(143, 58)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(12, 19)
         Me.Label5.TabIndex = 10
@@ -226,17 +239,27 @@ Partial Class Management_Home
         '
         Me.upcoming_events_soon.AutoSize = True
         Me.upcoming_events_soon.ForeColor = System.Drawing.Color.DarkOrange
-        Me.upcoming_events_soon.Location = New System.Drawing.Point(99, 58)
+        Me.upcoming_events_soon.Location = New System.Drawing.Point(83, 58)
         Me.upcoming_events_soon.Name = "upcoming_events_soon"
         Me.upcoming_events_soon.Size = New System.Drawing.Size(40, 19)
         Me.upcoming_events_soon.TabIndex = 0
         Me.upcoming_events_soon.Text = "Soon"
         '
+        'upcoming_events_past
+        '
+        Me.upcoming_events_past.AutoSize = True
+        Me.upcoming_events_past.ForeColor = System.Drawing.Color.Red
+        Me.upcoming_events_past.Location = New System.Drawing.Point(17, 59)
+        Me.upcoming_events_past.Name = "upcoming_events_past"
+        Me.upcoming_events_past.Size = New System.Drawing.Size(35, 19)
+        Me.upcoming_events_past.TabIndex = 0
+        Me.upcoming_events_past.Text = "Past"
+        '
         'upcoming_events_today
         '
         Me.upcoming_events_today.AutoSize = True
-        Me.upcoming_events_today.ForeColor = System.Drawing.Color.Red
-        Me.upcoming_events_today.Location = New System.Drawing.Point(17, 58)
+        Me.upcoming_events_today.ForeColor = System.Drawing.Color.Green
+        Me.upcoming_events_today.Location = New System.Drawing.Point(158, 58)
         Me.upcoming_events_today.Name = "upcoming_events_today"
         Me.upcoming_events_today.Size = New System.Drawing.Size(46, 19)
         Me.upcoming_events_today.TabIndex = 0
@@ -256,7 +279,7 @@ Partial Class Management_Home
         '
         Me.low_inventory_low_stock.AutoSize = True
         Me.low_inventory_low_stock.ForeColor = System.Drawing.Color.DarkOrange
-        Me.low_inventory_low_stock.Location = New System.Drawing.Point(141, 58)
+        Me.low_inventory_low_stock.Location = New System.Drawing.Point(138, 58)
         Me.low_inventory_low_stock.Name = "low_inventory_low_stock"
         Me.low_inventory_low_stock.Size = New System.Drawing.Size(71, 19)
         Me.low_inventory_low_stock.TabIndex = 0
@@ -452,6 +475,7 @@ Partial Class Management_Home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.ControlBox = False
         Me.Controls.Add(Me.activebar_payments)
         Me.Controls.Add(Me.activebar_events)
         Me.Controls.Add(Me.HomeDataGridView)
@@ -508,4 +532,6 @@ Partial Class Management_Home
     Friend WithEvents Label4 As Label
     Friend WithEvents invoice_payments_incomplete As Label
     Friend WithEvents invoice_payments_pending As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents upcoming_events_past As Label
 End Class

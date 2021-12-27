@@ -28,6 +28,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.customer_new_datails_panel = New System.Windows.Forms.Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.rbtn_new_customer_female = New System.Windows.Forms.RadioButton()
         Me.rbtn_new_customer_male = New System.Windows.Forms.RadioButton()
@@ -53,6 +54,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.txt_new_customer_last_name = New System.Windows.Forms.TextBox()
         Me.txt_new_customer_other_name = New System.Windows.Forms.TextBox()
         Me.customer_select_edit_panel = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.btn_customer_select_select = New System.Windows.Forms.Button()
         Me.btn_customer_select_cancel = New System.Windows.Forms.Button()
         Me.btn_customer_select_edit = New System.Windows.Forms.Button()
@@ -67,6 +69,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         'customer_new_datails_panel
         '
         Me.customer_new_datails_panel.BackColor = System.Drawing.Color.Transparent
+        Me.customer_new_datails_panel.Controls.Add(Me.Label12)
         Me.customer_new_datails_panel.Controls.Add(Me.Panel2)
         Me.customer_new_datails_panel.Controls.Add(Me.Label10)
         Me.customer_new_datails_panel.Controls.Add(Me.Label15)
@@ -94,13 +97,27 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.customer_new_datails_panel.Size = New System.Drawing.Size(461, 495)
         Me.customer_new_datails_panel.TabIndex = 0
         '
+        'Label12
+        '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label12.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label12.Location = New System.Drawing.Point(-2, 1)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(386, 49)
+        Me.Label12.TabIndex = 130
+        Me.Label12.Text = "Add New Automobile"
+        '
         'Panel2
         '
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.Controls.Add(Me.rbtn_new_customer_female)
         Me.Panel2.Controls.Add(Me.rbtn_new_customer_male)
-        Me.Panel2.Location = New System.Drawing.Point(-103, 317)
+        Me.Panel2.Location = New System.Drawing.Point(-103, 344)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(308, 33)
         Me.Panel2.TabIndex = 118
@@ -109,6 +126,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.rbtn_new_customer_female.AutoSize = True
         Me.rbtn_new_customer_female.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbtn_new_customer_female.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.rbtn_new_customer_female.Location = New System.Drawing.Point(155, 4)
         Me.rbtn_new_customer_female.Name = "rbtn_new_customer_female"
         Me.rbtn_new_customer_female.Size = New System.Drawing.Size(78, 25)
@@ -121,6 +139,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.rbtn_new_customer_male.AutoSize = True
         Me.rbtn_new_customer_male.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbtn_new_customer_male.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.rbtn_new_customer_male.Location = New System.Drawing.Point(60, 3)
         Me.rbtn_new_customer_male.Name = "rbtn_new_customer_male"
         Me.rbtn_new_customer_male.Size = New System.Drawing.Size(62, 25)
@@ -134,7 +153,8 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(-109, 296)
+        Me.Label10.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label10.Location = New System.Drawing.Point(-109, 323)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(57, 18)
         Me.Label10.TabIndex = 117
@@ -145,7 +165,8 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(257, 296)
+        Me.Label15.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label15.Location = New System.Drawing.Point(257, 323)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(45, 18)
         Me.Label15.TabIndex = 116
@@ -158,7 +179,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label8.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(-51, 286)
+        Me.Label8.Location = New System.Drawing.Point(-51, 313)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(20, 28)
         Me.Label8.TabIndex = 115
@@ -171,7 +192,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label6.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(314, 201)
+        Me.Label6.Location = New System.Drawing.Point(314, 228)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(20, 28)
         Me.Label6.TabIndex = 114
@@ -184,7 +205,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(-28, 207)
+        Me.Label2.Location = New System.Drawing.Point(-28, 234)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(20, 28)
         Me.Label2.TabIndex = 113
@@ -197,7 +218,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(-28, 40)
+        Me.Label1.Location = New System.Drawing.Point(-28, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(20, 28)
         Me.Label1.TabIndex = 112
@@ -215,7 +236,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.btn_new_customer_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_new_customer_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_new_customer_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_customer_cancel.Location = New System.Drawing.Point(213, 417)
+        Me.btn_new_customer_cancel.Location = New System.Drawing.Point(213, 444)
         Me.btn_new_customer_cancel.Name = "btn_new_customer_cancel"
         Me.btn_new_customer_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_new_customer_cancel.Size = New System.Drawing.Size(141, 38)
@@ -228,7 +249,8 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label35.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(-109, 50)
+        Me.Label35.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label35.Location = New System.Drawing.Point(-109, 77)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(81, 18)
         Me.Label35.TabIndex = 111
@@ -245,7 +267,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.btn_new_customer_save.ForeColor = System.Drawing.Color.White
         Me.btn_new_customer_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
         Me.btn_new_customer_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_customer_save.Location = New System.Drawing.Point(36, 417)
+        Me.btn_new_customer_save.Location = New System.Drawing.Point(36, 444)
         Me.btn_new_customer_save.Name = "btn_new_customer_save"
         Me.btn_new_customer_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_new_customer_save.Size = New System.Drawing.Size(141, 38)
@@ -258,7 +280,8 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(258, 129)
+        Me.Label9.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label9.Location = New System.Drawing.Point(258, 156)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(92, 18)
         Me.Label9.TabIndex = 110
@@ -269,7 +292,8 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(258, 211)
+        Me.Label7.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label7.Location = New System.Drawing.Point(258, 238)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(51, 18)
         Me.Label7.TabIndex = 109
@@ -280,7 +304,8 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(260, 50)
+        Me.Label5.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label5.Location = New System.Drawing.Point(260, 77)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(112, 18)
         Me.Label5.TabIndex = 108
@@ -291,7 +316,8 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(-106, 217)
+        Me.Label4.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label4.Location = New System.Drawing.Point(-106, 244)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(80, 18)
         Me.Label4.TabIndex = 107
@@ -302,7 +328,8 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(-109, 134)
+        Me.Label3.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label3.Location = New System.Drawing.Point(-109, 161)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 18)
         Me.Label3.TabIndex = 106
@@ -312,7 +339,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.txt_new_customer_email.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_customer_email.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_customer_email.Location = New System.Drawing.Point(260, 317)
+        Me.txt_new_customer_email.Location = New System.Drawing.Point(260, 344)
         Me.txt_new_customer_email.MaxLength = 50
         Me.txt_new_customer_email.Name = "txt_new_customer_email"
         Me.txt_new_customer_email.Size = New System.Drawing.Size(308, 33)
@@ -322,7 +349,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.txt_new_customer_phone.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_customer_phone.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_customer_phone.Location = New System.Drawing.Point(260, 234)
+        Me.txt_new_customer_phone.Location = New System.Drawing.Point(260, 261)
         Me.txt_new_customer_phone.MaxLength = 32
         Me.txt_new_customer_phone.Name = "txt_new_customer_phone"
         Me.txt_new_customer_phone.Size = New System.Drawing.Size(309, 33)
@@ -332,7 +359,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.txt_new_customer_first_name.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_customer_first_name.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_customer_first_name.Location = New System.Drawing.Point(-106, 71)
+        Me.txt_new_customer_first_name.Location = New System.Drawing.Point(-106, 98)
         Me.txt_new_customer_first_name.MaxLength = 25
         Me.txt_new_customer_first_name.Name = "txt_new_customer_first_name"
         Me.txt_new_customer_first_name.Size = New System.Drawing.Size(308, 33)
@@ -342,7 +369,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.txt_new_customer_city_town.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_customer_city_town.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_customer_city_town.Location = New System.Drawing.Point(260, 150)
+        Me.txt_new_customer_city_town.Location = New System.Drawing.Point(260, 177)
         Me.txt_new_customer_city_town.MaxLength = 45
         Me.txt_new_customer_city_town.Name = "txt_new_customer_city_town"
         Me.txt_new_customer_city_town.Size = New System.Drawing.Size(308, 33)
@@ -352,7 +379,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.txt_new_customer_pobox.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_customer_pobox.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_customer_pobox.Location = New System.Drawing.Point(261, 71)
+        Me.txt_new_customer_pobox.Location = New System.Drawing.Point(261, 98)
         Me.txt_new_customer_pobox.MaxLength = 10
         Me.txt_new_customer_pobox.Name = "txt_new_customer_pobox"
         Me.txt_new_customer_pobox.Size = New System.Drawing.Size(308, 33)
@@ -362,7 +389,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.txt_new_customer_last_name.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_customer_last_name.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_customer_last_name.Location = New System.Drawing.Point(-104, 238)
+        Me.txt_new_customer_last_name.Location = New System.Drawing.Point(-104, 265)
         Me.txt_new_customer_last_name.MaxLength = 25
         Me.txt_new_customer_last_name.Name = "txt_new_customer_last_name"
         Me.txt_new_customer_last_name.Size = New System.Drawing.Size(306, 33)
@@ -372,7 +399,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.txt_new_customer_other_name.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_customer_other_name.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_customer_other_name.Location = New System.Drawing.Point(-106, 155)
+        Me.txt_new_customer_other_name.Location = New System.Drawing.Point(-106, 182)
         Me.txt_new_customer_other_name.MaxLength = 25
         Me.txt_new_customer_other_name.Name = "txt_new_customer_other_name"
         Me.txt_new_customer_other_name.Size = New System.Drawing.Size(308, 33)
@@ -380,10 +407,8 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         'customer_select_edit_panel
         '
-        Me.customer_select_edit_panel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.customer_select_edit_panel.BackColor = System.Drawing.Color.Transparent
+        Me.customer_select_edit_panel.Controls.Add(Me.Label11)
         Me.customer_select_edit_panel.Controls.Add(Me.btn_customer_select_select)
         Me.customer_select_edit_panel.Controls.Add(Me.btn_customer_select_cancel)
         Me.customer_select_edit_panel.Controls.Add(Me.btn_customer_select_edit)
@@ -394,6 +419,20 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.customer_select_edit_panel.Size = New System.Drawing.Size(518, 506)
         Me.customer_select_edit_panel.TabIndex = 2
         Me.customer_select_edit_panel.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label11.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label11.Location = New System.Drawing.Point(64, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(391, 49)
+        Me.Label11.TabIndex = 129
+        Me.Label11.Text = "Select an Automobile"
         '
         'btn_customer_select_select
         '
@@ -421,6 +460,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.btn_customer_select_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btn_customer_select_cancel.BackColor = System.Drawing.Color.LightCoral
         Me.btn_customer_select_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_customer_select_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btn_customer_select_cancel.FlatAppearance.BorderSize = 0
         Me.btn_customer_select_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_customer_select_cancel.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -513,7 +553,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.CustomerDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.CustomerDataGridView.EnableHeadersVisualStyles = False
         Me.CustomerDataGridView.GridColor = System.Drawing.Color.Silver
-        Me.CustomerDataGridView.Location = New System.Drawing.Point(34, 50)
+        Me.CustomerDataGridView.Location = New System.Drawing.Point(34, 60)
         Me.CustomerDataGridView.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CustomerDataGridView.MultiSelect = False
         Me.CustomerDataGridView.Name = "CustomerDataGridView"
@@ -539,7 +579,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.CustomerDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.CustomerDataGridView.RowTemplate.Height = 38
         Me.CustomerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.CustomerDataGridView.Size = New System.Drawing.Size(443, 380)
+        Me.CustomerDataGridView.Size = New System.Drawing.Size(443, 373)
         Me.CustomerDataGridView.TabIndex = 2
         Me.CustomerDataGridView.VirtualMode = True
         '
@@ -547,11 +587,14 @@ Partial Class Management_Work_Order_Add_New_Customer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Codebot_GMS.My.Resources.Resources.icons8_customer_24
+        Me.BackColor = System.Drawing.Color.Teal
+        Me.CancelButton = Me.btn_customer_select_cancel
         Me.ClientSize = New System.Drawing.Size(1029, 521)
-        Me.Controls.Add(Me.customer_select_edit_panel)
+        Me.ControlBox = False
         Me.Controls.Add(Me.customer_new_datails_panel)
+        Me.Controls.Add(Me.customer_select_edit_panel)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Location = New System.Drawing.Point(280, 150)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -564,6 +607,7 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.customer_select_edit_panel.ResumeLayout(False)
+        Me.customer_select_edit_panel.PerformLayout()
         CType(Me.CustomerDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -600,4 +644,6 @@ Partial Class Management_Work_Order_Add_New_Customer
     Friend WithEvents btn_customer_select_edit As Button
     Friend WithEvents btn_customer_select_new As Button
     Friend WithEvents CustomerDataGridView As DataGridView
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
 End Class

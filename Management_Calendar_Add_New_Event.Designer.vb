@@ -30,10 +30,10 @@ Partial Class Management_Calendar_Add_New_Event
         Me.txt_new_caption = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txt_new_date = New System.Windows.Forms.TextBox()
         Me.btn_new_event_cancel = New System.Windows.Forms.Button()
         Me.btn_new_event_save = New System.Windows.Forms.Button()
-        Me.txt_new_date = New System.Windows.Forms.TextBox()
-        Me.btn_new_event_delete = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label15
@@ -41,7 +41,8 @@ Partial Class Management_Calendar_Add_New_Event
         Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(72, 200)
+        Me.Label15.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label15.Location = New System.Drawing.Point(72, 230)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(83, 18)
         Me.Label15.TabIndex = 124
@@ -54,7 +55,7 @@ Partial Class Management_Calendar_Add_New_Event
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(177, 103)
+        Me.Label2.Location = New System.Drawing.Point(177, 145)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(20, 28)
         Me.Label2.TabIndex = 122
@@ -65,7 +66,8 @@ Partial Class Management_Calendar_Add_New_Event
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(75, 29)
+        Me.Label9.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label9.Location = New System.Drawing.Point(75, 79)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(39, 18)
         Me.Label9.TabIndex = 121
@@ -76,7 +78,8 @@ Partial Class Management_Calendar_Add_New_Event
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(73, 111)
+        Me.Label7.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label7.Location = New System.Drawing.Point(73, 153)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(98, 18)
         Me.Label7.TabIndex = 120
@@ -86,18 +89,18 @@ Partial Class Management_Calendar_Add_New_Event
         '
         Me.txt_new_description.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_description.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_description.Location = New System.Drawing.Point(75, 221)
+        Me.txt_new_description.Location = New System.Drawing.Point(75, 251)
         Me.txt_new_description.MaxLength = 500
         Me.txt_new_description.Multiline = True
         Me.txt_new_description.Name = "txt_new_description"
-        Me.txt_new_description.Size = New System.Drawing.Size(308, 169)
+        Me.txt_new_description.Size = New System.Drawing.Size(308, 119)
         Me.txt_new_description.TabIndex = 119
         '
         'txt_new_caption
         '
         Me.txt_new_caption.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_caption.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_caption.Location = New System.Drawing.Point(74, 134)
+        Me.txt_new_caption.Location = New System.Drawing.Point(74, 176)
         Me.txt_new_caption.MaxLength = 25
         Me.txt_new_caption.Name = "txt_new_caption"
         Me.txt_new_caption.Size = New System.Drawing.Size(308, 33)
@@ -110,7 +113,7 @@ Partial Class Management_Calendar_Add_New_Event
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(161, 190)
+        Me.Label1.Location = New System.Drawing.Point(161, 220)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(20, 28)
         Me.Label1.TabIndex = 122
@@ -123,29 +126,41 @@ Partial Class Management_Calendar_Add_New_Event
         Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label3.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(120, 19)
+        Me.Label3.Location = New System.Drawing.Point(120, 69)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(20, 28)
         Me.Label3.TabIndex = 122
         Me.Label3.Text = "*"
+        '
+        'txt_new_date
+        '
+        Me.txt_new_date.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_new_date.Enabled = False
+        Me.txt_new_date.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_new_date.Location = New System.Drawing.Point(75, 100)
+        Me.txt_new_date.MaxLength = 25
+        Me.txt_new_date.Name = "txt_new_date"
+        Me.txt_new_date.Size = New System.Drawing.Size(308, 33)
+        Me.txt_new_date.TabIndex = 118
         '
         'btn_new_event_cancel
         '
         Me.btn_new_event_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btn_new_event_cancel.BackColor = System.Drawing.Color.LightCoral
         Me.btn_new_event_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_event_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btn_new_event_cancel.FlatAppearance.BorderSize = 0
         Me.btn_new_event_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_new_event_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_new_event_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_new_event_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_new_event_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_event_cancel.Location = New System.Drawing.Point(300, 426)
+        Me.btn_new_event_cancel.Location = New System.Drawing.Point(239, 391)
         Me.btn_new_event_cancel.Name = "btn_new_event_cancel"
         Me.btn_new_event_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_event_cancel.Size = New System.Drawing.Size(119, 41)
+        Me.btn_new_event_cancel.Size = New System.Drawing.Size(123, 41)
         Me.btn_new_event_cancel.TabIndex = 126
-        Me.btn_new_event_cancel.Text = "  CLOSE"
+        Me.btn_new_event_cancel.Text = "CANCEL"
         Me.btn_new_event_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_new_event_cancel.UseVisualStyleBackColor = False
         '
@@ -160,54 +175,39 @@ Partial Class Management_Calendar_Add_New_Event
         Me.btn_new_event_save.ForeColor = System.Drawing.Color.White
         Me.btn_new_event_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
         Me.btn_new_event_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_event_save.Location = New System.Drawing.Point(170, 426)
+        Me.btn_new_event_save.Location = New System.Drawing.Point(95, 391)
         Me.btn_new_event_save.Name = "btn_new_event_save"
         Me.btn_new_event_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_event_save.Size = New System.Drawing.Size(119, 41)
+        Me.btn_new_event_save.Size = New System.Drawing.Size(123, 41)
         Me.btn_new_event_save.TabIndex = 125
-        Me.btn_new_event_save.Text = "  SAVE"
+        Me.btn_new_event_save.Text = "SAVE"
         Me.btn_new_event_save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_new_event_save.UseVisualStyleBackColor = False
         '
-        'txt_new_date
+        'Label4
         '
-        Me.txt_new_date.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_new_date.Enabled = False
-        Me.txt_new_date.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_date.Location = New System.Drawing.Point(75, 50)
-        Me.txt_new_date.MaxLength = 25
-        Me.txt_new_date.Name = "txt_new_date"
-        Me.txt_new_date.Size = New System.Drawing.Size(308, 33)
-        Me.txt_new_date.TabIndex = 118
-        '
-        'btn_new_event_delete
-        '
-        Me.btn_new_event_delete.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_new_event_delete.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.btn_new_event_delete.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_new_event_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_event_delete.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_event_delete.ForeColor = System.Drawing.Color.LightCoral
-        Me.btn_new_event_delete.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
-        Me.btn_new_event_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_event_delete.Location = New System.Drawing.Point(36, 426)
-        Me.btn_new_event_delete.Name = "btn_new_event_delete"
-        Me.btn_new_event_delete.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_event_delete.Size = New System.Drawing.Size(119, 41)
-        Me.btn_new_event_delete.TabIndex = 125
-        Me.btn_new_event_delete.Text = " DELETE"
-        Me.btn_new_event_delete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_new_event_delete.UseVisualStyleBackColor = False
-        Me.btn_new_event_delete.Visible = False
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label4.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label4.Location = New System.Drawing.Point(81, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(294, 49)
+        Me.Label4.TabIndex = 127
+        Me.Label4.Text = "Calendar Event"
         '
         'Management_Calendar_Add_New_Event
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(464, 495)
+        Me.BackColor = System.Drawing.Color.Teal
+        Me.CancelButton = Me.btn_new_event_cancel
+        Me.ClientSize = New System.Drawing.Size(464, 469)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btn_new_event_cancel)
-        Me.Controls.Add(Me.btn_new_event_delete)
         Me.Controls.Add(Me.btn_new_event_save)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label3)
@@ -218,8 +218,10 @@ Partial Class Management_Calendar_Add_New_Event
         Me.Controls.Add(Me.txt_new_description)
         Me.Controls.Add(Me.txt_new_date)
         Me.Controls.Add(Me.txt_new_caption)
-        Me.Location = New System.Drawing.Point(550, 150)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Location = New System.Drawing.Point(550, 220)
         Me.Name = "Management_Calendar_Add_New_Event"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Management_Calendar_Add_New_Event"
         Me.ResumeLayout(False)
@@ -237,5 +239,5 @@ Partial Class Management_Calendar_Add_New_Event
     Friend WithEvents btn_new_event_cancel As Button
     Friend WithEvents btn_new_event_save As Button
     Friend WithEvents txt_new_date As TextBox
-    Friend WithEvents btn_new_event_delete As Button
+    Friend WithEvents Label4 As Label
 End Class

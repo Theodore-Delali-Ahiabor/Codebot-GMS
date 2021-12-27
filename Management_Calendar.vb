@@ -21,8 +21,8 @@ Public Class Management_Calendar
             fl.AutoScroll = True
             AddHandler fl.Click, AddressOf add_new_event_to_fl_day
             fl_days.Controls.Add(fl)
-            'If i % 5 = 0 Then
-            '    list_fl_day.Add(vbCrLf)
+            'If i Mod 5 = 0 Then
+            '    list_fl_day.Add()
             'End If
             list_fl_day.Add(fl)
         Next
@@ -51,7 +51,7 @@ Public Class Management_Calendar
                 .txt_new_description.Text = ""
                 .txt_new_date.Text = current_date.Year & "-" & current_date.Month & "-" & day
                 .btn_new_event_save.Text = "SAVE"
-                .btn_new_event_delete.Visible = False
+                .btn_new_event_cancel.Text = "CANCEL"
                 .ShowDialog()
             End With
 
@@ -71,7 +71,7 @@ Public Class Management_Calendar
                     .txt_new_date.Text = row("Date").year & "-" & row("Date").month & "-" & row("Date").day
                     .txt_new_description.Text = row("Description")
                     .btn_new_event_save.Text = "UPDATE"
-                    .btn_new_event_delete.Visible = True
+                    .btn_new_event_cancel.Text = "DELETE"
                     .ShowDialog()
                 End With
             End If
@@ -137,16 +137,16 @@ Public Class Management_Calendar
         Dim first_day_of_current_day As DateTime = New Date(current_date.Year, current_date.Month, 1)
         Return first_day_of_current_day.AddMonths(1).AddDays(-1).Day
     End Function
-    Private Sub btn_calendar_current_month_Click(sender As Object, e As EventArgs) Handles btn_calendar_current_month.Click
+    Private Sub btn_calendar_current_month_Click(sender As Object, e As EventArgs)
         current_date = DateTime.Today
         display_current_date()
     End Sub
 
-    Private Sub btn_calender_previous_month_Click(sender As Object, e As EventArgs) Handles btn_calender_previous_month.Click
+    Private Sub btn_calender_previous_month_Click(sender As Object, e As EventArgs)
         previous_month()
     End Sub
 
-    Private Sub btn_calendar_next_month_Click(sender As Object, e As EventArgs) Handles btn_calendar_next_month.Click
+    Private Sub btn_calendar_next_month_Click(sender As Object, e As EventArgs)
         next_month()
     End Sub
     Public Function query_event_table(ByRef default_query As String)
@@ -157,4 +157,17 @@ Public Class Management_Calendar
         Return sql_ds.Tables("result")
 
     End Function
+
+    Private Sub pb_calendar_previous_Click(sender As Object, e As EventArgs) Handles pb_calendar_previous.Click
+        previous_month()
+    End Sub
+
+    Private Sub pb_calendar_current_Click(sender As Object, e As EventArgs) Handles pb_calendar_current.Click
+        current_date = DateTime.Today
+        display_current_date()
+    End Sub
+
+    Private Sub pb_calendar_next_Click(sender As Object, e As EventArgs) Handles pb_calendar_next.Click
+        next_month()
+    End Sub
 End Class

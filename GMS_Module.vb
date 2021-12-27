@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Security.Cryptography
-Module Codebot_GMS_Module
+Imports System.Net.Mail
+Module GMS_Module
     Public sql_con As New MySqlConnection("server=localhost;user id=root;password=;database=codebot_gms_schema;sslMode=none;Allow Zero Datetime=True")
     Public sql_rdr As MySqlDataReader
     Public sql_dt As DataTable
@@ -8,13 +9,17 @@ Module Codebot_GMS_Module
     Public sql_ds As DataSet
     Public sql_cmd As MySqlCommand
     Public message_ts, invalid_login_ts As TimeSpan
-    Public signup_id, signup_name, login_id, login_full_name, login_as, default_query, filter_query, img_path, sql_stmt, null As String
+    Public signup_id, signup_name, login_id, login_first_name, login_full_name, login_as, default_query, filter_query, img_path, sql_stmt, null As String
     Public invalid_login As Integer = 0
     Public arr_image() As Byte
     Public open_image_file_dialog As New OpenFileDialog()
     Public mstream As New MemoryStream()
     Public triple_des As New TripleDESCryptoServiceProvider
+    Public email_delevery_status As Integer = 0
+
+    '-------------------------
     'LOADS FORMS INTO GMS_Main  
+    '-------------------------
     Public Sub gms_main_form_loader(ByVal main_form As Form)
         Try
             main_form.TopLevel = False
@@ -34,7 +39,9 @@ Module Codebot_GMS_Module
         End Try
 
     End Sub
+    '------------------------------------------------------------------------------------
     'LOADS FROMS INTO Management BASED ON THE BUTTON CLICK IN THE MANAGEMENT FORM SIDEBAR
+    '------------------------------------------------------------------------------------
     Public Sub sidebar_form_loader(ByRef form As Form)
         Try
             form.TopLevel = False
@@ -61,7 +68,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Sidebar Form Load Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    '------------------------------
     'LOADS FORMS INTO THE AUTH FORM 
+    '------------------------------
     Public Sub auth_form_loader(ByRef auth_form As Form)
         Try
             auth_form.TopLevel = False
@@ -81,33 +90,63 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Authentication Form Load Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
-    'DIPLAY POP UP MESSAGES 
-    Public Sub message(ByRef btn_name As Button, ByRef message_type As String)
+    '----------------------
+    'DIPLAY POP UP MESSAGES
+    '----------------------
+    Public Sub message(ByRef message_type As String, ByRef message_text As String)
+        message_ts = New TimeSpan(0, 0, 10)
+        GMS_Message.Opacity = 0.9
         Try
             If message_type = "warning" Then
-                btn_name.Show()
-                btn_name.BackColor = Color.LightPink
-                btn_name.ForeColor = Color.Red
-                Auth.message_timer.Enabled = True
-                message_ts = New TimeSpan(0, 0, 5)
+                My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Exclamation)
+                With GMS_Message
+                    .Enabled = True
+                    .BackColor = Color.LightPink
+                    .message_text.BackColor = Color.LightPink
+                    .message_text.Text = message_text
+                    .message_icon.Image = .message_warning_icon.Image
+                    .Show()
+                    .message_timer.Enabled = True
+                End With
+
             ElseIf message_type = "success" Then
-                btn_name.Show()
-                btn_name.BackColor = Color.PaleGreen
-                btn_name.ForeColor = Color.Green
-                Auth.message_timer.Enabled = True
-                message_ts = New TimeSpan(0, 0, 5)
+                My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Question)
+                With GMS_Message
+                    .BackColor = Color.PaleGreen
+                    .message_text.BackColor = Color.PaleGreen
+                    .message_text.Text = message_text
+                    .message_icon.Image = .message_success_icon.Image
+                    .Show()
+                    .message_timer.Enabled = True
+                End With
             ElseIf message_type = "information" Then
-                btn_name.Show()
-                btn_name.BackColor = Color.LightBlue
-                btn_name.ForeColor = Color.Blue
-                Auth.message_timer.Enabled = True
-                message_ts = New TimeSpan(0, 0, 5)
+                My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Asterisk)
+                With GMS_Message
+                    .BackColor = Color.LightBlue
+                    .message_text.BackColor = Color.LightBlue
+                    .message_text.Text = message_text
+                    .message_icon.Image = .message_information_icon.Image
+                    .Show()
+                    .message_timer.Enabled = True
+                End With
+            ElseIf message_type = "error" Then
+                My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Hand)
+                With GMS_Message
+                    .BackColor = Color.LightYellow
+                    .message_text.BackColor = Color.LightYellow
+                    .message_text.Text = message_text
+                    .message_icon.Image = .message_error_icon.Image
+                    .Show()
+                    .message_timer.Enabled = True
+                End With
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    '----------------
     'ADD COMBOX ITEMS
+    '----------------
     Public Sub add_combobox_items(ByRef cmb_name As ComboBox, ByRef table As String, ByRef column As String)
         Try
             Dim sql_cmd As New MySqlCommand("SELECT * FROM " & table, sql_con)
@@ -124,7 +163,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Combox Items Add Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    '------------------------------------------
     'ADD SEARCH SUGGESTIONS TO SEARCH TEXTBOXES
+    '------------------------------------------
     Public Sub add_search_suggestion(ByRef txtb_name As TextBox, ByRef table As String, ByRef column As String)
         txtb_name.Clear()
         Try
@@ -140,7 +181,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Search Suggestions Add Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    '--------------------------------------------
     'THIS PREVENTS REDUNDUNT DATA IN COMBOX ITMES 
+    '--------------------------------------------
     Public Function filter_combobox(ByRef cmb_name As ComboBox, ByRef filter_item As String) As Boolean
         Dim found As Boolean = False
         For Each item In cmb_name.Items
@@ -150,8 +193,9 @@ Module Codebot_GMS_Module
         Next
         Return found
     End Function
-
-    'FILL THE DATAGRID WITH A DEFAULT INFORMATION
+    '----------------------------------------------------------------------------------------
+    'FILL THE DATAGRID WITH A DEFAULT INFORMATION WITH THE DEFAULT ORDERING FROM THE DATABASE
+    '----------------------------------------------------------------------------------------
     Public Sub datagrid_fill(ByRef db_table As String, ByRef gridview_name As DataGridView)
         Try
             sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table, sql_con)
@@ -165,7 +209,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Data Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
-
+    '----------------------------------------------------------------------------------
+    'FILL THE DATAGRID WITH A DEFAULT INFORMATION ODERING BY THE ID IN DESCENDING ORDER
+    '----------------------------------------------------------------------------------
     Public Sub datagrid_fill_default(ByRef db_table As String, ByRef gridview_name As DataGridView)
         Try
             sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " ORDER BY ID DESC", sql_con)
@@ -179,7 +225,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Data Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    '----------------------------------------------------------------
     'FILL THE DATAGRID WITH INFORMATIONS BASE ON SOME FILTER VARIABLE
+    '----------------------------------------------------------------
     Public Sub datagrid_fill_flter_with_variable(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef db_column As String, ByRef symbol As String, ByRef variable As String)
         Try
             sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & symbol & variable, sql_con)
@@ -193,7 +241,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Query Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    '-------------------------------------------------------------------------------
     'FILL THE DATAGRID WITH INFORMATIONS BASED ON THE SELECTED TEXT FROM A COMBO BOX
+    '------------------------------------------------------------------------------
     Public Sub datagrid_fill_filter(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef db_column As String, ByRef filter_combox As ComboBox)
         Try
             sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & " = '" & filter_combox.Text & "' ORDER BY ID DESC", sql_con)
@@ -207,7 +257,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Filter Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    '---------------------------------------------------------------------
     'FILL THE DATAGRID WITH INFORMATIONS BASED ON THE TEXT FROM A TEXT BOX
+    '---------------------------------------------------------------------
     Public Sub datagrid_fill_filter_textbox(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef db_column As String, ByRef filter_txt As TextBox)
         Try
             sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & " = '" & filter_txt.Text & "' ORDER BY ID DESC", sql_con)
@@ -221,7 +273,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Search Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
-    'FILL  THE HOME DATAGRID WITH THE PREFERED FILTER FOR THE WORK ORDDERS DUE TAB 
+    '----------------------------------------------------------------------------
+    'FILL THE HOME DATAGRID WITH THE PREFERED FILTER FOR THE WORK ORDDERS DUE TAB 
+    '----------------------------------------------------------------------------
     Public Sub work_order_overdue_filter(ByRef variable As String)
         Try
             Management_Home.activebar_work_orders.Visible = True
@@ -240,7 +294,26 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Work Order Overdue Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
-    'CLEAR THE DEFAULT ROW SELECTION
+    '-------------------------------------------------------------
+    'RETRIEVES CALENDAR EVENTS BASED ON WHICH USER ADDED THE EVENT
+    '-------------------------------------------------------------
+    Public Sub calendar_events(ByRef symbol As String, ByRef variable As String)
+        Management_Home.activebar_work_orders.Visible = False
+        Management_Home.activebar_inventory.Visible = False
+        Management_Home.activebar_payments.Visible = False
+        Management_Home.activebar_events.Visible = True
+        sql_da = New MySqlDataAdapter("SELECT * FROM events_view WHERE Due_In " & symbol & " " & variable & " AND Added_by = '" & login_id & "' ORDER BY ID DESC", sql_con)
+        sql_dt = New DataTable
+        sql_dt.Clear()
+        sql_da.Fill(sql_dt)
+        Management_Home.HomeDataGridView.DataSource = sql_dt
+        datagrid_fill_color_effect("events_view", Management_Home.HomeDataGridView)
+        clear_gridview_default_selection(Management_Home.HomeDataGridView)
+        Management.lbl_current_tab.Text = "Dashboard | Upcoming Events"
+    End Sub
+    '--------------------------------------------------
+    'CLEAR THE DEFAULT ROW SELECTION IN A DATAFRID VIEW
+    '--------------------------------------------------
     Public Sub clear_gridview_default_selection(ByRef gridview_name As DataGridView)
         Try
             If gridview_name.Rows.Count > 0 Then
@@ -250,7 +323,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Default Selection Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    '--------------------------------------------------------------------
     'APPLY COLOR EFFECTS TO ROWS IN THE DATAGRID BASED ON THE TABLE IT IS
+    '--------------------------------------------------------------------
     Public Sub datagrid_fill_color_effect(ByRef db_table As String, ByRef gridview_name As DataGridView)
         Try
             If gridview_name.Rows.Count > 0 Then
@@ -258,7 +333,6 @@ Module Codebot_GMS_Module
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
                         If gridview_name.Rows(i).Cells(7).Value.ToString = False Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
-
                         Else
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
                         End If
@@ -292,9 +366,12 @@ Module Codebot_GMS_Module
                     Next
                 ElseIf db_table = "events_view" Then
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
+                        gridview_name.Columns(6).Visible = False
                         If gridview_name.Rows(i).Cells(1).Value < 11 Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
                             If gridview_name.Rows(i).Cells(1).Value = 0 Then
+                                gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
+                            ElseIf gridview_name.Rows(i).Cells(1).Value < 0 Then
                                 gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
                             End If
                         End If
@@ -305,8 +382,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "Datagridview Color Effect Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
-
+    '------------------------------------------------------------------------------------
     'FILL ALL COMBOBOXES WITH ITEMS AND FILL ALL FILTER TEXT BOXES WITH SEARCH SUGESTIONS
+    '------------------------------------------------------------------------------------
     Public Sub box_collections_fill()
         Try
             'Inventory
@@ -334,7 +412,6 @@ Module Codebot_GMS_Module
             Management_Work_Order.cmb_work_order_status_filter.SelectedIndex() = 0
             add_search_suggestion(Management_Work_Order.txt_work_order_automobile_name_filter, "work_order_view", "ID")
             add_combobox_items(Management_Work_Order.cmb_work_order_status_filter, "work_order_view", "Progress_Status")
-            'add_combobox_items(Management_Work_Order_Add_New.txt_new_work_order_progress_stats, "work_order_view", "Progress_Status")
             'invoice
             Management_Invoice.cmb_payment_status_filter.Items.Clear()
             Management_Invoice.cmb_payment_status_filter.Items.Add("All")
@@ -345,8 +422,9 @@ Module Codebot_GMS_Module
         End Try
 
     End Sub
-
+    '------------------------------------------------------------------
     'RESIZE THE COLUMNS IN THE DATAGRID TABLE BASED ON WHAT TABLE IT IS
+    '------------------------------------------------------------------
     Public Sub datagrif_fill_column_resize(ByRef db_table As String, ByRef gridview_name As DataGridView)
         Try
             If db_table = "employee_view" Then
@@ -358,7 +436,6 @@ Module Codebot_GMS_Module
                 gridview_name.Columns(5).Width = 200   '
                 gridview_name.Columns(6).Width = 70    '
                 gridview_name.Columns(7).Visible = False   'Active
-                'gridview_name.Columns(6).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             ElseIf db_table = "inventory" Then
                 gridview_name.Columns(0).Width = 50    'ID
                 gridview_name.Columns(1).Width = 100   'Category
@@ -383,7 +460,9 @@ Module Codebot_GMS_Module
             MessageBox.Show(ex.Message, "DataGridView Collumn Resize Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
+    '-----------------------------------------
     'To control user access to the application
+    '-----------------------------------------
     Public Sub Access_Control(ByRef role As String)
         With Management
             gms_main_form_loader(Management)
@@ -412,25 +491,70 @@ Module Codebot_GMS_Module
                 .btn_messages.Visible = False
 
             End If
-            .btn_management_message.Text = "Login Was Successful"
-            .btn_management_message.Show()
-            message(.btn_management_message, "success")
+            message("success", "Welcome " + login_first_name + ", you logged-in successfully")
         End With
     End Sub
+    '----------
+    'Send Email
+    '----------
+    Public Sub send_email(ByRef subject As String, ByRef reciepint As String, ByRef message As String)
+        Dim Smtp_Server As New SmtpClient
+        Dim e_mail As New MailMessage()
+        email_delevery_status = 0
+        Try
+            Smtp_Server.UseDefaultCredentials = False
+            Smtp_Server.Credentials = New Net.NetworkCredential("allprojectstemporaryemail@gmail.com", "@Welcome98")
+            Smtp_Server.Port = 587
+            Smtp_Server.EnableSsl = True
+            Smtp_Server.Host = "smtp.gmail.com"
+            '
+
+            e_mail = New MailMessage()
+            e_mail.From = New MailAddress("allprojectstemporaryemail@gmail.com")
+            e_mail.To.Add(reciepint)
+            e_mail.Subject = "HTU-JMTC " + subject
+            e_mail.IsBodyHtml = False
+            e_mail.Body = message
+            Smtp_Server.Send(e_mail)
+            email_delevery_status = 1
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "SMTP Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            email_delevery_status = 0
+        End Try
+    End Sub
+    '----------------------
+    ' send whatsapp message
+    '----------------------
+    Public Sub send_whatsapp(ByRef reciepint As String, ByRef message As String)
+        Try
+            Dim web As New WebBrowser
+            web.Navigate("whatsapp://send?phone=+233" & reciepint & "&text=" & message & "")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Whatsapp Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            SendKeys.Send("{ENTER}")
+        End Try
+
+    End Sub
+    '-------------------------------------------------
+    'ENCRIPT A USER PASSWORD FROM THE Simple3Des CLASS
+    '-------------------------------------------------
     Public Function Encoding(ByRef password As String)
         Dim wrapper As New Simple3Des()
-
-        'Return Encrypted password
+        'Return the Encrypted password
         Return wrapper.EncryptData(password)
     End Function
+    '-------------------------------------------------
+    'DECRIPT A USER PASSWORD FROM THE Simple3Des CLASS
+    '-------------------------------------------------
     Public Function Decoding(ByRef password As String)
         Dim wrapper As New Simple3Des()
-
-        ' Decrypt the Password
+        ' Return then Decrypted Password
         Return wrapper.DecryptData(password)
     End Function
-
-
+    '----------------------------------------
+    'A Simple3Des ENCODING AND DECODING CLASS
+    '----------------------------------------
     Public NotInheritable Class Simple3Des
         Private TripleDes As New TripleDESCryptoServiceProvider
         'a private method that creates a byte array of a specified length from the hash of the specified key.
@@ -453,7 +577,7 @@ Module Codebot_GMS_Module
             TripleDes.IV = TruncateHash("", TripleDes.BlockSize \ 8)
         End Sub
 
-        Public Function EncryptData(ByVal plaintext As String) As String
+        Public Function EncryptData(ByRef plaintext As String) As String
 
             ' Convert the plaintext string to a byte array.
             Dim plaintextBytes() As Byte = System.Text.Encoding.Unicode.GetBytes(plaintext)
@@ -472,7 +596,7 @@ Module Codebot_GMS_Module
             Return Convert.ToBase64String(ms.ToArray)
         End Function
 
-        Public Function DecryptData(ByVal encryptedtext As String) As String
+        Public Function DecryptData(ByRef encryptedtext As String) As String
 
             ' Convert the encrypted text string to a byte array.
             Dim encryptedBytes() As Byte = Convert.FromBase64String(encryptedtext)

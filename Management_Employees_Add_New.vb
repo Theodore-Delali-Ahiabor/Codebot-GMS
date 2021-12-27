@@ -112,10 +112,7 @@ Public Class Management_Employees_Add_New
                         If sql_cmd.ExecuteNonQuery > 0 Then
                             sidebar_form_loader(Management_Employees)
                             datagrid_fill_default("employee_view", Management_Employees.EmployeesDataGridView)
-
-                            Management.btn_management_message.Text = "Employee Details Updated Successfully"
-                            Management.btn_management_message.Show()
-                            message(Management.btn_management_message, "success")
+                            message("success", "Employee Details Updated Successfully")
                         Else
                             MsgBox("Error query", MsgBoxStyle.Exclamation)
                         End If
@@ -154,9 +151,7 @@ Public Class Management_Employees_Add_New
                             sidebar_form_loader(Management_Employees)
                             datagrid_fill_default("employee_view", Management_Employees.EmployeesDataGridView)
 
-                            Management.btn_management_message.Text = "New Employee Added Successfully"
-                            Management.btn_management_message.Show()
-                            message(Management.btn_management_message, "success")
+                            message("success", "New Employee Added Successfully")
                         Else
                             MsgBox("Error query", MsgBoxStyle.Exclamation)
                         End If

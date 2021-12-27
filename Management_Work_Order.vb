@@ -30,13 +30,9 @@ Public Class Management_Work_Order
         Try
             If Me.WorkOrderDataGridView.SelectedRows.Count = 1 Then
                 If Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "In Progress" Then
-                    Management.btn_management_message.Text = "Work Order already In Progress"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "information")
+                    message("information", "Work Order already In Progress")
                 ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "Complete" Then
-                    Management.btn_management_message.Text = "Work Order already ended"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "information")
+                    message("information", "Work Order already ended")
                 Else
                     Dim repos As DialogResult = MessageBox.Show("You are about to LUNCH a Work Order @ ID '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then
@@ -45,15 +41,11 @@ Public Class Management_Work_Order
                             Where ID = '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                         sql_da.Fill(sql_ds, "work_order")
                         datagrid_fill_default("work_order_view", Me.WorkOrderDataGridView)
-                        Management.btn_management_message.Text = "Work Order INITIATED successfully"
-                        Management.btn_management_message.Show()
-                        message(Management.btn_management_message, "success")
+                        message("success", "Work Order INITIATED successfully")
                     End If
                 End If
             Else
-                Management.btn_management_message.Text = "No Work Order selected"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "warning")
+                message("warning", "No Work Order selected")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Initiating Work Order Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
@@ -63,33 +55,26 @@ Public Class Management_Work_Order
     Private Sub btn_end_work_order_Click(sender As Object, e As EventArgs) Handles btn_end_work_order.Click
         Try
             If Me.WorkOrderDataGridView.SelectedRows.Count = 1 Then
-                If Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "Complete" Then
-                    Management.btn_management_message.Text = "Work Order already ended"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "information")
+                If Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "Completed" Then
+                    message("information", "Work Order has been closed")
                 ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "Pending" Then
-                    Management.btn_management_message.Text = "Work Order can not end while pending"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "information")
+                    message("information", "Work Order can not end while pending")
                 Else
                     Dim repos As DialogResult = MessageBox.Show("You are about to CLOSE a Work Order @ ID '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then
                         Management_Work_Order_Done_Work_Order.last_service_id = Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value
                         sql_ds = New DataSet
-                        sql_da = New MySqlDataAdapter("UPDATE work_order SET Status = '" & "Complete" & "' 
+                        sql_da = New MySqlDataAdapter("UPDATE work_order SET Status = '" & "Completed" & "' 
                             Where ID = '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                         sql_da.Fill(sql_ds, "work_order")
                         datagrid_fill_default("work_order_view", Me.WorkOrderDataGridView)
-                        Management.btn_management_message.Text = "Work Order ENDED successfully "
-                        Management.btn_management_message.Show()
-                        message(Management.btn_management_message, "success")
+                        message("success", "Work Order ENDED successfully ")
                         Management_Work_Order_Done_Work_Order.ShowDialog()
+
                     End If
                 End If
             Else
-                Management.btn_management_message.Text = "No Work Order selected"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "warning")
+                message("warning", "No Work Order selected")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Completing Work Order Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)

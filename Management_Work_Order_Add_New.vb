@@ -38,14 +38,10 @@ Public Class Management_Work_Order_Add_New
                     sql_da.Fill(sql_ds, "work_order")
                     sidebar_form_loader(Management_Work_Order)
                     datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)
-                    Management.btn_management_message.Text = "Work Order Added Successflly"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "success")
+                    message("success", "Work Order Added Successflly")
                 End If
             Else
-                Management.btn_management_message.Text = "Please fill out all required (*) fields"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "warning")
+                message("warning", "Please fill out all required (*) fields")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Save New Work Order Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)

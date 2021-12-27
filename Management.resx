@@ -7,7 +7,7 @@
     
     The primary goals of this format is to allow a simple XML format 
     that is mostly human readable. The generation and parsing of the 
-    various data types are Complete through the TypeConverter classes 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
     
     Example:
@@ -190,12 +190,6 @@
   <metadata name="UserBioStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>256, 13</value>
   </metadata>
-  <metadata name="DateTimeStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>407, 16</value>
-  </metadata>
-  <metadata name="UserBioStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>256, 13</value>
-  </metadata>
   <data name="btn_logout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -328,40 +322,6 @@
         4koD+t0B/mPw4x9AvCZv+f06+bdaGpQNAPsGZcM/YFyN+n11PyktDYqCDeiCJIwIe+5jkPWIYBvqYAm8
         veFHBPbG2ueiERosplk1nEKhB769mDagD+w7ZW+4tzc4AKMJLuHRiiHcg72hHneQgmxrvT6DGvGvzxSJ
         PAMUndYuRPvc0QAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btn_refresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAA49JREFUWEftlstLVFEcxx3toWOlpmRYviIVZxZqLVpJy0BqF24yCCMDlYIK0qIQ
-        Av0Pgsja9qAiMHFhL/KRPawWhuCuTRAuo+1Mn+/lN+O87sNBd37hw+/c+3ucc88995xbsKX1Kh6Ph6Aq
-        Fou1YNvVNtfmio7K6XQAPsMSTKrN/T4L2RzRQQUd3YKPcAMOQwn3i9R55gC4PuoGeQctLJhIaIVFGFSn
-        EKWQZqIbIrSzBsD9VbiXwTv4BfUW5i+Cj4M674Bao4MOq2AH1MFI5gC4/mpNR+REQa+s1W75S8EqhK3G
-        hrAHBO1yGKH9EyZgHDotzVHqAJQLdcQsYRvstrcIrFARktqwhTAky/VZmIEe2GnhWVKuNfUgo1ajnfaU
-        V15SBGnBXQRNuZ5anY/COO2whblKAyBW0z5MW7PXCPvgCgxYWG6RoAU2gy0GTZ0GcA6rzgstzFPE/gGt
-        Hb0iLVZnAFb7B+y20Gzh7AeNNALOgsPOYX2fPCHindUOeuoVq3EE9NUMYc9baLpwaro+QS1trQMljkGP
-        hQQS8cnVTg19pvpS9OVoAWtWJ8ydLgXh/IItxnabXQH/heMicrV3zFNrG/aU2Wls9oziaIFnOIuwmq5D
-        2Elz5y1qvKCWdtNmrBb0I6g095pw6lN5gNVi0Seo64fmzlvU0ALebzU1q861udeU6BC70QPQQ/kPAEcz
-        PMeZ+gqmzJ23qJF4BU1Y91fAzb2wSJBGedrsMnaXhaxb5JfCB2po8Z00+wZKLCRdOOagnkCNuBLu0E4e
-        NlxHrRlIxF+Am6qlmtBAO/dnKOHsheugY7gNNIgFS9Z5vmqhviK2GrTzaWZVSzW1zfdaSLZw6rudpTNN
-        v3MWwBmYBm2vfy3UU+TrXT+BLkhsxZrVZSi1sNwi4DJcIiFxFqiY/oT0BL8tzFXE6Mkfw1VyUw+jYRi0
-        MHeRFCZwAXQWqPMxc6m46wDwacHpnX+DE9b5XdUA/ZK95zrYrkqgDpNZ0AyE7HbWALjuhPvEPMW+hmu0
-        y7B66kbaegAdzd+hydL8ZUlaQDV2yxHXaQOggz7uaarLQD+pOk+04DTl4hioTsRS/EURZ7XDW8j8ufxn
-        YY40AMF9bWJdtLXQ9DungdzGatqDP7lEwh6occPCHCUGAHrP2/FroeoI1ymqP+m8T9JAUud0on+IlzAP
-        r0B7ifentlFiAGHQQaMNK/f2uiVPFRT8B3B1Cc5K8qXXAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAYtJREFUWEftlTFOw0AQRS1RUSCgyBVo6JIDINHmDFQJouQESBHQUFFS0HKFXAAo
-        6REdEjRBaSAU0Di82XyHWLGJ1/YiEDxptPtnPDs/K1uJ/llEHMfHxOvYE3pGxIGOKQcHNIl7oqFUYfCw
-        Tt8tsaGUPzTvE+eS3tB7SnQk/aH5gtiT9IbeHeJM0h+a77jKlqQ39G/SfyOZDw+eEO/28tQF53VZllgH
-        k8wnNstmarwzYIkVyeAwa5l4lnRv7NhWktdyeOUKAWHGSNuUgTe2PVtdISB5Btoy0HaFgGQaCA1D+zYr
-        QemJAWjxQNM0667yteZYp7+a+pyBnkWitdaa+9KAuZ1x3NVady7fgLZBwUD+O6DttzF7Gz/LAIVH0yHg
-        7AeNWXwDWbmyZJ2VMoCwf8JVSUdIA8g1Zr5IOgNHMpFC5crouCk2izhUORt7UNvKlDrrVxvgei+tPwE9
-        VKk41qitN0kvg7eIJ2LbFXyoaqDScIPGuU+zKDIwMBNK+UNz5qdZBPqGlYb/IaLoA2RshyXbGwLPAAAA
-        AElFTkSuQmCC
 </value>
   </data>
   <metadata name="systemtime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

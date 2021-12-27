@@ -488,18 +488,20 @@ Partial Class Management_Employees_Add_New
         Me.btn_new_user_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btn_new_user_cancel.BackColor = System.Drawing.Color.LightCoral
         Me.btn_new_user_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_user_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btn_new_user_cancel.FlatAppearance.BorderSize = 0
         Me.btn_new_user_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_new_user_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_new_user_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_new_user_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_new_user_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_user_cancel.Location = New System.Drawing.Point(509, 462)
+        Me.btn_new_user_cancel.Location = New System.Drawing.Point(509, 472)
         Me.btn_new_user_cancel.Name = "btn_new_user_cancel"
         Me.btn_new_user_cancel.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.btn_new_user_cancel.Size = New System.Drawing.Size(141, 52)
+        Me.btn_new_user_cancel.Size = New System.Drawing.Size(141, 42)
         Me.btn_new_user_cancel.TabIndex = 67
         Me.btn_new_user_cancel.Text = "CANCEL  "
+        Me.btn_new_user_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_new_user_cancel.UseVisualStyleBackColor = False
         '
         'btn_new_user_save
@@ -513,20 +515,24 @@ Partial Class Management_Employees_Add_New
         Me.btn_new_user_save.ForeColor = System.Drawing.Color.White
         Me.btn_new_user_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
         Me.btn_new_user_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_user_save.Location = New System.Drawing.Point(348, 462)
+        Me.btn_new_user_save.Location = New System.Drawing.Point(348, 472)
         Me.btn_new_user_save.Name = "btn_new_user_save"
         Me.btn_new_user_save.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.btn_new_user_save.Size = New System.Drawing.Size(141, 52)
+        Me.btn_new_user_save.Size = New System.Drawing.Size(129, 42)
         Me.btn_new_user_save.TabIndex = 65
         Me.btn_new_user_save.Text = "SAVE"
+        Me.btn_new_user_save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_new_user_save.UseVisualStyleBackColor = False
         '
         'Management_Employees_Add_New
         '
+        Me.AcceptButton = Me.btn_new_user_save
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.CancelButton = Me.btn_new_user_cancel
         Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.ControlBox = False
         Me.Controls.Add(Me.employee_clear_image)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.btn_new_user_select_image)

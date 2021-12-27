@@ -7,7 +7,7 @@
     
     The primary goals of this format is to allow a simple XML format 
     that is mostly human readable. The generation and parsing of the 
-    various data types are Complete through the TypeConverter classes 
+    various data types are done through the TypeConverter classes 
     associated with the data types.
     
     Example:
@@ -117,4 +117,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="signup_validate_num.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAmVJREFUSEtjGAqAEUqTBUyAurcAaSkIFwOYA3EThEkaYAIa3JSvKPD4tI3sMyC7
+        HyqOApgZGWa5inDdBzKVICLEg+g+LZFH7z2U/4NwkiwfyBBNiBQcSEVJ8T6976zwiZeFcQWQT1JQsQqx
+        Mm297CD3EWTBQ2fFL1zMjEugcjDQcMJG9g1IfqmhxEsgvwAiTDwQNeBjP/fSTekXyJAmNaGnQDEniBQD
+        v70w51WYD0HYX5znIVBcASJNPND1E+e+DTLgjbvSb2kOlp1AMSYgbjlsDXE9CF+0l3/Hycy4CChOVoqK
+        aNYQegoyCBgUz4H82hApnvsww5+6Kn5T4WY9BBTnBasmBzAyMvTss5R+DzLQUpDj3hV7uQ8wC7zFuK4C
+        laAnAJIBuxQHy657Tgpf3kENBuE6VWFQ6vKDKKEcGMTI8L6CGb7HQuYNMMDboXKUAzZGxjmnbGXhQRMk
+        AU41YhBZykHBTD1RuOuvOyq8vwxMOdC8AUpVFAHfXEUBeKqZoC36hJ2J8cxFO7kPa02kXgHlqyDKyAN2
+        QZLcd2CGHwOmfWD5Mw0oLmwIzIRv3JX/VqgIPQDyPcGqSQRhPuLct167K/0FGf7MVembAic4vXNDpBlc
+        61SFnr31UP5nK8R5CchXhQgTB6zMBdgfwlwOwiGSPLeA4loQaQhgZ2ZcACzsvoIsB+aPk0AhfogMcSAr
+        SY4fHDyrjCVBhVkRRBgFaGYp8D8DqTEVYD8F5LNAhIkHwSXKgveBQbMbyGaGCKECFkbGWZN0REG+y4OI
+        kA5AxXAqhIkVgML+HBCzgnk0Alh9NxwAAwMAsY7cy34rgdMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="signup_validate_symbol.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAmVJREFUSEtjGAqAEUqTBUyAurcAaSkIFwOYA3EThEkaYAIa3JSvKPD4tI3sMyC7
+        HyqOApgZGWa5inDdBzKVICLEg+g+LZFH7z2U/4NwkiwfyBBNiBQcSEVJ8T6976zwiZeFcQWQT1JQsQqx
+        Mm297CD3EWTBQ2fFL1zMjEugcjDQcMJG9g1IfqmhxEsgvwAiTDwQNeBjP/fSTekXyJAmNaGnQDEniBQD
+        v70w51WYD0HYX5znIVBcASJNPND1E+e+DTLgjbvSb2kOlp1AMSYgbjlsDXE9CF+0l3/Hycy4CChOVoqK
+        aNYQegoyCBgUz4H82hApnvsww5+6Kn5T4WY9BBTnBasmBzAyMvTss5R+DzLQUpDj3hV7uQ8wC7zFuK4C
+        laAnAJIBuxQHy657Tgpf3kENBuE6VWFQ6vKDKKEcGMTI8L6CGb7HQuYNMMDboXKUAzZGxjmnbGXhQRMk
+        AU41YhBZykHBTD1RuOuvOyq8vwxMOdC8AUpVFAHfXEUBeKqZoC36hJ2J8cxFO7kPa02kXgHlqyDKyAN2
+        QZLcd2CGHwOmfWD5Mw0oLmwIzIRv3JX/VqgIPQDyPcGqSQRhPuLct167K/0FGf7MVembAic4vXNDpBlc
+        61SFnr31UP5nK8R5CchXhQgTB6zMBdgfwlwOwiGSPLeA4loQaQhgZ2ZcACzsvoIsB+aPk0AhfogMcSAr
+        SY4fHDyrjCVBhVkRRBgFaGYp8D8DqTEVYD8F5LNAhIkHwSXKgveBQbMbyGaGCKECFkbGWZN0REG+y4OI
+        kA5AxXAqhIkVgML+HBCzgnk0Alh9NxwAAwMAsY7cy34rgdMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="signup_invalid.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAmVJREFUSEtjGAqAEUqTBUyAurcAaSkIFwOYA3EThEkaYAIa3JSvKPD4tI3sMyC7
+        HyqOApgZGWa5inDdBzKVICLEg+g+LZFH7z2U/4NwkiwfyBBNiBQcSEVJ8T6976zwiZeFcQWQT1JQsQqx
+        Mm297CD3EWTBQ2fFL1zMjEugcjDQcMJG9g1IfqmhxEsgvwAiTDwQNeBjP/fSTekXyJAmNaGnQDEniBQD
+        v70w51WYD0HYX5znIVBcASJNPND1E+e+DTLgjbvSb2kOlp1AMSYgbjlsDXE9CF+0l3/Hycy4CChOVoqK
+        aNYQegoyCBgUz4H82hApnvsww5+6Kn5T4WY9BBTnBasmBzAyMvTss5R+DzLQUpDj3hV7uQ8wC7zFuK4C
+        laAnAJIBuxQHy657Tgpf3kENBuE6VWFQ6vKDKKEcGMTI8L6CGb7HQuYNMMDboXKUAzZGxjmnbGXhQRMk
+        AU41YhBZykHBTD1RuOuvOyq8vwxMOdC8AUpVFAHfXEUBeKqZoC36hJ2J8cxFO7kPa02kXgHlqyDKyAN2
+        QZLcd2CGHwOmfWD5Mw0oLmwIzIRv3JX/VqgIPQDyPcGqSQRhPuLct167K/0FGf7MVembAic4vXNDpBlc
+        61SFnr31UP5nK8R5CchXhQgTB6zMBdgfwlwOwiGSPLeA4loQaQhgZ2ZcACzsvoIsB+aPk0AhfogMcSAr
+        SY4fHDyrjCVBhVkRRBgFaGYp8D8DqTEVYD8F5LNAhIkHwSXKgveBQbMbyGaGCKECFkbGWZN0REG+y4OI
+        kA5AxXAqhIkVgML+HBCzgnk0Alh9NxwAAwMAsY7cy34rgdMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="signup_validate_8_chars.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAmVJREFUSEtjGAqAEUqTBUyAurcAaSkIFwOYA3EThEkaYAIa3JSvKPD4tI3sMyC7
+        HyqOApgZGWa5inDdBzKVICLEg+g+LZFH7z2U/4NwkiwfyBBNiBQcSEVJ8T6976zwiZeFcQWQT1JQsQqx
+        Mm297CD3EWTBQ2fFL1zMjEugcjDQcMJG9g1IfqmhxEsgvwAiTDwQNeBjP/fSTekXyJAmNaGnQDEniBQD
+        v70w51WYD0HYX5znIVBcASJNPND1E+e+DTLgjbvSb2kOlp1AMSYgbjlsDXE9CF+0l3/Hycy4CChOVoqK
+        aNYQegoyCBgUz4H82hApnvsww5+6Kn5T4WY9BBTnBasmBzAyMvTss5R+DzLQUpDj3hV7uQ8wC7zFuK4C
+        laAnAJIBuxQHy657Tgpf3kENBuE6VWFQ6vKDKKEcGMTI8L6CGb7HQuYNMMDboXKUAzZGxjmnbGXhQRMk
+        AU41YhBZykHBTD1RuOuvOyq8vwxMOdC8AUpVFAHfXEUBeKqZoC36hJ2J8cxFO7kPa02kXgHlqyDKyAN2
+        QZLcd2CGHwOmfWD5Mw0oLmwIzIRv3JX/VqgIPQDyPcGqSQRhPuLct167K/0FGf7MVembAic4vXNDpBlc
+        61SFnr31UP5nK8R5CchXhQgTB6zMBdgfwlwOwiGSPLeA4loQaQhgZ2ZcACzsvoIsB+aPk0AhfogMcSAr
+        SY4fHDyrjCVBhVkRRBgFaGYp8D8DqTEVYD8F5LNAhIkHwSXKgveBQbMbyGaGCKECFkbGWZN0REG+y4OI
+        kA5AxXAqhIkVgML+HBCzgnk0Alh9NxwAAwMAsY7cy34rgdMAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

@@ -42,10 +42,9 @@ Partial Class GMS_Main
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1350, 719)
         Me.Controls.Add(Me.GMS_Main_panel)
-        Me.MaximizeBox = False
         Me.Name = "GMS_Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "GMS"
+        Me.Text = "Codebot Garage Management System"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 

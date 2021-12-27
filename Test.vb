@@ -3,84 +3,52 @@
 Imports MySql.Data.MySqlClient
 Imports System.Security.Cryptography
 Imports System.Text
-
+Imports System.Net.Mail
 Public Class Test
-    Public Function Encoding(ByRef password As String)
-        Dim wrapper As New Simple3Des()
-
-        'Return Encrypted password
-        Return wrapper.EncryptData(password)
-    End Function
-    Public Function Decoding(ByRef password As String)
-        Dim wrapper As New Simple3Des()
-
-        ' Decrypt the Password
-        Return wrapper.DecryptData(password)
-    End Function
-    Public NotInheritable Class Simple3Des
-        Private TripleDes As New TripleDESCryptoServiceProvider
-        Private Function TruncateHash(ByVal key As String, ByVal length As Integer) As Byte()
-            Dim sha1 As New SHA1CryptoServiceProvider
-
-            ' Hash the key.
-            Dim keyBytes() As Byte = System.Text.Encoding.Unicode.GetBytes(key)
-            Dim hash() As Byte = sha1.ComputeHash(keyBytes)
-
-            ' Truncate or pad the hash.
-            ReDim Preserve hash(length - 1)
-            Return hash
-        End Function
-
-        'constructor to initialize the 3DES cryptographic service provider.
-        Sub New()
-            ' Initialize the crypto provider.
-            TripleDes.Key = TruncateHash("Codebot_GMS", TripleDes.KeySize \ 8)
-            TripleDes.IV = TruncateHash("", TripleDes.BlockSize \ 8)
-        End Sub
-
-        Public Function EncryptData(ByVal plaintext As String) As String
-
-            ' Convert the plaintext string to a byte array.
-            Dim plaintextBytes() As Byte = System.Text.Encoding.Unicode.GetBytes(plaintext)
-
-            ' Create the stream.
-            Dim ms As New System.IO.MemoryStream
-            ' Create the encoder to write to the stream.
-            Dim encStream As New CryptoStream(ms,
-                TripleDes.CreateEncryptor(), System.Security.Cryptography.CryptoStreamMode.Write)
-
-            ' Use the crypto stream to write the byte array to the stream.
-            encStream.Write(plaintextBytes, 0, plaintextBytes.Length)
-            encStream.FlushFinalBlock()
-
-            ' Convert the encrypted stream to a printable string.
-            Return Convert.ToBase64String(ms.ToArray)
-        End Function
-
-        Public Function DecryptData(ByVal encryptedtext As String) As String
-
-            ' Convert the encrypted text string to a byte array.
-            Dim encryptedBytes() As Byte = Convert.FromBase64String(encryptedtext)
-
-            ' Create the stream.
-            Dim ms As New System.IO.MemoryStream
-            ' Create the decoder to write to the stream.
-            Dim decStream As New CryptoStream(ms, TripleDes.CreateDecryptor(), System.Security.Cryptography.CryptoStreamMode.Write)
-
-            ' Use the crypto stream to write the byte array to the stream.
-            decStream.Write(encryptedBytes, 0, encryptedBytes.Length)
-            decStream.FlushFinalBlock()
-
-            ' Convert the plaintext stream to a string.
-            Return System.Text.Encoding.Unicode.GetString(ms.ToArray)
-        End Function
-    End Class
 
     Private Sub btn_browse_img_Click(sender As Object, e As EventArgs) Handles btn_browse_img.Click
-        TextBox2.Text = Encoding(TextBox1.Text)
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        TextBox3.Text = Decoding(TextBox2.Text)
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim web As New WebBrowser
+        web.Navigate("whatsapp://send?phone=+233" & TextBox1.Text & "&text=" & TextBox2.Text & "")
+        SendKeys.Send("{ENTER}")
+            'Timer1.Start()
+
+        'Timer1.Stop()
+    End Sub
+    Dim sec As Integer = 0
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        sec += 1
+        If sec = 5 Then
+            SendKeys.Send("{ENTER}")
+            Timer1.Stop()
+            sec = 0
+        End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Beep)
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Exclamation)
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Hand)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Asterisk)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Question)
     End Sub
 End Class

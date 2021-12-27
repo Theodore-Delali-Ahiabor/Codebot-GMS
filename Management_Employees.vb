@@ -85,14 +85,10 @@ Public Class Management_Employees
                         Management_Employees_Add_New.txt_new_active.SelectedIndex = 1
                     End If
                 Else
-                    Management.btn_management_message.Text = "No Data Found"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "information")
+                    message("information", "No Data Found")
                 End If
             Else
-                Management.btn_management_message.Text = "No Row was selected"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "warning")
+                message("warning", "No Row was selected")
 
             End If
 
@@ -143,9 +139,7 @@ Public Class Management_Employees
         Try
             If Me.EmployeesDataGridView.SelectedRows.Count > 0 Then
                 If Me.EmployeesDataGridView.CurrentRow.Cells(7).Value.ToString = True Then
-                    Management.btn_management_message.Text = "Employee already active"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "information")
+                    message("information", "Employee already active")
                 Else
                     Dim repos As DialogResult = MessageBox.Show("You are about to Activate Employee '" & Me.EmployeesDataGridView.CurrentRow.Cells(1).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then
@@ -154,15 +148,11 @@ Public Class Management_Employees
                             Where ID = '" & Me.EmployeesDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                         sql_da.Fill(sql_ds, "employee")
                         datagrid_fill_default("employee_view", Me.EmployeesDataGridView)
-                        Management.btn_management_message.Text = "Employee activated successfully"
-                        Management.btn_management_message.Show()
-                        message(Management.btn_management_message, "success")
+                        message("success", "Employee activated successfully")
                     End If
                 End If
             Else
-                Management.btn_management_message.Text = "No Employee selected"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "warning")
+                message("warning", "No Employee selected")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Activate Employee Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
@@ -173,9 +163,7 @@ Public Class Management_Employees
         Try
             If Me.EmployeesDataGridView.SelectedRows.Count > 0 Then
                 If Me.EmployeesDataGridView.CurrentRow.Cells(7).Value.ToString = False Then
-                    Management.btn_management_message.Text = "Employee already Inactive"
-                    Management.btn_management_message.Show()
-                    message(Management.btn_management_message, "information")
+                    message("information", "Employee already Inactive")
                 Else
                     Dim repos As DialogResult = MessageBox.Show("You are about to Deactivate Employee '" & Me.EmployeesDataGridView.CurrentRow.Cells(1).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then
@@ -184,15 +172,11 @@ Public Class Management_Employees
                             Where ID = '" & Me.EmployeesDataGridView.CurrentRow.Cells(0).Value & "'", sql_con)
                         sql_da.Fill(sql_ds, "employee")
                         datagrid_fill_default("employee_view", Me.EmployeesDataGridView)
-                        Management.btn_management_message.Text = "Employee Deactivated successfully"
-                        Management.btn_management_message.Show()
-                        message(Management.btn_management_message, "success")
+                        message("success", "Employee Deactivated successfully")
                     End If
                 End If
             Else
-                Management.btn_management_message.Text = "No Employee selected"
-                Management.btn_management_message.Show()
-                message(Management.btn_management_message, "warning")
+                message("warning", "No Employee selected")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Deactivate Employee Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)

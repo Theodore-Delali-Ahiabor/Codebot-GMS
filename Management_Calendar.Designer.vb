@@ -24,10 +24,9 @@ Partial Class Management_Calendar
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Calendar))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btn_calendar_current_month = New System.Windows.Forms.Button()
-        Me.btn_calender_previous_month = New System.Windows.Forms.Button()
-        Me.lbl_month_year = New System.Windows.Forms.Label()
-        Me.btn_calendar_next_month = New System.Windows.Forms.Button()
+        Me.pb_calendar_next = New System.Windows.Forms.PictureBox()
+        Me.pb_calendar_previous = New System.Windows.Forms.PictureBox()
+        Me.pb_calendar_current = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -36,80 +35,70 @@ Partial Class Management_Calendar
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.lbl_month_year = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.fl_days = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1.SuspendLayout()
+        CType(Me.pb_calendar_next, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_calendar_previous, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_calendar_current, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.pb_calendar_next)
+        Me.Panel1.Controls.Add(Me.pb_calendar_previous)
+        Me.Panel1.Controls.Add(Me.pb_calendar_current)
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.btn_calendar_current_month)
-        Me.Panel1.Controls.Add(Me.btn_calender_previous_month)
         Me.Panel1.Controls.Add(Me.lbl_month_year)
-        Me.Panel1.Controls.Add(Me.btn_calendar_next_month)
         Me.Panel1.Location = New System.Drawing.Point(45, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1043, 92)
         Me.Panel1.TabIndex = 35
         '
-        'btn_calendar_current_month
+        'pb_calendar_next
         '
-        Me.btn_calendar_current_month.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_calendar_current_month.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_calendar_current_month.FlatAppearance.BorderSize = 0
-        Me.btn_calendar_current_month.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_calendar_current_month.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_calendar_current_month.ForeColor = System.Drawing.Color.White
-        Me.btn_calendar_current_month.Image = CType(resources.GetObject("btn_calendar_current_month.Image"), System.Drawing.Image)
-        Me.btn_calendar_current_month.Location = New System.Drawing.Point(471, 7)
-        Me.btn_calendar_current_month.Name = "btn_calendar_current_month"
-        Me.btn_calendar_current_month.Size = New System.Drawing.Size(93, 37)
-        Me.btn_calendar_current_month.TabIndex = 34
-        Me.btn_calendar_current_month.UseVisualStyleBackColor = False
+        Me.pb_calendar_next.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pb_calendar_next.BackColor = System.Drawing.Color.Transparent
+        Me.pb_calendar_next.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pb_calendar_next.Image = CType(resources.GetObject("pb_calendar_next.Image"), System.Drawing.Image)
+        Me.pb_calendar_next.ImageLocation = ""
+        Me.pb_calendar_next.Location = New System.Drawing.Point(574, 3)
+        Me.pb_calendar_next.Name = "pb_calendar_next"
+        Me.pb_calendar_next.Padding = New System.Windows.Forms.Padding(5)
+        Me.pb_calendar_next.Size = New System.Drawing.Size(42, 42)
+        Me.pb_calendar_next.TabIndex = 37
+        Me.pb_calendar_next.TabStop = False
         '
-        'btn_calender_previous_month
+        'pb_calendar_previous
         '
-        Me.btn_calender_previous_month.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_calender_previous_month.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_calender_previous_month.FlatAppearance.BorderSize = 0
-        Me.btn_calender_previous_month.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_calender_previous_month.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_calender_previous_month.ForeColor = System.Drawing.Color.White
-        Me.btn_calender_previous_month.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_back_24
-        Me.btn_calender_previous_month.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_calender_previous_month.Location = New System.Drawing.Point(413, 7)
-        Me.btn_calender_previous_month.Name = "btn_calender_previous_month"
-        Me.btn_calender_previous_month.Size = New System.Drawing.Size(39, 37)
-        Me.btn_calender_previous_month.TabIndex = 33
-        Me.btn_calender_previous_month.UseVisualStyleBackColor = False
+        Me.pb_calendar_previous.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pb_calendar_previous.BackColor = System.Drawing.Color.Transparent
+        Me.pb_calendar_previous.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pb_calendar_previous.Image = CType(resources.GetObject("pb_calendar_previous.Image"), System.Drawing.Image)
+        Me.pb_calendar_previous.ImageLocation = ""
+        Me.pb_calendar_previous.Location = New System.Drawing.Point(428, 3)
+        Me.pb_calendar_previous.Name = "pb_calendar_previous"
+        Me.pb_calendar_previous.Padding = New System.Windows.Forms.Padding(5)
+        Me.pb_calendar_previous.Size = New System.Drawing.Size(42, 42)
+        Me.pb_calendar_previous.TabIndex = 37
+        Me.pb_calendar_previous.TabStop = False
         '
-        'lbl_month_year
+        'pb_calendar_current
         '
-        Me.lbl_month_year.AutoSize = True
-        Me.lbl_month_year.Font = New System.Drawing.Font("Ebrima", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_month_year.Location = New System.Drawing.Point(6, 9)
-        Me.lbl_month_year.Name = "lbl_month_year"
-        Me.lbl_month_year.Size = New System.Drawing.Size(195, 37)
-        Me.lbl_month_year.TabIndex = 1
-        Me.lbl_month_year.Text = "January, 2000"
-        '
-        'btn_calendar_next_month
-        '
-        Me.btn_calendar_next_month.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_calendar_next_month.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_calendar_next_month.FlatAppearance.BorderSize = 0
-        Me.btn_calendar_next_month.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_calendar_next_month.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_calendar_next_month.ForeColor = System.Drawing.Color.White
-        Me.btn_calendar_next_month.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_forward_24
-        Me.btn_calendar_next_month.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_calendar_next_month.Location = New System.Drawing.Point(586, 7)
-        Me.btn_calendar_next_month.Name = "btn_calendar_next_month"
-        Me.btn_calendar_next_month.Size = New System.Drawing.Size(39, 37)
-        Me.btn_calendar_next_month.TabIndex = 34
-        Me.btn_calendar_next_month.UseVisualStyleBackColor = False
+        Me.pb_calendar_current.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pb_calendar_current.BackColor = System.Drawing.Color.Transparent
+        Me.pb_calendar_current.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pb_calendar_current.Image = CType(resources.GetObject("pb_calendar_current.Image"), System.Drawing.Image)
+        Me.pb_calendar_current.ImageLocation = ""
+        Me.pb_calendar_current.Location = New System.Drawing.Point(502, 3)
+        Me.pb_calendar_current.Name = "pb_calendar_current"
+        Me.pb_calendar_current.Padding = New System.Windows.Forms.Padding(5)
+        Me.pb_calendar_current.Size = New System.Drawing.Size(42, 42)
+        Me.pb_calendar_current.TabIndex = 37
+        Me.pb_calendar_current.TabStop = False
         '
         'Panel3
         '
@@ -217,9 +206,19 @@ Partial Class Management_Calendar
         Me.Button3.Text = "Sunday"
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'lbl_month_year
+        '
+        Me.lbl_month_year.AutoSize = True
+        Me.lbl_month_year.Font = New System.Drawing.Font("Ebrima", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_month_year.Location = New System.Drawing.Point(6, 9)
+        Me.lbl_month_year.Name = "lbl_month_year"
+        Me.lbl_month_year.Size = New System.Drawing.Size(195, 37)
+        Me.lbl_month_year.TabIndex = 1
+        Me.lbl_month_year.Text = "January, 2000"
+        '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel4.BackColor = System.Drawing.Color.Transparent
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
@@ -230,7 +229,7 @@ Partial Class Management_Calendar
         '
         Me.fl_days.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.fl_days.BackColor = System.Drawing.SystemColors.Control
+        Me.fl_days.BackColor = System.Drawing.Color.Transparent
         Me.fl_days.Location = New System.Drawing.Point(45, 94)
         Me.fl_days.Name = "fl_days"
         Me.fl_days.Size = New System.Drawing.Size(1043, 429)
@@ -241,7 +240,9 @@ Partial Class Management_Calendar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1102, 523)
+        Me.ControlBox = False
         Me.Controls.Add(Me.fl_days)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)
@@ -253,14 +254,14 @@ Partial Class Management_Calendar
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.pb_calendar_next, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_calendar_previous, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_calendar_current, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents btn_calender_previous_month As Button
-    Friend WithEvents btn_calendar_next_month As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents btn_calendar_current_month As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents Button9 As Button
@@ -272,4 +273,7 @@ Partial Class Management_Calendar
     Friend WithEvents Panel4 As Panel
     Friend WithEvents fl_days As FlowLayoutPanel
     Friend WithEvents lbl_month_year As Label
+    Friend WithEvents pb_calendar_next As PictureBox
+    Friend WithEvents pb_calendar_previous As PictureBox
+    Friend WithEvents pb_calendar_current As PictureBox
 End Class

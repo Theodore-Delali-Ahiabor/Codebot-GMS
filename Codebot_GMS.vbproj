@@ -122,6 +122,12 @@
     <Compile Include="Auth_Password_Reset.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Auth_Password_Reset_Code_Validation.Designer.vb">
+      <DependentUpon>Auth_Password_Reset_Code_Validation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Auth_Password_Reset_Code_Validation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Auth_Signup.Designer.vb">
       <DependentUpon>Auth_Signup.vb</DependentUpon>
     </Compile>
@@ -176,10 +182,10 @@
     <Compile Include="Management_Employees_Add_New.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Management_Home.Designer.vb">
-      <DependentUpon>Management_Home.vb</DependentUpon>
+    <Compile Include="Management_Dashboard.Designer.vb">
+      <DependentUpon>Management_Dashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="Management_Home.vb">
+    <Compile Include="Management_Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Management.Designer.vb">
@@ -231,6 +237,12 @@
     <Compile Include="Management_Work_Order_Done_Work_Order.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GMS_Message.Designer.vb">
+      <DependentUpon>GMS_Message.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GMS_Message.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -247,7 +259,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Codebot_GMS_Module.vb" />
+    <Compile Include="GMS_Module.vb" />
     <Compile Include="Test.Designer.vb">
       <DependentUpon>Test.vb</DependentUpon>
     </Compile>
@@ -265,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Auth_Password_Reset.resx">
       <DependentUpon>Auth_Password_Reset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auth_Password_Reset_Code_Validation.resx">
+      <DependentUpon>Auth_Password_Reset_Code_Validation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Auth_Signup.resx">
       <DependentUpon>Auth_Signup.vb</DependentUpon>
@@ -285,8 +300,8 @@
     <EmbeddedResource Include="Management_Employees_Add_New.resx">
       <DependentUpon>Management_Employees_Add_New.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Management_Home.resx">
-      <DependentUpon>Management_Home.vb</DependentUpon>
+    <EmbeddedResource Include="Management_Dashboard.resx">
+      <DependentUpon>Management_Dashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Employees.resx">
       <DependentUpon>Management_Employees.vb</DependentUpon>
@@ -321,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Work_Order_Done_Work_Order.resx">
       <DependentUpon>Management_Work_Order_Done_Work_Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GMS_Message.resx">
+      <DependentUpon>GMS_Message.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -432,6 +450,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Employee-Blue_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whatsapp_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approval_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_shield_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_32_px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32_px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -28,6 +28,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.automobile_new_datails_panel = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.txt_new_fuel = New System.Windows.Forms.ComboBox()
         Me.txt_new_make = New System.Windows.Forms.ComboBox()
         Me.txt_new_category = New System.Windows.Forms.ComboBox()
@@ -50,6 +51,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.txt_new_model = New System.Windows.Forms.TextBox()
         Me.txt_new_year = New System.Windows.Forms.TextBox()
         Me.automobile_select_edit_panel = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.btn_automobile_select_select = New System.Windows.Forms.Button()
         Me.btn_automobile_select_cancel = New System.Windows.Forms.Button()
         Me.btn_automobile_select_edit = New System.Windows.Forms.Button()
@@ -63,6 +65,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         'automobile_new_datails_panel
         '
         Me.automobile_new_datails_panel.BackColor = System.Drawing.Color.Transparent
+        Me.automobile_new_datails_panel.Controls.Add(Me.Label8)
         Me.automobile_new_datails_panel.Controls.Add(Me.txt_new_fuel)
         Me.automobile_new_datails_panel.Controls.Add(Me.txt_new_make)
         Me.automobile_new_datails_panel.Controls.Add(Me.txt_new_category)
@@ -84,18 +87,33 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.automobile_new_datails_panel.Controls.Add(Me.txt_new_color)
         Me.automobile_new_datails_panel.Controls.Add(Me.txt_new_model)
         Me.automobile_new_datails_panel.Controls.Add(Me.txt_new_year)
-        Me.automobile_new_datails_panel.Location = New System.Drawing.Point(540, 12)
+        Me.automobile_new_datails_panel.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.automobile_new_datails_panel.Location = New System.Drawing.Point(548, 12)
         Me.automobile_new_datails_panel.Name = "automobile_new_datails_panel"
-        Me.automobile_new_datails_panel.Size = New System.Drawing.Size(477, 497)
+        Me.automobile_new_datails_panel.Size = New System.Drawing.Size(469, 497)
         Me.automobile_new_datails_panel.TabIndex = 0
         Me.automobile_new_datails_panel.Visible = False
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label8.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label8.Location = New System.Drawing.Point(0, -3)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(386, 49)
+        Me.Label8.TabIndex = 128
+        Me.Label8.Text = "Add New Automobile"
         '
         'txt_new_fuel
         '
         Me.txt_new_fuel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_fuel.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_fuel.FormattingEnabled = True
-        Me.txt_new_fuel.Location = New System.Drawing.Point(271, 147)
+        Me.txt_new_fuel.Location = New System.Drawing.Point(267, 182)
         Me.txt_new_fuel.MaxLength = 25
         Me.txt_new_fuel.Name = "txt_new_fuel"
         Me.txt_new_fuel.Size = New System.Drawing.Size(308, 33)
@@ -106,7 +124,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.txt_new_make.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_make.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_make.FormattingEnabled = True
-        Me.txt_new_make.Location = New System.Drawing.Point(-101, 234)
+        Me.txt_new_make.Location = New System.Drawing.Point(-105, 269)
         Me.txt_new_make.MaxLength = 25
         Me.txt_new_make.Name = "txt_new_make"
         Me.txt_new_make.Size = New System.Drawing.Size(308, 33)
@@ -117,7 +135,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.txt_new_category.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_category.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_new_category.FormattingEnabled = True
-        Me.txt_new_category.Location = New System.Drawing.Point(-100, 63)
+        Me.txt_new_category.Location = New System.Drawing.Point(-104, 98)
         Me.txt_new_category.MaxLength = 25
         Me.txt_new_category.Name = "txt_new_category"
         Me.txt_new_category.Size = New System.Drawing.Size(308, 33)
@@ -128,7 +146,8 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(268, 288)
+        Me.Label10.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label10.Location = New System.Drawing.Point(264, 323)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(136, 18)
         Me.Label10.TabIndex = 114
@@ -139,7 +158,8 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(268, 213)
+        Me.Label15.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label15.Location = New System.Drawing.Point(264, 248)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(31, 18)
         Me.Label15.TabIndex = 115
@@ -152,7 +172,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label6.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(-49, 201)
+        Me.Label6.Location = New System.Drawing.Point(-53, 236)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(20, 28)
         Me.Label6.TabIndex = 113
@@ -165,7 +185,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(311, 114)
+        Me.Label2.Location = New System.Drawing.Point(307, 149)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(20, 28)
         Me.Label2.TabIndex = 113
@@ -178,7 +198,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(-36, 32)
+        Me.Label1.Location = New System.Drawing.Point(-40, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(20, 28)
         Me.Label1.TabIndex = 112
@@ -195,7 +215,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.btn_new_automobile_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_new_automobile_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_new_automobile_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_automobile_cancel.Location = New System.Drawing.Point(263, 411)
+        Me.btn_new_automobile_cancel.Location = New System.Drawing.Point(259, 426)
         Me.btn_new_automobile_cancel.Name = "btn_new_automobile_cancel"
         Me.btn_new_automobile_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_new_automobile_cancel.Size = New System.Drawing.Size(141, 38)
@@ -208,7 +228,8 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label35.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(-103, 42)
+        Me.Label35.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label35.Location = New System.Drawing.Point(-107, 77)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(68, 18)
         Me.Label35.TabIndex = 111
@@ -225,7 +246,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.btn_new_automobile_save.ForeColor = System.Drawing.Color.White
         Me.btn_new_automobile_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
         Me.btn_new_automobile_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_automobile_save.Location = New System.Drawing.Point(86, 411)
+        Me.btn_new_automobile_save.Location = New System.Drawing.Point(82, 426)
         Me.btn_new_automobile_save.Name = "btn_new_automobile_save"
         Me.btn_new_automobile_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_new_automobile_save.Size = New System.Drawing.Size(141, 38)
@@ -238,7 +259,8 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(271, 42)
+        Me.Label9.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label9.Location = New System.Drawing.Point(267, 77)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(45, 18)
         Me.Label9.TabIndex = 110
@@ -249,7 +271,8 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(269, 124)
+        Me.Label7.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label7.Location = New System.Drawing.Point(265, 159)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(36, 18)
         Me.Label7.TabIndex = 109
@@ -260,7 +283,8 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(-101, 288)
+        Me.Label5.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label5.Location = New System.Drawing.Point(-105, 323)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 18)
         Me.Label5.TabIndex = 108
@@ -271,7 +295,8 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(-100, 209)
+        Me.Label4.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label4.Location = New System.Drawing.Point(-104, 244)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 18)
         Me.Label4.TabIndex = 107
@@ -282,7 +307,8 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(-103, 126)
+        Me.Label3.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label3.Location = New System.Drawing.Point(-107, 161)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(42, 18)
         Me.Label3.TabIndex = 106
@@ -292,7 +318,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         '
         Me.txt_new_reg_number.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_reg_number.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_reg_number.Location = New System.Drawing.Point(271, 309)
+        Me.txt_new_reg_number.Location = New System.Drawing.Point(267, 345)
         Me.txt_new_reg_number.MaxLength = 25
         Me.txt_new_reg_number.Name = "txt_new_reg_number"
         Me.txt_new_reg_number.Size = New System.Drawing.Size(308, 33)
@@ -302,7 +328,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         '
         Me.txt_new_vin.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_vin.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_vin.Location = New System.Drawing.Point(271, 234)
+        Me.txt_new_vin.Location = New System.Drawing.Point(267, 269)
         Me.txt_new_vin.MaxLength = 25
         Me.txt_new_vin.Name = "txt_new_vin"
         Me.txt_new_vin.Size = New System.Drawing.Size(308, 33)
@@ -312,7 +338,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         '
         Me.txt_new_color.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_color.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_color.Location = New System.Drawing.Point(271, 63)
+        Me.txt_new_color.Location = New System.Drawing.Point(267, 98)
         Me.txt_new_color.MaxLength = 25
         Me.txt_new_color.Name = "txt_new_color"
         Me.txt_new_color.Size = New System.Drawing.Size(308, 33)
@@ -322,7 +348,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         '
         Me.txt_new_model.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_model.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_model.Location = New System.Drawing.Point(-100, 309)
+        Me.txt_new_model.Location = New System.Drawing.Point(-104, 345)
         Me.txt_new_model.MaxLength = 25
         Me.txt_new_model.Name = "txt_new_model"
         Me.txt_new_model.Size = New System.Drawing.Size(308, 33)
@@ -332,7 +358,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         '
         Me.txt_new_year.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_new_year.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_new_year.Location = New System.Drawing.Point(-100, 147)
+        Me.txt_new_year.Location = New System.Drawing.Point(-104, 182)
         Me.txt_new_year.MaxLength = 4
         Me.txt_new_year.Name = "txt_new_year"
         Me.txt_new_year.Size = New System.Drawing.Size(308, 33)
@@ -340,10 +366,8 @@ Partial Class Management_Work_Order_Add_New_Automobile
         '
         'automobile_select_edit_panel
         '
-        Me.automobile_select_edit_panel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.automobile_select_edit_panel.BackColor = System.Drawing.Color.Transparent
+        Me.automobile_select_edit_panel.Controls.Add(Me.Label11)
         Me.automobile_select_edit_panel.Controls.Add(Me.btn_automobile_select_select)
         Me.automobile_select_edit_panel.Controls.Add(Me.btn_automobile_select_cancel)
         Me.automobile_select_edit_panel.Controls.Add(Me.btn_automobile_select_edit)
@@ -354,6 +378,20 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.automobile_select_edit_panel.Size = New System.Drawing.Size(524, 497)
         Me.automobile_select_edit_panel.TabIndex = 1
         Me.automobile_select_edit_panel.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label11.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label11.Location = New System.Drawing.Point(97, -7)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(391, 49)
+        Me.Label11.TabIndex = 128
+        Me.Label11.Text = "Select an Automobile"
         '
         'btn_automobile_select_select
         '
@@ -381,6 +419,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.btn_automobile_select_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btn_automobile_select_cancel.BackColor = System.Drawing.Color.LightCoral
         Me.btn_automobile_select_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_automobile_select_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btn_automobile_select_cancel.FlatAppearance.BorderSize = 0
         Me.btn_automobile_select_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_automobile_select_cancel.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -473,7 +512,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.AutomobileDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.AutomobileDataGridView.EnableHeadersVisualStyles = False
         Me.AutomobileDataGridView.GridColor = System.Drawing.Color.Silver
-        Me.AutomobileDataGridView.Location = New System.Drawing.Point(34, 50)
+        Me.AutomobileDataGridView.Location = New System.Drawing.Point(34, 58)
         Me.AutomobileDataGridView.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.AutomobileDataGridView.MultiSelect = False
         Me.AutomobileDataGridView.Name = "AutomobileDataGridView"
@@ -507,11 +546,13 @@ Partial Class Management_Work_Order_Add_New_Automobile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
-        Me.BackgroundImage = Global.Codebot_GMS.My.Resources.Resources.icons8_car_24
+        Me.BackColor = System.Drawing.Color.Teal
+        Me.CancelButton = Me.btn_automobile_select_cancel
         Me.ClientSize = New System.Drawing.Size(1029, 521)
-        Me.Controls.Add(Me.automobile_new_datails_panel)
+        Me.ControlBox = False
         Me.Controls.Add(Me.automobile_select_edit_panel)
+        Me.Controls.Add(Me.automobile_new_datails_panel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Location = New System.Drawing.Point(280, 150)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -522,6 +563,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.automobile_new_datails_panel.ResumeLayout(False)
         Me.automobile_new_datails_panel.PerformLayout()
         Me.automobile_select_edit_panel.ResumeLayout(False)
+        Me.automobile_select_edit_panel.PerformLayout()
         CType(Me.AutomobileDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -555,4 +597,6 @@ Partial Class Management_Work_Order_Add_New_Automobile
     Friend WithEvents txt_new_make As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label11 As Label
 End Class
