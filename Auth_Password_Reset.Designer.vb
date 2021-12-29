@@ -35,18 +35,18 @@ Partial Class Auth_Password_Reset
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.btn_password_reset_send_code = New System.Windows.Forms.Button()
+        Me.btn_password_reset_cancel = New System.Windows.Forms.Button()
         Me.chkb_login_reset_send_sms = New System.Windows.Forms.CheckBox()
         Me.chkb_login_reset_send_whatsapp = New System.Windows.Forms.CheckBox()
         Me.chkb_login_reset_send_email = New System.Windows.Forms.CheckBox()
-        Me.btn_password_reset_send_code = New System.Windows.Forms.Button()
-        Me.btn_password_reset_cancel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label8
         '
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Teal
         Me.Label8.Location = New System.Drawing.Point(69, 206)
@@ -59,6 +59,7 @@ Partial Class Auth_Password_Reset
         '
         Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label13.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.LightCoral
@@ -86,20 +87,21 @@ Partial Class Auth_Password_Reset
         '
         Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label15.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Teal
         Me.Label15.Location = New System.Drawing.Point(105, 21)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(303, 49)
+        Me.Label15.Size = New System.Drawing.Size(234, 49)
         Me.Label15.TabIndex = 29
-        Me.Label15.Text = "LOGIN RESET"
+        Me.Label15.Text = "Login Reset"
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.IndianRed
         Me.Label2.Location = New System.Drawing.Point(71, 90)
         Me.Label2.Name = "Label2"
@@ -111,6 +113,7 @@ Partial Class Auth_Password_Reset
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DimGray
         Me.Label3.Location = New System.Drawing.Point(70, 147)
@@ -123,6 +126,7 @@ Partial Class Auth_Password_Reset
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DimGray
         Me.Label4.Location = New System.Drawing.Point(70, 172)
@@ -135,6 +139,7 @@ Partial Class Auth_Password_Reset
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DimGray
         Me.Label5.Location = New System.Drawing.Point(70, 113)
@@ -147,7 +152,7 @@ Partial Class Auth_Password_Reset
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Teal
         Me.Label6.Location = New System.Drawing.Point(73, 301)
@@ -160,6 +165,7 @@ Partial Class Auth_Password_Reset
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.DimGray
         Me.Label7.Location = New System.Drawing.Point(74, 359)
@@ -172,6 +178,7 @@ Partial Class Auth_Password_Reset
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.IndianRed
         Me.Label1.Location = New System.Drawing.Point(217, 478)
@@ -184,61 +191,13 @@ Partial Class Auth_Password_Reset
         '
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.ForeColor = System.Drawing.Color.IndianRed
         Me.Label9.Location = New System.Drawing.Point(75, 337)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(33, 13)
         Me.Label9.TabIndex = 37
         Me.Label9.Text = "HINT"
-        '
-        'chkb_login_reset_send_sms
-        '
-        Me.chkb_login_reset_send_sms.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.chkb_login_reset_send_sms.AutoSize = True
-        Me.chkb_login_reset_send_sms.Enabled = False
-        Me.chkb_login_reset_send_sms.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkb_login_reset_send_sms.Image = Global.Codebot_GMS.My.Resources.Resources.sms_24px
-        Me.chkb_login_reset_send_sms.Location = New System.Drawing.Point(95, 472)
-        Me.chkb_login_reset_send_sms.Name = "chkb_login_reset_send_sms"
-        Me.chkb_login_reset_send_sms.Padding = New System.Windows.Forms.Padding(5)
-        Me.chkb_login_reset_send_sms.Size = New System.Drawing.Size(95, 35)
-        Me.chkb_login_reset_send_sms.TabIndex = 40
-        Me.chkb_login_reset_send_sms.Text = "SMS"
-        Me.chkb_login_reset_send_sms.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.chkb_login_reset_send_sms.UseVisualStyleBackColor = True
-        '
-        'chkb_login_reset_send_whatsapp
-        '
-        Me.chkb_login_reset_send_whatsapp.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.chkb_login_reset_send_whatsapp.AutoSize = True
-        Me.chkb_login_reset_send_whatsapp.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkb_login_reset_send_whatsapp.Image = Global.Codebot_GMS.My.Resources.Resources.whatsapp_24px
-        Me.chkb_login_reset_send_whatsapp.Location = New System.Drawing.Point(95, 432)
-        Me.chkb_login_reset_send_whatsapp.Name = "chkb_login_reset_send_whatsapp"
-        Me.chkb_login_reset_send_whatsapp.Padding = New System.Windows.Forms.Padding(5)
-        Me.chkb_login_reset_send_whatsapp.Size = New System.Drawing.Size(133, 35)
-        Me.chkb_login_reset_send_whatsapp.TabIndex = 40
-        Me.chkb_login_reset_send_whatsapp.Text = "Whatsapp"
-        Me.chkb_login_reset_send_whatsapp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.chkb_login_reset_send_whatsapp.UseVisualStyleBackColor = True
-        '
-        'chkb_login_reset_send_email
-        '
-        Me.chkb_login_reset_send_email.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.chkb_login_reset_send_email.AutoSize = True
-        Me.chkb_login_reset_send_email.Checked = True
-        Me.chkb_login_reset_send_email.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkb_login_reset_send_email.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkb_login_reset_send_email.Image = Global.Codebot_GMS.My.Resources.Resources.email_24px
-        Me.chkb_login_reset_send_email.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkb_login_reset_send_email.Location = New System.Drawing.Point(95, 393)
-        Me.chkb_login_reset_send_email.Name = "chkb_login_reset_send_email"
-        Me.chkb_login_reset_send_email.Padding = New System.Windows.Forms.Padding(5)
-        Me.chkb_login_reset_send_email.Size = New System.Drawing.Size(101, 35)
-        Me.chkb_login_reset_send_email.TabIndex = 40
-        Me.chkb_login_reset_send_email.Text = "Email"
-        Me.chkb_login_reset_send_email.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.chkb_login_reset_send_email.UseVisualStyleBackColor = True
         '
         'btn_password_reset_send_code
         '
@@ -280,6 +239,57 @@ Partial Class Auth_Password_Reset
         Me.btn_password_reset_cancel.Text = "CANCEL    "
         Me.btn_password_reset_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_password_reset_cancel.UseVisualStyleBackColor = False
+        '
+        'chkb_login_reset_send_sms
+        '
+        Me.chkb_login_reset_send_sms.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkb_login_reset_send_sms.AutoSize = True
+        Me.chkb_login_reset_send_sms.BackColor = System.Drawing.Color.Transparent
+        Me.chkb_login_reset_send_sms.Enabled = False
+        Me.chkb_login_reset_send_sms.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkb_login_reset_send_sms.Image = Global.Codebot_GMS.My.Resources.Resources.sms_24px
+        Me.chkb_login_reset_send_sms.Location = New System.Drawing.Point(95, 472)
+        Me.chkb_login_reset_send_sms.Name = "chkb_login_reset_send_sms"
+        Me.chkb_login_reset_send_sms.Padding = New System.Windows.Forms.Padding(5)
+        Me.chkb_login_reset_send_sms.Size = New System.Drawing.Size(95, 35)
+        Me.chkb_login_reset_send_sms.TabIndex = 40
+        Me.chkb_login_reset_send_sms.Text = "SMS"
+        Me.chkb_login_reset_send_sms.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.chkb_login_reset_send_sms.UseVisualStyleBackColor = False
+        '
+        'chkb_login_reset_send_whatsapp
+        '
+        Me.chkb_login_reset_send_whatsapp.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkb_login_reset_send_whatsapp.AutoSize = True
+        Me.chkb_login_reset_send_whatsapp.BackColor = System.Drawing.Color.Transparent
+        Me.chkb_login_reset_send_whatsapp.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkb_login_reset_send_whatsapp.Image = Global.Codebot_GMS.My.Resources.Resources.whatsapp_24px
+        Me.chkb_login_reset_send_whatsapp.Location = New System.Drawing.Point(95, 432)
+        Me.chkb_login_reset_send_whatsapp.Name = "chkb_login_reset_send_whatsapp"
+        Me.chkb_login_reset_send_whatsapp.Padding = New System.Windows.Forms.Padding(5)
+        Me.chkb_login_reset_send_whatsapp.Size = New System.Drawing.Size(133, 35)
+        Me.chkb_login_reset_send_whatsapp.TabIndex = 40
+        Me.chkb_login_reset_send_whatsapp.Text = "Whatsapp"
+        Me.chkb_login_reset_send_whatsapp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.chkb_login_reset_send_whatsapp.UseVisualStyleBackColor = False
+        '
+        'chkb_login_reset_send_email
+        '
+        Me.chkb_login_reset_send_email.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.chkb_login_reset_send_email.AutoSize = True
+        Me.chkb_login_reset_send_email.Checked = True
+        Me.chkb_login_reset_send_email.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkb_login_reset_send_email.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkb_login_reset_send_email.Image = Global.Codebot_GMS.My.Resources.Resources.email_24px
+        Me.chkb_login_reset_send_email.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chkb_login_reset_send_email.Location = New System.Drawing.Point(95, 393)
+        Me.chkb_login_reset_send_email.Name = "chkb_login_reset_send_email"
+        Me.chkb_login_reset_send_email.Padding = New System.Windows.Forms.Padding(5)
+        Me.chkb_login_reset_send_email.Size = New System.Drawing.Size(101, 35)
+        Me.chkb_login_reset_send_email.TabIndex = 40
+        Me.chkb_login_reset_send_email.Text = "Email"
+        Me.chkb_login_reset_send_email.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.chkb_login_reset_send_email.UseVisualStyleBackColor = True
         '
         'Auth_Password_Reset
         '

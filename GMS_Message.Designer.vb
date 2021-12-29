@@ -24,16 +24,18 @@ Partial Class GMS_Message
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.message_text = New System.Windows.Forms.RichTextBox()
+        Me.message_timer = New System.Windows.Forms.Timer(Me.components)
         Me.message_warning_icon = New System.Windows.Forms.PictureBox()
         Me.message_information_icon = New System.Windows.Forms.PictureBox()
         Me.message_error_icon = New System.Windows.Forms.PictureBox()
         Me.message_success_icon = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.message_icon = New System.Windows.Forms.PictureBox()
-        Me.message_timer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.message_warning_icon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.message_information_icon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.message_error_icon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.message_success_icon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.message_icon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,16 +47,20 @@ Partial Class GMS_Message
         Me.message_text.Cursor = System.Windows.Forms.Cursors.Hand
         Me.message_text.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.message_text.HideSelection = False
-        Me.message_text.Location = New System.Drawing.Point(82, 20)
+        Me.message_text.Location = New System.Drawing.Point(73, 20)
         Me.message_text.Margin = New System.Windows.Forms.Padding(7, 5, 7, 5)
         Me.message_text.Name = "message_text"
         Me.message_text.ReadOnly = True
         Me.message_text.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
         Me.message_text.ShortcutsEnabled = False
-        Me.message_text.Size = New System.Drawing.Size(342, 48)
+        Me.message_text.Size = New System.Drawing.Size(338, 48)
         Me.message_text.TabIndex = 2
         Me.message_text.TabStop = False
         Me.message_text.Text = ""
+        '
+        'message_timer
+        '
+        Me.message_timer.Interval = 1000
         '
         'message_warning_icon
         '
@@ -100,6 +106,16 @@ Partial Class GMS_Message
         Me.message_success_icon.TabStop = False
         Me.message_success_icon.Visible = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Codebot_GMS.My.Resources.Resources.delete_24px
+        Me.PictureBox1.Location = New System.Drawing.Point(414, 33)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(7, 5, 7, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'message_icon
         '
         Me.message_icon.Location = New System.Drawing.Point(20, 20)
@@ -108,10 +124,6 @@ Partial Class GMS_Message
         Me.message_icon.Size = New System.Drawing.Size(48, 48)
         Me.message_icon.TabIndex = 0
         Me.message_icon.TabStop = False
-        '
-        'message_timer
-        '
-        Me.message_timer.Interval = 1000
         '
         'GMS_Message
         '
@@ -124,6 +136,7 @@ Partial Class GMS_Message
         Me.Controls.Add(Me.message_information_icon)
         Me.Controls.Add(Me.message_error_icon)
         Me.Controls.Add(Me.message_success_icon)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.message_icon)
         Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Font = New System.Drawing.Font("Copperplate Gothic Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -140,6 +153,7 @@ Partial Class GMS_Message
         CType(Me.message_information_icon, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.message_error_icon, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.message_success_icon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.message_icon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -152,4 +166,5 @@ Partial Class GMS_Message
     Friend WithEvents message_information_icon As PictureBox
     Friend WithEvents message_warning_icon As PictureBox
     Friend WithEvents message_timer As Timer
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -22,11 +22,11 @@ Partial Class Management_Work_Order_Add_New_Automobile
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Work_Order_Add_New_Automobile))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Work_Order_Add_New_Automobile))
         Me.automobile_new_datails_panel = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txt_new_fuel = New System.Windows.Forms.ComboBox()
@@ -37,9 +37,7 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btn_new_automobile_cancel = New System.Windows.Forms.Button()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.btn_new_automobile_save = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -52,11 +50,13 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.txt_new_year = New System.Windows.Forms.TextBox()
         Me.automobile_select_edit_panel = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.btn_automobile_select_select = New System.Windows.Forms.Button()
+        Me.AutomobileDataGridView = New System.Windows.Forms.DataGridView()
         Me.btn_automobile_select_cancel = New System.Windows.Forms.Button()
+        Me.btn_automobile_select_select = New System.Windows.Forms.Button()
         Me.btn_automobile_select_edit = New System.Windows.Forms.Button()
         Me.btn_automobile_select_new = New System.Windows.Forms.Button()
-        Me.AutomobileDataGridView = New System.Windows.Forms.DataGridView()
+        Me.btn_new_automobile_cancel = New System.Windows.Forms.Button()
+        Me.btn_new_automobile_save = New System.Windows.Forms.Button()
         Me.automobile_new_datails_panel.SuspendLayout()
         Me.automobile_select_edit_panel.SuspendLayout()
         CType(Me.AutomobileDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -204,25 +204,6 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label1.TabIndex = 112
         Me.Label1.Text = "*"
         '
-        'btn_new_automobile_cancel
-        '
-        Me.btn_new_automobile_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_new_automobile_cancel.BackColor = System.Drawing.Color.LightCoral
-        Me.btn_new_automobile_cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_new_automobile_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_new_automobile_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_automobile_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_automobile_cancel.ForeColor = System.Drawing.Color.White
-        Me.btn_new_automobile_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
-        Me.btn_new_automobile_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_automobile_cancel.Location = New System.Drawing.Point(259, 426)
-        Me.btn_new_automobile_cancel.Name = "btn_new_automobile_cancel"
-        Me.btn_new_automobile_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_automobile_cancel.Size = New System.Drawing.Size(141, 38)
-        Me.btn_new_automobile_cancel.TabIndex = 105
-        Me.btn_new_automobile_cancel.Text = "CANCEL"
-        Me.btn_new_automobile_cancel.UseVisualStyleBackColor = False
-        '
         'Label35
         '
         Me.Label35.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -234,25 +215,6 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label35.Size = New System.Drawing.Size(68, 18)
         Me.Label35.TabIndex = 111
         Me.Label35.Text = "Category"
-        '
-        'btn_new_automobile_save
-        '
-        Me.btn_new_automobile_save.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_new_automobile_save.BackColor = System.Drawing.Color.LightGreen
-        Me.btn_new_automobile_save.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_new_automobile_save.FlatAppearance.BorderSize = 0
-        Me.btn_new_automobile_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_new_automobile_save.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_new_automobile_save.ForeColor = System.Drawing.Color.White
-        Me.btn_new_automobile_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
-        Me.btn_new_automobile_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_new_automobile_save.Location = New System.Drawing.Point(82, 426)
-        Me.btn_new_automobile_save.Name = "btn_new_automobile_save"
-        Me.btn_new_automobile_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        Me.btn_new_automobile_save.Size = New System.Drawing.Size(141, 38)
-        Me.btn_new_automobile_save.TabIndex = 104
-        Me.btn_new_automobile_save.Text = "SAVE"
-        Me.btn_new_automobile_save.UseVisualStyleBackColor = False
         '
         'Label9
         '
@@ -393,91 +355,6 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.Label11.TabIndex = 128
         Me.Label11.Text = "Select an Automobile"
         '
-        'btn_automobile_select_select
-        '
-        Me.btn_automobile_select_select.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_automobile_select_select.BackColor = System.Drawing.Color.LightGreen
-        Me.btn_automobile_select_select.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_automobile_select_select.FlatAppearance.BorderSize = 0
-        Me.btn_automobile_select_select.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_automobile_select_select.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_automobile_select_select.ForeColor = System.Drawing.Color.White
-        Me.btn_automobile_select_select.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_checkmark_24
-        Me.btn_automobile_select_select.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_automobile_select_select.Location = New System.Drawing.Point(254, 455)
-        Me.btn_automobile_select_select.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_automobile_select_select.Name = "btn_automobile_select_select"
-        Me.btn_automobile_select_select.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_automobile_select_select.Size = New System.Drawing.Size(113, 38)
-        Me.btn_automobile_select_select.TabIndex = 35
-        Me.btn_automobile_select_select.Text = "SELECT"
-        Me.btn_automobile_select_select.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_automobile_select_select.UseVisualStyleBackColor = False
-        '
-        'btn_automobile_select_cancel
-        '
-        Me.btn_automobile_select_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_automobile_select_cancel.BackColor = System.Drawing.Color.LightCoral
-        Me.btn_automobile_select_cancel.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_automobile_select_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btn_automobile_select_cancel.FlatAppearance.BorderSize = 0
-        Me.btn_automobile_select_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_automobile_select_cancel.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_automobile_select_cancel.ForeColor = System.Drawing.Color.White
-        Me.btn_automobile_select_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
-        Me.btn_automobile_select_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_automobile_select_cancel.Location = New System.Drawing.Point(393, 455)
-        Me.btn_automobile_select_cancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_automobile_select_cancel.Name = "btn_automobile_select_cancel"
-        Me.btn_automobile_select_cancel.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_automobile_select_cancel.Size = New System.Drawing.Size(128, 38)
-        Me.btn_automobile_select_cancel.TabIndex = 35
-        Me.btn_automobile_select_cancel.Text = "CANCEL"
-        Me.btn_automobile_select_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_automobile_select_cancel.UseVisualStyleBackColor = False
-        '
-        'btn_automobile_select_edit
-        '
-        Me.btn_automobile_select_edit.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_automobile_select_edit.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_automobile_select_edit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_automobile_select_edit.FlatAppearance.BorderSize = 0
-        Me.btn_automobile_select_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_automobile_select_edit.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_automobile_select_edit.ForeColor = System.Drawing.Color.White
-        Me.btn_automobile_select_edit.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_edit_white_24
-        Me.btn_automobile_select_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_automobile_select_edit.Location = New System.Drawing.Point(127, 455)
-        Me.btn_automobile_select_edit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_automobile_select_edit.Name = "btn_automobile_select_edit"
-        Me.btn_automobile_select_edit.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_automobile_select_edit.Size = New System.Drawing.Size(100, 38)
-        Me.btn_automobile_select_edit.TabIndex = 35
-        Me.btn_automobile_select_edit.Text = "EDIT"
-        Me.btn_automobile_select_edit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_automobile_select_edit.UseVisualStyleBackColor = False
-        '
-        'btn_automobile_select_new
-        '
-        Me.btn_automobile_select_new.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btn_automobile_select_new.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_automobile_select_new.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_automobile_select_new.FlatAppearance.BorderSize = 0
-        Me.btn_automobile_select_new.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_automobile_select_new.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_automobile_select_new.ForeColor = System.Drawing.Color.White
-        Me.btn_automobile_select_new.Image = CType(resources.GetObject("btn_automobile_select_new.Image"), System.Drawing.Image)
-        Me.btn_automobile_select_new.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_automobile_select_new.Location = New System.Drawing.Point(6, 455)
-        Me.btn_automobile_select_new.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_automobile_select_new.Name = "btn_automobile_select_new"
-        Me.btn_automobile_select_new.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_automobile_select_new.Size = New System.Drawing.Size(100, 38)
-        Me.btn_automobile_select_new.TabIndex = 34
-        Me.btn_automobile_select_new.Text = "NEW"
-        Me.btn_automobile_select_new.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_automobile_select_new.UseVisualStyleBackColor = False
-        '
         'AutomobileDataGridView
         '
         Me.AutomobileDataGridView.AllowUserToAddRows = False
@@ -542,13 +419,136 @@ Partial Class Management_Work_Order_Add_New_Automobile
         Me.AutomobileDataGridView.TabIndex = 2
         Me.AutomobileDataGridView.VirtualMode = True
         '
+        'btn_automobile_select_cancel
+        '
+        Me.btn_automobile_select_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_automobile_select_cancel.BackColor = System.Drawing.Color.LightCoral
+        Me.btn_automobile_select_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_automobile_select_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btn_automobile_select_cancel.FlatAppearance.BorderSize = 0
+        Me.btn_automobile_select_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_automobile_select_cancel.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_automobile_select_cancel.ForeColor = System.Drawing.Color.White
+        Me.btn_automobile_select_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
+        Me.btn_automobile_select_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_automobile_select_cancel.Location = New System.Drawing.Point(393, 455)
+        Me.btn_automobile_select_cancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_automobile_select_cancel.Name = "btn_automobile_select_cancel"
+        Me.btn_automobile_select_cancel.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_automobile_select_cancel.Size = New System.Drawing.Size(128, 38)
+        Me.btn_automobile_select_cancel.TabIndex = 35
+        Me.btn_automobile_select_cancel.Text = "CANCEL"
+        Me.btn_automobile_select_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_automobile_select_cancel.UseVisualStyleBackColor = False
+        '
+        'btn_automobile_select_select
+        '
+        Me.btn_automobile_select_select.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_automobile_select_select.BackColor = System.Drawing.Color.LightGreen
+        Me.btn_automobile_select_select.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_automobile_select_select.FlatAppearance.BorderSize = 0
+        Me.btn_automobile_select_select.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_automobile_select_select.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_automobile_select_select.ForeColor = System.Drawing.Color.White
+        Me.btn_automobile_select_select.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_checkmark_24
+        Me.btn_automobile_select_select.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_automobile_select_select.Location = New System.Drawing.Point(254, 455)
+        Me.btn_automobile_select_select.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_automobile_select_select.Name = "btn_automobile_select_select"
+        Me.btn_automobile_select_select.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_automobile_select_select.Size = New System.Drawing.Size(113, 38)
+        Me.btn_automobile_select_select.TabIndex = 35
+        Me.btn_automobile_select_select.Text = "SELECT"
+        Me.btn_automobile_select_select.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_automobile_select_select.UseVisualStyleBackColor = False
+        '
+        'btn_automobile_select_edit
+        '
+        Me.btn_automobile_select_edit.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_automobile_select_edit.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_automobile_select_edit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_automobile_select_edit.FlatAppearance.BorderSize = 0
+        Me.btn_automobile_select_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_automobile_select_edit.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_automobile_select_edit.ForeColor = System.Drawing.Color.White
+        Me.btn_automobile_select_edit.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_edit_white_24
+        Me.btn_automobile_select_edit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_automobile_select_edit.Location = New System.Drawing.Point(127, 455)
+        Me.btn_automobile_select_edit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_automobile_select_edit.Name = "btn_automobile_select_edit"
+        Me.btn_automobile_select_edit.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_automobile_select_edit.Size = New System.Drawing.Size(100, 38)
+        Me.btn_automobile_select_edit.TabIndex = 35
+        Me.btn_automobile_select_edit.Text = "EDIT"
+        Me.btn_automobile_select_edit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_automobile_select_edit.UseVisualStyleBackColor = False
+        '
+        'btn_automobile_select_new
+        '
+        Me.btn_automobile_select_new.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_automobile_select_new.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_automobile_select_new.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_automobile_select_new.FlatAppearance.BorderSize = 0
+        Me.btn_automobile_select_new.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_automobile_select_new.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_automobile_select_new.ForeColor = System.Drawing.Color.White
+        Me.btn_automobile_select_new.Image = CType(resources.GetObject("btn_automobile_select_new.Image"), System.Drawing.Image)
+        Me.btn_automobile_select_new.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_automobile_select_new.Location = New System.Drawing.Point(6, 455)
+        Me.btn_automobile_select_new.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_automobile_select_new.Name = "btn_automobile_select_new"
+        Me.btn_automobile_select_new.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_automobile_select_new.Size = New System.Drawing.Size(100, 38)
+        Me.btn_automobile_select_new.TabIndex = 34
+        Me.btn_automobile_select_new.Text = "NEW"
+        Me.btn_automobile_select_new.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_automobile_select_new.UseVisualStyleBackColor = False
+        '
+        'btn_new_automobile_cancel
+        '
+        Me.btn_new_automobile_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_automobile_cancel.BackColor = System.Drawing.Color.LightCoral
+        Me.btn_new_automobile_cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_automobile_cancel.FlatAppearance.BorderSize = 0
+        Me.btn_new_automobile_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_automobile_cancel.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_automobile_cancel.ForeColor = System.Drawing.Color.White
+        Me.btn_new_automobile_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
+        Me.btn_new_automobile_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_automobile_cancel.Location = New System.Drawing.Point(259, 426)
+        Me.btn_new_automobile_cancel.Name = "btn_new_automobile_cancel"
+        Me.btn_new_automobile_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_automobile_cancel.Size = New System.Drawing.Size(141, 38)
+        Me.btn_new_automobile_cancel.TabIndex = 105
+        Me.btn_new_automobile_cancel.Text = "CANCEL"
+        Me.btn_new_automobile_cancel.UseVisualStyleBackColor = False
+        '
+        'btn_new_automobile_save
+        '
+        Me.btn_new_automobile_save.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_new_automobile_save.BackColor = System.Drawing.Color.LightGreen
+        Me.btn_new_automobile_save.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_new_automobile_save.FlatAppearance.BorderSize = 0
+        Me.btn_new_automobile_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_new_automobile_save.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_new_automobile_save.ForeColor = System.Drawing.Color.White
+        Me.btn_new_automobile_save.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_save_24
+        Me.btn_new_automobile_save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_new_automobile_save.Location = New System.Drawing.Point(82, 426)
+        Me.btn_new_automobile_save.Name = "btn_new_automobile_save"
+        Me.btn_new_automobile_save.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        Me.btn_new_automobile_save.Size = New System.Drawing.Size(141, 38)
+        Me.btn_new_automobile_save.TabIndex = 104
+        Me.btn_new_automobile_save.Text = "SAVE"
+        Me.btn_new_automobile_save.UseVisualStyleBackColor = False
+        '
         'Management_Work_Order_Add_New_Automobile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
         Me.CancelButton = Me.btn_automobile_select_cancel
-        Me.ClientSize = New System.Drawing.Size(1029, 521)
+        Me.ClientSize = New System.Drawing.Size(1030, 520)
         Me.ControlBox = False
         Me.Controls.Add(Me.automobile_select_edit_panel)
         Me.Controls.Add(Me.automobile_new_datails_panel)

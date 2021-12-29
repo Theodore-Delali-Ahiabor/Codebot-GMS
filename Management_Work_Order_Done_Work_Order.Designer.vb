@@ -74,6 +74,7 @@ Partial Class Management_Work_Order_Done_Work_Order
         'txt_done_mileage
         '
         Me.txt_done_mileage.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_done_mileage.CausesValidation = False
         Me.txt_done_mileage.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_done_mileage.Location = New System.Drawing.Point(76, 200)
         Me.txt_done_mileage.MaxLength = 25
@@ -130,9 +131,9 @@ Partial Class Management_Work_Order_Done_Work_Order
         Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Label1.Location = New System.Drawing.Point(71, 169)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(234, 28)
+        Me.Label1.Size = New System.Drawing.Size(278, 28)
         Me.Label1.TabIndex = 126
-        Me.Label1.Text = "Next Service Due mileage"
+        Me.Label1.Text = "Next Service Due mileage (km)"
         '
         'Label7
         '

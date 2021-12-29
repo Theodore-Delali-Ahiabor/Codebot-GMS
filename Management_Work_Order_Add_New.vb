@@ -32,9 +32,9 @@ Public Class Management_Work_Order_Add_New
                 Dim repos As DialogResult = MessageBox.Show("You are about to Add a new Work Order, are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                 If repos = DialogResult.Yes Then
                     sql_ds = New DataSet
-                    sql_da = New MySqlDataAdapter("INSERT INTO work_order(`Customer`,`Automobile`,`Technician`,`Date_In`,`Date_Due_Out`,`Mileage`,`Status`,`Relevant_Informations`)
-                            VALUES('" & customer & "','" & automobile & "','" & txt_new_work_order_technicians.Text & "', '" & date_in & "','" & date_due_out & "',
-                            '" & txt_new_work_order_mileage.Text & "', '" & txt_new_work_order_progress_stats.Text & "','" & txt_new_work_order_relevant_information.Text & "')", sql_con)
+                    sql_da = New MySqlDataAdapter("INSERT INTO work_order(`Customer`,`Automobile`,`Technician`,`Date_In`,`Date_Due_Out`,`Mileage`,`Status`,`Relevant_Informations`,`Created_On`,`Created_By`,`Last_Modified_On`,`Last_Modified_By`)
+                            VALUES('" & customer & "','" & automobile & "','" & txt_new_work_order_technicians.Text & "', '" & date_in & "','" & date_due_out & "','" & txt_new_work_order_mileage.Text & "', '" & txt_new_work_order_progress_stats.Text & "',
+                            '" & txt_new_work_order_relevant_information.Text & "',SYSDATE(),'" & login_id & "',SYSDATE(),'" & login_id & "')", sql_con)
                     sql_da.Fill(sql_ds, "work_order")
                     sidebar_form_loader(Management_Work_Order)
                     datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)

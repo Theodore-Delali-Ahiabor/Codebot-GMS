@@ -2,17 +2,17 @@
 Public Class Management_Inventory
     Private Sub cmb_inventory_category_filter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_inventory_category_filter.SelectedIndexChanged
         If cmb_inventory_category_filter.SelectedIndex = 0 Then
-            datagrid_fill_default("inventory", InventoryDataGridView)
+            datagrid_fill_default("inventory_view", InventoryDataGridView)
         Else
-            datagrid_fill_filter("inventory", InventoryDataGridView, "Category", Me.cmb_inventory_category_filter)
+            datagrid_fill_filter("inventory_view", InventoryDataGridView, "Category", Me.cmb_inventory_category_filter)
         End If
     End Sub
 
     Private Sub cmb_inventory_location_filter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_inventory_location_filter.SelectedIndexChanged
         If cmb_inventory_location_filter.SelectedIndex = 0 Then
-            datagrid_fill_default("inventory", InventoryDataGridView)
+            datagrid_fill_default("inventory_view", InventoryDataGridView)
         Else
-            datagrid_fill_filter("inventory", InventoryDataGridView, "Location", Me.cmb_inventory_location_filter)
+            datagrid_fill_filter("inventory_view", InventoryDataGridView, "Location", Me.cmb_inventory_location_filter)
         End If
     End Sub
 
@@ -37,9 +37,9 @@ Public Class Management_Inventory
 
     Private Sub txt_inventory_part_name_filter_TextChanged(sender As Object, e As EventArgs) Handles txt_inventory_part_name_filter.TextChanged
         If txt_inventory_part_name_filter.Text = "" Then
-            datagrid_fill_default("inventory", InventoryDataGridView)
+            datagrid_fill_default("inventory_view", InventoryDataGridView)
         Else
-            datagrid_fill_filter_textbox("inventory", InventoryDataGridView, "Description", Me.txt_inventory_part_name_filter)
+            datagrid_fill_filter_textbox("inventory_view", InventoryDataGridView, "Description", Me.txt_inventory_part_name_filter)
         End If
     End Sub
 
@@ -54,7 +54,7 @@ Public Class Management_Inventory
                 sql_dt = New DataTable
                 sql_dt.Clear()
                 sql_da.Fill(sql_dt)
-                If sql_dt.Rows.Count() > 0 Then
+                If sql_dt.Rows.Count() = 1 Then
                     sidebar_form_loader(Management_Inventory_Add_New)
                     With Management_Inventory_Add_New
                         .txt_new_category.Text = sql_dt.Rows(0).Item("Category").ToString()
@@ -65,6 +65,8 @@ Public Class Management_Inventory
                         .txt_new_model.Text = sql_dt.Rows(0).Item("Model_Type").ToString()
                         .txt_new_quantity.Text = sql_dt.Rows(0).Item("Stock").ToString()
                         .txt_new_unit_cost.Text = sql_dt.Rows(0).Item("Unit_Cost").ToString()
+                        .txt_new_supplier.Text = InventoryDataGridView.CurrentRow.Cells(9).Value.ToString()
+                        Management_Inventory_Add_New_Suplyer.suppylier_id = sql_dt.Rows(0).Item("Supplier_ID").ToString()
 
                         .txt_new_category.Enabled = True
                         .txt_new_part_name.Enabled = True
@@ -79,60 +81,47 @@ Public Class Management_Inventory
                     message("warning", "No Data Found")
                 End If
             Else
-                message("warning", "No Row was selected")
+                message("warning", "No item selected")
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Edit Item Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     Public Sub clear_inventory_form()
-        Management_Inventory_Add_New.txt_new_category.Text = ""
-        Management_Inventory_Add_New.txt_new_part_name.Clear()
-        Management_Inventory_Add_New.txt_new_part_number.Clear()
-        Management_Inventory_Add_New.txt_new_alternative.Clear()
-        Management_Inventory_Add_New.txt_new_location.Clear()
-        Management_Inventory_Add_New.txt_new_model.Clear()
-        Management_Inventory_Add_New.txt_new_quantity.Clear()
-        Management_Inventory_Add_New.txt_new_unit_cost.Clear()
+        With Management_Inventory_Add_New
+            .txt_new_category.Text = ""
+            .txt_new_part_name.Clear()
+            .txt_new_part_number.Clear()
+            .txt_new_alternative.Clear()
+            .txt_new_location.Clear()
+            .txt_new_model.Clear()
+            .txt_new_quantity.Clear()
+            .txt_new_unit_cost.Clear()
+            .txt_new_supplier.Clear()
+        End With
     End Sub
 
     Private Sub InventoryDataGridView_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles InventoryDataGridView.ColumnHeaderMouseClick
-        datagrid_fill_color_effect("inventory", Me.InventoryDataGridView)
-        clear_gridview_default_selection(Me.InventoryDataGridView)
+        datagrid_fill_color_effect("inventory_view", Me.InventoryDataGridView)
+        'clear_gridview_default_selection(Me.InventoryDataGridView)
     End Sub
 
     Private Sub InventoryDataGridView_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles InventoryDataGridView.CellMouseDoubleClick
         btn_edit_inventory_item_Click(btn_edit_inventory_item, EventArgs.Empty)
     End Sub
-
-    Private Sub btn_stock_item_Click(sender As Object, e As EventArgs) Handles btn_stock_item.Click
+    Public current_stock As Integer
+    Public item_name As String
+    Private Sub btn_stock_in_item_Click(sender As Object, e As EventArgs) Handles btn_stock_in_item.Click
         If InventoryDataGridView.SelectedRows.Count = 1 Then
-            sql_da = New MySqlDataAdapter("SELECT * FROM inventory WHERE ID = '" & InventoryDataGridView.CurrentRow.Cells(0).Value.ToString() & "'", sql_con)
+            sql_da = New MySqlDataAdapter("SELECT * FROM `inventory` WHERE ID = '" & InventoryDataGridView.CurrentRow.Cells(0).Value.ToString() & "'", sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
             sql_da.Fill(sql_dt)
             If sql_dt.Rows.Count() > 0 Then
-                sidebar_form_loader(Management_Inventory_Add_New)
-                With Management_Inventory_Add_New
-                    .txt_new_category.Text = sql_dt.Rows(0).Item("Category").ToString()
-                    .txt_new_part_name.Text = sql_dt.Rows(0).Item("Description").ToString()
-                    .txt_new_part_number.Text = sql_dt.Rows(0).Item("Serial_no").ToString()
-                    .txt_new_alternative.Text = sql_dt.Rows(0).Item("Alternative").ToString()
-                    .txt_new_location.Text = sql_dt.Rows(0).Item("Location").ToString()
-                    .txt_new_model.Text = sql_dt.Rows(0).Item("Model_Type").ToString()
-                    .txt_new_quantity.Text = sql_dt.Rows(0).Item("Stock").ToString()
-                    .txt_new_unit_cost.Text = sql_dt.Rows(0).Item("Unit_Cost").ToString()
-
-                    .txt_new_category.Enabled = False
-                    .txt_new_part_name.Enabled = False
-                    .txt_new_part_number.Enabled = False
-                    .txt_new_alternative.Enabled = False
-                    .txt_new_location.Enabled = False
-                    .txt_new_model.Enabled = False
-                    .txt_new_quantity.Enabled = True
-                    .txt_new_unit_cost.Enabled = False
-                End With
-
+                current_stock = sql_dt.Rows(0).Item("Stock")
+                item_name = sql_dt.Rows(0).Item("Description")
+                Management_Inventory_Stock_In.txt_stock_in_name.Text = item_name
+                Management_Inventory_Stock_In.ShowDialog()
             Else
                 message("warning", "No Data Found")
             End If
@@ -141,7 +130,22 @@ Public Class Management_Inventory
         End If
     End Sub
 
-    Private Sub btn_make_items_requisition_Click(sender As Object, e As EventArgs) Handles btn_make_items_requisition.Click
-        'Management_Market.ShowDialog()
+    Private Sub btn_stock_out_item_Click(sender As Object, e As EventArgs) Handles btn_stock_out_item.Click
+        If InventoryDataGridView.SelectedRows.Count = 1 Then
+            sql_da = New MySqlDataAdapter("SELECT * FROM `inventory` WHERE ID = '" & InventoryDataGridView.CurrentRow.Cells(0).Value.ToString() & "'", sql_con)
+            sql_dt = New DataTable
+            sql_dt.Clear()
+            sql_da.Fill(sql_dt)
+            If sql_dt.Rows.Count() > 0 Then
+                current_stock = sql_dt.Rows(0).Item("Stock")
+                'item_name = sql_dt.Rows(0).Item("Description")
+                'Management_Inventory_Stock_In.txt_stock_in_name.Text = item_name
+                'Management_Inventory_Stock_In.ShowDialog()
+            Else
+                message("warning", "No Data Found")
+            End If
+        Else
+            message("warning", "No Item selected")
+        End If
     End Sub
 End Class

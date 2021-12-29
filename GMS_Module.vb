@@ -51,7 +51,7 @@ Module GMS_Module
             form.Visible = False
             If form.Visible = False Then
                 Management_Employees.Visible = False
-                Management_Home.Visible = False
+                Management_Dashboard.Visible = False
                 Management_Employees_Add_New.Visible = False
                 Management_Work_Order.Visible = False
                 Management_Calendar.Visible = False
@@ -60,6 +60,7 @@ Module GMS_Module
                 Management_Work_Order_Add_New.Visible = False
                 Management_Invoice.Visible = False
                 Management_Invoice_Add_New.Visible = False
+                Management_Feedbacks.Visible = False
                 form.Visible = True
             Else
                 form.Visible = False
@@ -140,6 +141,7 @@ Module GMS_Module
                     .message_timer.Enabled = True
                 End With
             End If
+            GMS_Message.message_icon.Focus()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Message Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -204,7 +206,6 @@ Module GMS_Module
             sql_da.Fill(sql_dt)
             gridview_name.DataSource = sql_dt
             datagrid_fill_color_effect(db_table, gridview_name)
-            clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Data Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -220,7 +221,6 @@ Module GMS_Module
             sql_da.Fill(sql_dt)
             gridview_name.DataSource = sql_dt
             datagrid_fill_color_effect(db_table, gridview_name)
-            clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Data Display Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -230,13 +230,13 @@ Module GMS_Module
     '----------------------------------------------------------------
     Public Sub datagrid_fill_flter_with_variable(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef db_column As String, ByRef symbol As String, ByRef variable As String)
         Try
-            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & symbol & variable, sql_con)
+            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & symbol & variable & " ORDER BY ID DESC", sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
             sql_da.Fill(sql_dt)
             gridview_name.DataSource = sql_dt
             datagrid_fill_color_effect(db_table, gridview_name)
-            clear_gridview_default_selection(gridview_name)
+            datagrid_fill_column_resize(db_table, gridview_name)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Query Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -252,7 +252,6 @@ Module GMS_Module
             sql_da.Fill(sql_dt)
             gridview_name.DataSource = sql_dt
             datagrid_fill_color_effect(db_table, gridview_name)
-            clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Filter Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -268,28 +267,27 @@ Module GMS_Module
             sql_da.Fill(sql_dt)
             gridview_name.DataSource = sql_dt
             datagrid_fill_color_effect(db_table, gridview_name)
-            clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Search Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
-    '----------------------------------------------------------------------------
-    'FILL THE HOME DATAGRID WITH THE PREFERED FILTER FOR THE WORK ORDDERS DUE TAB 
-    '----------------------------------------------------------------------------
+    '-----------------------------------------------------------------------------------------------------------------------------
+    'FILL THE HOME DATAGRID WITH THE PREFERED FILTER FOR THE WORK ORDDERS DUE WHERE PROGRESS STATUS IS NOT TERMINATED OR COMPLETED
+    '-----------------------------------------------------------------------------------------------------------------------------
     Public Sub work_order_overdue_filter(ByRef variable As String)
         Try
-            Management_Home.activebar_work_orders.Visible = True
-            Management_Home.activebar_inventory.Visible = False
-            Management_Home.activebar_events.Visible = False
-            Management_Home.activebar_payments.Visible = False
-            sql_da = New MySqlDataAdapter("SELECT * FROM work_order_view WHERE Due_In < " & variable & " AND Progress_Status <> '" & "Completed" & "' ORDER BY ID DESC ", sql_con)
+            Management_Dashboard.activebar_work_orders.Visible = True
+            Management_Dashboard.activebar_inventory.Visible = False
+            Management_Dashboard.activebar_events.Visible = False
+            Management_Dashboard.activebar_payments.Visible = False
+            sql_da = New MySqlDataAdapter("SELECT * FROM `work_order_view` WHERE `Due_In` < " & variable & " AND `Progress_Status` <> '" & "Completed" & "' AND `Progress_Status` <> '" & "Terminated" & "' ORDER BY ID DESC ", sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
             sql_da.Fill(sql_dt)
-            Management_Home.HomeDataGridView.DataSource = sql_dt
-            datagrid_fill_color_effect("work_order_view", Management_Home.HomeDataGridView)
+            Management_Dashboard.DashboardDataGridView.DataSource = sql_dt
+            datagrid_fill_color_effect("work_order_view", Management_Dashboard.DashboardDataGridView)
+            datagrid_fill_column_resize("work_order_view", Management_Dashboard.DashboardDataGridView)
             Management.lbl_current_tab.Text = "Dashboard | Work Oders Due"
-            clear_gridview_default_selection(Management_Home.HomeDataGridView)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Work Order Overdue Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -297,18 +295,18 @@ Module GMS_Module
     '-------------------------------------------------------------
     'RETRIEVES CALENDAR EVENTS BASED ON WHICH USER ADDED THE EVENT
     '-------------------------------------------------------------
-    Public Sub calendar_events(ByRef symbol As String, ByRef variable As String)
-        Management_Home.activebar_work_orders.Visible = False
-        Management_Home.activebar_inventory.Visible = False
-        Management_Home.activebar_payments.Visible = False
-        Management_Home.activebar_events.Visible = True
-        sql_da = New MySqlDataAdapter("SELECT * FROM events_view WHERE Due_In " & symbol & " " & variable & " AND Added_by = '" & login_id & "' ORDER BY ID DESC", sql_con)
+    Public Sub upcoming_calendar_events(ByRef symbol As String, ByRef variable As String)
+        Management_Dashboard.activebar_work_orders.Visible = False
+        Management_Dashboard.activebar_inventory.Visible = False
+        Management_Dashboard.activebar_payments.Visible = False
+        Management_Dashboard.activebar_events.Visible = True
+        sql_da = New MySqlDataAdapter("SELECT * FROM `events_view` WHERE `Due_In` " & symbol & " " & variable & " AND `Added_By` = '" & login_id & "' ORDER BY ID DESC", sql_con)
         sql_dt = New DataTable
         sql_dt.Clear()
         sql_da.Fill(sql_dt)
-        Management_Home.HomeDataGridView.DataSource = sql_dt
-        datagrid_fill_color_effect("events_view", Management_Home.HomeDataGridView)
-        clear_gridview_default_selection(Management_Home.HomeDataGridView)
+        Management_Dashboard.DashboardDataGridView.DataSource = sql_dt
+        datagrid_fill_color_effect("events_view", Management_Dashboard.DashboardDataGridView)
+        datagrid_fill_column_resize("events_view", Management_Dashboard.DashboardDataGridView)
         Management.lbl_current_tab.Text = "Dashboard | Upcoming Events"
     End Sub
     '--------------------------------------------------
@@ -337,7 +335,8 @@ Module GMS_Module
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
                         End If
                     Next
-                ElseIf db_table = "inventory" Then
+                End If
+                If db_table = "inventory_view" Then
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
                         If gridview_name.Rows(i).Cells(7).Value < 11 Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
@@ -348,26 +347,42 @@ Module GMS_Module
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
                         End If
                     Next
-                ElseIf db_table = "work_order_view" Then
+                End If
+                If db_table = "work_order_view" Then
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
-                        If gridview_name.Rows(i).Cells(4).Value < 6 And gridview_name.Rows(i).Cells(5).Value <> "Completed" Then
-                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
-                            If gridview_name.Rows(i).Cells(4).Value < 1 Then
-                                gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
-                            End If
-                        ElseIf gridview_name.Rows(i).Cells(5).Value = "Pending Start" Then
+                        If gridview_name.Rows(i).Cells(5).Value = "Pending Start" Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Silver
+                            If gridview_name.Rows(i).Cells(4).Value < 8 Then
+                                gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Gold
+                                If gridview_name.Rows(i).Cells(4).Value = 0 Then
+                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Green
+                                ElseIf gridview_name.Rows(i).Cells(4).Value < 0 Then
+                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Coral
+                                End If
+                            End If
                         ElseIf gridview_name.Rows(i).Cells(5).Value = "In Progress" Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
+                            If gridview_name.Rows(i).Cells(4).Value < 8 Then
+                                gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Gold
+                                If gridview_name.Rows(i).Cells(4).Value = 0 Then
+                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Green
+                                ElseIf gridview_name.Rows(i).Cells(4).Value < 0 Then
+                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Coral
+                                End If
+                            End If
                         ElseIf gridview_name.Rows(i).Cells(5).Value = "Completed" Then
                             gridview_name.Rows(i).Cells(4).Value = 0
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
+                        ElseIf gridview_name.Rows(i).Cells(5).Value = "Terminated" Then
+                            gridview_name.Rows(i).Cells(4).Value = 0
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Black
+                            gridview_name.Rows(i).DefaultCellStyle.ForeColor = Color.White
                         End If
                     Next
-                ElseIf db_table = "events_view" Then
+                End If
+                If db_table = "events_view" Then
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
-                        gridview_name.Columns(6).Visible = False
-                        If gridview_name.Rows(i).Cells(1).Value < 11 Then
+                        If gridview_name.Rows(i).Cells(1).Value < 8 Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
                             If gridview_name.Rows(i).Cells(1).Value = 0 Then
                                 gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
@@ -378,6 +393,7 @@ Module GMS_Module
                     Next
                 End If
             End If
+            clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Datagridview Color Effect Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -425,90 +441,108 @@ Module GMS_Module
     '------------------------------------------------------------------
     'RESIZE THE COLUMNS IN THE DATAGRID TABLE BASED ON WHAT TABLE IT IS
     '------------------------------------------------------------------
-    Public Sub datagrif_fill_column_resize(ByRef db_table As String, ByRef gridview_name As DataGridView)
+    Public Sub datagrid_fill_column_resize(ByRef db_table As String, ByRef gridview_name As DataGridView)
         Try
-            If db_table = "employee_view" Then
-                gridview_name.Columns(0).Width = 140   'ID
-                gridview_name.Columns(1).Width = 230   'Full name
-                gridview_name.Columns(2).Width = 240   '
-                gridview_name.Columns(3).Width = 100   '
-                gridview_name.Columns(4).Width = 50    '
-                gridview_name.Columns(5).Width = 200   '
-                gridview_name.Columns(6).Width = 70    '
-                gridview_name.Columns(7).Visible = False   'Active
-            ElseIf db_table = "inventory" Then
-                gridview_name.Columns(0).Width = 50    'ID
-                gridview_name.Columns(1).Width = 100   'Category
-                gridview_name.Columns(2).Width = 170   'Part Name 
-                gridview_name.Columns(3).Width = 130   'Part Number
-                'gridview_name.Columns(4).Width = 210   'Alternative
-                gridview_name.Columns(5).Width = 110   'Location
-                gridview_name.Columns(6).Width = 200   'Model/Type
-                gridview_name.Columns(7).Width = 60   'Stock
-                gridview_name.Columns(8).Width = 80   'Unit cost
-            ElseIf db_table = "work_order_view" Then
-                gridview_name.Columns.Item("ID").Width = 100
-                gridview_name.Columns.Item("Customer").Width = 225
-                gridview_name.Columns.Item("Automobile").Width = 300
-                gridview_name.Columns.Item("Technicians").Width = 225
-                gridview_name.Columns.Item("Due_In").Width = 115
-                gridview_name.Columns.Item("Due_In").HeaderText = "Due In / Days"
-                gridview_name.Columns.Item("Due_In").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                gridview_name.Columns.Item("Progress_Status").Width = 135
-            End If
+            Select Case db_table
+                Case "employee_view"
+                    gridview_name.Columns(2).Width = 240   '
+                    gridview_name.Columns(3).Width = 100   '
+                    gridview_name.Columns(4).Width = 50    '
+                    gridview_name.Columns(5).Width = 200   '
+                    gridview_name.Columns(6).Width = 70    '
+                    gridview_name.Columns(7).Visible = False   'Active
+
+                Case "inventory_view"
+                    gridview_name.Columns(0).Width = 50    'ID
+                    gridview_name.Columns(1).Width = 100   'Category
+                    gridview_name.Columns(2).Width = 170   'Part Name 
+                    gridview_name.Columns(3).Width = 130   'Part Number
+                    'gridview_name.Columns(4).Width = 210   'Alternative
+                    gridview_name.Columns(5).Width = 110   'Location
+                    gridview_name.Columns(6).Width = 200   'Model/Type
+                    gridview_name.Columns(7).Width = 60   'Stock
+                    gridview_name.Columns(8).Width = 80   'Unit cost
+                Case "work_order_view"
+                    gridview_name.Columns(0).Width = 100
+                    gridview_name.Columns(1).Width = 225
+                    gridview_name.Columns(2).Width = 300
+                    gridview_name.Columns(3).Width = 225
+                    gridview_name.Columns(4).Width = 100
+                    'gridview_name.Columns(4).HeaderText = "Due In / Days"
+                    gridview_name.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                    gridview_name.Columns(5).Width = 135
+                Case "events_view"
+                    gridview_name.Columns(0).Width = 100
+                    gridview_name.Columns(1).Width = 100
+                    gridview_name.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                    gridview_name.Columns(2).Width = 200
+                    'gridview_name.Columns.(3).Width = auto
+                    gridview_name.Columns(4).Visible = False
+            End Select
+
+            'If db_table = "employee_view" Then
+
+            'End If
+            'If db_table = "inventory_view" Then
+
+            'End If
+            'If db_table = "work_order_view" Then
+
+            'End If
+            'If db_table = "events_view" Then
+
+            'End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "DataGridView Collumn Resize Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
     End Sub
     '-----------------------------------------
-    'To control user access to the application
+    'TO CONTROL USER ACCESS TO THE APPLICATION
     '-----------------------------------------
     Public Sub Access_Control(ByRef role As String)
         With Management
             gms_main_form_loader(Management)
-            .btn_home_Click(Management.btn_home, EventArgs.Empty)
+            .btn_home_Click(Management.btn_dashboard, EventArgs.Empty)
             .login_position.Text = login_as
             .login_name.Text = login_full_name
 
             If role = "Administrator" Or role = "Supervisor" Or role = "Manager" Or role = "Management Engineer" Or role = "Supervising Engineer" Then
 
                 'Give user administrative privilages
-                Management_Home.low_inventory_panel.Visible = True
+                Management_Dashboard.low_inventory_panel.Visible = True
                 .btn_employees.Visible = True
                 .btn_inventory.Visible = True
                 .btn_statistics.Visible = True
-                .btn_logs.Visible = True
-                .btn_messages.Visible = True
+                .btn_feedbacks.Visible = True
 
             Else
 
                 'Give other user privilages 
-                Management_Home.low_inventory_panel.Visible = False
+                Management_Dashboard.low_inventory_panel.Visible = False
                 .btn_employees.Visible = False
                 .btn_inventory.Visible = False
                 .btn_statistics.Visible = False
-                .btn_logs.Visible = False
-                .btn_messages.Visible = False
+                .btn_feedbacks.Visible = False
 
             End If
             message("success", "Welcome " + login_first_name + ", you logged-in successfully")
         End With
     End Sub
     '----------
-    'Send Email
+    'SEND EMAIL
     '----------
     Public Sub send_email(ByRef subject As String, ByRef reciepint As String, ByRef message As String)
         Dim Smtp_Server As New SmtpClient
         Dim e_mail As New MailMessage()
         email_delevery_status = 0
         Try
+            '
             Smtp_Server.UseDefaultCredentials = False
             Smtp_Server.Credentials = New Net.NetworkCredential("allprojectstemporaryemail@gmail.com", "@Welcome98")
             Smtp_Server.Port = 587
             Smtp_Server.EnableSsl = True
             Smtp_Server.Host = "smtp.gmail.com"
             '
-
             e_mail = New MailMessage()
             e_mail.From = New MailAddress("allprojectstemporaryemail@gmail.com")
             e_mail.To.Add(reciepint)
@@ -523,7 +557,7 @@ Module GMS_Module
         End Try
     End Sub
     '----------------------
-    ' send whatsapp message
+    ' SEND WHATSAPP MESSAGE
     '----------------------
     Public Sub send_whatsapp(ByRef reciepint As String, ByRef message As String)
         Try

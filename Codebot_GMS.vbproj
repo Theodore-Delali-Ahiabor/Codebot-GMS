@@ -152,6 +152,12 @@
     <Compile Include="Management_Calendar_Add_New_Event.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Management_Feedbacks.Designer.vb">
+      <DependentUpon>Management_Feedbacks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Feedbacks.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Management_Inventory.Designer.vb">
       <DependentUpon>Management_Inventory.vb</DependentUpon>
     </Compile>
@@ -162,6 +168,18 @@
       <DependentUpon>Management_Inventory_Add_New.vb</DependentUpon>
     </Compile>
     <Compile Include="Management_Inventory_Add_New.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management_Inventory_Add_New_Suplyer.Designer.vb">
+      <DependentUpon>Management_Inventory_Add_New_Suplyer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Inventory_Add_New_Suplyer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management_Inventory_Stock_In.Designer.vb">
+      <DependentUpon>Management_Inventory_Stock_In.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Inventory_Stock_In.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Management_Invoice.Designer.vb">
@@ -306,11 +324,20 @@
     <EmbeddedResource Include="Management_Employees.resx">
       <DependentUpon>Management_Employees.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Management_Feedbacks.resx">
+      <DependentUpon>Management_Feedbacks.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Management_Inventory.resx">
       <DependentUpon>Management_Inventory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Inventory_Add_New.resx">
       <DependentUpon>Management_Inventory_Add_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management_Inventory_Add_New_Suplyer.resx">
+      <DependentUpon>Management_Inventory_Add_New_Suplyer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management_Inventory_Stock_In.resx">
+      <DependentUpon>Management_Inventory_Stock_In.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Invoice.resx">
       <DependentUpon>Management_Invoice.vb</DependentUpon>
@@ -425,6 +452,9 @@
   <ItemGroup>
     <PackageReference Include="MySql.Data">
       <Version>8.0.27</Version>
+    </PackageReference>
+    <PackageReference Include="OpenPop.NET">
+      <Version>2.0.6.1120</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

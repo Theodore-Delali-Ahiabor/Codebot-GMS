@@ -14,7 +14,7 @@
     '------------------------------
     'HIDES THE MESSAGE WHEN CLICKED
     '------------------------------
-    Private Sub message_icon_Click(sender As Object, e As EventArgs) Handles message_icon.Click, message_warning_icon.Click, message_information_icon.Click, message_error_icon.Click, message_success_icon.Click
+    Private Sub message_icon_Click(sender As Object, e As EventArgs) Handles message_icon.Click, message_warning_icon.Click, message_information_icon.Click, message_error_icon.Click, message_success_icon.Click, PictureBox1.Click
         GMS_Message_Click(Me, EventArgs.Empty)
     End Sub
     '-------------------------------------------------------

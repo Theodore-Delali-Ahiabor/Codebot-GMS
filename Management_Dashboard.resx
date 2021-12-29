@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PictureBoxInventory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAP1JREFUaEPt2DFqAkEYhuFpbKySwspCW6sU6Sy0sbHxBpI7WOcOAbughRfwBN7F
+        IyieQN+fJWFYZneHcYVRvgdeWGR2YQTXn3EiIiLyGAe6BppRpS86tVzZkULr3shnG9jRu9eZajfQJ1vQ
+        ZmVTCq3rkM828Ftc/rON2tpKQ5oUl25B9tAxfZB9Q/aZmVOPQuubxN6btAF74Hdx6bbUpRUtaUAbMmsa
+        UWh9k9h7bQN7+vS6UO0GcpL0IxYRkT9Jr9F7Z6HyPBOS9SwUM0pkNQulyGoWSqFZiEREpFHSa7Stc6Ef
+        qvIU50J1/9LZngvFyvZcKJZmIRIREXkFzt0A5YK34iJWAocAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="PictureBoxWorkOrders.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -134,16 +144,6 @@
         WufjOG0c+W+4C7O8LSklgNghjwcv0TVxFi2VVhsXrHPeaePIZ+28lBZA7JjHA3dYN6kHaKm02niwyzLn
         45QaIARVgAZz0OkxHhsblMdnq84MnIIuVNukiN9LYQFu4WJcj5dtAM86Y/A0HkQ7Y5sU8Xv5v6eQG5P/
         oJu68XUcoD9ZUVFR0e/o6fkD2CoN6gdLAgsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="PictureBoxInventory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAP1JREFUaEPt2DFqAkEYhuFpbKySwspCW6sU6Sy0sbHxBpI7WOcOAbughRfwBN7F
-        IyieQN+fJWFYZneHcYVRvgdeWGR2YQTXn3EiIiLyGAe6BppRpS86tVzZkULr3shnG9jRu9eZajfQJ1vQ
-        ZmVTCq3rkM828Ftc/rON2tpKQ5oUl25B9tAxfZB9Q/aZmVOPQuubxN6btAF74Hdx6bbUpRUtaUAbMmsa
-        UWh9k9h7bQN7+vS6UO0GcpL0IxYRkT9Jr9F7Z6HyPBOS9SwUM0pkNQulyGoWSqFZiEREpFHSa7Stc6Ef
-        qvIU50J1/9LZngvFyvZcKJZmIRIREXkFzt0A5YK34iJWAocAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

@@ -2,18 +2,19 @@
 Public Class Management
     Public Sub Management_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Codehbot Garage Management System"
-        sidebar_active(btn_home)
-        sidebar_form_loader(Management_Home)
+        sidebar_active(btn_dashboard)
+        sidebar_form_loader(Management_Dashboard)
         box_collections_fill()
     End Sub
-    Public Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
+    Public Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_dashboard.Click
         Me.lbl_current_tab.Text = "Dashboard | Work Oders Due"
         sidebar_active(sender)
-        sidebar_form_loader(Management_Home)
-        Management_Home.activebar_work_orders.Visible = True
-        With Management_Home
+        sidebar_form_loader(Management_Dashboard)
+        Management_Dashboard.activebar_work_orders.Visible = True
+        With Management_Dashboard
             .work_order_due_soon_Click(.work_order_due_soon, EventArgs.Empty)
             .work_order_overdue_Click(.work_order_overdue, EventArgs.Empty)
+            .work_order_due_today_Click(.work_order_due_today, EventArgs.Empty)
             .low_inventory_low_stock_Click(.low_inventory_low_stock, EventArgs.Empty)
             .low_inventory_out_of_stock_Click(.low_inventory_out_of_stock, EventArgs.Empty)
             .upcoming_events_past_Click(.upcoming_events_past, EventArgs.Empty)
@@ -22,14 +23,14 @@ Public Class Management
             .invoice_payments_pending_Click(.invoice_payments_pending, EventArgs.Empty)
             .invoice_payments_incomplete_Click(.invoice_payments_incomplete, EventArgs.Empty)
             work_order_overdue_filter("6")
-            datagrif_fill_column_resize("work_order_view", .HomeDataGridView)
+            'datagrif_fill_column_resize("work_order_view", .HomeDataGridView)
         End With
     End Sub
     Public Sub btn_work_orders_Click(sender As Object, e As EventArgs) Handles btn_work_orders.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Work_Order)
         datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)
-        datagrif_fill_column_resize("work_order_view", Management_Work_Order.WorkOrderDataGridView)
+        'datagrif_fill_column_resize("work_order_view", Management_Work_Order.WorkOrderDataGridView)
         Management_Work_Order.txt_work_order_automobile_name_filter.Clear()
         Management_Work_Order.cmb_work_order_status_filter.SelectedIndex() = 0
     End Sub
@@ -45,14 +46,14 @@ Public Class Management
     Public Sub btn_inventory_Click(sender As Object, e As EventArgs) Handles btn_inventory.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Inventory)
-        datagrid_fill_default("inventory", Management_Inventory.InventoryDataGridView)
-        datagrif_fill_column_resize("inventory", Management_Inventory.InventoryDataGridView)
+        datagrid_fill_default("inventory_view", Management_Inventory.InventoryDataGridView)
+        'datagrif_fill_column_resize("inventory", Management_Inventory.InventoryDataGridView)
         Management_Inventory.txt_inventory_part_name_filter.Clear()
         Management_Inventory.cmb_inventory_category_filter.SelectedIndex() = 0
         Management_Inventory.cmb_inventory_location_filter.SelectedIndex() = 0
     End Sub
 
-    Private Sub btn_purcahse_orders_Click(sender As Object, e As EventArgs) Handles btn_logs.Click
+    Private Sub btn_purcahse_orders_Click(sender As Object, e As EventArgs)
         sidebar_active(sender)
     End Sub
 
@@ -60,7 +61,7 @@ Public Class Management
         sidebar_active(sender)
         sidebar_form_loader(Management_Employees)
         datagrid_fill_default("employee_view", Management_Employees.EmployeesDataGridView)
-        datagrif_fill_column_resize("employee_view", Management_Employees.EmployeesDataGridView)
+        'datagrif_fill_column_resize("employee_view", Management_Employees.EmployeesDataGridView)
         Management_Employees.txt_employee_name_filter.Clear()
         Management_Employees.cmb_employee_position_filter.SelectedIndex() = 0
     End Sub
@@ -72,11 +73,12 @@ Public Class Management
     Private Sub btn_calenders_Click(sender As Object, e As EventArgs) Handles btn_calenders.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Calendar)
-        Management_Calendar.display_current_date()
+        'Management_Calendar.display_current_date()
+        Management_Calendar.pb_calendar_current_Click(Management_Calendar.pb_calendar_current, EventArgs.Empty)
     End Sub
-    Private Sub btn_messages_Click(sender As Object, e As EventArgs) Handles btn_messages.Click
+    Private Sub btn_feedbacks_Click(sender As Object, e As EventArgs) Handles btn_feedbacks.Click
         sidebar_active(sender)
-        'sidebar_form_loader(Management_Calendar)
+        sidebar_form_loader(Management_Feedbacks)
     End Sub
     'TO LOG A USER OUT OF THE SYSTEM
     Public Sub btn_logout_Click(sender As Object, e As EventArgs) Handles btn_logout.Click
@@ -89,15 +91,14 @@ Public Class Management
     'CHANGES THE BACKGROUND COLOR OF THE SIDEBAR BUTTONS WHEN CLICKED
     Public Sub sidebar_active(ByVal btn As Button)
         While btn.BackColor = Color.Teal
-            btn_home.BackColor = Color.Teal
+            btn_dashboard.BackColor = Color.Teal
             btn_calenders.BackColor = Color.Teal
             btn_employees.BackColor = Color.Teal
             btn_inventory.BackColor = Color.Teal
-            btn_logs.BackColor = Color.Teal
             btn_work_orders.BackColor = Color.Teal
             btn_statistics.BackColor = Color.Teal
             btn_invoice.BackColor = Color.Teal
-            btn_messages.BackColor = Color.Teal
+            btn_feedbacks.BackColor = Color.Teal
             btn.BackColor = Color.CadetBlue
             btn.Focus()
         End While
@@ -110,8 +111,8 @@ Public Class Management
     End Sub
     'THE REFRESH BUTTON CALLS THE SIDEBAR CLICK EVENTS BASED ON THE ACTIVE BUTTON 
     Private Sub pb_refresh_Click(sender As Object, e As EventArgs) Handles pb_refresh.Click
-        If btn_home.BackColor = Color.CadetBlue Then
-            Me.btn_home_Click(Me.btn_home, EventArgs.Empty)
+        If btn_dashboard.BackColor = Color.CadetBlue Then
+            Me.btn_home_Click(Me.btn_dashboard, EventArgs.Empty)
         ElseIf btn_employees.BackColor = Color.CadetBlue Then
             Me.btn_employees_Click(Me.btn_employees, EventArgs.Empty)
         ElseIf btn_inventory.BackColor = Color.CadetBlue Then

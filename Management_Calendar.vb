@@ -162,7 +162,7 @@ Public Class Management_Calendar
         previous_month()
     End Sub
 
-    Private Sub pb_calendar_current_Click(sender As Object, e As EventArgs) Handles pb_calendar_current.Click
+    Public Sub pb_calendar_current_Click(sender As Object, e As EventArgs) Handles pb_calendar_current.Click
         current_date = DateTime.Today
         display_current_date()
     End Sub

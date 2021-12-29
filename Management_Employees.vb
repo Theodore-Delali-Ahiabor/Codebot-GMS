@@ -118,8 +118,10 @@ Public Class Management_Employees
     Private Sub cmb_employee_position_filter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_employee_position_filter.SelectedIndexChanged
         If cmb_employee_position_filter.SelectedIndex = 0 Then
             datagrid_fill_default("employee_view", EmployeesDataGridView)
+            'datagrif_fill_column_resize("employee_view", EmployeesDataGridView)
         Else
             datagrid_fill_filter("employee_view", EmployeesDataGridView, "Role", Me.cmb_employee_position_filter)
+            'datagrif_fill_column_resize("employee_view", EmployeesDataGridView)
         End If
     End Sub
     Private Sub txt_employee_name_filter_TextChanged(sender As Object, e As EventArgs) Handles txt_employee_name_filter.TextChanged
@@ -132,7 +134,6 @@ Public Class Management_Employees
 
     Private Sub EmployeesDataGridView_ColumnHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles EmployeesDataGridView.ColumnHeaderMouseClick
         datagrid_fill_color_effect("employee_view", Me.EmployeesDataGridView)
-        clear_gridview_default_selection(Me.EmployeesDataGridView)
     End Sub
 
     Private Sub btn_activate_employee_Click(sender As Object, e As EventArgs) Handles btn_activate_employee.Click

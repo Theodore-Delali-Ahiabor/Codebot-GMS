@@ -45,8 +45,8 @@ Partial Class Management_Inventory
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_edit_inventory_item = New System.Windows.Forms.Button()
         Me.btn_add_new_inventory_item = New System.Windows.Forms.Button()
-        Me.btn_make_items_requisition = New System.Windows.Forms.Button()
-        Me.btn_stock_item = New System.Windows.Forms.Button()
+        Me.btn_stock_out_item = New System.Windows.Forms.Button()
+        Me.btn_stock_in_item = New System.Windows.Forms.Button()
         CType(Me.InventoryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -262,9 +262,9 @@ Partial Class Management_Inventory
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(40, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(83, 16)
+        Me.Label6.Size = New System.Drawing.Size(114, 16)
         Me.Label6.TabIndex = 0
-        Me.Label6.Text = "In Stock Item"
+        Me.Label6.Text = "High In Stock Item"
         '
         'Label3
         '
@@ -350,45 +350,45 @@ Partial Class Management_Inventory
         Me.btn_add_new_inventory_item.Text = "    Item"
         Me.btn_add_new_inventory_item.UseVisualStyleBackColor = False
         '
-        'btn_make_items_requisition
+        'btn_stock_out_item
         '
-        Me.btn_make_items_requisition.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btn_make_items_requisition.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.btn_make_items_requisition.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_make_items_requisition.FlatAppearance.BorderSize = 0
-        Me.btn_make_items_requisition.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_make_items_requisition.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_make_items_requisition.ForeColor = System.Drawing.Color.White
-        Me.btn_make_items_requisition.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_make_items_requisition.Location = New System.Drawing.Point(187, 472)
-        Me.btn_make_items_requisition.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_make_items_requisition.Name = "btn_make_items_requisition"
-        Me.btn_make_items_requisition.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_make_items_requisition.Size = New System.Drawing.Size(170, 46)
-        Me.btn_make_items_requisition.TabIndex = 68
-        Me.btn_make_items_requisition.Text = "Make Request"
-        Me.btn_make_items_requisition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_make_items_requisition.UseVisualStyleBackColor = False
+        Me.btn_stock_out_item.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_stock_out_item.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btn_stock_out_item.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_stock_out_item.FlatAppearance.BorderSize = 0
+        Me.btn_stock_out_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stock_out_item.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stock_out_item.ForeColor = System.Drawing.Color.White
+        Me.btn_stock_out_item.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_stock_out_item.Location = New System.Drawing.Point(209, 471)
+        Me.btn_stock_out_item.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_stock_out_item.Name = "btn_stock_out_item"
+        Me.btn_stock_out_item.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_stock_out_item.Size = New System.Drawing.Size(129, 46)
+        Me.btn_stock_out_item.TabIndex = 68
+        Me.btn_stock_out_item.Text = "STOCK OUT"
+        Me.btn_stock_out_item.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_stock_out_item.UseVisualStyleBackColor = False
         '
-        'btn_stock_item
+        'btn_stock_in_item
         '
-        Me.btn_stock_item.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btn_stock_item.BackColor = System.Drawing.Color.LightGreen
-        Me.btn_stock_item.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_stock_item.FlatAppearance.BorderSize = 0
-        Me.btn_stock_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_stock_item.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_stock_item.ForeColor = System.Drawing.Color.White
-        Me.btn_stock_item.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_stock_item.Location = New System.Drawing.Point(51, 471)
-        Me.btn_stock_item.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_stock_item.Name = "btn_stock_item"
-        Me.btn_stock_item.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_stock_item.Size = New System.Drawing.Size(116, 46)
-        Me.btn_stock_item.TabIndex = 67
-        Me.btn_stock_item.Text = "Stock"
-        Me.btn_stock_item.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_stock_item.UseVisualStyleBackColor = False
+        Me.btn_stock_in_item.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_stock_in_item.BackColor = System.Drawing.Color.LightGreen
+        Me.btn_stock_in_item.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_stock_in_item.FlatAppearance.BorderSize = 0
+        Me.btn_stock_in_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_stock_in_item.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stock_in_item.ForeColor = System.Drawing.Color.White
+        Me.btn_stock_in_item.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_stock_in_item.Location = New System.Drawing.Point(51, 471)
+        Me.btn_stock_in_item.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_stock_in_item.Name = "btn_stock_in_item"
+        Me.btn_stock_in_item.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_stock_in_item.Size = New System.Drawing.Size(129, 46)
+        Me.btn_stock_in_item.TabIndex = 67
+        Me.btn_stock_in_item.Text = "STOCK IN"
+        Me.btn_stock_in_item.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_stock_in_item.UseVisualStyleBackColor = False
         '
         'Management_Inventory
         '
@@ -396,9 +396,9 @@ Partial Class Management_Inventory
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1101, 538)
-        Me.Controls.Add(Me.btn_make_items_requisition)
+        Me.Controls.Add(Me.btn_stock_out_item)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btn_stock_item)
+        Me.Controls.Add(Me.btn_stock_in_item)
         Me.Controls.Add(Me.cmb_inventory_category_filter)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
@@ -438,6 +438,6 @@ Partial Class Management_Inventory
     Friend WithEvents Label6 As Label
     Friend WithEvents Button4 As Button
     Friend WithEvents Label7 As Label
-    Friend WithEvents btn_make_items_requisition As Button
-    Friend WithEvents btn_stock_item As Button
+    Friend WithEvents btn_stock_out_item As Button
+    Friend WithEvents btn_stock_in_item As Button
 End Class

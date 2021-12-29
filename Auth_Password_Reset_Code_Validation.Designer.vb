@@ -168,7 +168,7 @@ Partial Class Auth_Password_Reset_Code_Validation
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label4.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.WhiteSmoke
@@ -183,7 +183,7 @@ Partial Class Auth_Password_Reset_Code_Validation
         Me.AcceptButton = Me.btn_reset_code_validate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.Teal
         Me.CancelButton = Me.btn_reset_code_cancel
         Me.ClientSize = New System.Drawing.Size(520, 280)
         Me.ControlBox = False

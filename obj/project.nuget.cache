@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6gJJtvgMTfUY8EBjGaCulz2Pi1lXmvRd2pQ6mWxSg15pTrjp7EbvgOfSzChnzB8kZ4UJLITAy28TU5YocvCU7w==",
+  "dgSpecHash": "3kMdV+rHsDldRP/V1r52TCFaWvr2dkf6+/D/CQH/twyodKqujI7B6oRdngHw8Sski8Krytr+0i4/A9W5+FyntA==",
   "success": true,
   "projectFilePath": "C:\\Users\\theod\\Desktop\\  \\Projects\\Visual Basic\\Codebot GMS\\Codebot_GMS.vbproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\theod\\.nuget\\packages\\k4os.compression.lz4.streams\\1.2.6\\k4os.compression.lz4.streams.1.2.6.nupkg.sha512",
     "C:\\Users\\theod\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\k4os.hash.xxhash.1.0.6.nupkg.sha512",
     "C:\\Users\\theod\\.nuget\\packages\\mysql.data\\8.0.27\\mysql.data.8.0.27.nupkg.sha512",
+    "C:\\Users\\theod\\.nuget\\packages\\openpop.net\\2.0.6.1120\\openpop.net.2.0.6.1120.nupkg.sha512",
     "C:\\Users\\theod\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\theod\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\theod\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
