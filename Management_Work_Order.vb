@@ -59,6 +59,8 @@ Public Class Management_Work_Order
                     message("information", "Work Order is already closed")
                 ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "Pending" Then
                     message("information", "Cannot CLOSE a pending work order. Terminate instead.")
+                ElseIf Me.WorkOrderDataGridView.CurrentRow.Cells(5).Value.ToString = "Terminated" Then
+                    message("information", "Work Order has been terminated.")
                 Else
                     Dim repos As DialogResult = MessageBox.Show("You are about to CLOSE a Work Order @ ID '" & Me.WorkOrderDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                     If repos = DialogResult.Yes Then

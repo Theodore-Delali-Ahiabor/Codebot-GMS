@@ -144,9 +144,9 @@ Partial Class Auth_Password_Reset
         Me.Label5.ForeColor = System.Drawing.Color.DimGray
         Me.Label5.Location = New System.Drawing.Point(70, 113)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(358, 21)
+        Me.Label5.Size = New System.Drawing.Size(359, 21)
         Me.Label5.TabIndex = 38
-        Me.Label5.Text = "-Internet connectivity is needed to reset your login"
+        Me.Label5.Text = "-Internet connection is required to reset your login"
         '
         'Label6
         '

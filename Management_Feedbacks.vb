@@ -14,17 +14,25 @@ Public Class Management_Feedbacks
 
         For count As Integer = 1 To messageCount
             Try
+                MsgBox("check")
                 allMessages.Add(client.GetMessage(count))
+                MsgBox("check" + allMessages.ToString)
             Catch ex As OpenPop.Pop3.Exceptions.PopServerException
                 allMessages.Add(Nothing)
+                MsgBox("Error - " + ex.ToString)
+
             End Try
         Next
         Return allMessages
-        MsgBox(allMessages)
+        'MsgBox(allMessages)
     End Function
 
     Private Sub btn_new_mail_Click(sender As Object, e As EventArgs) Handles btn_new_mail.Click
-        GetMails("pop.gmail.com", 995, True, "allprojectstemporaryemail@gmail.com", "@Welcome98")
+        If CheckForInternetConnection() = True Then
+            MsgBox("You are connected")
+        Else
+            MsgBox("No Internet Connection")
+        End If
 
     End Sub
 End Class

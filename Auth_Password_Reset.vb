@@ -29,24 +29,28 @@ Public Class Auth_Password_Reset
                             reset_phone = CStr(sql_dt.Rows(0).Item("Phone"))
                             reset_email = sql_dt.Rows(0).Item("email")
                             Try
-                                'Sends a reset code  to the user requesting the password reset based on the selected meduims
-                                If chkb_login_reset_send_email.Checked Then
-                                    'send email
-                                    send_email("Login Reset", txt_password_reset_email.Text, "Your login reset code is " + CStr(reset_code))
-                                    'check if the mail was sent sucessfully
-                                    If email_delevery_status = 1 Then
-                                        message("success", "Login reset code has been successfully sent to " + txt_password_reset_email.Text)
+                                If CheckForInternetConnection() = True Then
+                                    'Sends a reset code  to the user requesting the password reset based on the selected meduims
+                                    If chkb_login_reset_send_email.Checked Then
+                                        'send email
+                                        send_email("Login Reset", txt_password_reset_email.Text, "Your login reset code is " + CStr(reset_code))
+                                        'check if the mail was sent sucessfully
+                                        If email_delevery_status = 1 Then
+                                            message("success", "Reset code successfully sent to " + txt_password_reset_email.Text)
+                                            login_reset_update_user()
+                                        Else
+                                            message("warning", "Failed to send email to " + reset_email + ". ")
+                                        End If
+                                    ElseIf chkb_login_reset_send_whatsapp.Checked Then
+                                        'send whatsapp
+                                        send_whatsapp(reset_phone, "Your login reset code is " + CStr(reset_code))
+                                        message("success", "Login reset code has been successfully sent to " + reset_phone)
                                         login_reset_update_user()
                                     Else
-                                        message("warning", "Failed to send email to " + reset_email + ".Check email address and try again. ")
+                                        message("warning", "No messagin meduim Selected")
                                     End If
-                                ElseIf chkb_login_reset_send_whatsapp.Checked Then
-                                    'send whatsapp
-                                    send_whatsapp(reset_phone, "Your login reset code is " + CStr(reset_code))
-                                    message("success", "Login reset code has been successfully sent to " + reset_phone)
-                                    login_reset_update_user()
                                 Else
-                                    message("warning", "No Sending meduim Selected")
+                                    message("warning", "No internet connection, Check internet conection and try Again")
                                 End If
                             Catch ex As Exception
                                 MessageBox.Show(ex.Message, "Sending Code Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

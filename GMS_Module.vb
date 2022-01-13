@@ -528,33 +528,43 @@ Module GMS_Module
             message("success", "Welcome " + login_first_name + ", you logged-in successfully")
         End With
     End Sub
+    '-------------------------------------
+    'CHECKING FOR INTERET CONNECTION STATE
+    '-------------------------------------
+    Public Function CheckForInternetConnection() As Boolean
+        Try
+            Return My.Computer.Network.Ping("www.google.com")
+        Catch
+            Return False
+        End Try
+    End Function
     '----------
     'SEND EMAIL
     '----------
-    Public Sub send_email(ByRef subject As String, ByRef reciepint As String, ByRef message As String)
+    Public Sub send_email(ByRef subject As String, ByRef reciepint As String, ByRef message_body As String)
         Dim Smtp_Server As New SmtpClient
         Dim e_mail As New MailMessage()
-        email_delevery_status = 0
-        Try
-            '
-            Smtp_Server.UseDefaultCredentials = False
-            Smtp_Server.Credentials = New Net.NetworkCredential("allprojectstemporaryemail@gmail.com", "@Welcome98")
-            Smtp_Server.Port = 587
-            Smtp_Server.EnableSsl = True
-            Smtp_Server.Host = "smtp.gmail.com"
-            '
-            e_mail = New MailMessage()
-            e_mail.From = New MailAddress("allprojectstemporaryemail@gmail.com")
-            e_mail.To.Add(reciepint)
-            e_mail.Subject = "HTU-JMTC " + subject
-            e_mail.IsBodyHtml = False
-            e_mail.Body = message
-            Smtp_Server.Send(e_mail)
-            email_delevery_status = 1
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "SMTP Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             email_delevery_status = 0
-        End Try
+            Try
+                '
+                Smtp_Server.UseDefaultCredentials = False
+                Smtp_Server.Credentials = New Net.NetworkCredential("allprojectstemporaryemail@gmail.com", "@Welcome98")
+                Smtp_Server.Port = 587
+                Smtp_Server.EnableSsl = True
+                Smtp_Server.Host = "smtp.gmail.com"
+                '
+                e_mail = New MailMessage()
+                e_mail.From = New MailAddress("allprojectstemporaryemail@gmail.com")
+                e_mail.To.Add(reciepint)
+                e_mail.Subject = "HTU-JMTC " + subject
+                e_mail.IsBodyHtml = False
+                e_mail.Body = message_body
+                Smtp_Server.Send(e_mail)
+                email_delevery_status = 1
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "SMTP Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                email_delevery_status = 0
+            End Try
     End Sub
     '----------------------
     ' SEND WHATSAPP MESSAGE
