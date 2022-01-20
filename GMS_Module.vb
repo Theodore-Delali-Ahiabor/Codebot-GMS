@@ -287,7 +287,6 @@ Module GMS_Module
             Management_Dashboard.DashboardDataGridView.DataSource = sql_dt
             datagrid_fill_color_effect("work_order_view", Management_Dashboard.DashboardDataGridView)
             datagrid_fill_column_resize("work_order_view", Management_Dashboard.DashboardDataGridView)
-            Management.lbl_current_tab.Text = "Dashboard | Work Oders Due"
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Work Order Overdue Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -307,7 +306,6 @@ Module GMS_Module
         Management_Dashboard.DashboardDataGridView.DataSource = sql_dt
         datagrid_fill_color_effect("events_view", Management_Dashboard.DashboardDataGridView)
         datagrid_fill_column_resize("events_view", Management_Dashboard.DashboardDataGridView)
-        Management.lbl_current_tab.Text = "Dashboard | Upcoming Events"
     End Sub
     '--------------------------------------------------
     'CLEAR THE DEFAULT ROW SELECTION IN A DATAFRID VIEW
@@ -451,7 +449,6 @@ Module GMS_Module
                     gridview_name.Columns(5).Width = 200   '
                     gridview_name.Columns(6).Width = 70    '
                     gridview_name.Columns(7).Visible = False   'Active
-
                 Case "inventory_view"
                     gridview_name.Columns(0).Width = 50    'ID
                     gridview_name.Columns(1).Width = 100   'Category
@@ -479,19 +476,6 @@ Module GMS_Module
                     'gridview_name.Columns.(3).Width = auto
                     gridview_name.Columns(4).Visible = False
             End Select
-
-            'If db_table = "employee_view" Then
-
-            'End If
-            'If db_table = "inventory_view" Then
-
-            'End If
-            'If db_table = "work_order_view" Then
-
-            'End If
-            'If db_table = "events_view" Then
-
-            'End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "DataGridView Collumn Resize Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
@@ -502,7 +486,7 @@ Module GMS_Module
     Public Sub Access_Control(ByRef role As String)
         With Management
             gms_main_form_loader(Management)
-            .btn_home_Click(Management.btn_dashboard, EventArgs.Empty)
+            .btn_dashboard_Click(Management.btn_dashboard, EventArgs.Empty)
             .login_position.Text = login_as
             .login_name.Text = login_full_name
 

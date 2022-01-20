@@ -6,7 +6,7 @@ Public Class Management
         sidebar_form_loader(Management_Dashboard)
         box_collections_fill()
     End Sub
-    Public Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_dashboard.Click
+    Public Sub btn_dashboard_Click(sender As Object, e As EventArgs) Handles btn_dashboard.Click
         Me.lbl_current_tab.Text = "Dashboard | Work Oders Due"
         sidebar_active(sender)
         sidebar_form_loader(Management_Dashboard)
@@ -23,14 +23,14 @@ Public Class Management
             .invoice_payments_pending_Click(.invoice_payments_pending, EventArgs.Empty)
             .invoice_payments_incomplete_Click(.invoice_payments_incomplete, EventArgs.Empty)
             work_order_overdue_filter("6")
-            'datagrif_fill_column_resize("work_order_view", .HomeDataGridView)
+            'datagrid_fill_column_resize("work_order_view", Management_Dashboard.DashboardDataGridView)
         End With
     End Sub
     Public Sub btn_work_orders_Click(sender As Object, e As EventArgs) Handles btn_work_orders.Click
         sidebar_active(sender)
         sidebar_form_loader(Management_Work_Order)
         datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)
-        'datagrif_fill_column_resize("work_order_view", Management_Work_Order.WorkOrderDataGridView)
+        datagrid_fill_column_resize("work_order_view", Management_Work_Order.WorkOrderDataGridView)
         Management_Work_Order.txt_work_order_automobile_name_filter.Clear()
         Management_Work_Order.cmb_work_order_status_filter.SelectedIndex() = 0
     End Sub
@@ -47,7 +47,7 @@ Public Class Management
         sidebar_active(sender)
         sidebar_form_loader(Management_Inventory)
         datagrid_fill_default("inventory_view", Management_Inventory.InventoryDataGridView)
-        'datagrif_fill_column_resize("inventory", Management_Inventory.InventoryDataGridView)
+        datagrid_fill_column_resize("inventory", Management_Inventory.InventoryDataGridView)
         Management_Inventory.txt_inventory_part_name_filter.Clear()
         Management_Inventory.cmb_inventory_category_filter.SelectedIndex() = 0
         Management_Inventory.cmb_inventory_location_filter.SelectedIndex() = 0
@@ -61,7 +61,7 @@ Public Class Management
         sidebar_active(sender)
         sidebar_form_loader(Management_Employees)
         datagrid_fill_default("employee_view", Management_Employees.EmployeesDataGridView)
-        'datagrif_fill_column_resize("employee_view", Management_Employees.EmployeesDataGridView)
+        datagrid_fill_column_resize("employee_view", Management_Employees.EmployeesDataGridView)
         Management_Employees.txt_employee_name_filter.Clear()
         Management_Employees.cmb_employee_position_filter.SelectedIndex() = 0
     End Sub
@@ -112,7 +112,7 @@ Public Class Management
     'THE REFRESH BUTTON CALLS THE SIDEBAR CLICK EVENTS BASED ON THE ACTIVE BUTTON 
     Private Sub pb_refresh_Click(sender As Object, e As EventArgs) Handles pb_refresh.Click
         If btn_dashboard.BackColor = Color.CadetBlue Then
-            Me.btn_home_Click(Me.btn_dashboard, EventArgs.Empty)
+            Me.btn_dashboard_Click(Me.btn_dashboard, EventArgs.Empty)
         ElseIf btn_employees.BackColor = Color.CadetBlue Then
             Me.btn_employees_Click(Me.btn_employees, EventArgs.Empty)
         ElseIf btn_inventory.BackColor = Color.CadetBlue Then

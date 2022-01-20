@@ -22,49 +22,49 @@ Partial Class Management_Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Dashboard))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.work_oders_due_panel = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lbl_work_orders_due = New System.Windows.Forms.Label()
         Me.work_order_overdue = New System.Windows.Forms.Label()
         Me.work_order_due_soon = New System.Windows.Forms.Label()
         Me.work_order_due_today = New System.Windows.Forms.Label()
+        Me.PictureBoxWorkOrders = New System.Windows.Forms.PictureBox()
+        Me.lbl_work_orders_due = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.invoice_payments_panel = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.lbl_invoice_payments = New System.Windows.Forms.Label()
         Me.invoice_payments_incomplete = New System.Windows.Forms.Label()
         Me.invoice_payments_pending = New System.Windows.Forms.Label()
+        Me.lbl_invoice_payments = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.upcoming_events_panel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.lbl_upcoming_events = New System.Windows.Forms.Label()
         Me.upcoming_events_soon = New System.Windows.Forms.Label()
         Me.upcoming_events_past = New System.Windows.Forms.Label()
         Me.upcoming_events_today = New System.Windows.Forms.Label()
+        Me.lbl_upcoming_events = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.lbl_low_inventory = New System.Windows.Forms.Label()
         Me.low_inventory_low_stock = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.low_inventory_out_of_stock = New System.Windows.Forms.Label()
         Me.low_inventory_panel = New System.Windows.Forms.Panel()
+        Me.PictureBoxInventory = New System.Windows.Forms.PictureBox()
         Me.activebar_inventory = New System.Windows.Forms.Button()
         Me.activebar_work_orders = New System.Windows.Forms.Button()
         Me.DashboardDataGridView = New System.Windows.Forms.DataGridView()
         Me.activebar_events = New System.Windows.Forms.Button()
         Me.activebar_payments = New System.Windows.Forms.Button()
-        Me.PictureBoxInventory = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxWorkOrders = New System.Windows.Forms.PictureBox()
         Me.work_oders_due_panel.SuspendLayout()
+        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.invoice_payments_panel.SuspendLayout()
         Me.upcoming_events_panel.SuspendLayout()
         Me.low_inventory_panel.SuspendLayout()
-        CType(Me.DashboardDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DashboardDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'work_oders_due_panel
@@ -86,34 +86,6 @@ Partial Class Management_Dashboard
         Me.work_oders_due_panel.Name = "work_oders_due_panel"
         Me.work_oders_due_panel.Size = New System.Drawing.Size(235, 88)
         Me.work_oders_due_panel.TabIndex = 0
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(80, 58)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(12, 19)
-        Me.Label7.TabIndex = 7
-        Me.Label7.Text = "|"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(151, 59)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(12, 19)
-        Me.Label3.TabIndex = 10
-        Me.Label3.Text = "|"
-        '
-        'lbl_work_orders_due
-        '
-        Me.lbl_work_orders_due.AutoSize = True
-        Me.lbl_work_orders_due.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_work_orders_due.Location = New System.Drawing.Point(3, 0)
-        Me.lbl_work_orders_due.Name = "lbl_work_orders_due"
-        Me.lbl_work_orders_due.Size = New System.Drawing.Size(151, 25)
-        Me.lbl_work_orders_due.TabIndex = 0
-        Me.lbl_work_orders_due.Text = "Work Orders Due"
         '
         'work_order_overdue
         '
@@ -145,6 +117,44 @@ Partial Class Management_Dashboard
         Me.work_order_due_today.TabIndex = 0
         Me.work_order_due_today.Text = "Today"
         '
+        'PictureBoxWorkOrders
+        '
+        Me.PictureBoxWorkOrders.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxWorkOrders.Image = CType(resources.GetObject("PictureBoxWorkOrders.Image"), System.Drawing.Image)
+        Me.PictureBoxWorkOrders.Location = New System.Drawing.Point(181, 3)
+        Me.PictureBoxWorkOrders.Name = "PictureBoxWorkOrders"
+        Me.PictureBoxWorkOrders.Size = New System.Drawing.Size(49, 50)
+        Me.PictureBoxWorkOrders.TabIndex = 9
+        Me.PictureBoxWorkOrders.TabStop = False
+        '
+        'lbl_work_orders_due
+        '
+        Me.lbl_work_orders_due.AutoSize = True
+        Me.lbl_work_orders_due.Font = New System.Drawing.Font("Ebrima", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_work_orders_due.Location = New System.Drawing.Point(3, 0)
+        Me.lbl_work_orders_due.Name = "lbl_work_orders_due"
+        Me.lbl_work_orders_due.Size = New System.Drawing.Size(151, 25)
+        Me.lbl_work_orders_due.TabIndex = 0
+        Me.lbl_work_orders_due.Text = "Work Orders Due"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(151, 59)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(12, 19)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "|"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(80, 58)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(12, 19)
+        Me.Label7.TabIndex = 7
+        Me.Label7.Text = "|"
+        '
         'invoice_payments_panel
         '
         Me.invoice_payments_panel.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -161,25 +171,6 @@ Partial Class Management_Dashboard
         Me.invoice_payments_panel.Name = "invoice_payments_panel"
         Me.invoice_payments_panel.Size = New System.Drawing.Size(235, 87)
         Me.invoice_payments_panel.TabIndex = 1
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(90, 58)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(12, 19)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "|"
-        '
-        'lbl_invoice_payments
-        '
-        Me.lbl_invoice_payments.AutoSize = True
-        Me.lbl_invoice_payments.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_invoice_payments.Location = New System.Drawing.Point(3, 0)
-        Me.lbl_invoice_payments.Name = "lbl_invoice_payments"
-        Me.lbl_invoice_payments.Size = New System.Drawing.Size(163, 28)
-        Me.lbl_invoice_payments.TabIndex = 2
-        Me.lbl_invoice_payments.Text = "Invoice Payments"
         '
         'invoice_payments_incomplete
         '
@@ -201,6 +192,25 @@ Partial Class Management_Dashboard
         Me.invoice_payments_pending.TabIndex = 0
         Me.invoice_payments_pending.Text = "Pending"
         '
+        'lbl_invoice_payments
+        '
+        Me.lbl_invoice_payments.AutoSize = True
+        Me.lbl_invoice_payments.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_invoice_payments.Location = New System.Drawing.Point(3, 0)
+        Me.lbl_invoice_payments.Name = "lbl_invoice_payments"
+        Me.lbl_invoice_payments.Size = New System.Drawing.Size(163, 28)
+        Me.lbl_invoice_payments.TabIndex = 2
+        Me.lbl_invoice_payments.Text = "Invoice Payments"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(90, 58)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(12, 19)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "|"
+        '
         'upcoming_events_panel
         '
         Me.upcoming_events_panel.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -219,34 +229,6 @@ Partial Class Management_Dashboard
         Me.upcoming_events_panel.Name = "upcoming_events_panel"
         Me.upcoming_events_panel.Size = New System.Drawing.Size(235, 87)
         Me.upcoming_events_panel.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(67, 59)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(12, 19)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "|"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(143, 58)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(12, 19)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "|"
-        '
-        'lbl_upcoming_events
-        '
-        Me.lbl_upcoming_events.AutoSize = True
-        Me.lbl_upcoming_events.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_upcoming_events.Location = New System.Drawing.Point(3, 0)
-        Me.lbl_upcoming_events.Name = "lbl_upcoming_events"
-        Me.lbl_upcoming_events.Size = New System.Drawing.Size(165, 28)
-        Me.lbl_upcoming_events.TabIndex = 4
-        Me.lbl_upcoming_events.Text = "Upcoming Events"
         '
         'upcoming_events_soon
         '
@@ -277,6 +259,34 @@ Partial Class Management_Dashboard
         Me.upcoming_events_today.Size = New System.Drawing.Size(46, 19)
         Me.upcoming_events_today.TabIndex = 0
         Me.upcoming_events_today.Text = "Today"
+        '
+        'lbl_upcoming_events
+        '
+        Me.lbl_upcoming_events.AutoSize = True
+        Me.lbl_upcoming_events.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_upcoming_events.Location = New System.Drawing.Point(3, 0)
+        Me.lbl_upcoming_events.Name = "lbl_upcoming_events"
+        Me.lbl_upcoming_events.Size = New System.Drawing.Size(165, 28)
+        Me.lbl_upcoming_events.TabIndex = 4
+        Me.lbl_upcoming_events.Text = "Upcoming Events"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(67, 59)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(12, 19)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "|"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(143, 58)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(12, 19)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "|"
         '
         'lbl_low_inventory
         '
@@ -335,6 +345,16 @@ Partial Class Management_Dashboard
         Me.low_inventory_panel.Size = New System.Drawing.Size(235, 86)
         Me.low_inventory_panel.TabIndex = 0
         '
+        'PictureBoxInventory
+        '
+        Me.PictureBoxInventory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxInventory.Image = CType(resources.GetObject("PictureBoxInventory.Image"), System.Drawing.Image)
+        Me.PictureBoxInventory.Location = New System.Drawing.Point(171, 4)
+        Me.PictureBoxInventory.Name = "PictureBoxInventory"
+        Me.PictureBoxInventory.Size = New System.Drawing.Size(48, 50)
+        Me.PictureBoxInventory.TabIndex = 12
+        Me.PictureBoxInventory.TabStop = False
+        '
         'activebar_inventory
         '
         Me.activebar_inventory.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -385,45 +405,45 @@ Partial Class Management_Dashboard
         Me.DashboardDataGridView.BackgroundColor = System.Drawing.Color.White
         Me.DashboardDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DashboardDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DashboardDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DashboardDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DashboardDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightCyan
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Gray
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DashboardDataGridView.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCyan
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DashboardDataGridView.DefaultCellStyle = DataGridViewCellStyle2
         Me.DashboardDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DashboardDataGridView.EnableHeadersVisualStyles = False
         Me.DashboardDataGridView.GridColor = System.Drawing.Color.Silver
         Me.DashboardDataGridView.Location = New System.Drawing.Point(24, 132)
         Me.DashboardDataGridView.MultiSelect = False
         Me.DashboardDataGridView.Name = "DashboardDataGridView"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DashboardDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DashboardDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DashboardDataGridView.RowHeadersVisible = False
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.CadetBlue
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DashboardDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DashboardDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DashboardDataGridView.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DashboardDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.DashboardDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.CadetBlue
@@ -472,26 +492,6 @@ Partial Class Management_Dashboard
         Me.activebar_payments.UseVisualStyleBackColor = False
         Me.activebar_payments.Visible = False
         '
-        'PictureBoxInventory
-        '
-        Me.PictureBoxInventory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBoxInventory.Image = CType(resources.GetObject("PictureBoxInventory.Image"), System.Drawing.Image)
-        Me.PictureBoxInventory.Location = New System.Drawing.Point(171, 4)
-        Me.PictureBoxInventory.Name = "PictureBoxInventory"
-        Me.PictureBoxInventory.Size = New System.Drawing.Size(48, 50)
-        Me.PictureBoxInventory.TabIndex = 12
-        Me.PictureBoxInventory.TabStop = False
-        '
-        'PictureBoxWorkOrders
-        '
-        Me.PictureBoxWorkOrders.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBoxWorkOrders.Image = CType(resources.GetObject("PictureBoxWorkOrders.Image"), System.Drawing.Image)
-        Me.PictureBoxWorkOrders.Location = New System.Drawing.Point(181, 3)
-        Me.PictureBoxWorkOrders.Name = "PictureBoxWorkOrders"
-        Me.PictureBoxWorkOrders.Size = New System.Drawing.Size(49, 50)
-        Me.PictureBoxWorkOrders.TabIndex = 9
-        Me.PictureBoxWorkOrders.TabStop = False
-        '
         'Management_Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -515,15 +515,15 @@ Partial Class Management_Dashboard
         Me.Text = "Management_Dashboard"
         Me.work_oders_due_panel.ResumeLayout(False)
         Me.work_oders_due_panel.PerformLayout()
+        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.invoice_payments_panel.ResumeLayout(False)
         Me.invoice_payments_panel.PerformLayout()
         Me.upcoming_events_panel.ResumeLayout(False)
         Me.upcoming_events_panel.PerformLayout()
         Me.low_inventory_panel.ResumeLayout(False)
         Me.low_inventory_panel.PerformLayout()
-        CType(Me.DashboardDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxInventory, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxWorkOrders, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DashboardDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
