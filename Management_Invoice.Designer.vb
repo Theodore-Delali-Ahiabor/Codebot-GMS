@@ -33,6 +33,9 @@ Partial Class Management_Invoice
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_add_new_invoice = New System.Windows.Forms.Button()
+        Me.btn_complete_work_order = New System.Windows.Forms.Button()
+        Me.btn_start_work_order = New System.Windows.Forms.Button()
+        Me.btn_terminate_work_order = New System.Windows.Forms.Button()
         CType(Me.InvoiceDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -117,7 +120,7 @@ Partial Class Management_Invoice
         Me.InvoiceDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.InvoiceDataGridView.RowTemplate.Height = 38
         Me.InvoiceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.InvoiceDataGridView.Size = New System.Drawing.Size(1005, 408)
+        Me.InvoiceDataGridView.Size = New System.Drawing.Size(1005, 417)
         Me.InvoiceDataGridView.TabIndex = 64
         '
         'Label3
@@ -160,7 +163,7 @@ Partial Class Management_Invoice
         Me.btn_add_new_invoice.ForeColor = System.Drawing.Color.White
         Me.btn_add_new_invoice.Image = CType(resources.GetObject("btn_add_new_invoice.Image"), System.Drawing.Image)
         Me.btn_add_new_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_add_new_invoice.Location = New System.Drawing.Point(48, 4)
+        Me.btn_add_new_invoice.Location = New System.Drawing.Point(48, 15)
         Me.btn_add_new_invoice.Name = "btn_add_new_invoice"
         Me.btn_add_new_invoice.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
         Me.btn_add_new_invoice.Size = New System.Drawing.Size(105, 46)
@@ -168,13 +171,78 @@ Partial Class Management_Invoice
         Me.btn_add_new_invoice.Text = "    New"
         Me.btn_add_new_invoice.UseVisualStyleBackColor = False
         '
+        'btn_complete_work_order
+        '
+        Me.btn_complete_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_complete_work_order.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btn_complete_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_complete_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_complete_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_complete_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_complete_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_complete_work_order.Image = CType(resources.GetObject("btn_complete_work_order.Image"), System.Drawing.Image)
+        Me.btn_complete_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_complete_work_order.Location = New System.Drawing.Point(160, 505)
+        Me.btn_complete_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_complete_work_order.Name = "btn_complete_work_order"
+        Me.btn_complete_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.btn_complete_work_order.Size = New System.Drawing.Size(138, 46)
+        Me.btn_complete_work_order.TabIndex = 71
+        Me.btn_complete_work_order.Text = "COMPLETE"
+        Me.btn_complete_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_complete_work_order.UseVisualStyleBackColor = False
+        '
+        'btn_start_work_order
+        '
+        Me.btn_start_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_start_work_order.BackColor = System.Drawing.Color.LightGreen
+        Me.btn_start_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_start_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_start_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_start_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_start_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_start_work_order.Image = CType(resources.GetObject("btn_start_work_order.Image"), System.Drawing.Image)
+        Me.btn_start_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_start_work_order.Location = New System.Drawing.Point(48, 505)
+        Me.btn_start_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_start_work_order.Name = "btn_start_work_order"
+        Me.btn_start_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.btn_start_work_order.Size = New System.Drawing.Size(96, 46)
+        Me.btn_start_work_order.TabIndex = 70
+        Me.btn_start_work_order.Text = "PAYED"
+        Me.btn_start_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_start_work_order.UseVisualStyleBackColor = False
+        '
+        'btn_terminate_work_order
+        '
+        Me.btn_terminate_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_terminate_work_order.BackColor = System.Drawing.Color.Black
+        Me.btn_terminate_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_terminate_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_terminate_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_terminate_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_terminate_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_terminate_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_terminate_work_order.Location = New System.Drawing.Point(322, 505)
+        Me.btn_terminate_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_terminate_work_order.Name = "btn_terminate_work_order"
+        Me.btn_terminate_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_terminate_work_order.Size = New System.Drawing.Size(138, 46)
+        Me.btn_terminate_work_order.TabIndex = 72
+        Me.btn_terminate_work_order.Text = "TERMINATE"
+        Me.btn_terminate_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_terminate_work_order.UseVisualStyleBackColor = False
+        '
         'Management_Invoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.ClientSize = New System.Drawing.Size(1101, 564)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btn_terminate_work_order)
+        Me.Controls.Add(Me.btn_complete_work_order)
+        Me.Controls.Add(Me.btn_start_work_order)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cmb_payment_status_filter)
@@ -195,4 +263,7 @@ Partial Class Management_Invoice
     Friend WithEvents btn_add_new_invoice As Button
     Friend WithEvents txt_invoice_id_filter As TextBox
     Friend WithEvents InvoiceDataGridView As DataGridView
+    Friend WithEvents btn_complete_work_order As Button
+    Friend WithEvents btn_start_work_order As Button
+    Friend WithEvents btn_terminate_work_order As Button
 End Class

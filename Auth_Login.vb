@@ -6,7 +6,9 @@ Public Class Auth_Login
                 message("error", "Unexpeted Character (') in username")
                 txt_login_username.Focus()
             Else
+
                 Try
+
                     sql_da = New MySqlDataAdapter("SELECT * FROM user WHERE Username = '" & txt_login_username.Text & "'", sql_con)
                     sql_dt = New DataTable
                     sql_dt.Clear()
@@ -119,5 +121,4 @@ Public Class Auth_Login
             txt_invalid_display.Text = String.Format("Try Again in  {0} Mins : {1} Secs", invalid_login_ts.Minutes, invalid_login_ts.Seconds)
         End If
     End Sub
-
 End Class

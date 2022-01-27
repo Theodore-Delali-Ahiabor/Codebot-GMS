@@ -110,7 +110,17 @@ Public Class Management_Dashboard
         Me.upcoming_events_past.Text = DashboardDataGridView.Rows.Count & " Past"
     End Sub
     Public Sub upcoming_events_soon_Click(sender As Object, e As EventArgs) Handles upcoming_events_soon.Click
-        upcoming_calendar_events("<", "8")
+        activebar_work_orders.Visible = False
+        activebar_inventory.Visible = False
+        activebar_payments.Visible = False
+        activebar_events.Visible = True
+        sql_da = New MySqlDataAdapter("SELECT * FROM `events_view` WHERE `Due_In` < 8  AND `Due_In` > 0 AND `Added_By` = '" & login_id & "' ORDER BY ID DESC", sql_con)
+        sql_dt = New DataTable
+        sql_dt.Clear()
+        sql_da.Fill(sql_dt)
+        DashboardDataGridView.DataSource = sql_dt
+        datagrid_fill_color_effect("events_view", DashboardDataGridView)
+        datagrid_fill_column_resize("events_view", DashboardDataGridView)
         Me.upcoming_events_soon.Text = DashboardDataGridView.Rows.Count & " soon"
     End Sub
 

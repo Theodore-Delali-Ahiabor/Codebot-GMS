@@ -2,6 +2,7 @@
     Public Sub btn_add_new_invoice_Click(sender As Object, e As EventArgs) Handles btn_add_new_invoice.Click
         Management.lbl_current_tab.Text = "Invoice | Add New Invoice"
         sidebar_form_loader(Management_Invoice_Add_New)
+
         Try
             Dim services_dt As New DataTable
             services_dt.Clear()
@@ -126,5 +127,7 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Add New Invoice Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
+        Management_Invoice_Add_New.clear_invoice()
     End Sub
+
 End Class

@@ -1,8 +1,7 @@
 ﻿Public Class Management_Invoice_Add_New
-
     Private Sub btn_new_ivoice_cancel_Click(sender As Object, e As EventArgs) Handles btn_new_ivoice_cancel.Click
         sidebar_form_loader(Management_Invoice)
-        Management.lbl_current_tab.Text = "Invoive"
+        Management.lbl_current_tab.Text = "Invoive | New"
     End Sub
 
     Private Sub InvoicePartsDataGridView_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles InvoicePartsDataGridView.CellValueChanged
@@ -72,7 +71,39 @@
                 calculate()
             End With
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Enter Services Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
+            'MessageBox.Show(ex.Message, "Enter Services Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub btn_new_incoice_existing_work_order_Click(sender As Object, e As EventArgs) Handles btn_new_incoice_existing_work_order.Click
+        Management_Invoice_Select_Work_Order.ShowDialog()
+    End Sub
+
+    Private Sub btn_new_invoice_new_work_order_Click(sender As Object, e As EventArgs) Handles btn_new_invoice_new_work_order.Click
+        Management_Work_Order.btn_add_new_work_order_Click(Management_Work_Order.btn_add_new_work_order, EventArgs.Empty)
+    End Sub
+
+    Private Sub work_order_clear_work_order_Click(sender As Object, e As EventArgs) Handles work_order_clear_work_order.Click
+        txt_invoice_work_order.Clear()
+    End Sub
+
+    Public Sub clear_invoice()
+        lbl_new_invoice_total_services_cost.Text = "00.00"
+        lbl_new_invoice_total_parts_cost.Text = "00.00"
+        lbl_new_invoice_tax.Text = "00.00"
+        lbl_new_invoice_grand_total_cost.Text = "00.00"
+        lbl_new_invoice_payable_amount.Text = "00.00"
+        txt_invoice_work_order.Clear()
+        cmb_payment_method_filter.Text = ""
+        txt_invoice_payment_amount.Clear()
+        cmb_payment_status_filter.Text = ""
+    End Sub
+
+    Private Sub InvoiceServicesDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles InvoiceServicesDataGridView.CellClick
+        'InvoiceServicesDataGridView_CellValueChanged(InvoiceServicesDataGridView, EventArgs.Empty)
+    End Sub
+
+    Private Sub InvoicePartsDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles InvoicePartsDataGridView.CellClick
+        'InvoicePartsDataGridView_CellValueChanged(InvoicePartsDataGridView, EventArgs.Empty)
     End Sub
 End Class

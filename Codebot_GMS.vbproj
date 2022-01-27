@@ -219,6 +219,12 @@
       <DependentUpon>Management_Employees.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Management_Invoice_Select_Work_Order.Designer.vb">
+      <DependentUpon>Management_Invoice_Select_Work_Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Invoice_Select_Work_Order.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Management_Work_Order.Designer.vb">
       <DependentUpon>Management_Work_Order.vb</DependentUpon>
     </Compile>
@@ -344,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Invoice_Add_New.resx">
       <DependentUpon>Management_Invoice_Add_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management_Invoice_Select_Work_Order.resx">
+      <DependentUpon>Management_Invoice_Select_Work_Order.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Work_Order.resx">
       <DependentUpon>Management_Work_Order.vb</DependentUpon>

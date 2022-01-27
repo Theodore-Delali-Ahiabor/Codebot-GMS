@@ -25,37 +25,6 @@ Partial Class Management
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.DateTimeStatusStrip = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.current_date = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.current_time = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.UserBioStatusStrip = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.login_name = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.login_position = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.lbl_current_tab = New System.Windows.Forms.Label()
-        Me.management_main_container = New System.Windows.Forms.Panel()
-        Me.systemtime = New System.Windows.Forms.Timer(Me.components)
-        Me.pb_print = New System.Windows.Forms.PictureBox()
-        Me.pb_refresh = New System.Windows.Forms.PictureBox()
-        Me.btn_logout = New System.Windows.Forms.Button()
-        Me.btn_feedbacks = New System.Windows.Forms.Button()
-        Me.btn_statistics = New System.Windows.Forms.Button()
-        Me.btn_employees = New System.Windows.Forms.Button()
-        Me.btn_inventory = New System.Windows.Forms.Button()
-        Me.btn_calenders = New System.Windows.Forms.Button()
-        Me.btn_invoice = New System.Windows.Forms.Button()
-        Me.btn_work_orders = New System.Windows.Forms.Button()
-        Me.btn_dashboard = New System.Windows.Forms.Button()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmi_work_order = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -79,6 +48,37 @@ Partial Class Management
         Me.MoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RestoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.DateTimeStatusStrip = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel3 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.current_date = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel7 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.current_time = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.UserBioStatusStrip = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.login_name = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.login_position = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btn_logout = New System.Windows.Forms.Button()
+        Me.btn_feedbacks = New System.Windows.Forms.Button()
+        Me.btn_statistics = New System.Windows.Forms.Button()
+        Me.btn_employees = New System.Windows.Forms.Button()
+        Me.btn_inventory = New System.Windows.Forms.Button()
+        Me.btn_calenders = New System.Windows.Forms.Button()
+        Me.btn_invoice = New System.Windows.Forms.Button()
+        Me.btn_work_orders = New System.Windows.Forms.Button()
+        Me.btn_dashboard = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.pb_print = New System.Windows.Forms.PictureBox()
+        Me.pb_refresh = New System.Windows.Forms.PictureBox()
+        Me.lbl_current_tab = New System.Windows.Forms.Label()
+        Me.management_main_container = New System.Windows.Forms.Panel()
+        Me.systemtime = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.DateTimeStatusStrip.SuspendLayout()
@@ -102,6 +102,151 @@ Partial Class Management
         Me.MenuStrip.Size = New System.Drawing.Size(1350, 43)
         Me.MenuStrip.TabIndex = 0
         Me.MenuStrip.Text = "MenuStrip1"
+        '
+        'ToolsToolStripMenuItem
+        '
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmi_work_order, Me.ToolStripSeparator1, Me.ToolStripSeparator2, Me.tsmi_part, Me.ToolStripSeparator3, Me.ToolStripSeparator4, Me.tsmi_invoice, Me.ToolStripSeparator5, Me.ToolStripSeparator6, Me.tsmi_employee, Me.ToolStripSeparator7, Me.ToolStripSeparator10, Me.tsmi_exit})
+        Me.ToolsToolStripMenuItem.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolsToolStripMenuItem.Image = CType(resources.GetObject("ToolsToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ToolsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+        Me.ToolsToolStripMenuItem.Padding = New System.Windows.Forms.Padding(10)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(128, 43)
+        Me.ToolsToolStripMenuItem.Text = "Quick Access"
+        '
+        'tsmi_work_order
+        '
+        Me.tsmi_work_order.Name = "tsmi_work_order"
+        Me.tsmi_work_order.Size = New System.Drawing.Size(182, 24)
+        Me.tsmi_work_order.Text = "New Work Order"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(179, 6)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(179, 6)
+        '
+        'tsmi_part
+        '
+        Me.tsmi_part.Name = "tsmi_part"
+        Me.tsmi_part.Size = New System.Drawing.Size(182, 24)
+        Me.tsmi_part.Text = "New Part"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(179, 6)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(179, 6)
+        '
+        'tsmi_invoice
+        '
+        Me.tsmi_invoice.Name = "tsmi_invoice"
+        Me.tsmi_invoice.Size = New System.Drawing.Size(182, 24)
+        Me.tsmi_invoice.Text = "New Invoice"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(179, 6)
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(179, 6)
+        '
+        'tsmi_employee
+        '
+        Me.tsmi_employee.Name = "tsmi_employee"
+        Me.tsmi_employee.Size = New System.Drawing.Size(182, 24)
+        Me.tsmi_employee.Text = "New Employee"
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(179, 6)
+        '
+        'ToolStripSeparator10
+        '
+        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(179, 6)
+        '
+        'tsmi_exit
+        '
+        Me.tsmi_exit.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
+        Me.tsmi_exit.Name = "tsmi_exit"
+        Me.tsmi_exit.Size = New System.Drawing.Size(182, 24)
+        Me.tsmi_exit.Text = "Exit"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FfToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Image = CType(resources.GetObject("HelpToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(82, 43)
+        Me.HelpToolStripMenuItem.Text = "Reports"
+        '
+        'FfToolStripMenuItem
+        '
+        Me.FfToolStripMenuItem.Name = "FfToolStripMenuItem"
+        Me.FfToolStripMenuItem.Size = New System.Drawing.Size(84, 22)
+        Me.FfToolStripMenuItem.Text = "ff"
+        '
+        'QuickAccessToolStripMenuItem
+        '
+        Me.QuickAccessToolStripMenuItem.Image = CType(resources.GetObject("QuickAccessToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.QuickAccessToolStripMenuItem.Name = "QuickAccessToolStripMenuItem"
+        Me.QuickAccessToolStripMenuItem.Size = New System.Drawing.Size(68, 43)
+        Me.QuickAccessToolStripMenuItem.Text = "More"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DdToolStripMenuItem, Me.DocumentationToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.Image = CType(resources.GetObject("ReportsToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(63, 43)
+        Me.ReportsToolStripMenuItem.Text = "Help"
+        '
+        'DdToolStripMenuItem
+        '
+        Me.DdToolStripMenuItem.Name = "DdToolStripMenuItem"
+        Me.DdToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DdToolStripMenuItem.Text = "Getting Started"
+        '
+        'DocumentationToolStripMenuItem
+        '
+        Me.DocumentationToolStripMenuItem.Name = "DocumentationToolStripMenuItem"
+        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.DocumentationToolStripMenuItem.Text = "Documentation"
+        '
+        'MoreToolStripMenuItem
+        '
+        Me.MoreToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.MoreToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AaToolStripMenuItem, Me.RestoreToolStripMenuItem})
+        Me.MoreToolStripMenuItem.Image = CType(resources.GetObject("MoreToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.MoreToolStripMenuItem.Name = "MoreToolStripMenuItem"
+        Me.MoreToolStripMenuItem.Size = New System.Drawing.Size(68, 43)
+        Me.MoreToolStripMenuItem.Text = "Tools"
+        '
+        'AaToolStripMenuItem
+        '
+        Me.AaToolStripMenuItem.Name = "AaToolStripMenuItem"
+        Me.AaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AaToolStripMenuItem.Text = "Backup Database"
+        '
+        'RestoreToolStripMenuItem
+        '
+        Me.RestoreToolStripMenuItem.Name = "RestoreToolStripMenuItem"
+        Me.RestoreToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RestoreToolStripMenuItem.Text = "Restore Database"
         '
         'Panel4
         '
@@ -277,72 +422,6 @@ Partial Class Management
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(233, 676)
         Me.Panel1.TabIndex = 16
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel5.Controls.Add(Me.pb_print)
-        Me.Panel5.Controls.Add(Me.pb_refresh)
-        Me.Panel5.Controls.Add(Me.lbl_current_tab)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Font = New System.Drawing.Font("Ebrima", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel5.Location = New System.Drawing.Point(233, 43)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1117, 63)
-        Me.Panel5.TabIndex = 20
-        '
-        'lbl_current_tab
-        '
-        Me.lbl_current_tab.AutoSize = True
-        Me.lbl_current_tab.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_current_tab.ForeColor = System.Drawing.Color.Teal
-        Me.lbl_current_tab.Location = New System.Drawing.Point(37, 17)
-        Me.lbl_current_tab.Name = "lbl_current_tab"
-        Me.lbl_current_tab.Size = New System.Drawing.Size(121, 28)
-        Me.lbl_current_tab.TabIndex = 1
-        Me.lbl_current_tab.Text = "Currenrt Tab"
-        '
-        'management_main_container
-        '
-        Me.management_main_container.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.management_main_container.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.management_main_container.Location = New System.Drawing.Point(233, 106)
-        Me.management_main_container.Name = "management_main_container"
-        Me.management_main_container.Size = New System.Drawing.Size(1117, 568)
-        Me.management_main_container.TabIndex = 21
-        '
-        'systemtime
-        '
-        Me.systemtime.Enabled = True
-        Me.systemtime.Interval = 1000
-        '
-        'pb_print
-        '
-        Me.pb_print.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pb_print.BackColor = System.Drawing.Color.Transparent
-        Me.pb_print.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pb_print.Image = Global.Codebot_GMS.My.Resources.Resources.print_32_px
-        Me.pb_print.ImageLocation = ""
-        Me.pb_print.Location = New System.Drawing.Point(960, 9)
-        Me.pb_print.Name = "pb_print"
-        Me.pb_print.Padding = New System.Windows.Forms.Padding(5)
-        Me.pb_print.Size = New System.Drawing.Size(42, 42)
-        Me.pb_print.TabIndex = 36
-        Me.pb_print.TabStop = False
-        '
-        'pb_refresh
-        '
-        Me.pb_refresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pb_refresh.BackColor = System.Drawing.Color.Transparent
-        Me.pb_refresh.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pb_refresh.Image = Global.Codebot_GMS.My.Resources.Resources.refresh_32_px
-        Me.pb_refresh.ImageLocation = ""
-        Me.pb_refresh.Location = New System.Drawing.Point(1025, 9)
-        Me.pb_refresh.Name = "pb_refresh"
-        Me.pb_refresh.Padding = New System.Windows.Forms.Padding(5)
-        Me.pb_refresh.Size = New System.Drawing.Size(42, 42)
-        Me.pb_refresh.TabIndex = 36
-        Me.pb_refresh.TabStop = False
         '
         'btn_logout
         '
@@ -564,150 +643,71 @@ Partial Class Management
         Me.btn_dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_dashboard.UseVisualStyleBackColor = False
         '
-        'ToolsToolStripMenuItem
+        'Panel5
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmi_work_order, Me.ToolStripSeparator1, Me.ToolStripSeparator2, Me.tsmi_part, Me.ToolStripSeparator3, Me.ToolStripSeparator4, Me.tsmi_invoice, Me.ToolStripSeparator5, Me.ToolStripSeparator6, Me.tsmi_employee, Me.ToolStripSeparator7, Me.ToolStripSeparator10, Me.tsmi_exit})
-        Me.ToolsToolStripMenuItem.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolsToolStripMenuItem.Image = CType(resources.GetObject("ToolsToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ToolsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Padding = New System.Windows.Forms.Padding(10)
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(128, 43)
-        Me.ToolsToolStripMenuItem.Text = "Quick Access"
+        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel5.Controls.Add(Me.pb_print)
+        Me.Panel5.Controls.Add(Me.pb_refresh)
+        Me.Panel5.Controls.Add(Me.lbl_current_tab)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Font = New System.Drawing.Font("Ebrima", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel5.Location = New System.Drawing.Point(233, 43)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1117, 63)
+        Me.Panel5.TabIndex = 20
         '
-        'tsmi_work_order
+        'pb_print
         '
-        Me.tsmi_work_order.Name = "tsmi_work_order"
-        Me.tsmi_work_order.Size = New System.Drawing.Size(182, 24)
-        Me.tsmi_work_order.Text = "New Work Order"
+        Me.pb_print.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pb_print.BackColor = System.Drawing.Color.Transparent
+        Me.pb_print.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pb_print.Image = Global.Codebot_GMS.My.Resources.Resources.print_32_px
+        Me.pb_print.ImageLocation = ""
+        Me.pb_print.Location = New System.Drawing.Point(960, 9)
+        Me.pb_print.Name = "pb_print"
+        Me.pb_print.Padding = New System.Windows.Forms.Padding(5)
+        Me.pb_print.Size = New System.Drawing.Size(42, 42)
+        Me.pb_print.TabIndex = 36
+        Me.pb_print.TabStop = False
         '
-        'ToolStripSeparator1
+        'pb_refresh
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(179, 6)
+        Me.pb_refresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pb_refresh.BackColor = System.Drawing.Color.Transparent
+        Me.pb_refresh.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pb_refresh.Image = Global.Codebot_GMS.My.Resources.Resources.refresh_32_px
+        Me.pb_refresh.ImageLocation = ""
+        Me.pb_refresh.Location = New System.Drawing.Point(1025, 9)
+        Me.pb_refresh.Name = "pb_refresh"
+        Me.pb_refresh.Padding = New System.Windows.Forms.Padding(5)
+        Me.pb_refresh.Size = New System.Drawing.Size(42, 42)
+        Me.pb_refresh.TabIndex = 36
+        Me.pb_refresh.TabStop = False
         '
-        'ToolStripSeparator2
+        'lbl_current_tab
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(179, 6)
+        Me.lbl_current_tab.AutoSize = True
+        Me.lbl_current_tab.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_current_tab.ForeColor = System.Drawing.Color.Teal
+        Me.lbl_current_tab.Location = New System.Drawing.Point(37, 17)
+        Me.lbl_current_tab.Name = "lbl_current_tab"
+        Me.lbl_current_tab.Size = New System.Drawing.Size(121, 28)
+        Me.lbl_current_tab.TabIndex = 1
+        Me.lbl_current_tab.Text = "Currenrt Tab"
         '
-        'tsmi_part
+        'management_main_container
         '
-        Me.tsmi_part.Name = "tsmi_part"
-        Me.tsmi_part.Size = New System.Drawing.Size(182, 24)
-        Me.tsmi_part.Text = "New Part"
+        Me.management_main_container.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.management_main_container.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.management_main_container.Location = New System.Drawing.Point(233, 106)
+        Me.management_main_container.Name = "management_main_container"
+        Me.management_main_container.Size = New System.Drawing.Size(1117, 568)
+        Me.management_main_container.TabIndex = 21
         '
-        'ToolStripSeparator3
+        'systemtime
         '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(179, 6)
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(179, 6)
-        '
-        'tsmi_invoice
-        '
-        Me.tsmi_invoice.Name = "tsmi_invoice"
-        Me.tsmi_invoice.Size = New System.Drawing.Size(182, 24)
-        Me.tsmi_invoice.Text = "New Invoice"
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(179, 6)
-        '
-        'ToolStripSeparator6
-        '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(179, 6)
-        '
-        'tsmi_employee
-        '
-        Me.tsmi_employee.Name = "tsmi_employee"
-        Me.tsmi_employee.Size = New System.Drawing.Size(182, 24)
-        Me.tsmi_employee.Text = "New Employee"
-        '
-        'ToolStripSeparator7
-        '
-        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(179, 6)
-        '
-        'ToolStripSeparator10
-        '
-        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
-        Me.ToolStripSeparator10.Size = New System.Drawing.Size(179, 6)
-        '
-        'tsmi_exit
-        '
-        Me.tsmi_exit.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
-        Me.tsmi_exit.Name = "tsmi_exit"
-        Me.tsmi_exit.Size = New System.Drawing.Size(182, 24)
-        Me.tsmi_exit.Text = "Exit"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FfToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Image = CType(resources.GetObject("HelpToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(82, 43)
-        Me.HelpToolStripMenuItem.Text = "Reports"
-        '
-        'FfToolStripMenuItem
-        '
-        Me.FfToolStripMenuItem.Name = "FfToolStripMenuItem"
-        Me.FfToolStripMenuItem.Size = New System.Drawing.Size(84, 22)
-        Me.FfToolStripMenuItem.Text = "ff"
-        '
-        'QuickAccessToolStripMenuItem
-        '
-        Me.QuickAccessToolStripMenuItem.Image = CType(resources.GetObject("QuickAccessToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.QuickAccessToolStripMenuItem.Name = "QuickAccessToolStripMenuItem"
-        Me.QuickAccessToolStripMenuItem.Size = New System.Drawing.Size(68, 43)
-        Me.QuickAccessToolStripMenuItem.Text = "More"
-        '
-        'ReportsToolStripMenuItem
-        '
-        Me.ReportsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DdToolStripMenuItem, Me.DocumentationToolStripMenuItem})
-        Me.ReportsToolStripMenuItem.Image = CType(resources.GetObject("ReportsToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(63, 43)
-        Me.ReportsToolStripMenuItem.Text = "Help"
-        '
-        'DdToolStripMenuItem
-        '
-        Me.DdToolStripMenuItem.Name = "DdToolStripMenuItem"
-        Me.DdToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.DdToolStripMenuItem.Text = "Getting Started"
-        '
-        'DocumentationToolStripMenuItem
-        '
-        Me.DocumentationToolStripMenuItem.Name = "DocumentationToolStripMenuItem"
-        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.DocumentationToolStripMenuItem.Text = "Documentation"
-        '
-        'MoreToolStripMenuItem
-        '
-        Me.MoreToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.MoreToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AaToolStripMenuItem, Me.RestoreToolStripMenuItem})
-        Me.MoreToolStripMenuItem.Image = CType(resources.GetObject("MoreToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.MoreToolStripMenuItem.Name = "MoreToolStripMenuItem"
-        Me.MoreToolStripMenuItem.Size = New System.Drawing.Size(68, 43)
-        Me.MoreToolStripMenuItem.Text = "Tools"
-        '
-        'AaToolStripMenuItem
-        '
-        Me.AaToolStripMenuItem.Name = "AaToolStripMenuItem"
-        Me.AaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AaToolStripMenuItem.Text = "Backup Database"
-        '
-        'RestoreToolStripMenuItem
-        '
-        Me.RestoreToolStripMenuItem.Name = "RestoreToolStripMenuItem"
-        Me.RestoreToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RestoreToolStripMenuItem.Text = "Restore Database"
+        Me.systemtime.Enabled = True
+        Me.systemtime.Interval = 1000
         '
         'Management
         '

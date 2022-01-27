@@ -60,7 +60,6 @@ C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.exe
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.xml
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.pdb
-C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.vbproj.AssemblyReference.cache
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Auth_Password_Reset_Code_Validation.resources
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.GMS_Message.resources
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Management_Inventory_Stock_In.resources
@@ -68,3 +67,5 @@ C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Management_Feedbacks.resources
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Management_Dashboard.resources
 C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\bin\Debug\OpenPop.dll
+C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.Management_Invoice_Select_Work_Order.resources
+C:\Users\theod\Desktop\  \Projects\Visual Basic\Codebot GMS\obj\Debug\Codebot_GMS.vbproj.AssemblyReference.cache

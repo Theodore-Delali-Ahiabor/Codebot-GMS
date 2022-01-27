@@ -380,13 +380,12 @@ Module GMS_Module
                 End If
                 If db_table = "events_view" Then
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
-                        If gridview_name.Rows(i).Cells(1).Value < 8 Then
+                        If gridview_name.Rows(i).Cells(1).Value < 8 And gridview_name.Rows(i).Cells(1).Value > 0 Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
-                            If gridview_name.Rows(i).Cells(1).Value = 0 Then
-                                gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
-                            ElseIf gridview_name.Rows(i).Cells(1).Value < 0 Then
-                                gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
-                            End If
+                        ElseIf gridview_name.Rows(i).Cells(1).Value = 0 Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
+                        ElseIf gridview_name.Rows(i).Cells(1).Value < 0 Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
                         End If
                     Next
                 End If
@@ -456,9 +455,10 @@ Module GMS_Module
                     gridview_name.Columns(3).Width = 130   'Part Number
                     'gridview_name.Columns(4).Width = 210   'Alternative
                     gridview_name.Columns(5).Width = 110   'Location
-                    gridview_name.Columns(6).Width = 200   'Model/Type
+                    gridview_name.Columns(6).Width = 100   'Model/Type
                     gridview_name.Columns(7).Width = 60   'Stock
                     gridview_name.Columns(8).Width = 80   'Unit cost
+                    'gridview_name.Columns(9).Width =
                 Case "work_order_view"
                     gridview_name.Columns(0).Width = 100
                     gridview_name.Columns(1).Width = 225
@@ -489,6 +489,9 @@ Module GMS_Module
             .btn_dashboard_Click(Management.btn_dashboard, EventArgs.Empty)
             .login_position.Text = login_as
             .login_name.Text = login_full_name
+            '.login_user_name.Text =
+            '.login_role.Text = login_as
+            '.login_photo.Image = Image
 
             If role = "Administrator" Or role = "Supervisor" Or role = "Manager" Or role = "Management Engineer" Or role = "Supervising Engineer" Then
 
