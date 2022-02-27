@@ -1,4 +1,4 @@
-﻿
+﻿Imports System.IO
 Public Class Auth_Login
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         If txt_login_username.Text <> "" And txt_login_password.Text <> "" Then
@@ -28,7 +28,21 @@ Public Class Auth_Login
                             login_as = sql_dt.Rows(0).Item("Role").ToString()
                             login_first_name = sql_dt.Rows(0).Item("First_Name").ToString()
                             If sql_dt.Rows(0).Item("Active").ToString() = True Then
+
+                                If sql_dt.Rows(0).Item("Image").Equals(DBNull.Value) Then
+                                    With Management
+                                        .login_photo.BackgroundImage = .login_photo.InitialImage
+                                    End With
+                                Else
+                                    arr_image = sql_dt.Rows(0).Item(1)
+                                    Dim mstream As New MemoryStream(arr_image)
+                                    With Management
+                                        .login_photo.BackgroundImage = Image.FromStream(mstream)
+                                    End With
+                                End If
+
                                 Access_Control(login_as)
+                                invalid_login = 0
                             Else
                                 message("warning", "Employee is deactivated, contact Administrator")
                                 txt_login_username.Focus()
@@ -80,7 +94,7 @@ Public Class Auth_Login
         txt_login_username.Clear()
         txt_login_password.Clear()
         With Auth_Signup
-            .lbl_signup_title.Text = "SignUP"
+            .lbl_signup_title.Text = "SIGNUP"
             .txt_signup_email.Clear()
             .txt_signup_email.Focus()
             .txt_signup_username.Clear()

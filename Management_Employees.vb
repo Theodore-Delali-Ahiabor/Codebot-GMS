@@ -40,7 +40,7 @@ Public Class Management_Employees
                 If sql_dt.Rows.Count() > 0 Then
                     If sql_dt.Rows(0).Item("Image").Equals(DBNull.Value) Then
                         With Management_Employees_Add_New
-                            .pb_new_user_image.BackgroundImage = Management_Employees_Add_New.pb_new_user_image.InitialImage
+                            .pb_new_user_image.BackgroundImage = .pb_new_user_image.InitialImage
                             .txt_new_id.Text = sql_dt.Rows(0).Item("ID").ToString()
                             .txt_new_first_name.Text = sql_dt.Rows(0).Item("First_Name").ToString()
                             .txt_new_other_names.Text = sql_dt.Rows(0).Item("Other_Name").ToString()

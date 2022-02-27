@@ -81,6 +81,7 @@
 
     Private Sub btn_new_invoice_new_work_order_Click(sender As Object, e As EventArgs) Handles btn_new_invoice_new_work_order.Click
         Management_Work_Order.btn_add_new_work_order_Click(Management_Work_Order.btn_add_new_work_order, EventArgs.Empty)
+        Management.sidebar_active(Management.btn_work_orders)
     End Sub
 
     Private Sub work_order_clear_work_order_Click(sender As Object, e As EventArgs) Handles work_order_clear_work_order.Click
@@ -105,5 +106,13 @@
 
     Private Sub InvoicePartsDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles InvoicePartsDataGridView.CellClick
         'InvoicePartsDataGridView_CellValueChanged(InvoicePartsDataGridView, EventArgs.Empty)
+    End Sub
+
+    Private Sub btn_new_invoice_save_Click(sender As Object, e As EventArgs) Handles btn_new_invoice_save.Click
+
+    End Sub
+
+    Private Sub Management_Invoice_Add_New_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

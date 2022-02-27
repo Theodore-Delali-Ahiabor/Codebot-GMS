@@ -103,13 +103,13 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label12.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Ebrima", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label12.Location = New System.Drawing.Point(-2, 1)
+        Me.Label12.Location = New System.Drawing.Point(54, 6)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(386, 49)
+        Me.Label12.Size = New System.Drawing.Size(302, 45)
         Me.Label12.TabIndex = 130
-        Me.Label12.Text = "Add New Automobile"
+        Me.Label12.Text = "Add New Customer"
         '
         'Panel2
         '
@@ -426,13 +426,13 @@ Partial Class Management_Work_Order_Add_New_Customer
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label11.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Ebrima", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label11.Location = New System.Drawing.Point(64, 0)
+        Me.Label11.Location = New System.Drawing.Point(85, 6)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(391, 49)
+        Me.Label11.Size = New System.Drawing.Size(299, 45)
         Me.Label11.TabIndex = 129
-        Me.Label11.Text = "Select an Automobile"
+        Me.Label11.Text = "Select an Customer"
         '
         'btn_customer_select_select
         '

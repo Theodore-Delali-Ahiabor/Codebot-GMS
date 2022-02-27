@@ -33,6 +33,8 @@ Public Class Auth_Password_Reset
                                     'Sends a reset code  to the user requesting the password reset based on the selected meduims
                                     If chkb_login_reset_send_email.Checked Then
                                         'send email
+                                        Me.UseWaitCursor = True
+                                        message("information", "Please wait while we send your reset code")
                                         send_email("Login Reset", txt_password_reset_email.Text, "Your login reset code is " + CStr(reset_code))
                                         'check if the mail was sent sucessfully
                                         If email_delevery_status = 1 Then
@@ -41,13 +43,14 @@ Public Class Auth_Password_Reset
                                         Else
                                             message("warning", "Failed to send email to " + reset_email + ". ")
                                         End If
+                                        Me.Cursor = DefaultCursor
                                     ElseIf chkb_login_reset_send_whatsapp.Checked Then
                                         'send whatsapp
                                         send_whatsapp(reset_phone, "Your login reset code is " + CStr(reset_code))
                                         message("success", "Login reset code has been successfully sent to " + reset_phone)
                                         login_reset_update_user()
                                     Else
-                                        message("warning", "No messagin meduim Selected")
+                                        message("warning", "No messaging meduim Selected")
                                     End If
                                 Else
                                     message("warning", "No internet connection, Check internet conection and try Again")
@@ -73,8 +76,7 @@ Public Class Auth_Password_Reset
     End Sub
     Public Sub login_reset_update_user()
         sql_ds = New DataSet
-        sql_da = New MySqlDataAdapter("INSERT INTO login_reset(Request_ID,	Reset_Code,Request_Time)
-                                                VALUES('" & reset_id & "', '" & reset_code & "', '" & Date.UtcNow & "')", sql_con)
+        sql_da = New MySqlDataAdapter("UPDATE `user` SET `Reset_Code` = '" & reset_code & "', `Last_Updated` = '" & Date.UtcNow & "' WHERE 	Employee_ID = '" & reset_id & "'", sql_con)
         sql_da.Fill(sql_ds, "user")
         Auth_Password_Reset_Code_Validation.ShowDialog()
     End Sub

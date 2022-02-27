@@ -40,6 +40,7 @@ Partial Class Auth_Password_Reset
         Me.chkb_login_reset_send_sms = New System.Windows.Forms.CheckBox()
         Me.chkb_login_reset_send_whatsapp = New System.Windows.Forms.CheckBox()
         Me.chkb_login_reset_send_email = New System.Windows.Forms.CheckBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label8
@@ -291,6 +292,19 @@ Partial Class Auth_Password_Reset
         Me.chkb_login_reset_send_email.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.chkb_login_reset_send_email.UseVisualStyleBackColor = True
         '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Green
+        Me.Label10.Location = New System.Drawing.Point(217, 393)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(125, 21)
+        Me.Label10.TabIndex = 37
+        Me.Label10.Text = "(Recommended)"
+        '
         'Auth_Password_Reset
         '
         Me.AcceptButton = Me.btn_password_reset_send_code
@@ -307,6 +321,7 @@ Partial Class Auth_Password_Reset
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label2)
@@ -341,4 +356,5 @@ Partial Class Auth_Password_Reset
     Friend WithEvents chkb_login_reset_send_email As CheckBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
 End Class

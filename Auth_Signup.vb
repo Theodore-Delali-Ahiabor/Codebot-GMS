@@ -22,14 +22,14 @@ Public Class Auth_Signup
                                 sql_dt.Clear()
                                 sql_da.Fill(sql_dt)
                                 If sql_dt.Rows.Count() <= 0 Then
-                                    message("information", "Welcome '" & signup_name & "'. Continue Signup")
+                                    message("information", "Hi '" & signup_name & "'. Continue Signup")
                                     signup_middle_panel.Visible = True
                                     txt_signup_email.Enabled = False
                                     txt_signup_username.Focus()
                                     txt_signup_username.Enabled = True
                                     txt_signup_password.Enabled = True
                                     signup_notice_panel.Visible = False
-                                    btn_signup_verify_create.Text = "CREATE"
+                                    btn_signup_verify_create.Text = "SIGNUP"
                                 ElseIf sql_dt.Rows.Count() > 0 And sql_dt.Rows(0).Item("Username") = "" And sql_dt.Rows(0).Item("Password") = "" Then
                                     message("information", "Welcome '" & signup_name & "'. Continue Reset")
                                     signup_middle_panel.Visible = True
@@ -48,6 +48,9 @@ Public Class Auth_Signup
                         Catch ex As Exception
                             MessageBox.Show(ex.Message, "Employee Verification Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         End Try
+                    Else
+                        message("error", "Enter a valid email address") '
+                        txt_signup_email.Focus()
                     End If
                 End If
             Else
@@ -99,7 +102,7 @@ Public Class Auth_Signup
                             Dim repos As DialogResult = MessageBox.Show("You are about to Signup with Username '" & txt_signup_username.Text.ToString() & "', are you sure to continue ?", "Signup", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                             If repos = DialogResult.Yes Then
                                 sql_ds = New DataSet
-                                sql_da = New MySqlDataAdapter("UPDATE user SET Username = '" & txt_signup_username.Text.ToString() & "', Password = '" & Encoding(txt_signup_confirm_password.Text.ToString()) & "', `Last_Updated`='" & Date.UtcNow & "' WHERE Employee_ID = '" & signup_id & "' ", sql_con)
+                                sql_da = New MySqlDataAdapter("UPDATE user SET `Username` = '" & txt_signup_username.Text.ToString() & "', `Password` = '" & Encoding(txt_signup_confirm_password.Text.ToString()) & "', `Last_Updated`='" & Date.UtcNow & "' WHERE `Employee_ID` = '" & Auth_Password_Reset.reset_id & "' ", sql_con)
                                 sql_da.Fill(sql_ds, "user")
                                 auth_form_loader(Auth_Login)
                                 message("susccess", "You have sucessfully reset your  login. You can now Login")

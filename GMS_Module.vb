@@ -109,7 +109,6 @@ Module GMS_Module
                     .Show()
                     .message_timer.Enabled = True
                 End With
-
             ElseIf message_type = "success" Then
                 My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Question)
                 With GMS_Message
@@ -261,7 +260,7 @@ Module GMS_Module
     '---------------------------------------------------------------------
     Public Sub datagrid_fill_filter_textbox(ByRef db_table As String, ByRef gridview_name As DataGridView, ByRef db_column As String, ByRef filter_txt As TextBox)
         Try
-            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & " = '" & filter_txt.Text & "' ORDER BY ID DESC", sql_con)
+            sql_da = New MySqlDataAdapter("SELECT * FROM " & db_table & " WHERE " & db_column & " LIKE '%" & filter_txt.Text & "%' ORDER BY ID DESC", sql_con)
             sql_dt = New DataTable
             sql_dt.Clear()
             sql_da.Fill(sql_dt)
@@ -330,7 +329,7 @@ Module GMS_Module
                         If gridview_name.Rows(i).Cells(7).Value.ToString = False Then
                             gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
                         Else
-                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
                         End If
                     Next
                 End If
@@ -342,7 +341,7 @@ Module GMS_Module
                                 gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
                             End If
                         Else
-                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Honeydew
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
                         End If
                     Next
                 End If
@@ -353,7 +352,7 @@ Module GMS_Module
                             If gridview_name.Rows(i).Cells(4).Value < 8 Then
                                 gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Gold
                                 If gridview_name.Rows(i).Cells(4).Value = 0 Then
-                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Green
+                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.LightGreen
                                 ElseIf gridview_name.Rows(i).Cells(4).Value < 0 Then
                                     gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Coral
                                 End If
@@ -363,7 +362,7 @@ Module GMS_Module
                             If gridview_name.Rows(i).Cells(4).Value < 8 Then
                                 gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Gold
                                 If gridview_name.Rows(i).Cells(4).Value = 0 Then
-                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Green
+                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.LightGreen
                                 ElseIf gridview_name.Rows(i).Cells(4).Value < 0 Then
                                     gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Coral
                                 End If
@@ -377,6 +376,7 @@ Module GMS_Module
                             gridview_name.Rows(i).DefaultCellStyle.ForeColor = Color.White
                         End If
                     Next
+                    'MsgBox("check point")
                 End If
                 If db_table = "events_view" Then
                     For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
@@ -433,7 +433,6 @@ Module GMS_Module
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Box Collection Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
-
     End Sub
     '------------------------------------------------------------------
     'RESIZE THE COLUMNS IN THE DATAGRID TABLE BASED ON WHAT TABLE IT IS
@@ -489,9 +488,7 @@ Module GMS_Module
             .btn_dashboard_Click(Management.btn_dashboard, EventArgs.Empty)
             .login_position.Text = login_as
             .login_name.Text = login_full_name
-            '.login_user_name.Text =
-            '.login_role.Text = login_as
-            '.login_photo.Image = Image
+            '.login_photo.BackgroundImage = Image.FromStream(mstream)
 
             If role = "Administrator" Or role = "Supervisor" Or role = "Manager" Or role = "Management Engineer" Or role = "Supervising Engineer" Then
 
@@ -547,8 +544,8 @@ Module GMS_Module
                 e_mail.IsBodyHtml = False
                 e_mail.Body = message_body
                 Smtp_Server.Send(e_mail)
-                email_delevery_status = 1
-            Catch ex As Exception
+            email_delevery_status = 1
+        Catch ex As Exception
                 MessageBox.Show(ex.Message, "SMTP Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 email_delevery_status = 0
             End Try

@@ -123,7 +123,7 @@ Partial Class Auth_Login
         Me.txt_invalid_display.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_invalid_display.BackColor = System.Drawing.Color.WhiteSmoke
         Me.txt_invalid_display.Cursor = System.Windows.Forms.Cursors.Default
-        Me.txt_invalid_display.Font = New System.Drawing.Font("Ebrima", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_invalid_display.Font = New System.Drawing.Font("Ebrima", 17.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_invalid_display.ForeColor = System.Drawing.Color.LightCoral
         Me.txt_invalid_display.Location = New System.Drawing.Point(98, 344)
         Me.txt_invalid_display.Name = "txt_invalid_display"

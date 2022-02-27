@@ -30,12 +30,12 @@ Partial Class Management_Invoice
         Me.cmb_payment_status_filter = New System.Windows.Forms.ComboBox()
         Me.txt_invoice_id_filter = New System.Windows.Forms.TextBox()
         Me.InvoiceDataGridView = New System.Windows.Forms.DataGridView()
+        Me.btn_terminate_work_order = New System.Windows.Forms.Button()
+        Me.btn_complete_work_order = New System.Windows.Forms.Button()
+        Me.btn_start_work_order = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_add_new_invoice = New System.Windows.Forms.Button()
-        Me.btn_complete_work_order = New System.Windows.Forms.Button()
-        Me.btn_start_work_order = New System.Windows.Forms.Button()
-        Me.btn_terminate_work_order = New System.Windows.Forms.Button()
         CType(Me.InvoiceDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,7 +44,7 @@ Partial Class Management_Invoice
         Me.cmb_payment_status_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmb_payment_status_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_payment_status_filter.FormattingEnabled = True
-        Me.cmb_payment_status_filter.Location = New System.Drawing.Point(831, 32)
+        Me.cmb_payment_status_filter.Location = New System.Drawing.Point(865, 32)
         Me.cmb_payment_status_filter.Margin = New System.Windows.Forms.Padding(10)
         Me.cmb_payment_status_filter.Name = "cmb_payment_status_filter"
         Me.cmb_payment_status_filter.Size = New System.Drawing.Size(222, 29)
@@ -56,7 +56,7 @@ Partial Class Management_Invoice
         Me.txt_invoice_id_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_invoice_id_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txt_invoice_id_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_invoice_id_filter.Location = New System.Drawing.Point(596, 32)
+        Me.txt_invoice_id_filter.Location = New System.Drawing.Point(630, 32)
         Me.txt_invoice_id_filter.Name = "txt_invoice_id_filter"
         Me.txt_invoice_id_filter.Size = New System.Drawing.Size(222, 29)
         Me.txt_invoice_id_filter.TabIndex = 68
@@ -94,7 +94,7 @@ Partial Class Management_Invoice
         Me.InvoiceDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.InvoiceDataGridView.EnableHeadersVisualStyles = False
         Me.InvoiceDataGridView.GridColor = System.Drawing.Color.Silver
-        Me.InvoiceDataGridView.Location = New System.Drawing.Point(48, 75)
+        Me.InvoiceDataGridView.Location = New System.Drawing.Point(14, 75)
         Me.InvoiceDataGridView.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.InvoiceDataGridView.MultiSelect = False
         Me.InvoiceDataGridView.Name = "InvoiceDataGridView"
@@ -120,56 +120,28 @@ Partial Class Management_Invoice
         Me.InvoiceDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.InvoiceDataGridView.RowTemplate.Height = 38
         Me.InvoiceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.InvoiceDataGridView.Size = New System.Drawing.Size(1005, 417)
+        Me.InvoiceDataGridView.Size = New System.Drawing.Size(1073, 417)
         Me.InvoiceDataGridView.TabIndex = 64
         '
-        'Label3
+        'btn_terminate_work_order
         '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Teal
-        Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label3.Location = New System.Drawing.Point(593, 3)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label3.Size = New System.Drawing.Size(131, 27)
-        Me.Label3.TabIndex = 69
-        Me.Label3.Text = "Invoice ID       "
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Teal
-        Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label2.Location = New System.Drawing.Point(828, 5)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(5)
-        Me.Label2.Size = New System.Drawing.Size(183, 27)
-        Me.Label2.TabIndex = 67
-        Me.Label2.Text = "Payment Status       "
-        '
-        'btn_add_new_invoice
-        '
-        Me.btn_add_new_invoice.BackColor = System.Drawing.Color.CadetBlue
-        Me.btn_add_new_invoice.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_add_new_invoice.FlatAppearance.BorderSize = 0
-        Me.btn_add_new_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_add_new_invoice.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_add_new_invoice.ForeColor = System.Drawing.Color.White
-        Me.btn_add_new_invoice.Image = CType(resources.GetObject("btn_add_new_invoice.Image"), System.Drawing.Image)
-        Me.btn_add_new_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_add_new_invoice.Location = New System.Drawing.Point(48, 15)
-        Me.btn_add_new_invoice.Name = "btn_add_new_invoice"
-        Me.btn_add_new_invoice.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.btn_add_new_invoice.Size = New System.Drawing.Size(105, 46)
-        Me.btn_add_new_invoice.TabIndex = 65
-        Me.btn_add_new_invoice.Text = "    New"
-        Me.btn_add_new_invoice.UseVisualStyleBackColor = False
+        Me.btn_terminate_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_terminate_work_order.BackColor = System.Drawing.Color.Black
+        Me.btn_terminate_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_terminate_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_terminate_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_terminate_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_terminate_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_terminate_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_terminate_work_order.Location = New System.Drawing.Point(288, 505)
+        Me.btn_terminate_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_terminate_work_order.Name = "btn_terminate_work_order"
+        Me.btn_terminate_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_terminate_work_order.Size = New System.Drawing.Size(138, 46)
+        Me.btn_terminate_work_order.TabIndex = 72
+        Me.btn_terminate_work_order.Text = "TERMINATE"
+        Me.btn_terminate_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_terminate_work_order.UseVisualStyleBackColor = False
         '
         'btn_complete_work_order
         '
@@ -182,7 +154,7 @@ Partial Class Management_Invoice
         Me.btn_complete_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_complete_work_order.Image = CType(resources.GetObject("btn_complete_work_order.Image"), System.Drawing.Image)
         Me.btn_complete_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_complete_work_order.Location = New System.Drawing.Point(160, 505)
+        Me.btn_complete_work_order.Location = New System.Drawing.Point(126, 505)
         Me.btn_complete_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_complete_work_order.Name = "btn_complete_work_order"
         Me.btn_complete_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
@@ -203,7 +175,7 @@ Partial Class Management_Invoice
         Me.btn_start_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_start_work_order.Image = CType(resources.GetObject("btn_start_work_order.Image"), System.Drawing.Image)
         Me.btn_start_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_start_work_order.Location = New System.Drawing.Point(48, 505)
+        Me.btn_start_work_order.Location = New System.Drawing.Point(14, 505)
         Me.btn_start_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_start_work_order.Name = "btn_start_work_order"
         Me.btn_start_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
@@ -213,25 +185,53 @@ Partial Class Management_Invoice
         Me.btn_start_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_start_work_order.UseVisualStyleBackColor = False
         '
-        'btn_terminate_work_order
+        'Label3
         '
-        Me.btn_terminate_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btn_terminate_work_order.BackColor = System.Drawing.Color.Black
-        Me.btn_terminate_work_order.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_terminate_work_order.FlatAppearance.BorderSize = 0
-        Me.btn_terminate_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_terminate_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_terminate_work_order.ForeColor = System.Drawing.Color.White
-        Me.btn_terminate_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_terminate_work_order.Location = New System.Drawing.Point(322, 505)
-        Me.btn_terminate_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_terminate_work_order.Name = "btn_terminate_work_order"
-        Me.btn_terminate_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_terminate_work_order.Size = New System.Drawing.Size(138, 46)
-        Me.btn_terminate_work_order.TabIndex = 72
-        Me.btn_terminate_work_order.Text = "TERMINATE"
-        Me.btn_terminate_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_terminate_work_order.UseVisualStyleBackColor = False
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Teal
+        Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
+        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label3.Location = New System.Drawing.Point(627, 3)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label3.Size = New System.Drawing.Size(131, 27)
+        Me.Label3.TabIndex = 69
+        Me.Label3.Text = "Invoice ID       "
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Copperplate Gothic Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Teal
+        Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label2.Location = New System.Drawing.Point(862, 5)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Padding = New System.Windows.Forms.Padding(5)
+        Me.Label2.Size = New System.Drawing.Size(183, 27)
+        Me.Label2.TabIndex = 67
+        Me.Label2.Text = "Payment Status       "
+        '
+        'btn_add_new_invoice
+        '
+        Me.btn_add_new_invoice.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_add_new_invoice.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_add_new_invoice.FlatAppearance.BorderSize = 0
+        Me.btn_add_new_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_add_new_invoice.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_add_new_invoice.ForeColor = System.Drawing.Color.White
+        Me.btn_add_new_invoice.Image = CType(resources.GetObject("btn_add_new_invoice.Image"), System.Drawing.Image)
+        Me.btn_add_new_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_add_new_invoice.Location = New System.Drawing.Point(12, 12)
+        Me.btn_add_new_invoice.Name = "btn_add_new_invoice"
+        Me.btn_add_new_invoice.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.btn_add_new_invoice.Size = New System.Drawing.Size(105, 41)
+        Me.btn_add_new_invoice.TabIndex = 65
+        Me.btn_add_new_invoice.Text = "    New"
+        Me.btn_add_new_invoice.UseVisualStyleBackColor = False
         '
         'Management_Invoice
         '

@@ -22,16 +22,16 @@ Partial Class Management_Invoice_Select_Work_Order
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Management_Invoice_Select_Work_Order))
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.InvoiceSelectWorkOrderDataGridView = New System.Windows.Forms.DataGridView()
         Me.btn_invoice_select_select = New System.Windows.Forms.Button()
         Me.btn_invoice_select_cancel = New System.Windows.Forms.Button()
         Me.btn_invoice_select_new = New System.Windows.Forms.Button()
-        Me.InvoiceSelectWorkOrderDataGridView = New System.Windows.Forms.DataGridView()
         CType(Me.InvoiceSelectWorkOrderDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,13 +41,77 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label11.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Ebrima", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label11.Location = New System.Drawing.Point(223, 3)
+        Me.Label11.Location = New System.Drawing.Point(310, 7)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(556, 49)
+        Me.Label11.Size = New System.Drawing.Size(442, 45)
         Me.Label11.TabIndex = 134
         Me.Label11.Text = "Select an Existing work Order"
+        '
+        'InvoiceSelectWorkOrderDataGridView
+        '
+        Me.InvoiceSelectWorkOrderDataGridView.AllowUserToAddRows = False
+        Me.InvoiceSelectWorkOrderDataGridView.AllowUserToDeleteRows = False
+        Me.InvoiceSelectWorkOrderDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.InvoiceSelectWorkOrderDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.InvoiceSelectWorkOrderDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.InvoiceSelectWorkOrderDataGridView.BackgroundColor = System.Drawing.Color.White
+        Me.InvoiceSelectWorkOrderDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.InvoiceSelectWorkOrderDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.InvoiceSelectWorkOrderDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.InvoiceSelectWorkOrderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCyan
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.InvoiceSelectWorkOrderDataGridView.DefaultCellStyle = DataGridViewCellStyle2
+        Me.InvoiceSelectWorkOrderDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.InvoiceSelectWorkOrderDataGridView.EnableHeadersVisualStyles = False
+        Me.InvoiceSelectWorkOrderDataGridView.GridColor = System.Drawing.Color.Silver
+        Me.InvoiceSelectWorkOrderDataGridView.Location = New System.Drawing.Point(34, 56)
+        Me.InvoiceSelectWorkOrderDataGridView.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.InvoiceSelectWorkOrderDataGridView.MultiSelect = False
+        Me.InvoiceSelectWorkOrderDataGridView.Name = "InvoiceSelectWorkOrderDataGridView"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.InvoiceSelectWorkOrderDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.InvoiceSelectWorkOrderDataGridView.RowHeadersVisible = False
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.InvoiceSelectWorkOrderDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.CadetBlue
+        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.Height = 38
+        Me.InvoiceSelectWorkOrderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.InvoiceSelectWorkOrderDataGridView.Size = New System.Drawing.Size(954, 374)
+        Me.InvoiceSelectWorkOrderDataGridView.TabIndex = 129
+        Me.InvoiceSelectWorkOrderDataGridView.VirtualMode = True
         '
         'btn_invoice_select_select
         '
@@ -60,7 +124,7 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.btn_invoice_select_select.ForeColor = System.Drawing.Color.White
         Me.btn_invoice_select_select.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_checkmark_24
         Me.btn_invoice_select_select.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_invoice_select_select.Location = New System.Drawing.Point(452, 430)
+        Me.btn_invoice_select_select.Location = New System.Drawing.Point(452, 445)
         Me.btn_invoice_select_select.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_invoice_select_select.Name = "btn_invoice_select_select"
         Me.btn_invoice_select_select.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -82,7 +146,7 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.btn_invoice_select_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_invoice_select_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_invoice_select_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_invoice_select_cancel.Location = New System.Drawing.Point(595, 430)
+        Me.btn_invoice_select_cancel.Location = New System.Drawing.Point(595, 445)
         Me.btn_invoice_select_cancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_invoice_select_cancel.Name = "btn_invoice_select_cancel"
         Me.btn_invoice_select_cancel.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -103,7 +167,7 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.btn_invoice_select_new.ForeColor = System.Drawing.Color.White
         Me.btn_invoice_select_new.Image = CType(resources.GetObject("btn_invoice_select_new.Image"), System.Drawing.Image)
         Me.btn_invoice_select_new.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_invoice_select_new.Location = New System.Drawing.Point(318, 430)
+        Me.btn_invoice_select_new.Location = New System.Drawing.Point(318, 445)
         Me.btn_invoice_select_new.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_invoice_select_new.Name = "btn_invoice_select_new"
         Me.btn_invoice_select_new.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -113,76 +177,12 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.btn_invoice_select_new.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_invoice_select_new.UseVisualStyleBackColor = False
         '
-        'InvoiceSelectWorkOrderDataGridView
-        '
-        Me.InvoiceSelectWorkOrderDataGridView.AllowUserToAddRows = False
-        Me.InvoiceSelectWorkOrderDataGridView.AllowUserToDeleteRows = False
-        Me.InvoiceSelectWorkOrderDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.InvoiceSelectWorkOrderDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.InvoiceSelectWorkOrderDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.InvoiceSelectWorkOrderDataGridView.BackgroundColor = System.Drawing.Color.White
-        Me.InvoiceSelectWorkOrderDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.InvoiceSelectWorkOrderDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.InvoiceSelectWorkOrderDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
-        Me.InvoiceSelectWorkOrderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle10.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightCyan
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.InvoiceSelectWorkOrderDataGridView.DefaultCellStyle = DataGridViewCellStyle10
-        Me.InvoiceSelectWorkOrderDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.InvoiceSelectWorkOrderDataGridView.EnableHeadersVisualStyles = False
-        Me.InvoiceSelectWorkOrderDataGridView.GridColor = System.Drawing.Color.Silver
-        Me.InvoiceSelectWorkOrderDataGridView.Location = New System.Drawing.Point(34, 56)
-        Me.InvoiceSelectWorkOrderDataGridView.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.InvoiceSelectWorkOrderDataGridView.MultiSelect = False
-        Me.InvoiceSelectWorkOrderDataGridView.Name = "InvoiceSelectWorkOrderDataGridView"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.InvoiceSelectWorkOrderDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
-        Me.InvoiceSelectWorkOrderDataGridView.RowHeadersVisible = False
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.CadetBlue
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.InvoiceSelectWorkOrderDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle12
-        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
-        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.CadetBlue
-        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
-        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.Height = 38
-        Me.InvoiceSelectWorkOrderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.InvoiceSelectWorkOrderDataGridView.Size = New System.Drawing.Size(954, 355)
-        Me.InvoiceSelectWorkOrderDataGridView.TabIndex = 129
-        Me.InvoiceSelectWorkOrderDataGridView.VirtualMode = True
-        '
         'Management_Invoice_Select_Work_Order
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(1014, 481)
+        Me.ClientSize = New System.Drawing.Size(1014, 500)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.btn_invoice_select_select)
         Me.Controls.Add(Me.btn_invoice_select_cancel)

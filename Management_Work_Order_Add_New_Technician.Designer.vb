@@ -22,16 +22,16 @@ Partial Class Management_Work_Order_Add_New_Technician
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TechnicianDataGridView = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.btn_technician_select_select = New System.Windows.Forms.Button()
         Me.btn_technician_select_cancel = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.TechnicianDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,46 +47,46 @@ Partial Class Management_Work_Order_Add_New_Technician
         Me.TechnicianDataGridView.BackgroundColor = System.Drawing.Color.White
         Me.TechnicianDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.TechnicianDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.TechnicianDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.TechnicianDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.TechnicianDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCyan
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.TechnicianDataGridView.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightCyan
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.TechnicianDataGridView.DefaultCellStyle = DataGridViewCellStyle6
         Me.TechnicianDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.TechnicianDataGridView.EnableHeadersVisualStyles = False
         Me.TechnicianDataGridView.GridColor = System.Drawing.Color.Silver
         Me.TechnicianDataGridView.Location = New System.Drawing.Point(48, 95)
         Me.TechnicianDataGridView.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TechnicianDataGridView.Name = "TechnicianDataGridView"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.TechnicianDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.TechnicianDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.TechnicianDataGridView.RowHeadersVisible = False
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CadetBlue
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.TechnicianDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.TechnicianDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.TechnicianDataGridView.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Consolas", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TechnicianDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.TechnicianDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.CadetBlue
@@ -119,6 +119,20 @@ Partial Class Management_Work_Order_Add_New_Technician
         Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 40
         Me.Label2.Text = "HINT"
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label12.Font = New System.Drawing.Font("Ebrima", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label12.Location = New System.Drawing.Point(368, 9)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(311, 46)
+        Me.Label12.TabIndex = 131
+        Me.Label12.Text = "Select Technician(s)"
         '
         'btn_technician_select_select
         '
@@ -162,20 +176,6 @@ Partial Class Management_Work_Order_Add_New_Technician
         Me.btn_technician_select_cancel.Text = "CANCEL"
         Me.btn_technician_select_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_technician_select_cancel.UseVisualStyleBackColor = False
-        '
-        'Label12
-        '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label12.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label12.Location = New System.Drawing.Point(335, 9)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(380, 49)
-        Me.Label12.TabIndex = 131
-        Me.Label12.Text = "Select Technician(s)"
         '
         'Management_Work_Order_Add_New_Technician
         '

@@ -88,11 +88,11 @@ Partial Class Management_Work_Order_Done_Work_Order
         Me.Login.AutoSize = True
         Me.Login.BackColor = System.Drawing.Color.Transparent
         Me.Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Login.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Login.Font = New System.Drawing.Font("Ebrima", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Login.ForeColor = System.Drawing.Color.MintCream
-        Me.Login.Location = New System.Drawing.Point(146, 9)
+        Me.Login.Location = New System.Drawing.Point(163, 9)
         Me.Login.Name = "Login"
-        Me.Login.Size = New System.Drawing.Size(159, 49)
+        Me.Login.Size = New System.Drawing.Size(128, 45)
         Me.Login.TabIndex = 125
         Me.Login.Text = "Finalize"
         '

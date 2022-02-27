@@ -38,11 +38,11 @@ Partial Class Management_Inventory_Stock_In
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Ink Free", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Ebrima", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label4.Location = New System.Drawing.Point(137, 29)
+        Me.Label4.Location = New System.Drawing.Point(171, 18)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(191, 49)
+        Me.Label4.Size = New System.Drawing.Size(145, 45)
         Me.Label4.TabIndex = 129
         Me.Label4.Text = "Stock In "
         '

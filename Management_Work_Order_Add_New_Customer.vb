@@ -29,8 +29,11 @@ Public Class Management_Work_Order_Add_New_Customer
                             '" & txt_new_customer_city_town.Text & "', '" & txt_new_customer_phone.Text & "', '" & txt_new_customer_email.Text & "')", sql_con)
                         sql_da.Fill(sql_ds, "customer_info")
                         Management_Work_Order_Add_New.txt_work_order_new_customer.Text = txt_new_customer_first_name.Text & " " & txt_new_customer_other_name.Text & " " & txt_new_customer_last_name.Text
-                        Management_Work_Order_Add_New.customer = CustomerDataGridView.CurrentRow.Cells(0).Value
+                        datagrid_fill_default("customer_info", Me.CustomerDataGridView)
+                        Me.CustomerDataGridView.Rows(0).Selected = True
+                        Management_Work_Order_Add_New.customer = CustomerDataGridView.Rows(0).Cells(0).Value
                         Me.Close()
+                        message("success", "Customer Info Added successfully")
                     End If
                 Else
                     sql_ds = New DataSet
@@ -43,7 +46,7 @@ Public Class Management_Work_Order_Add_New_Customer
                     Me.customer_new_datails_panel.Dock = DockStyle.Fill
                     Me.customer_new_datails_panel.Visible = False
                     Me.customer_select_edit_panel.Visible = True
-                    Me.CustomerDataGridView.Rows(0).Selected = True
+                    'Me.CustomerDataGridView.Rows(0).Selected = True
                 End If
 
             Catch ex As Exception
@@ -55,10 +58,13 @@ Public Class Management_Work_Order_Add_New_Customer
     End Sub
 
     Private Sub btn_customer_select_new_Click(sender As Object, e As EventArgs) Handles btn_customer_select_new.Click
+        clearCustomer()
         Me.customer_new_datails_panel.Dock = DockStyle.Fill
         Me.customer_select_edit_panel.Visible = False
         Me.customer_new_datails_panel.Visible = True
         Me.btn_new_customer_save.Text = "SAVE"
+    End Sub
+    Public Sub clearCustomer()
         txt_new_customer_first_name.Clear()
         txt_new_customer_other_name.Clear()
         txt_new_customer_last_name.Clear()
@@ -68,9 +74,7 @@ Public Class Management_Work_Order_Add_New_Customer
         txt_new_customer_city_town.Clear()
         txt_new_customer_phone.Clear()
         txt_new_customer_email.Clear()
-
     End Sub
-
     Private Sub btn_customer_select_edit_Click(sender As Object, e As EventArgs) Handles btn_customer_select_edit.Click
         Me.customer_new_datails_panel.Dock = DockStyle.Fill
         Me.customer_select_edit_panel.Visible = False

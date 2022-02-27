@@ -45,12 +45,13 @@ Partial Class Management_Work_Order
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btn_terminate_work_order = New System.Windows.Forms.Button()
         Me.btn_complete_work_order = New System.Windows.Forms.Button()
         Me.btn_start_work_order = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_add_new_work_order = New System.Windows.Forms.Button()
-        Me.btn_terminate_work_order = New System.Windows.Forms.Button()
+        Me.btn_edit_new_work_order = New System.Windows.Forms.Button()
         CType(Me.WorkOrderDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -88,7 +89,7 @@ Partial Class Management_Work_Order
         Me.WorkOrderDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.WorkOrderDataGridView.EnableHeadersVisualStyles = False
         Me.WorkOrderDataGridView.GridColor = System.Drawing.Color.Silver
-        Me.WorkOrderDataGridView.Location = New System.Drawing.Point(45, 76)
+        Me.WorkOrderDataGridView.Location = New System.Drawing.Point(14, 69)
         Me.WorkOrderDataGridView.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.WorkOrderDataGridView.MultiSelect = False
         Me.WorkOrderDataGridView.Name = "WorkOrderDataGridView"
@@ -113,8 +114,9 @@ Partial Class Management_Work_Order
         Me.WorkOrderDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
         Me.WorkOrderDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.WorkOrderDataGridView.RowTemplate.Height = 38
+        Me.WorkOrderDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.WorkOrderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.WorkOrderDataGridView.Size = New System.Drawing.Size(1005, 347)
+        Me.WorkOrderDataGridView.Size = New System.Drawing.Size(1073, 382)
         Me.WorkOrderDataGridView.TabIndex = 38
         '
         'cmb_work_order_status_filter
@@ -122,7 +124,7 @@ Partial Class Management_Work_Order
         Me.cmb_work_order_status_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmb_work_order_status_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_work_order_status_filter.FormattingEnabled = True
-        Me.cmb_work_order_status_filter.Location = New System.Drawing.Point(828, 33)
+        Me.cmb_work_order_status_filter.Location = New System.Drawing.Point(865, 33)
         Me.cmb_work_order_status_filter.Margin = New System.Windows.Forms.Padding(10)
         Me.cmb_work_order_status_filter.Name = "cmb_work_order_status_filter"
         Me.cmb_work_order_status_filter.Size = New System.Drawing.Size(222, 29)
@@ -134,7 +136,7 @@ Partial Class Management_Work_Order
         Me.txt_work_order_automobile_name_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_work_order_automobile_name_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txt_work_order_automobile_name_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_work_order_automobile_name_filter.Location = New System.Drawing.Point(593, 33)
+        Me.txt_work_order_automobile_name_filter.Location = New System.Drawing.Point(630, 33)
         Me.txt_work_order_automobile_name_filter.Name = "txt_work_order_automobile_name_filter"
         Me.txt_work_order_automobile_name_filter.Size = New System.Drawing.Size(222, 29)
         Me.txt_work_order_automobile_name_filter.TabIndex = 61
@@ -156,9 +158,9 @@ Partial Class Management_Work_Order
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Location = New System.Drawing.Point(473, 430)
+        Me.Panel1.Location = New System.Drawing.Point(533, 458)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(577, 81)
+        Me.Panel1.Size = New System.Drawing.Size(554, 63)
         Me.Panel1.TabIndex = 64
         '
         'Button6
@@ -169,7 +171,7 @@ Partial Class Management_Work_Order
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(196, 59)
+        Me.Button6.Location = New System.Drawing.Point(299, 8)
         Me.Button6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button6.Name = "Button6"
         Me.Button6.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -185,7 +187,7 @@ Partial Class Management_Work_Order
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(396, 6)
+        Me.Button8.Location = New System.Drawing.Point(446, 37)
         Me.Button8.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button8.Name = "Button8"
         Me.Button8.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -201,7 +203,7 @@ Partial Class Management_Work_Order
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(196, 6)
+        Me.Button5.Location = New System.Drawing.Point(6, 37)
         Me.Button5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button5.Name = "Button5"
         Me.Button5.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -217,7 +219,7 @@ Partial Class Management_Work_Order
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(196, 31)
+        Me.Button4.Location = New System.Drawing.Point(146, 37)
         Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button4.Name = "Button4"
         Me.Button4.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -233,7 +235,7 @@ Partial Class Management_Work_Order
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(3, 62)
+        Me.Button3.Location = New System.Drawing.Point(299, 35)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
         Me.Button3.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -249,7 +251,7 @@ Partial Class Management_Work_Order
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(3, 6)
+        Me.Button2.Location = New System.Drawing.Point(6, 8)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -265,7 +267,7 @@ Partial Class Management_Work_Order
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(3, 33)
+        Me.Button1.Location = New System.Drawing.Point(146, 8)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -277,71 +279,91 @@ Partial Class Management_Work_Order
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(218, 59)
+        Me.Label8.Location = New System.Drawing.Point(321, 8)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(169, 19)
+        Me.Label8.Size = New System.Drawing.Size(92, 19)
         Me.Label8.TabIndex = 2
-        Me.Label8.Text = "Pending Start Work Order"
+        Me.Label8.Text = "Pending Start"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(418, 4)
+        Me.Label9.Location = New System.Drawing.Point(468, 35)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(155, 19)
+        Me.Label9.Size = New System.Drawing.Size(78, 19)
         Me.Label9.TabIndex = 2
-        Me.Label9.Text = "Terminated Work Order"
+        Me.Label9.Text = "Terminated"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(218, 4)
+        Me.Label7.Location = New System.Drawing.Point(28, 35)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(155, 19)
+        Me.Label7.Size = New System.Drawing.Size(78, 19)
         Me.Label7.TabIndex = 2
-        Me.Label7.Text = "In Progress Work Order"
+        Me.Label7.Text = "In Progress"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(218, 31)
+        Me.Label6.Location = New System.Drawing.Point(168, 37)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(136, 19)
+        Me.Label6.Size = New System.Drawing.Size(59, 19)
         Me.Label6.TabIndex = 2
-        Me.Label6.Text = "Selected Work Order"
+        Me.Label6.Text = "Selected"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(25, 60)
+        Me.Label5.Location = New System.Drawing.Point(321, 33)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(146, 19)
+        Me.Label5.Size = New System.Drawing.Size(69, 19)
         Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Due Soon Work Order"
+        Me.Label5.Text = "Due Soon"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(25, 33)
+        Me.Label1.Location = New System.Drawing.Point(168, 8)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(139, 19)
+        Me.Label1.Size = New System.Drawing.Size(66, 19)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Overdue Work Order"
+        Me.Label1.Text = "Overdue "
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(25, 4)
+        Me.Label4.Location = New System.Drawing.Point(28, 6)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(153, 19)
+        Me.Label4.Size = New System.Drawing.Size(76, 19)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Completed Work Order"
+        Me.Label4.Text = "Completed"
+        '
+        'btn_terminate_work_order
+        '
+        Me.btn_terminate_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_terminate_work_order.BackColor = System.Drawing.Color.Black
+        Me.btn_terminate_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_terminate_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_terminate_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_terminate_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_terminate_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_terminate_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_terminate_work_order.Location = New System.Drawing.Point(294, 466)
+        Me.btn_terminate_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_terminate_work_order.Name = "btn_terminate_work_order"
+        Me.btn_terminate_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.btn_terminate_work_order.Size = New System.Drawing.Size(138, 46)
+        Me.btn_terminate_work_order.TabIndex = 66
+        Me.btn_terminate_work_order.Text = "TERMINATE"
+        Me.btn_terminate_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_terminate_work_order.UseVisualStyleBackColor = False
         '
         'btn_complete_work_order
         '
@@ -354,7 +376,7 @@ Partial Class Management_Work_Order
         Me.btn_complete_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_complete_work_order.Image = CType(resources.GetObject("btn_complete_work_order.Image"), System.Drawing.Image)
         Me.btn_complete_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_complete_work_order.Location = New System.Drawing.Point(155, 455)
+        Me.btn_complete_work_order.Location = New System.Drawing.Point(135, 466)
         Me.btn_complete_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_complete_work_order.Name = "btn_complete_work_order"
         Me.btn_complete_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
@@ -375,7 +397,7 @@ Partial Class Management_Work_Order
         Me.btn_start_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_start_work_order.Image = CType(resources.GetObject("btn_start_work_order.Image"), System.Drawing.Image)
         Me.btn_start_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_start_work_order.Location = New System.Drawing.Point(43, 455)
+        Me.btn_start_work_order.Location = New System.Drawing.Point(16, 466)
         Me.btn_start_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_start_work_order.Name = "btn_start_work_order"
         Me.btn_start_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
@@ -393,7 +415,7 @@ Partial Class Management_Work_Order
         Me.Label3.ForeColor = System.Drawing.Color.Teal
         Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label3.Location = New System.Drawing.Point(590, 4)
+        Me.Label3.Location = New System.Drawing.Point(627, 4)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(5)
         Me.Label3.Size = New System.Drawing.Size(177, 27)
@@ -408,7 +430,7 @@ Partial Class Management_Work_Order
         Me.Label2.ForeColor = System.Drawing.Color.Teal
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label2.Location = New System.Drawing.Point(825, 6)
+        Me.Label2.Location = New System.Drawing.Point(862, 6)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(5)
         Me.Label2.Size = New System.Drawing.Size(191, 27)
@@ -425,33 +447,31 @@ Partial Class Management_Work_Order
         Me.btn_add_new_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_add_new_work_order.Image = CType(resources.GetObject("btn_add_new_work_order.Image"), System.Drawing.Image)
         Me.btn_add_new_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_add_new_work_order.Location = New System.Drawing.Point(45, 5)
+        Me.btn_add_new_work_order.Location = New System.Drawing.Point(12, 12)
         Me.btn_add_new_work_order.Name = "btn_add_new_work_order"
         Me.btn_add_new_work_order.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
-        Me.btn_add_new_work_order.Size = New System.Drawing.Size(105, 46)
+        Me.btn_add_new_work_order.Size = New System.Drawing.Size(105, 40)
         Me.btn_add_new_work_order.TabIndex = 58
         Me.btn_add_new_work_order.Text = "    New"
         Me.btn_add_new_work_order.UseVisualStyleBackColor = False
         '
-        'btn_terminate_work_order
+        'btn_edit_new_work_order
         '
-        Me.btn_terminate_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btn_terminate_work_order.BackColor = System.Drawing.Color.Black
-        Me.btn_terminate_work_order.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_terminate_work_order.FlatAppearance.BorderSize = 0
-        Me.btn_terminate_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_terminate_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_terminate_work_order.ForeColor = System.Drawing.Color.White
-        Me.btn_terminate_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_terminate_work_order.Location = New System.Drawing.Point(309, 455)
-        Me.btn_terminate_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_terminate_work_order.Name = "btn_terminate_work_order"
-        Me.btn_terminate_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_terminate_work_order.Size = New System.Drawing.Size(138, 46)
-        Me.btn_terminate_work_order.TabIndex = 66
-        Me.btn_terminate_work_order.Text = "TERMINATE"
-        Me.btn_terminate_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_terminate_work_order.UseVisualStyleBackColor = False
+        Me.btn_edit_new_work_order.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_edit_new_work_order.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_edit_new_work_order.FlatAppearance.BorderSize = 0
+        Me.btn_edit_new_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_edit_new_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_edit_new_work_order.ForeColor = System.Drawing.Color.White
+        Me.btn_edit_new_work_order.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_edit_white_24
+        Me.btn_edit_new_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_edit_new_work_order.Location = New System.Drawing.Point(135, 12)
+        Me.btn_edit_new_work_order.Name = "btn_edit_new_work_order"
+        Me.btn_edit_new_work_order.Padding = New System.Windows.Forms.Padding(12, 0, 0, 0)
+        Me.btn_edit_new_work_order.Size = New System.Drawing.Size(105, 40)
+        Me.btn_edit_new_work_order.TabIndex = 58
+        Me.btn_edit_new_work_order.Text = "    Edit"
+        Me.btn_edit_new_work_order.UseVisualStyleBackColor = False
         '
         'Management_Work_Order
         '
@@ -467,6 +487,7 @@ Partial Class Management_Work_Order
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cmb_work_order_status_filter)
+        Me.Controls.Add(Me.btn_edit_new_work_order)
         Me.Controls.Add(Me.btn_add_new_work_order)
         Me.Controls.Add(Me.txt_work_order_automobile_name_filter)
         Me.Controls.Add(Me.WorkOrderDataGridView)
@@ -506,4 +527,5 @@ Partial Class Management_Work_Order
     Friend WithEvents Button8 As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents btn_terminate_work_order As Button
+    Friend WithEvents btn_edit_new_work_order As Button
 End Class

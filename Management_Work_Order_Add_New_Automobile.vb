@@ -5,6 +5,14 @@ Public Class Management_Work_Order_Add_New_Automobile
     End Sub
 
     Private Sub btn_automobile_select_new_Click(sender As Object, e As EventArgs) Handles btn_automobile_select_new.Click
+        clearAutomobile()
+        Me.automobile_new_datails_panel.Dock = DockStyle.Fill
+        Me.automobile_select_edit_panel.Visible = False
+        Me.automobile_new_datails_panel.Visible = True
+        btn_new_automobile_save.Text = "SAVE"
+
+    End Sub
+    Public Sub clearAutomobile()
         txt_new_category.Text = ""
         txt_new_year.Clear()
         txt_new_make.Text = ""
@@ -13,13 +21,7 @@ Public Class Management_Work_Order_Add_New_Automobile
         txt_new_fuel.Text = ""
         txt_new_vin.Clear()
         txt_new_reg_number.Clear()
-        Me.automobile_new_datails_panel.Dock = DockStyle.Fill
-        Me.automobile_select_edit_panel.Visible = False
-        Me.automobile_new_datails_panel.Visible = True
-        btn_new_automobile_save.Text = "SAVE"
-
     End Sub
-
     Private Sub btn_automobile_select_edit_Click(sender As Object, e As EventArgs) Handles btn_automobile_select_edit.Click
         btn_automobile_select_new_Click(btn_automobile_select_new, EventArgs.Empty)
         txt_new_category.Text = AutomobileDataGridView.CurrentRow.Cells(1).Value
@@ -53,7 +55,7 @@ Public Class Management_Work_Order_Add_New_Automobile
     End Sub
 
     Private Sub btn_new_automobile_save_Click(sender As Object, e As EventArgs) Handles btn_new_automobile_save.Click
-        If txt_new_make.Text <> "" And txt_new_fuel.Text <> "" Then
+        If txt_new_make.Text <> "" And txt_new_fuel.Text <> "" And txt_new_year.Text <> "" Then
             Try
                 If btn_new_automobile_save.Text = "SAVE" Then
                     Dim repos As DialogResult = MessageBox.Show("You are about to Add a new Automobile, are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
@@ -64,11 +66,11 @@ Public Class Management_Work_Order_Add_New_Automobile
                             '" & txt_new_fuel.Text & "', '" & txt_new_vin.Text & "', '" & txt_new_reg_number.Text & "')", sql_con)
                         sql_da.Fill(sql_ds, "automobile_info")
                         Management_Work_Order_Add_New.txt_work_order_new_automobile.Text = CStr(txt_new_year.Text & " " & txt_new_color.Text & " " & txt_new_make.Text & " " & txt_new_model.Text)
-                        Management_Work_Order_Add_New.automobile = AutomobileDataGridView.CurrentRow.Cells(0).Value
-                        Me.Close()
                         datagrid_fill_default("automobile_info", Me.AutomobileDataGridView)
-                        message("success", "Automobile Updated Successflly")
-
+                        Me.AutomobileDataGridView.Rows(0).Selected = True
+                        Management_Work_Order_Add_New.automobile = AutomobileDataGridView.Rows(0).Cells(0).Value
+                        Me.Close()
+                        message("success", "Automobile Added Successflly")
                     End If
                 Else
                     Dim repos As DialogResult = MessageBox.Show("You are about to Update Autoombile @ ID '" & Me.AutomobileDataGridView.CurrentRow.Cells(0).Value & "', are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
@@ -101,23 +103,5 @@ Public Class Management_Work_Order_Add_New_Automobile
         add_combobox_items(Me.txt_new_fuel, "automobile_info", "Fuel")
         Me.txt_new_make.Items.Clear()
         add_combobox_items(Me.txt_new_make, "automobile_info", "Make")
-    End Sub
-
-    Private Sub Management_Work_Order_Add_New_Automobile_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
-
-        If e.KeyValue = Keys.Return Then
-            MsgBox("Check-1")
-        End If
-        If Me.automobile_new_datails_panel.Visible = True Then
-            MsgBox("Check-2")
-            Me.AcceptButton = btn_new_automobile_save
-        ElseIf Me.automobile_select_edit_panel.Visible = True Then
-            MsgBox("Check-3")
-            Me.AcceptButton = btn_automobile_select_select
-        End If
-    End Sub
-
-    Private Sub Management_Work_Order_Add_New_Automobile_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
-        MsgBox("Check-1-Press")
     End Sub
 End Class

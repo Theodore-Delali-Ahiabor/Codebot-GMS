@@ -130,7 +130,7 @@ Public Class Management_Inventory
         End If
     End Sub
 
-    Private Sub btn_stock_out_item_Click(sender As Object, e As EventArgs) Handles btn_stock_out_item.Click
+    Private Sub btn_stock_out_item_Click(sender As Object, e As EventArgs)
         If InventoryDataGridView.SelectedRows.Count = 1 Then
             sql_da = New MySqlDataAdapter("SELECT * FROM `inventory` WHERE ID = '" & InventoryDataGridView.CurrentRow.Cells(0).Value.ToString() & "'", sql_con)
             sql_dt = New DataTable

@@ -134,6 +134,12 @@
     <Compile Include="Auth_Signup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Management_Work_Order_Add_New_Parts.Designer.vb">
+      <DependentUpon>Management_Work_Order_Add_New_Parts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Work_Order_Add_New_Parts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GMS_Main.Designer.vb">
       <DependentUpon>GMS_Main.vb</DependentUpon>
     </Compile>
@@ -249,6 +255,12 @@
     <Compile Include="Management_Work_Order_Add_New_Customer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Management_Work_Order_Add_New_Services.Designer.vb">
+      <DependentUpon>Management_Work_Order_Add_New_Services.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Management_Work_Order_Add_New_Services.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Management_Work_Order_Add_New_Technician.Designer.vb">
       <DependentUpon>Management_Work_Order_Add_New_Technician.vb</DependentUpon>
     </Compile>
@@ -309,6 +321,9 @@
       <DependentUpon>Auth_Signup.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Management_Work_Order_Add_New_Parts.resx">
+      <DependentUpon>Management_Work_Order_Add_New_Parts.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GMS_Main.resx">
       <DependentUpon>GMS_Main.vb</DependentUpon>
     </EmbeddedResource>
@@ -366,6 +381,9 @@
     <EmbeddedResource Include="Management_Work_Order_Add_New_Customer.resx">
       <DependentUpon>Management_Work_Order_Add_New_Customer.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management_Work_Order_Add_New_Services.resx">
+      <DependentUpon>Management_Work_Order_Add_New_Services.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management_Work_Order_Add_New_Technician.resx">
       <DependentUpon>Management_Work_Order_Add_New_Technician.vb</DependentUpon>

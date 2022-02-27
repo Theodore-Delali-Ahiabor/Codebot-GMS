@@ -11,7 +11,7 @@
         Try
             Dim entered_code As String = txt_code_1.Text + txt_code_2.Text + txt_code_3.Text + txt_code_4.Text + txt_code_5.Text + txt_code_6.Text
             If IsNumeric(entered_code) And entered_code.Length = 6 Then
-                sql_da = New MySqlDataAdapter("SELECT * FROM `login_reset` WHERE Request_Time = (SELECT MAX(`Request_Time`) FROM `login_reset` WHERE `Request_ID` = '" & Auth_Password_Reset.reset_id & "')", sql_con)
+                sql_da = New MySqlDataAdapter("SELECT * FROM `user` WHERE `Employee_ID` = '" & Auth_Password_Reset.reset_id & "'", sql_con)
                 sql_dt = New DataTable
                 sql_dt.Clear()
                 sql_da.Fill(sql_dt)
@@ -20,15 +20,12 @@
                         Dim repos As DialogResult = MessageBox.Show("Are you sure to reset user login?", "User Login Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                         If repos = DialogResult.Yes Then
                             sql_ds = New DataSet
-                            '
-                            sql_da = New MySqlDataAdapter("UPDATE user SET Username = '" & null & "' , Password = '" & null & "'  WHERE Employee_ID = '" & sql_dt.Rows(0).Item("Request_ID") & "'", sql_con)
+                            sql_da = New MySqlDataAdapter("UPDATE user SET Username = '" & null & "' , Password = '" & null & "'  WHERE Employee_ID = '" & Auth_Password_Reset.reset_id & "'", sql_con)
                             sql_da.Fill(sql_ds, "employee")
                             Me.Close()
                             message("success", "Reset code validated successfully. Create new Username & Password")
-                            'Auth_Login.btn_signup_Click(Auth_Login.btn_signup, EventArgs.Empty)
-
                             With Auth_Signup
-                                .lbl_signup_title.Text = "Reset"
+                                .lbl_signup_title.Text = "RESET"
                                 .txt_signup_email.Text = Auth_Password_Reset.reset_email
                                 .txt_signup_email.Enabled = False
                                 .txt_signup_username.Clear()
