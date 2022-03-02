@@ -222,7 +222,7 @@ Partial Class Management_Calendar
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(42, 523)
+        Me.Panel4.Size = New System.Drawing.Size(42, 616)
         Me.Panel4.TabIndex = 1
         '
         'fl_days
@@ -232,7 +232,7 @@ Partial Class Management_Calendar
         Me.fl_days.BackColor = System.Drawing.Color.Transparent
         Me.fl_days.Location = New System.Drawing.Point(45, 94)
         Me.fl_days.Name = "fl_days"
-        Me.fl_days.Size = New System.Drawing.Size(1043, 429)
+        Me.fl_days.Size = New System.Drawing.Size(1043, 522)
         Me.fl_days.TabIndex = 39
         '
         'Management_Calendar
@@ -241,7 +241,7 @@ Partial Class Management_Calendar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1102, 523)
+        Me.ClientSize = New System.Drawing.Size(1121, 616)
         Me.ControlBox = False
         Me.Controls.Add(Me.fl_days)
         Me.Controls.Add(Me.Panel4)

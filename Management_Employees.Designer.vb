@@ -52,7 +52,7 @@ Partial Class Management_Employees
         Me.cmb_employee_position_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmb_employee_position_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_employee_position_filter.FormattingEnabled = True
-        Me.cmb_employee_position_filter.Location = New System.Drawing.Point(867, 37)
+        Me.cmb_employee_position_filter.Location = New System.Drawing.Point(887, 37)
         Me.cmb_employee_position_filter.Margin = New System.Windows.Forms.Padding(9, 14, 9, 14)
         Me.cmb_employee_position_filter.Name = "cmb_employee_position_filter"
         Me.cmb_employee_position_filter.Size = New System.Drawing.Size(222, 29)
@@ -64,7 +64,7 @@ Partial Class Management_Employees
         Me.txt_employee_name_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_employee_name_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txt_employee_name_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_employee_name_filter.Location = New System.Drawing.Point(616, 37)
+        Me.txt_employee_name_filter.Location = New System.Drawing.Point(636, 37)
         Me.txt_employee_name_filter.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txt_employee_name_filter.Name = "txt_employee_name_filter"
         Me.txt_employee_name_filter.Size = New System.Drawing.Size(222, 29)
@@ -130,7 +130,7 @@ Partial Class Management_Employees
         Me.EmployeesDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.EmployeesDataGridView.RowTemplate.Height = 38
         Me.EmployeesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.EmployeesDataGridView.Size = New System.Drawing.Size(1077, 422)
+        Me.EmployeesDataGridView.Size = New System.Drawing.Size(1097, 466)
         Me.EmployeesDataGridView.TabIndex = 1
         Me.EmployeesDataGridView.VirtualMode = True
         '
@@ -143,7 +143,7 @@ Partial Class Management_Employees
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(793, 514)
+        Me.Panel1.Location = New System.Drawing.Point(813, 558)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(296, 46)
         Me.Panel1.TabIndex = 43
@@ -238,7 +238,7 @@ Partial Class Management_Employees
         Me.btn_deactivate_employee.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_deactivate_employee.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_toggle_off_32
         Me.btn_deactivate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_deactivate_employee.Location = New System.Drawing.Point(176, 515)
+        Me.btn_deactivate_employee.Location = New System.Drawing.Point(176, 559)
         Me.btn_deactivate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_deactivate_employee.Name = "btn_deactivate_employee"
         Me.btn_deactivate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -259,7 +259,7 @@ Partial Class Management_Employees
         Me.btn_activate_employee.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_activate_employee.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_toggle_on_32
         Me.btn_activate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_activate_employee.Location = New System.Drawing.Point(12, 514)
+        Me.btn_activate_employee.Location = New System.Drawing.Point(12, 558)
         Me.btn_activate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_activate_employee.Name = "btn_activate_employee"
         Me.btn_activate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -277,7 +277,7 @@ Partial Class Management_Employees
         Me.Label4.ForeColor = System.Drawing.Color.Teal
         Me.Label4.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label4.Location = New System.Drawing.Point(613, -1)
+        Me.Label4.Location = New System.Drawing.Point(633, -1)
         Me.Label4.Name = "Label4"
         Me.Label4.Padding = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.Label4.Size = New System.Drawing.Size(84, 35)
@@ -293,7 +293,7 @@ Partial Class Management_Employees
         Me.Label2.ForeColor = System.Drawing.Color.Teal
         Me.Label2.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_filter_24
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label2.Location = New System.Drawing.Point(864, -1)
+        Me.Label2.Location = New System.Drawing.Point(884, -1)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(4, 7, 4, 7)
         Me.Label2.Size = New System.Drawing.Size(73, 35)
@@ -303,7 +303,7 @@ Partial Class Management_Employees
         '
         'btn_edit_employee
         '
-        Me.btn_edit_employee.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_edit_employee.BackColor = System.Drawing.Color.Teal
         Me.btn_edit_employee.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_edit_employee.FlatAppearance.BorderSize = 0
         Me.btn_edit_employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -322,7 +322,7 @@ Partial Class Management_Employees
         '
         'btn_add_new_employee
         '
-        Me.btn_add_new_employee.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_add_new_employee.BackColor = System.Drawing.Color.Teal
         Me.btn_add_new_employee.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_add_new_employee.FlatAppearance.BorderSize = 0
         Me.btn_add_new_employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -346,7 +346,7 @@ Partial Class Management_Employees
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1101, 572)
+        Me.ClientSize = New System.Drawing.Size(1121, 616)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btn_deactivate_employee)

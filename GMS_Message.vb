@@ -46,4 +46,8 @@
         message_ts = New TimeSpan(0, 0, 10)
         Opacity = 0.9
     End Sub
+
+    Private Sub GMS_Message_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Location = New Point(Screen.PrimaryScreen.WorkingArea.Width - Me.Width, Screen.PrimaryScreen.WorkingArea.Height - Me.Height)
+    End Sub
 End Class

@@ -423,7 +423,7 @@ Module GMS_Module
             Management_Work_Order.cmb_work_order_status_filter.Items.Clear()
             Management_Work_Order.cmb_work_order_status_filter.Items.Add("All")
             Management_Work_Order.cmb_work_order_status_filter.SelectedIndex() = 0
-            add_search_suggestion(Management_Work_Order.txt_work_order_automobile_name_filter, "work_order_view", "ID")
+            'add_search_suggestion(Management_Work_Order.txt_work_order_automobile_name_filter, "work_order_view", "ID")
             add_combobox_items(Management_Work_Order.cmb_work_order_status_filter, "work_order_view", "Progress_Status")
             'invoice
             Management_Invoice.cmb_payment_status_filter.Items.Clear()

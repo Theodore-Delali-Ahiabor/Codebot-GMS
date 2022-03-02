@@ -136,9 +136,9 @@ Public Class Management_Work_Order
             .txt_work_order_new_customer.Clear()
             .txt_work_order_new_automobile.Clear()
             .txt_new_work_order_technicians.Clear()
-            .txt_new_work_order_date_in.Checked = False
+            '.txt_new_work_order_date_in.Checked = False
             .txt_new_work_order_date_in.Value = Today
-            .txt_new_work_order_date_out.Checked = False
+            '.txt_new_work_order_date_out.Checked = False
             .txt_new_work_order_date_out.Value = Today
             .txt_new_work_order_mileage.Clear()
             .txt_new_work_order_progress_stats.SelectedIndex = 0
@@ -154,22 +154,43 @@ Public Class Management_Work_Order
             sidebar_form_loader(Management_Work_Order_Add_New)
 
             With Management_Work_Order_Add_New
-                sql_da = New MySqlDataAdapter("SELECT * FROM `work_order` ", sql_con)
+                .lbl_new_work_order_id.Text = WorkOrderDataGridView.CurrentRow.Cells(0).Value.ToString
+
+                sql_da = New MySqlDataAdapter("SELECT * FROM `work_order` WHERE `ID` = '" & .lbl_new_work_order_id.Text & "'", sql_con)
                 sql_dt = New DataTable
                 sql_dt.Clear()
                 sql_da.Fill(sql_dt)
-                .txt_work_order_new_customer.Clear()
-                .txt_work_order_new_automobile.Clear()
-                .txt_new_work_order_technicians.Clear()
-                .txt_new_work_order_date_in.Checked = False
-                .txt_new_work_order_date_in.Value = Today
-                .txt_new_work_order_date_out.Checked = False
-                .txt_new_work_order_date_out.Value = Today
-                .txt_new_work_order_mileage.Clear()
-                .txt_new_work_order_progress_stats.SelectedIndex = 0
-                .txt_new_work_order_relevant_information.Clear()
-                .automobile = 0
-                .customer = 0
+                If sql_dt.Rows.Count > 0 Then
+                    .txt_new_work_order_technicians.Text = sql_dt.Rows(0).Item("Technician").ToString
+                    .txt_new_work_order_date_in.Checked = True
+                    .txt_new_work_order_date_in.Value = sql_dt.Rows(0).Item("Date_In").ToString
+                    .txt_new_work_order_date_out.Checked = True
+                    .txt_new_work_order_date_out.Value = sql_dt.Rows(0).Item("Date_Due_Out").ToString
+                    .txt_new_work_order_mileage.Text = sql_dt.Rows(0).Item("Mileage").ToString
+                    .txt_new_work_order_progress_stats.Text = sql_dt.Rows(0).Item("Status").ToString
+                    .txt_new_work_order_relevant_information.Text = sql_dt.Rows(0).Item("Relevant_Informations").ToString
+                    .automobile = sql_dt.Rows(0).Item("Automobile").ToString
+                    .customer = sql_dt.Rows(0).Item("Customer").ToString
+
+                    sql_da = New MySqlDataAdapter("SELECT * FROM `automobile_info` WHERE `ID` = '" & .automobile & "'", sql_con)
+                    sql_dt = New DataTable
+                    sql_dt.Clear()
+                    sql_da.Fill(sql_dt)
+                    If sql_dt.Rows.Count = 1 Then
+                        .txt_work_order_new_automobile.Text = CStr(sql_dt.Rows(0).Item(2) & " " & sql_dt.Rows(0).Item(5) & " " & sql_dt.Rows(0).Item(3) & " " & sql_dt.Rows(0).Item(4))
+                    End If
+
+                    sql_da = New MySqlDataAdapter("SELECT * FROM `customer_info` WHERE `ID` = '" & .customer & "'", sql_con)
+                    sql_dt = New DataTable
+                    sql_dt.Clear()
+                    sql_da.Fill(sql_dt)
+                    If sql_dt.Rows.Count = 1 Then
+                        .txt_work_order_new_customer.Text = sql_dt.Rows(0).Item(1) & " " & sql_dt.Rows(0).Item(2) & " " & sql_dt.Rows(0).Item(3)
+                    End If
+                Else
+                    message("error", "Work  Order NOT found")
+                End If
+
 
                 .lbl_new_work_order_id.Text = WorkOrderDataGridView.CurrentRow.Cells(0).Value.ToString
 

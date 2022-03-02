@@ -39,15 +39,27 @@ Public Class Management_Work_Order_Add_New
                 date_in = txt_new_work_order_date_in.Value.Year & "-" & txt_new_work_order_date_in.Value.Month & "-" & txt_new_work_order_date_in.Value.Day
                 date_due_out = txt_new_work_order_date_out.Value.Year & "-" & txt_new_work_order_date_out.Value.Month & "-" & txt_new_work_order_date_out.Value.Day
                 Dim repos As DialogResult = MessageBox.Show("You are about to Add a new Work Order, are you sure to continue ?", "Updating User Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
-                If repos = DialogResult.Yes Then
-                    sql_ds = New DataSet
-                    sql_da = New MySqlDataAdapter("INSERT INTO work_order(`Customer`,`Automobile`,`Technician`,`Date_In`,`Date_Due_Out`,`Mileage`,`Parts_ID`, `Services_ID`,`Status`,`Relevant_Informations`,`Created_On`,`Created_By`,`Last_Modified_On`,`Last_Modified_By`)
+                If btn_new_item_save.Text = "SAVE" Then
+                    If repos = DialogResult.Yes Then
+                        sql_ds = New DataSet
+                        sql_da = New MySqlDataAdapter("INSERT INTO work_order(`Customer`,`Automobile`,`Technician`,`Date_In`,`Date_Due_Out`,`Mileage`,`Parts_ID`, `Services_ID`,`Status`,`Relevant_Informations`,`Created_On`,`Created_By`,`Last_Modified_On`,`Last_Modified_By`)
                             VALUES('" & customer & "','" & automobile & "','" & txt_new_work_order_technicians.Text & "', '" & date_in & "','" & date_due_out & "','" & txt_new_work_order_mileage.Text & "', '" & parts_id & "', '" & services_id & "','" & txt_new_work_order_progress_stats.Text & "',
                             '" & txt_new_work_order_relevant_information.Text & "',SYSDATE(),'" & login_id & "',SYSDATE(),'" & login_id & "')", sql_con)
-                    sql_da.Fill(sql_ds, "work_order")
-                    sidebar_form_loader(Management_Work_Order)
-                    datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)
-                    message("success", "Work Order Added Successflly")
+                        sql_da.Fill(sql_ds, "work_order")
+                        sidebar_form_loader(Management_Work_Order)
+                        datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)
+                        message("success", "Work Order Added Successflly")
+                    End If
+                Else
+                    If repos = DialogResult.Yes Then
+                        sql_ds = New DataSet
+                        sql_da = New MySqlDataAdapter("UPDATE `work_order` SET `Customer`='" & customer & "',`Automobile`='" & automobile & "',`Technician`='" & txt_new_work_order_technicians.Text & "',`Date_In`='" & date_in & "',`Date_Due_Out`='" & date_due_out & "',`Mileage`='" & txt_new_work_order_mileage.Text & "',`Parts_ID`='" & parts_id & "'
+                            ,`Services_ID`='" & services_id & "',`Status`='" & txt_new_work_order_progress_stats.Text & "',`Relevant_Informations`='" & txt_new_work_order_relevant_information.Text & "',`Last_Modified_On`=SYSDATE(),`Last_Modified_By`='" & login_id & "' WHERE `ID`='" & lbl_new_work_order_id.Text & "'", sql_con)
+                        sql_da.Fill(sql_ds, "work_order")
+                        sidebar_form_loader(Management_Work_Order)
+                        datagrid_fill_default("work_order_view", Management_Work_Order.WorkOrderDataGridView)
+                        message("success", "Work Order Updated Successflly")
+                    End If
                 End If
             Else
                 message("warning", "Please fill out all required (*) fields")

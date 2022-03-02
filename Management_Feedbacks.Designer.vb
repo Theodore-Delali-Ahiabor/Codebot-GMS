@@ -96,7 +96,7 @@ Partial Class Management_Feedbacks
         Me.EmployeesDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.EmployeesDataGridView.RowTemplate.Height = 38
         Me.EmployeesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.EmployeesDataGridView.Size = New System.Drawing.Size(992, 401)
+        Me.EmployeesDataGridView.Size = New System.Drawing.Size(1012, 479)
         Me.EmployeesDataGridView.TabIndex = 2
         Me.EmployeesDataGridView.VirtualMode = True
         '
@@ -135,7 +135,7 @@ Partial Class Management_Feedbacks
         Me.btn_deactivate_employee.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_deactivate_employee.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_toggle_off_32
         Me.btn_deactivate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_deactivate_employee.Location = New System.Drawing.Point(218, 483)
+        Me.btn_deactivate_employee.Location = New System.Drawing.Point(218, 561)
         Me.btn_deactivate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_deactivate_employee.Name = "btn_deactivate_employee"
         Me.btn_deactivate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -157,7 +157,7 @@ Partial Class Management_Feedbacks
         Me.btn_activate_employee.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_activate_employee.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_toggle_on_32
         Me.btn_activate_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_activate_employee.Location = New System.Drawing.Point(54, 483)
+        Me.btn_activate_employee.Location = New System.Drawing.Point(54, 561)
         Me.btn_activate_employee.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_activate_employee.Name = "btn_activate_employee"
         Me.btn_activate_employee.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -190,7 +190,7 @@ Partial Class Management_Feedbacks
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.ClientSize = New System.Drawing.Size(1121, 616)
         Me.ControlBox = False
         Me.Controls.Add(Me.btn_new_mail)
         Me.Controls.Add(Me.btn_deactivate_employee)

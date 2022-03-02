@@ -81,7 +81,7 @@ Partial Class Management_Dashboard
         Me.work_oders_due_panel.Controls.Add(Me.Label7)
         Me.work_oders_due_panel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.work_oders_due_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.work_oders_due_panel.Location = New System.Drawing.Point(24, 13)
+        Me.work_oders_due_panel.Location = New System.Drawing.Point(34, 13)
         Me.work_oders_due_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.work_oders_due_panel.Name = "work_oders_due_panel"
         Me.work_oders_due_panel.Size = New System.Drawing.Size(235, 88)
@@ -166,7 +166,7 @@ Partial Class Management_Dashboard
         Me.invoice_payments_panel.Controls.Add(Me.Label4)
         Me.invoice_payments_panel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.invoice_payments_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.invoice_payments_panel.Location = New System.Drawing.Point(293, 13)
+        Me.invoice_payments_panel.Location = New System.Drawing.Point(303, 13)
         Me.invoice_payments_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.invoice_payments_panel.Name = "invoice_payments_panel"
         Me.invoice_payments_panel.Size = New System.Drawing.Size(235, 87)
@@ -224,7 +224,7 @@ Partial Class Management_Dashboard
         Me.upcoming_events_panel.Controls.Add(Me.Label5)
         Me.upcoming_events_panel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.upcoming_events_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.upcoming_events_panel.Location = New System.Drawing.Point(565, 13)
+        Me.upcoming_events_panel.Location = New System.Drawing.Point(575, 13)
         Me.upcoming_events_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.upcoming_events_panel.Name = "upcoming_events_panel"
         Me.upcoming_events_panel.Size = New System.Drawing.Size(235, 87)
@@ -339,7 +339,7 @@ Partial Class Management_Dashboard
         Me.low_inventory_panel.Controls.Add(Me.Label13)
         Me.low_inventory_panel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.low_inventory_panel.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.low_inventory_panel.Location = New System.Drawing.Point(840, 14)
+        Me.low_inventory_panel.Location = New System.Drawing.Point(850, 14)
         Me.low_inventory_panel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.low_inventory_panel.Name = "low_inventory_panel"
         Me.low_inventory_panel.Size = New System.Drawing.Size(235, 86)
@@ -358,7 +358,7 @@ Partial Class Management_Dashboard
         'activebar_inventory
         '
         Me.activebar_inventory.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.activebar_inventory.BackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_inventory.BackColor = System.Drawing.Color.Teal
         Me.activebar_inventory.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
         Me.activebar_inventory.FlatAppearance.BorderSize = 0
         Me.activebar_inventory.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
@@ -367,7 +367,7 @@ Partial Class Management_Dashboard
         Me.activebar_inventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.activebar_inventory.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.activebar_inventory.ForeColor = System.Drawing.Color.CadetBlue
-        Me.activebar_inventory.Location = New System.Drawing.Point(840, 6)
+        Me.activebar_inventory.Location = New System.Drawing.Point(850, 6)
         Me.activebar_inventory.Name = "activebar_inventory"
         Me.activebar_inventory.Size = New System.Drawing.Size(235, 10)
         Me.activebar_inventory.TabIndex = 0
@@ -377,7 +377,7 @@ Partial Class Management_Dashboard
         'activebar_work_orders
         '
         Me.activebar_work_orders.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.activebar_work_orders.BackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_work_orders.BackColor = System.Drawing.Color.Teal
         Me.activebar_work_orders.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
         Me.activebar_work_orders.FlatAppearance.BorderSize = 0
         Me.activebar_work_orders.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
@@ -386,7 +386,7 @@ Partial Class Management_Dashboard
         Me.activebar_work_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.activebar_work_orders.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.activebar_work_orders.ForeColor = System.Drawing.Color.CadetBlue
-        Me.activebar_work_orders.Location = New System.Drawing.Point(24, 5)
+        Me.activebar_work_orders.Location = New System.Drawing.Point(34, 5)
         Me.activebar_work_orders.Name = "activebar_work_orders"
         Me.activebar_work_orders.Size = New System.Drawing.Size(235, 7)
         Me.activebar_work_orders.TabIndex = 0
@@ -451,13 +451,13 @@ Partial Class Management_Dashboard
         Me.DashboardDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DashboardDataGridView.RowTemplate.Height = 38
         Me.DashboardDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DashboardDataGridView.Size = New System.Drawing.Size(1051, 384)
+        Me.DashboardDataGridView.Size = New System.Drawing.Size(1071, 462)
         Me.DashboardDataGridView.TabIndex = 9
         '
         'activebar_events
         '
         Me.activebar_events.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.activebar_events.BackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_events.BackColor = System.Drawing.Color.Teal
         Me.activebar_events.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
         Me.activebar_events.FlatAppearance.BorderSize = 0
         Me.activebar_events.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
@@ -466,7 +466,7 @@ Partial Class Management_Dashboard
         Me.activebar_events.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.activebar_events.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.activebar_events.ForeColor = System.Drawing.Color.CadetBlue
-        Me.activebar_events.Location = New System.Drawing.Point(565, 5)
+        Me.activebar_events.Location = New System.Drawing.Point(575, 5)
         Me.activebar_events.Name = "activebar_events"
         Me.activebar_events.Size = New System.Drawing.Size(235, 10)
         Me.activebar_events.TabIndex = 10
@@ -476,7 +476,7 @@ Partial Class Management_Dashboard
         'activebar_payments
         '
         Me.activebar_payments.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.activebar_payments.BackColor = System.Drawing.Color.CadetBlue
+        Me.activebar_payments.BackColor = System.Drawing.Color.Teal
         Me.activebar_payments.FlatAppearance.BorderColor = System.Drawing.Color.CadetBlue
         Me.activebar_payments.FlatAppearance.BorderSize = 0
         Me.activebar_payments.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
@@ -485,7 +485,7 @@ Partial Class Management_Dashboard
         Me.activebar_payments.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.activebar_payments.Font = New System.Drawing.Font("Ebrima", 1.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.activebar_payments.ForeColor = System.Drawing.Color.CadetBlue
-        Me.activebar_payments.Location = New System.Drawing.Point(293, 5)
+        Me.activebar_payments.Location = New System.Drawing.Point(303, 5)
         Me.activebar_payments.Name = "activebar_payments"
         Me.activebar_payments.Size = New System.Drawing.Size(235, 7)
         Me.activebar_payments.TabIndex = 11
@@ -497,7 +497,7 @@ Partial Class Management_Dashboard
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.ClientSize = New System.Drawing.Size(1121, 616)
         Me.ControlBox = False
         Me.Controls.Add(Me.activebar_payments)
         Me.Controls.Add(Me.activebar_events)

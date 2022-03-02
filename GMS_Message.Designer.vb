@@ -141,7 +141,6 @@ Partial Class GMS_Message
         Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Font = New System.Drawing.Font("Copperplate Gothic Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Location = New System.Drawing.Point(500, 10)
         Me.Margin = New System.Windows.Forms.Padding(7, 5, 7, 5)
         Me.Name = "GMS_Message"
         Me.Opacity = 0.9R

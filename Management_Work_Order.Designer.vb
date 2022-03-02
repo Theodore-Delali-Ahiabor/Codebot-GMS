@@ -116,7 +116,7 @@ Partial Class Management_Work_Order
         Me.WorkOrderDataGridView.RowTemplate.Height = 38
         Me.WorkOrderDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.WorkOrderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.WorkOrderDataGridView.Size = New System.Drawing.Size(1073, 382)
+        Me.WorkOrderDataGridView.Size = New System.Drawing.Size(1093, 475)
         Me.WorkOrderDataGridView.TabIndex = 38
         '
         'cmb_work_order_status_filter
@@ -124,7 +124,7 @@ Partial Class Management_Work_Order
         Me.cmb_work_order_status_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmb_work_order_status_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_work_order_status_filter.FormattingEnabled = True
-        Me.cmb_work_order_status_filter.Location = New System.Drawing.Point(865, 33)
+        Me.cmb_work_order_status_filter.Location = New System.Drawing.Point(885, 33)
         Me.cmb_work_order_status_filter.Margin = New System.Windows.Forms.Padding(10)
         Me.cmb_work_order_status_filter.Name = "cmb_work_order_status_filter"
         Me.cmb_work_order_status_filter.Size = New System.Drawing.Size(222, 29)
@@ -136,7 +136,7 @@ Partial Class Management_Work_Order
         Me.txt_work_order_automobile_name_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_work_order_automobile_name_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txt_work_order_automobile_name_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_work_order_automobile_name_filter.Location = New System.Drawing.Point(630, 33)
+        Me.txt_work_order_automobile_name_filter.Location = New System.Drawing.Point(650, 33)
         Me.txt_work_order_automobile_name_filter.Name = "txt_work_order_automobile_name_filter"
         Me.txt_work_order_automobile_name_filter.Size = New System.Drawing.Size(222, 29)
         Me.txt_work_order_automobile_name_filter.TabIndex = 61
@@ -158,7 +158,7 @@ Partial Class Management_Work_Order
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Location = New System.Drawing.Point(533, 458)
+        Me.Panel1.Location = New System.Drawing.Point(553, 551)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(554, 63)
         Me.Panel1.TabIndex = 64
@@ -355,7 +355,7 @@ Partial Class Management_Work_Order
         Me.btn_terminate_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_terminate_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_terminate_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_terminate_work_order.Location = New System.Drawing.Point(294, 466)
+        Me.btn_terminate_work_order.Location = New System.Drawing.Point(294, 559)
         Me.btn_terminate_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_terminate_work_order.Name = "btn_terminate_work_order"
         Me.btn_terminate_work_order.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -376,7 +376,7 @@ Partial Class Management_Work_Order
         Me.btn_complete_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_complete_work_order.Image = CType(resources.GetObject("btn_complete_work_order.Image"), System.Drawing.Image)
         Me.btn_complete_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_complete_work_order.Location = New System.Drawing.Point(135, 466)
+        Me.btn_complete_work_order.Location = New System.Drawing.Point(135, 559)
         Me.btn_complete_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_complete_work_order.Name = "btn_complete_work_order"
         Me.btn_complete_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
@@ -397,7 +397,7 @@ Partial Class Management_Work_Order
         Me.btn_start_work_order.ForeColor = System.Drawing.Color.White
         Me.btn_start_work_order.Image = CType(resources.GetObject("btn_start_work_order.Image"), System.Drawing.Image)
         Me.btn_start_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_start_work_order.Location = New System.Drawing.Point(16, 466)
+        Me.btn_start_work_order.Location = New System.Drawing.Point(16, 559)
         Me.btn_start_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_start_work_order.Name = "btn_start_work_order"
         Me.btn_start_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
@@ -415,7 +415,7 @@ Partial Class Management_Work_Order
         Me.Label3.ForeColor = System.Drawing.Color.Teal
         Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label3.Location = New System.Drawing.Point(627, 4)
+        Me.Label3.Location = New System.Drawing.Point(647, 4)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(5)
         Me.Label3.Size = New System.Drawing.Size(177, 27)
@@ -430,7 +430,7 @@ Partial Class Management_Work_Order
         Me.Label2.ForeColor = System.Drawing.Color.Teal
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label2.Location = New System.Drawing.Point(862, 6)
+        Me.Label2.Location = New System.Drawing.Point(882, 6)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(5)
         Me.Label2.Size = New System.Drawing.Size(191, 27)
@@ -439,7 +439,7 @@ Partial Class Management_Work_Order
         '
         'btn_add_new_work_order
         '
-        Me.btn_add_new_work_order.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_add_new_work_order.BackColor = System.Drawing.Color.Teal
         Me.btn_add_new_work_order.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_add_new_work_order.FlatAppearance.BorderSize = 0
         Me.btn_add_new_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -457,7 +457,7 @@ Partial Class Management_Work_Order
         '
         'btn_edit_new_work_order
         '
-        Me.btn_edit_new_work_order.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_edit_new_work_order.BackColor = System.Drawing.Color.Teal
         Me.btn_edit_new_work_order.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_edit_new_work_order.FlatAppearance.BorderSize = 0
         Me.btn_edit_new_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -478,7 +478,7 @@ Partial Class Management_Work_Order
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1101, 523)
+        Me.ClientSize = New System.Drawing.Size(1121, 616)
         Me.ControlBox = False
         Me.Controls.Add(Me.btn_terminate_work_order)
         Me.Controls.Add(Me.btn_complete_work_order)

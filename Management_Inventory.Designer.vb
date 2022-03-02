@@ -109,7 +109,7 @@ Partial Class Management_Inventory
         Me.InventoryDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.InventoryDataGridView.RowTemplate.Height = 38
         Me.InventoryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.InventoryDataGridView.Size = New System.Drawing.Size(1075, 409)
+        Me.InventoryDataGridView.Size = New System.Drawing.Size(1095, 478)
         Me.InventoryDataGridView.TabIndex = 44
         '
         'cmb_inventory_category_filter
@@ -117,7 +117,7 @@ Partial Class Management_Inventory
         Me.cmb_inventory_category_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmb_inventory_category_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_inventory_category_filter.FormattingEnabled = True
-        Me.cmb_inventory_category_filter.Location = New System.Drawing.Point(635, 33)
+        Me.cmb_inventory_category_filter.Location = New System.Drawing.Point(655, 33)
         Me.cmb_inventory_category_filter.Margin = New System.Windows.Forms.Padding(10)
         Me.cmb_inventory_category_filter.Name = "cmb_inventory_category_filter"
         Me.cmb_inventory_category_filter.Size = New System.Drawing.Size(222, 29)
@@ -129,7 +129,7 @@ Partial Class Management_Inventory
         Me.txt_inventory_part_name_filter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txt_inventory_part_name_filter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txt_inventory_part_name_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_inventory_part_name_filter.Location = New System.Drawing.Point(404, 33)
+        Me.txt_inventory_part_name_filter.Location = New System.Drawing.Point(424, 33)
         Me.txt_inventory_part_name_filter.Name = "txt_inventory_part_name_filter"
         Me.txt_inventory_part_name_filter.Size = New System.Drawing.Size(222, 29)
         Me.txt_inventory_part_name_filter.TabIndex = 56
@@ -139,7 +139,7 @@ Partial Class Management_Inventory
         Me.cmb_inventory_location_filter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmb_inventory_location_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_inventory_location_filter.FormattingEnabled = True
-        Me.cmb_inventory_location_filter.Location = New System.Drawing.Point(866, 33)
+        Me.cmb_inventory_location_filter.Location = New System.Drawing.Point(886, 33)
         Me.cmb_inventory_location_filter.Margin = New System.Windows.Forms.Padding(10)
         Me.cmb_inventory_location_filter.Name = "cmb_inventory_location_filter"
         Me.cmb_inventory_location_filter.Size = New System.Drawing.Size(222, 29)
@@ -156,7 +156,7 @@ Partial Class Management_Inventory
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Location = New System.Drawing.Point(715, 486)
+        Me.Panel1.Location = New System.Drawing.Point(735, 564)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(373, 46)
         Me.Panel1.TabIndex = 60
@@ -275,11 +275,11 @@ Partial Class Management_Inventory
         Me.btn_stock_in_item.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_stock_in_item.ForeColor = System.Drawing.Color.White
         Me.btn_stock_in_item.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_stock_in_item.Location = New System.Drawing.Point(12, 486)
+        Me.btn_stock_in_item.Location = New System.Drawing.Point(13, 563)
         Me.btn_stock_in_item.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_stock_in_item.Name = "btn_stock_in_item"
         Me.btn_stock_in_item.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
-        Me.btn_stock_in_item.Size = New System.Drawing.Size(129, 39)
+        Me.btn_stock_in_item.Size = New System.Drawing.Size(129, 40)
         Me.btn_stock_in_item.TabIndex = 67
         Me.btn_stock_in_item.Text = "STOCK IN"
         Me.btn_stock_in_item.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -293,7 +293,7 @@ Partial Class Management_Inventory
         Me.Label3.ForeColor = System.Drawing.Color.Teal
         Me.Label3.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_search_80
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label3.Location = New System.Drawing.Point(401, 3)
+        Me.Label3.Location = New System.Drawing.Point(421, 3)
         Me.Label3.Name = "Label3"
         Me.Label3.Padding = New System.Windows.Forms.Padding(5)
         Me.Label3.Size = New System.Drawing.Size(91, 27)
@@ -309,7 +309,7 @@ Partial Class Management_Inventory
         Me.Label1.ForeColor = System.Drawing.Color.Teal
         Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label1.Location = New System.Drawing.Point(632, 5)
+        Me.Label1.Location = New System.Drawing.Point(652, 5)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(5)
         Me.Label1.Size = New System.Drawing.Size(127, 27)
@@ -325,7 +325,7 @@ Partial Class Management_Inventory
         Me.Label2.ForeColor = System.Drawing.Color.Teal
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label2.Location = New System.Drawing.Point(863, 6)
+        Me.Label2.Location = New System.Drawing.Point(883, 6)
         Me.Label2.Name = "Label2"
         Me.Label2.Padding = New System.Windows.Forms.Padding(5)
         Me.Label2.Size = New System.Drawing.Size(122, 27)
@@ -335,7 +335,7 @@ Partial Class Management_Inventory
         '
         'btn_edit_inventory_item
         '
-        Me.btn_edit_inventory_item.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_edit_inventory_item.BackColor = System.Drawing.Color.Teal
         Me.btn_edit_inventory_item.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_edit_inventory_item.FlatAppearance.BorderSize = 0
         Me.btn_edit_inventory_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -354,7 +354,7 @@ Partial Class Management_Inventory
         '
         'btn_add_new_inventory_item
         '
-        Me.btn_add_new_inventory_item.BackColor = System.Drawing.Color.CadetBlue
+        Me.btn_add_new_inventory_item.BackColor = System.Drawing.Color.Teal
         Me.btn_add_new_inventory_item.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_add_new_inventory_item.FlatAppearance.BorderSize = 0
         Me.btn_add_new_inventory_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -376,7 +376,7 @@ Partial Class Management_Inventory
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(1101, 538)
+        Me.ClientSize = New System.Drawing.Size(1121, 616)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btn_stock_in_item)
         Me.Controls.Add(Me.cmb_inventory_category_filter)

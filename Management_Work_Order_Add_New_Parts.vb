@@ -69,7 +69,7 @@
                         .CurrentRow.Cells(1).Value = CStr(1)
                         .CurrentRow.Cells(2).Value = sql_rdr.Item("Stock").ToString
                         .CurrentRow.Cells(4).Value = sql_rdr.Item("Unit_Cost").ToString
-                        .CurrentRow.Cells(3).Value = (CInt(.CurrentRow.Cells(4).Value) * CInt(.CurrentRow.Cells(1).Value)).ToString
+                        .CurrentRow.Cells(3).Value = (CDec(.CurrentRow.Cells(4).Value) * CDec(.CurrentRow.Cells(1).Value)).ToString
                     End If
                     sql_con.Close()
 

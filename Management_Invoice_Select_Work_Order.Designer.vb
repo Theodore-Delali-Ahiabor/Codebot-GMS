@@ -37,7 +37,7 @@ Partial Class Management_Invoice_Select_Work_Order
         '
         'Label11
         '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -109,13 +109,13 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.InvoiceSelectWorkOrderDataGridView.RowTemplate.Height = 38
         Me.InvoiceSelectWorkOrderDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.InvoiceSelectWorkOrderDataGridView.Size = New System.Drawing.Size(954, 374)
+        Me.InvoiceSelectWorkOrderDataGridView.Size = New System.Drawing.Size(954, 414)
         Me.InvoiceSelectWorkOrderDataGridView.TabIndex = 129
         Me.InvoiceSelectWorkOrderDataGridView.VirtualMode = True
         '
         'btn_invoice_select_select
         '
-        Me.btn_invoice_select_select.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_invoice_select_select.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btn_invoice_select_select.BackColor = System.Drawing.Color.LightGreen
         Me.btn_invoice_select_select.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_invoice_select_select.FlatAppearance.BorderSize = 0
@@ -124,7 +124,7 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.btn_invoice_select_select.ForeColor = System.Drawing.Color.White
         Me.btn_invoice_select_select.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_checkmark_24
         Me.btn_invoice_select_select.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_invoice_select_select.Location = New System.Drawing.Point(452, 445)
+        Me.btn_invoice_select_select.Location = New System.Drawing.Point(452, 489)
         Me.btn_invoice_select_select.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_invoice_select_select.Name = "btn_invoice_select_select"
         Me.btn_invoice_select_select.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -136,7 +136,7 @@ Partial Class Management_Invoice_Select_Work_Order
         '
         'btn_invoice_select_cancel
         '
-        Me.btn_invoice_select_cancel.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_invoice_select_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btn_invoice_select_cancel.BackColor = System.Drawing.Color.LightCoral
         Me.btn_invoice_select_cancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_invoice_select_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
@@ -146,7 +146,7 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.btn_invoice_select_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_invoice_select_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_cancel_24
         Me.btn_invoice_select_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_invoice_select_cancel.Location = New System.Drawing.Point(595, 445)
+        Me.btn_invoice_select_cancel.Location = New System.Drawing.Point(595, 489)
         Me.btn_invoice_select_cancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_invoice_select_cancel.Name = "btn_invoice_select_cancel"
         Me.btn_invoice_select_cancel.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -158,7 +158,7 @@ Partial Class Management_Invoice_Select_Work_Order
         '
         'btn_invoice_select_new
         '
-        Me.btn_invoice_select_new.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_invoice_select_new.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btn_invoice_select_new.BackColor = System.Drawing.Color.CadetBlue
         Me.btn_invoice_select_new.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_invoice_select_new.FlatAppearance.BorderSize = 0
@@ -167,7 +167,7 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.btn_invoice_select_new.ForeColor = System.Drawing.Color.White
         Me.btn_invoice_select_new.Image = CType(resources.GetObject("btn_invoice_select_new.Image"), System.Drawing.Image)
         Me.btn_invoice_select_new.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_invoice_select_new.Location = New System.Drawing.Point(318, 445)
+        Me.btn_invoice_select_new.Location = New System.Drawing.Point(318, 489)
         Me.btn_invoice_select_new.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btn_invoice_select_new.Name = "btn_invoice_select_new"
         Me.btn_invoice_select_new.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -182,7 +182,7 @@ Partial Class Management_Invoice_Select_Work_Order
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(1014, 500)
+        Me.ClientSize = New System.Drawing.Size(1014, 540)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.btn_invoice_select_select)
         Me.Controls.Add(Me.btn_invoice_select_cancel)
