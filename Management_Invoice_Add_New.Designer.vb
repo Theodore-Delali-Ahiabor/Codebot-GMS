@@ -37,8 +37,6 @@ Partial Class Management_Invoice_Add_New
         Me.InvoicePartsDataGridView = New System.Windows.Forms.DataGridView()
         Me.InvoiceServicesDataGridView = New System.Windows.Forms.DataGridView()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.cmb_payment_status_filter = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_new_invoice_total_services_cost = New System.Windows.Forms.Label()
         Me.lbl_new_invoice_total_parts_cost = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -52,16 +50,23 @@ Partial Class Management_Invoice_Add_New
         Me.Label18 = New System.Windows.Forms.Label()
         Me.lbl_new_invoice_payable_amount = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cmb_payment_method_filter = New System.Windows.Forms.ComboBox()
         Me.btn_new_invoice_save = New System.Windows.Forms.Button()
         Me.btn_new_ivoice_cancel = New System.Windows.Forms.Button()
         Me.btn_new_incoice_existing_work_order = New System.Windows.Forms.Button()
-        Me.txt_invoice_payment_amount = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lbl_new_invoice_id = New System.Windows.Forms.Label()
+        Me.lbl_new_invoice_date = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.lbl_new_invoice_writer = New System.Windows.Forms.Label()
         CType(Me.InvoicePartsDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvoiceServicesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label15
@@ -250,57 +255,34 @@ Partial Class Management_Invoice_Add_New
         Me.Label4.TabIndex = 129
         Me.Label4.Text = "Services"
         '
-        'cmb_payment_status_filter
-        '
-        Me.cmb_payment_status_filter.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cmb_payment_status_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_payment_status_filter.FormattingEnabled = True
-        Me.cmb_payment_status_filter.Items.AddRange(New Object() {"Pending Payment", "Partial Payment", "Full Payment"})
-        Me.cmb_payment_status_filter.Location = New System.Drawing.Point(40, 235)
-        Me.cmb_payment_status_filter.Margin = New System.Windows.Forms.Padding(10)
-        Me.cmb_payment_status_filter.Name = "cmb_payment_status_filter"
-        Me.cmb_payment_status_filter.Size = New System.Drawing.Size(309, 29)
-        Me.cmb_payment_status_filter.TabIndex = 132
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(36, 209)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(112, 18)
-        Me.Label2.TabIndex = 116
-        Me.Label2.Text = "Payment Status"
-        '
         'lbl_new_invoice_total_services_cost
         '
         Me.lbl_new_invoice_total_services_cost.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lbl_new_invoice_total_services_cost.AutoSize = True
         Me.lbl_new_invoice_total_services_cost.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_new_invoice_total_services_cost.Location = New System.Drawing.Point(215, 11)
+        Me.lbl_new_invoice_total_services_cost.Location = New System.Drawing.Point(214, 12)
         Me.lbl_new_invoice_total_services_cost.Name = "lbl_new_invoice_total_services_cost"
-        Me.lbl_new_invoice_total_services_cost.Size = New System.Drawing.Size(44, 18)
+        Me.lbl_new_invoice_total_services_cost.Size = New System.Drawing.Size(36, 18)
         Me.lbl_new_invoice_total_services_cost.TabIndex = 116
-        Me.lbl_new_invoice_total_services_cost.Text = "00.00"
+        Me.lbl_new_invoice_total_services_cost.Text = "0.00"
         '
         'lbl_new_invoice_total_parts_cost
         '
         Me.lbl_new_invoice_total_parts_cost.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lbl_new_invoice_total_parts_cost.AutoSize = True
         Me.lbl_new_invoice_total_parts_cost.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_new_invoice_total_parts_cost.Location = New System.Drawing.Point(215, 51)
+        Me.lbl_new_invoice_total_parts_cost.Location = New System.Drawing.Point(214, 52)
         Me.lbl_new_invoice_total_parts_cost.Name = "lbl_new_invoice_total_parts_cost"
-        Me.lbl_new_invoice_total_parts_cost.Size = New System.Drawing.Size(44, 18)
+        Me.lbl_new_invoice_total_parts_cost.Size = New System.Drawing.Size(36, 18)
         Me.lbl_new_invoice_total_parts_cost.TabIndex = 116
-        Me.lbl_new_invoice_total_parts_cost.Text = "00.00"
+        Me.lbl_new_invoice_total_parts_cost.Text = "0.00"
         '
         'Label8
         '
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(8, 11)
+        Me.Label8.Location = New System.Drawing.Point(7, 12)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(130, 18)
         Me.Label8.TabIndex = 116
@@ -311,7 +293,7 @@ Partial Class Management_Invoice_Add_New
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(8, 51)
+        Me.Label3.Location = New System.Drawing.Point(7, 52)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 18)
         Me.Label3.TabIndex = 116
@@ -322,7 +304,7 @@ Partial Class Management_Invoice_Add_New
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(8, 85)
+        Me.Label5.Location = New System.Drawing.Point(7, 88)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(114, 18)
         Me.Label5.TabIndex = 116
@@ -333,18 +315,18 @@ Partial Class Management_Invoice_Add_New
         Me.lbl_new_invoice_tax.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lbl_new_invoice_tax.AutoSize = True
         Me.lbl_new_invoice_tax.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_new_invoice_tax.Location = New System.Drawing.Point(215, 85)
+        Me.lbl_new_invoice_tax.Location = New System.Drawing.Point(214, 88)
         Me.lbl_new_invoice_tax.Name = "lbl_new_invoice_tax"
-        Me.lbl_new_invoice_tax.Size = New System.Drawing.Size(44, 18)
+        Me.lbl_new_invoice_tax.Size = New System.Drawing.Size(36, 18)
         Me.lbl_new_invoice_tax.TabIndex = 116
-        Me.lbl_new_invoice_tax.Text = "00.00"
+        Me.lbl_new_invoice_tax.Text = "0.00"
         '
         'Label13
         '
         Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(162, 11)
+        Me.Label13.Location = New System.Drawing.Point(161, 12)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(41, 18)
         Me.Label13.TabIndex = 116
@@ -355,7 +337,7 @@ Partial Class Management_Invoice_Add_New
         Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(162, 87)
+        Me.Label14.Location = New System.Drawing.Point(161, 90)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(41, 18)
         Me.Label14.TabIndex = 116
@@ -366,7 +348,7 @@ Partial Class Management_Invoice_Add_New
         Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(162, 51)
+        Me.Label16.Location = New System.Drawing.Point(161, 52)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(41, 18)
         Me.Label16.TabIndex = 116
@@ -377,7 +359,7 @@ Partial Class Management_Invoice_Add_New
         Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(162, 124)
+        Me.Label17.Location = New System.Drawing.Point(161, 128)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(41, 18)
         Me.Label17.TabIndex = 116
@@ -388,7 +370,7 @@ Partial Class Management_Invoice_Add_New
         Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(8, 122)
+        Me.Label18.Location = New System.Drawing.Point(7, 126)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(128, 18)
         Me.Label18.TabIndex = 116
@@ -399,11 +381,11 @@ Partial Class Management_Invoice_Add_New
         Me.lbl_new_invoice_payable_amount.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lbl_new_invoice_payable_amount.AutoSize = True
         Me.lbl_new_invoice_payable_amount.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_new_invoice_payable_amount.Location = New System.Drawing.Point(215, 122)
+        Me.lbl_new_invoice_payable_amount.Location = New System.Drawing.Point(214, 126)
         Me.lbl_new_invoice_payable_amount.Name = "lbl_new_invoice_payable_amount"
-        Me.lbl_new_invoice_payable_amount.Size = New System.Drawing.Size(44, 18)
+        Me.lbl_new_invoice_payable_amount.Size = New System.Drawing.Size(36, 18)
         Me.lbl_new_invoice_payable_amount.TabIndex = 116
-        Me.lbl_new_invoice_payable_amount.Text = "00.00"
+        Me.lbl_new_invoice_payable_amount.Text = "0.00"
         '
         'Panel1
         '
@@ -421,33 +403,10 @@ Partial Class Management_Invoice_Add_New
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.lbl_new_invoice_payable_amount)
         Me.Panel1.Controls.Add(Me.lbl_new_invoice_tax)
-        Me.Panel1.Location = New System.Drawing.Point(729, 333)
+        Me.Panel1.Location = New System.Drawing.Point(740, 350)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(353, 180)
+        Me.Panel1.Size = New System.Drawing.Size(310, 180)
         Me.Panel1.TabIndex = 133
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(41, 88)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(120, 18)
-        Me.Label6.TabIndex = 116
-        Me.Label6.Text = "Payment Method"
-        '
-        'cmb_payment_method_filter
-        '
-        Me.cmb_payment_method_filter.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cmb_payment_method_filter.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_payment_method_filter.FormattingEnabled = True
-        Me.cmb_payment_method_filter.Items.AddRange(New Object() {"MTN Mobile Money", "Vodafone Cash", "AirtelTigo", "Bank Transfer", "Physical Cash", "Other"})
-        Me.cmb_payment_method_filter.Location = New System.Drawing.Point(40, 110)
-        Me.cmb_payment_method_filter.Margin = New System.Windows.Forms.Padding(10)
-        Me.cmb_payment_method_filter.Name = "cmb_payment_method_filter"
-        Me.cmb_payment_method_filter.Size = New System.Drawing.Size(309, 29)
-        Me.cmb_payment_method_filter.TabIndex = 132
         '
         'btn_new_invoice_save
         '
@@ -507,26 +466,122 @@ Partial Class Management_Invoice_Add_New
         Me.btn_new_incoice_existing_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btn_new_incoice_existing_work_order.UseVisualStyleBackColor = False
         '
-        'txt_invoice_payment_amount
+        'Panel2
         '
-        Me.txt_invoice_payment_amount.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txt_invoice_payment_amount.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_invoice_payment_amount.Location = New System.Drawing.Point(40, 173)
-        Me.txt_invoice_payment_amount.MaxLength = 35
-        Me.txt_invoice_payment_amount.Name = "txt_invoice_payment_amount"
-        Me.txt_invoice_payment_amount.Size = New System.Drawing.Size(309, 33)
-        Me.txt_invoice_payment_amount.TabIndex = 103
+        Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Controls.Add(Me.lbl_new_invoice_id)
+        Me.Panel2.Controls.Add(Me.lbl_new_invoice_date)
+        Me.Panel2.Controls.Add(Me.Label21)
+        Me.Panel2.Controls.Add(Me.lbl_new_invoice_writer)
+        Me.Panel2.Location = New System.Drawing.Point(30, 100)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(319, 180)
+        Me.Panel2.TabIndex = 133
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(11, 12)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 18)
+        Me.Label2.TabIndex = 116
+        Me.Label2.Text = "Invoice ID"
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(96, 12)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(12, 18)
+        Me.Label9.TabIndex = 116
+        Me.Label9.Text = ":"
         '
         'Label7
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(37, 149)
+        Me.Label7.Location = New System.Drawing.Point(96, 57)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(166, 18)
-        Me.Label7.TabIndex = 123
-        Me.Label7.Text = "Payment Amount / GHS"
+        Me.Label7.Size = New System.Drawing.Size(12, 18)
+        Me.Label7.TabIndex = 116
+        Me.Label7.Text = ":"
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(96, 103)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(12, 18)
+        Me.Label6.TabIndex = 116
+        Me.Label6.Text = ":"
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(11, 103)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(72, 18)
+        Me.Label11.TabIndex = 116
+        Me.Label11.Text = "Issued By"
+        '
+        'lbl_new_invoice_id
+        '
+        Me.lbl_new_invoice_id.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbl_new_invoice_id.AutoSize = True
+        Me.lbl_new_invoice_id.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_new_invoice_id.Location = New System.Drawing.Point(128, 12)
+        Me.lbl_new_invoice_id.Name = "lbl_new_invoice_id"
+        Me.lbl_new_invoice_id.Size = New System.Drawing.Size(40, 18)
+        Me.lbl_new_invoice_id.TabIndex = 116
+        Me.lbl_new_invoice_id.Text = "0000"
+        '
+        'lbl_new_invoice_date
+        '
+        Me.lbl_new_invoice_date.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbl_new_invoice_date.AutoSize = True
+        Me.lbl_new_invoice_date.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_new_invoice_date.Location = New System.Drawing.Point(128, 57)
+        Me.lbl_new_invoice_date.Name = "lbl_new_invoice_date"
+        Me.lbl_new_invoice_date.Size = New System.Drawing.Size(49, 18)
+        Me.lbl_new_invoice_date.TabIndex = 116
+        Me.lbl_new_invoice_date.Text = "Today"
+        '
+        'Label21
+        '
+        Me.Label21.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(11, 57)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(39, 18)
+        Me.Label21.TabIndex = 116
+        Me.Label21.Text = "Date"
+        '
+        'lbl_new_invoice_writer
+        '
+        Me.lbl_new_invoice_writer.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbl_new_invoice_writer.AutoSize = True
+        Me.lbl_new_invoice_writer.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_new_invoice_writer.Location = New System.Drawing.Point(128, 103)
+        Me.lbl_new_invoice_writer.Name = "lbl_new_invoice_writer"
+        Me.lbl_new_invoice_writer.Size = New System.Drawing.Size(48, 18)
+        Me.lbl_new_invoice_writer.TabIndex = 116
+        Me.lbl_new_invoice_writer.Text = "Name"
         '
         'Management_Invoice_Add_New
         '
@@ -538,19 +593,14 @@ Partial Class Management_Invoice_Add_New
         Me.ClientSize = New System.Drawing.Size(1121, 616)
         Me.ControlBox = False
         Me.Controls.Add(Me.InvoiceServicesDataGridView)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.cmb_payment_method_filter)
-        Me.Controls.Add(Me.cmb_payment_status_filter)
         Me.Controls.Add(Me.InvoicePartsDataGridView)
         Me.Controls.Add(Me.btn_new_incoice_existing_work_order)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label35)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txt_invoice_payment_amount)
         Me.Controls.Add(Me.txt_invoice_work_order)
         Me.Controls.Add(Me.btn_new_ivoice_cancel)
         Me.Controls.Add(Me.btn_new_invoice_save)
@@ -560,6 +610,8 @@ Partial Class Management_Invoice_Add_New
         CType(Me.InvoiceServicesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -575,8 +627,6 @@ Partial Class Management_Invoice_Add_New
     Friend WithEvents InvoicePartsDataGridView As DataGridView
     Friend WithEvents InvoiceServicesDataGridView As DataGridView
     Friend WithEvents Label4 As Label
-    Friend WithEvents cmb_payment_status_filter As ComboBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents lbl_new_invoice_total_services_cost As Label
     Friend WithEvents lbl_new_invoice_total_parts_cost As Label
     Friend WithEvents Label8 As Label
@@ -590,8 +640,14 @@ Partial Class Management_Invoice_Add_New
     Friend WithEvents Label18 As Label
     Friend WithEvents lbl_new_invoice_payable_amount As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents lbl_new_invoice_id As Label
+    Friend WithEvents lbl_new_invoice_date As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents lbl_new_invoice_writer As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents cmb_payment_method_filter As ComboBox
-    Friend WithEvents txt_invoice_payment_amount As TextBox
+    Friend WithEvents Label9 As Label
     Friend WithEvents Label7 As Label
 End Class

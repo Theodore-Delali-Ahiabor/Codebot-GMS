@@ -1,7 +1,19 @@
 ﻿Public Class Management_Invoice_Add_New
     Dim service(), s_cost(), descriptions(), quantitys(), costs(), unit_costs() As String
-    Dim total_service_cost, total_part_cost As Decimal
+    Dim total_service_cost, total_part_cost As Double
+    Dim invoice_id, invoice_date As String
 
+    Private Sub btn_new_invoice_save_Click(sender As Object, e As EventArgs) Handles btn_new_invoice_save.Click
+        Dim repos As DialogResult = MessageBox.Show("You are about to ADD a new invoice, are you sure to continue ?", "Adding New Invoice", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        If repos = DialogResult.Yes Then
+            sql_ds = New DataSet
+            sql_da = New MySqlDataAdapter("INSERT INTO `invoice`(`Issued_By`, `Work_Order_ID`, `Date`, `Service_Total`, `Parts_Total`, `Tax`, `Grand_Total`,`Paid_Amt`,`Balance`, `Payment_Status`) 
+        VALUES ('" & login_id & "','" & txt_invoice_work_order.Text.ToString & "','" & invoice_date & "','" & total_service_cost & "','" & total_part_cost & "','" & lbl_new_invoice_tax.Text.ToString & "','" & lbl_new_invoice_payable_amount.Text.ToString & "','0.00','" & lbl_new_invoice_payable_amount.Text.ToString & "','Pending')", sql_con)
+            sql_da.Fill(sql_ds, "invoice")
+            datagrid_fill_default("invoice", Management_Invoice.InvoiceDataGridView)
+        End If
+        sidebar_form_loader(Management_Invoice)
+    End Sub
 
     Private Sub btn_new_ivoice_cancel_Click(sender As Object, e As EventArgs) Handles btn_new_ivoice_cancel.Click
         sidebar_form_loader(Management_Invoice)
@@ -9,14 +21,13 @@
     End Sub
     Private Sub calculate()
         Try
-            lbl_new_invoice_total_parts_cost.Text = CStr(total_part_cost)
-            lbl_new_invoice_total_services_cost.Text = CStr(total_service_cost)
-            'lbl_new_invoice_tax.Text = ""
+            lbl_new_invoice_total_parts_cost.Text = total_part_cost
+            lbl_new_invoice_total_services_cost.Text = total_service_cost
+            lbl_new_invoice_tax.Text = 0.00
             lbl_new_invoice_payable_amount.Text = CDec(CDec(lbl_new_invoice_total_parts_cost.Text) + CStr(total_service_cost)) - CDec(lbl_new_invoice_tax.Text)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Invoice Calculation Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
         End Try
-
     End Sub
 
     Private Sub btn_new_incoice_existing_work_order_Click(sender As Object, e As EventArgs) Handles btn_new_incoice_existing_work_order.Click
@@ -29,14 +40,13 @@
     End Sub
 
     Public Sub clear_invoice()
-        lbl_new_invoice_total_services_cost.Text = "00.00"
-        lbl_new_invoice_total_parts_cost.Text = "00.00"
-        lbl_new_invoice_tax.Text = "00.00"
-        lbl_new_invoice_payable_amount.Text = "00.00"
+        lbl_new_invoice_total_services_cost.Text = "0.00"
+        lbl_new_invoice_total_parts_cost.Text = "0.00"
+        lbl_new_invoice_tax.Text = "0.00"
+        lbl_new_invoice_payable_amount.Text = "0.00"
         txt_invoice_work_order.Clear()
-        cmb_payment_method_filter.Text = ""
-        txt_invoice_payment_amount.Clear()
-        cmb_payment_status_filter.Text = ""
+        lbl_new_invoice_date.Text = Date.Now.DayOfWeek.ToString + ", " + Date.Now.Day.ToString + "/" + Date.Now.Month.ToString + "/" + Date.Now.Year.ToString
+        invoice_date = Date.Now.Year.ToString + "-" + Date.Now.Month.ToString + "-" + Date.Now.Day.ToString
     End Sub
 
     Private Sub txt_invoice_work_order_TextChanged(sender As Object, e As EventArgs) Handles txt_invoice_work_order.TextChanged
@@ -190,6 +200,7 @@
             Catch ex As Exception
 
             End Try
+
         End If
     End Sub
 End Class

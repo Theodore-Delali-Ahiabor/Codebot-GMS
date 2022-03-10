@@ -27,21 +27,15 @@ Partial Class Management
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmi_work_order = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsmi_part = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsmi_invoice = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsmi_employee = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.WorkOrderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InvoiceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsmi_exit = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FfToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuickAccessToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoreStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DdToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DocumentationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -60,7 +54,6 @@ Partial Class Management
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btn_logout = New System.Windows.Forms.Button()
         Me.btn_feedbacks = New System.Windows.Forms.Button()
-        Me.btn_statistics = New System.Windows.Forms.Button()
         Me.btn_employees = New System.Windows.Forms.Button()
         Me.btn_inventory = New System.Windows.Forms.Button()
         Me.btn_calenders = New System.Windows.Forms.Button()
@@ -77,6 +70,8 @@ Partial Class Management
         Me.Label3 = New System.Windows.Forms.Label()
         Me.management_main_container = New System.Windows.Forms.Panel()
         Me.systemtime = New System.Windows.Forms.Timer(Me.components)
+        Me.PaymentAccountsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServiceCenterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -92,7 +87,7 @@ Partial Class Management
         '
         Me.MenuStrip.BackColor = System.Drawing.Color.Gainsboro
         Me.MenuStrip.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.QuickAccessToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.MoreToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.MoreStripMenuItem, Me.ReportsToolStripMenuItem, Me.MoreToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -102,7 +97,7 @@ Partial Class Management
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmi_work_order, Me.ToolStripSeparator1, Me.ToolStripSeparator2, Me.tsmi_part, Me.ToolStripSeparator3, Me.ToolStripSeparator4, Me.tsmi_invoice, Me.ToolStripSeparator5, Me.ToolStripSeparator6, Me.tsmi_employee, Me.ToolStripSeparator7, Me.ToolStripSeparator10, Me.tsmi_exit})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmi_work_order, Me.ToolStripSeparator10, Me.tsmi_exit})
         Me.ToolsToolStripMenuItem.Font = New System.Drawing.Font("Ebrima", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolsToolStripMenuItem.Image = CType(resources.GetObject("ToolsToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ToolsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -113,73 +108,46 @@ Partial Class Management
         '
         'tsmi_work_order
         '
+        Me.tsmi_work_order.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WorkOrderToolStripMenuItem, Me.PartToolStripMenuItem, Me.InvoiceToolStripMenuItem, Me.EmployeeToolStripMenuItem})
+        Me.tsmi_work_order.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_plus_math_24
         Me.tsmi_work_order.Name = "tsmi_work_order"
-        Me.tsmi_work_order.Size = New System.Drawing.Size(182, 24)
-        Me.tsmi_work_order.Text = "New Work Order"
+        Me.tsmi_work_order.Size = New System.Drawing.Size(180, 24)
+        Me.tsmi_work_order.Text = "New"
         '
-        'ToolStripSeparator1
+        'WorkOrderToolStripMenuItem
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(179, 6)
+        Me.WorkOrderToolStripMenuItem.Name = "WorkOrderToolStripMenuItem"
+        Me.WorkOrderToolStripMenuItem.Size = New System.Drawing.Size(182, 24)
+        Me.WorkOrderToolStripMenuItem.Text = "Work Order"
         '
-        'ToolStripSeparator2
+        'PartToolStripMenuItem
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(179, 6)
+        Me.PartToolStripMenuItem.Name = "PartToolStripMenuItem"
+        Me.PartToolStripMenuItem.Size = New System.Drawing.Size(182, 24)
+        Me.PartToolStripMenuItem.Text = "Part / Equipment"
         '
-        'tsmi_part
+        'InvoiceToolStripMenuItem
         '
-        Me.tsmi_part.Name = "tsmi_part"
-        Me.tsmi_part.Size = New System.Drawing.Size(182, 24)
-        Me.tsmi_part.Text = "New Part"
+        Me.InvoiceToolStripMenuItem.Name = "InvoiceToolStripMenuItem"
+        Me.InvoiceToolStripMenuItem.Size = New System.Drawing.Size(182, 24)
+        Me.InvoiceToolStripMenuItem.Text = "Invoice"
         '
-        'ToolStripSeparator3
+        'EmployeeToolStripMenuItem
         '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(179, 6)
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(179, 6)
-        '
-        'tsmi_invoice
-        '
-        Me.tsmi_invoice.Name = "tsmi_invoice"
-        Me.tsmi_invoice.Size = New System.Drawing.Size(182, 24)
-        Me.tsmi_invoice.Text = "New Invoice"
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(179, 6)
-        '
-        'ToolStripSeparator6
-        '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(179, 6)
-        '
-        'tsmi_employee
-        '
-        Me.tsmi_employee.Name = "tsmi_employee"
-        Me.tsmi_employee.Size = New System.Drawing.Size(182, 24)
-        Me.tsmi_employee.Text = "New Employee"
-        '
-        'ToolStripSeparator7
-        '
-        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(179, 6)
+        Me.EmployeeToolStripMenuItem.Name = "EmployeeToolStripMenuItem"
+        Me.EmployeeToolStripMenuItem.Size = New System.Drawing.Size(182, 24)
+        Me.EmployeeToolStripMenuItem.Text = "Employee"
         '
         'ToolStripSeparator10
         '
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
-        Me.ToolStripSeparator10.Size = New System.Drawing.Size(179, 6)
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(177, 6)
         '
         'tsmi_exit
         '
         Me.tsmi_exit.Image = Global.Codebot_GMS.My.Resources.Resources.icons8_delete_24
         Me.tsmi_exit.Name = "tsmi_exit"
-        Me.tsmi_exit.Size = New System.Drawing.Size(182, 24)
+        Me.tsmi_exit.Size = New System.Drawing.Size(180, 24)
         Me.tsmi_exit.Text = "Exit"
         '
         'HelpToolStripMenuItem
@@ -193,15 +161,16 @@ Partial Class Management
         'FfToolStripMenuItem
         '
         Me.FfToolStripMenuItem.Name = "FfToolStripMenuItem"
-        Me.FfToolStripMenuItem.Size = New System.Drawing.Size(84, 22)
+        Me.FfToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FfToolStripMenuItem.Text = "ff"
         '
-        'QuickAccessToolStripMenuItem
+        'MoreStripMenuItem
         '
-        Me.QuickAccessToolStripMenuItem.Image = CType(resources.GetObject("QuickAccessToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.QuickAccessToolStripMenuItem.Name = "QuickAccessToolStripMenuItem"
-        Me.QuickAccessToolStripMenuItem.Size = New System.Drawing.Size(68, 43)
-        Me.QuickAccessToolStripMenuItem.Text = "More"
+        Me.MoreStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PaymentAccountsToolStripMenuItem, Me.ServiceCenterToolStripMenuItem})
+        Me.MoreStripMenuItem.Image = CType(resources.GetObject("MoreStripMenuItem.Image"), System.Drawing.Image)
+        Me.MoreStripMenuItem.Name = "MoreStripMenuItem"
+        Me.MoreStripMenuItem.Size = New System.Drawing.Size(68, 43)
+        Me.MoreStripMenuItem.Text = "More"
         '
         'ReportsToolStripMenuItem
         '
@@ -298,7 +267,6 @@ Partial Class Management
         Me.Panel1.Controls.Add(Me.StatusStrip1)
         Me.Panel1.Controls.Add(Me.btn_logout)
         Me.Panel1.Controls.Add(Me.btn_feedbacks)
-        Me.Panel1.Controls.Add(Me.btn_statistics)
         Me.Panel1.Controls.Add(Me.btn_employees)
         Me.Panel1.Controls.Add(Me.btn_inventory)
         Me.Panel1.Controls.Add(Me.btn_calenders)
@@ -368,7 +336,7 @@ Partial Class Management
         Me.btn_logout.ForeColor = System.Drawing.Color.White
         Me.btn_logout.Image = CType(resources.GetObject("btn_logout.Image"), System.Drawing.Image)
         Me.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_logout.Location = New System.Drawing.Point(0, 453)
+        Me.btn_logout.Location = New System.Drawing.Point(0, 405)
         Me.btn_logout.Name = "btn_logout"
         Me.btn_logout.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
         Me.btn_logout.Size = New System.Drawing.Size(233, 48)
@@ -393,7 +361,7 @@ Partial Class Management
         Me.btn_feedbacks.ForeColor = System.Drawing.Color.White
         Me.btn_feedbacks.Image = CType(resources.GetObject("btn_feedbacks.Image"), System.Drawing.Image)
         Me.btn_feedbacks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_feedbacks.Location = New System.Drawing.Point(0, 405)
+        Me.btn_feedbacks.Location = New System.Drawing.Point(0, 357)
         Me.btn_feedbacks.Name = "btn_feedbacks"
         Me.btn_feedbacks.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
         Me.btn_feedbacks.Size = New System.Drawing.Size(233, 48)
@@ -401,31 +369,6 @@ Partial Class Management
         Me.btn_feedbacks.Text = "Feedbacks"
         Me.btn_feedbacks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_feedbacks.UseVisualStyleBackColor = False
-        '
-        'btn_statistics
-        '
-        Me.btn_statistics.AccessibleName = ""
-        Me.btn_statistics.BackColor = System.Drawing.Color.Teal
-        Me.btn_statistics.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_statistics.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btn_statistics.FlatAppearance.BorderSize = 0
-        Me.btn_statistics.FlatAppearance.CheckedBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_statistics.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_statistics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue
-        Me.btn_statistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_statistics.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_statistics.ForeColor = System.Drawing.Color.White
-        Me.btn_statistics.Image = CType(resources.GetObject("btn_statistics.Image"), System.Drawing.Image)
-        Me.btn_statistics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_statistics.Location = New System.Drawing.Point(0, 357)
-        Me.btn_statistics.Name = "btn_statistics"
-        Me.btn_statistics.Padding = New System.Windows.Forms.Padding(23, 0, 0, 0)
-        Me.btn_statistics.Size = New System.Drawing.Size(233, 48)
-        Me.btn_statistics.TabIndex = 7
-        Me.btn_statistics.Text = "Statistics"
-        Me.btn_statistics.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.btn_statistics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btn_statistics.UseVisualStyleBackColor = False
         '
         'btn_employees
         '
@@ -689,6 +632,18 @@ Partial Class Management
         Me.systemtime.Enabled = True
         Me.systemtime.Interval = 1000
         '
+        'PaymentAccountsToolStripMenuItem
+        '
+        Me.PaymentAccountsToolStripMenuItem.Name = "PaymentAccountsToolStripMenuItem"
+        Me.PaymentAccountsToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.PaymentAccountsToolStripMenuItem.Text = "Payment Accounts"
+        '
+        'ServiceCenterToolStripMenuItem
+        '
+        Me.ServiceCenterToolStripMenuItem.Name = "ServiceCenterToolStripMenuItem"
+        Me.ServiceCenterToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.ServiceCenterToolStripMenuItem.Text = "Service Center"
+        '
         'Management
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -739,14 +694,13 @@ Partial Class Management
     Friend WithEvents btn_dashboard As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents btn_statistics As Button
     Friend WithEvents btn_employees As Button
     Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel5 As Panel
     Friend WithEvents lbl_current_tab As Label
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents tsmi_work_order As ToolStripMenuItem
-    Friend WithEvents QuickAccessToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MoreStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MoreToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FfToolStripMenuItem As ToolStripMenuItem
@@ -759,17 +713,6 @@ Partial Class Management
     Friend WithEvents btn_feedbacks As Button
     Friend WithEvents RestoreToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents tsmi_part As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents tsmi_invoice As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
-    Friend WithEvents tsmi_employee As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
     Friend WithEvents tsmi_exit As ToolStripMenuItem
     Friend WithEvents pb_refresh As PictureBox
     Friend WithEvents pb_print As PictureBox
@@ -782,4 +725,11 @@ Partial Class Management
     Friend WithEvents ToolStripStatusLabel2 As ToolStripStatusLabel
     Friend WithEvents current_time As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents WorkOrderToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PartToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InvoiceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
+    Friend WithEvents EmployeeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PaymentAccountsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ServiceCenterToolStripMenuItem As ToolStripMenuItem
 End Class

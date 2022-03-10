@@ -58,6 +58,10 @@ Public Class Management_Employees_Add_New
         pb_new_user_image.BackgroundImage = pb_new_user_image.InitialImage
     End Sub
 
+    Private Sub txt_new_birth_date_ValueChanged(sender As Object, e As EventArgs) Handles txt_new_birth_date.ValueChanged
+
+    End Sub
+
     Private Sub btn_new_user_save_Click(sender As Object, e As EventArgs) Handles btn_new_user_save.Click
         birth_date = CStr(txt_new_birth_date.Value.Year) + "-" + CStr(txt_new_birth_date.Value.Month) + "-" + CStr(txt_new_birth_date.Value.Day)
         Try

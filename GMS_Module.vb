@@ -389,6 +389,17 @@ Module GMS_Module
                         End If
                     Next
                 End If
+                If db_table = "invoice" Then
+                    'For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
+                    '    If gridview_name.Rows(i).Cells(1).Value < 8 And gridview_name.Rows(i).Cells(1).Value > 0 Then
+                    '        gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
+                    '    ElseIf gridview_name.Rows(i).Cells(1).Value = 0 Then
+                    '        gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
+                    '    ElseIf gridview_name.Rows(i).Cells(1).Value < 0 Then
+                    '        gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
+                    '    End If
+                    'Next
+                End If
             End If
             clear_gridview_default_selection(gridview_name)
         Catch ex As Exception
@@ -496,17 +507,18 @@ Module GMS_Module
                 Management_Dashboard.low_inventory_panel.Visible = True
                 .btn_employees.Visible = True
                 .btn_inventory.Visible = True
-                .btn_statistics.Visible = True
                 .btn_feedbacks.Visible = True
 
+                .MoreStripMenuItem.Visible = True
             Else
 
                 'Give other user privilages 
                 Management_Dashboard.low_inventory_panel.Visible = False
                 .btn_employees.Visible = False
                 .btn_inventory.Visible = False
-                .btn_statistics.Visible = False
                 .btn_feedbacks.Visible = False
+
+                .MoreStripMenuItem.Visible = False
 
             End If
             message("success", "Welcome " + login_first_name + ", you logged-in successfully")
@@ -529,26 +541,26 @@ Module GMS_Module
         Dim Smtp_Server As New SmtpClient
         Dim e_mail As New MailMessage()
             email_delevery_status = 0
-            Try
-                '
-                Smtp_Server.UseDefaultCredentials = False
-                Smtp_Server.Credentials = New Net.NetworkCredential("allprojectstemporaryemail@gmail.com", "@Welcome98")
-                Smtp_Server.Port = 587
-                Smtp_Server.EnableSsl = True
-                Smtp_Server.Host = "smtp.gmail.com"
-                '
-                e_mail = New MailMessage()
-                e_mail.From = New MailAddress("allprojectstemporaryemail@gmail.com")
-                e_mail.To.Add(reciepint)
-                e_mail.Subject = "HTU-JMTC " + subject
-                e_mail.IsBodyHtml = False
-                e_mail.Body = message_body
-                Smtp_Server.Send(e_mail)
+        Try
+            '
+            Smtp_Server.UseDefaultCredentials = False
+            Smtp_Server.Credentials = New Net.NetworkCredential("allprojectstemporaryemail@gmail.com", "@Welcome98")
+            Smtp_Server.Port = 587
+            Smtp_Server.EnableSsl = True
+            Smtp_Server.Host = "smtp.gmail.com"
+            '
+            e_mail = New MailMessage()
+            e_mail.From = New MailAddress("allprojectstemporaryemail@gmail.com")
+            e_mail.To.Add(reciepint)
+            e_mail.Subject = "HTU-JMTC " + subject
+            e_mail.IsBodyHtml = False
+            e_mail.Body = message_body
+            Smtp_Server.Send(e_mail)
             email_delevery_status = 1
         Catch ex As Exception
-                MessageBox.Show(ex.Message, "SMTP Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                email_delevery_status = 0
-            End Try
+            MessageBox.Show(ex.Message, "SMTP Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            email_delevery_status = 0
+        End Try
     End Sub
     '----------------------
     ' SEND WHATSAPP MESSAGE

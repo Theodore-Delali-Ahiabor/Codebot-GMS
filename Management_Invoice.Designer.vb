@@ -30,12 +30,21 @@ Partial Class Management_Invoice
         Me.cmb_payment_status_filter = New System.Windows.Forms.ComboBox()
         Me.txt_invoice_id_filter = New System.Windows.Forms.TextBox()
         Me.InvoiceDataGridView = New System.Windows.Forms.DataGridView()
-        Me.btn_complete_work_order = New System.Windows.Forms.Button()
-        Me.btn_start_work_order = New System.Windows.Forms.Button()
+        Me.btn_fully_paid_invoice = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_add_new_invoice = New System.Windows.Forms.Button()
         CType(Me.InvoiceDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmb_payment_status_filter
@@ -119,50 +128,148 @@ Partial Class Management_Invoice
         Me.InvoiceDataGridView.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.InvoiceDataGridView.RowTemplate.Height = 38
         Me.InvoiceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.InvoiceDataGridView.Size = New System.Drawing.Size(1093, 479)
+        Me.InvoiceDataGridView.Size = New System.Drawing.Size(1093, 466)
         Me.InvoiceDataGridView.TabIndex = 64
         '
-        'btn_complete_work_order
+        'btn_fully_paid_invoice
         '
-        Me.btn_complete_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btn_complete_work_order.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.btn_complete_work_order.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_complete_work_order.FlatAppearance.BorderSize = 0
-        Me.btn_complete_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_complete_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_complete_work_order.ForeColor = System.Drawing.Color.White
-        Me.btn_complete_work_order.Image = CType(resources.GetObject("btn_complete_work_order.Image"), System.Drawing.Image)
-        Me.btn_complete_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_complete_work_order.Location = New System.Drawing.Point(126, 562)
-        Me.btn_complete_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_complete_work_order.Name = "btn_complete_work_order"
-        Me.btn_complete_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.btn_complete_work_order.Size = New System.Drawing.Size(138, 40)
-        Me.btn_complete_work_order.TabIndex = 71
-        Me.btn_complete_work_order.Text = "COMPLETE"
-        Me.btn_complete_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_complete_work_order.UseVisualStyleBackColor = False
+        Me.btn_fully_paid_invoice.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btn_fully_paid_invoice.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.btn_fully_paid_invoice.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btn_fully_paid_invoice.FlatAppearance.BorderSize = 0
+        Me.btn_fully_paid_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_fully_paid_invoice.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_fully_paid_invoice.ForeColor = System.Drawing.Color.White
+        Me.btn_fully_paid_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btn_fully_paid_invoice.Location = New System.Drawing.Point(14, 555)
+        Me.btn_fully_paid_invoice.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btn_fully_paid_invoice.Name = "btn_fully_paid_invoice"
+        Me.btn_fully_paid_invoice.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.btn_fully_paid_invoice.Size = New System.Drawing.Size(157, 47)
+        Me.btn_fully_paid_invoice.TabIndex = 70
+        Me.btn_fully_paid_invoice.Text = "NEW PAYMENT"
+        Me.btn_fully_paid_invoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_fully_paid_invoice.UseVisualStyleBackColor = False
         '
-        'btn_start_work_order
+        'Panel1
         '
-        Me.btn_start_work_order.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btn_start_work_order.BackColor = System.Drawing.Color.LightGreen
-        Me.btn_start_work_order.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btn_start_work_order.FlatAppearance.BorderSize = 0
-        Me.btn_start_work_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_start_work_order.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_start_work_order.ForeColor = System.Drawing.Color.White
-        Me.btn_start_work_order.Image = CType(resources.GetObject("btn_start_work_order.Image"), System.Drawing.Image)
-        Me.btn_start_work_order.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_start_work_order.Location = New System.Drawing.Point(14, 562)
-        Me.btn_start_work_order.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btn_start_work_order.Name = "btn_start_work_order"
-        Me.btn_start_work_order.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.btn_start_work_order.Size = New System.Drawing.Size(103, 40)
-        Me.btn_start_work_order.TabIndex = 70
-        Me.btn_start_work_order.Text = "PAYED"
-        Me.btn_start_work_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_start_work_order.UseVisualStyleBackColor = False
+        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(861, 548)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(246, 63)
+        Me.Panel1.TabIndex = 72
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.LightGreen
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(6, 7)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button5.Size = New System.Drawing.Size(16, 17)
+        Me.Button5.TabIndex = 45
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.CadetBlue
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Silver
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(146, 37)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button4.Size = New System.Drawing.Size(16, 17)
+        Me.Button4.TabIndex = 45
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Gold
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Silver
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(6, 38)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button3.Size = New System.Drawing.Size(16, 17)
+        Me.Button3.TabIndex = 45
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Coral
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(146, 8)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button1.Size = New System.Drawing.Size(16, 17)
+        Me.Button1.TabIndex = 43
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(28, 8)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(52, 13)
+        Me.Label7.TabIndex = 2
+        Me.Label7.Text = "Fully Paid"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(168, 39)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(49, 13)
+        Me.Label6.TabIndex = 2
+        Me.Label6.Text = "Selected"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(28, 41)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(67, 13)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Partially Paid"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(168, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Pending"
         '
         'Label3
         '
@@ -219,8 +326,8 @@ Partial Class Management_Invoice
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1121, 616)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btn_complete_work_order)
-        Me.Controls.Add(Me.btn_start_work_order)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.btn_fully_paid_invoice)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cmb_payment_status_filter)
@@ -230,6 +337,8 @@ Partial Class Management_Invoice
         Me.Name = "Management_Invoice"
         Me.Text = "Management_Invoice"
         CType(Me.InvoiceDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -241,6 +350,14 @@ Partial Class Management_Invoice
     Friend WithEvents btn_add_new_invoice As Button
     Friend WithEvents txt_invoice_id_filter As TextBox
     Friend WithEvents InvoiceDataGridView As DataGridView
-    Friend WithEvents btn_complete_work_order As Button
-    Friend WithEvents btn_start_work_order As Button
+    Friend WithEvents btn_fully_paid_invoice As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label1 As Label
 End Class

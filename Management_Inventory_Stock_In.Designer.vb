@@ -40,7 +40,7 @@ Partial Class Management_Inventory_Stock_In
         Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label4.Font = New System.Drawing.Font("Ebrima", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Label4.Location = New System.Drawing.Point(171, 18)
+        Me.Label4.Location = New System.Drawing.Point(168, 31)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(145, 45)
         Me.Label4.TabIndex = 129
@@ -56,7 +56,7 @@ Partial Class Management_Inventory_Stock_In
         Me.btn_stock_in.Font = New System.Drawing.Font("Ebrima", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_stock_in.ForeColor = System.Drawing.Color.White
         Me.btn_stock_in.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_stock_in.Location = New System.Drawing.Point(87, 305)
+        Me.btn_stock_in.Location = New System.Drawing.Point(84, 318)
         Me.btn_stock_in.Name = "btn_stock_in"
         Me.btn_stock_in.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_stock_in.Size = New System.Drawing.Size(136, 39)
@@ -70,7 +70,7 @@ Partial Class Management_Inventory_Stock_In
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(49, 102)
+        Me.Label3.Location = New System.Drawing.Point(46, 115)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(167, 18)
         Me.Label3.TabIndex = 133
@@ -80,7 +80,7 @@ Partial Class Management_Inventory_Stock_In
         '
         Me.txt_stock_in_name.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_stock_in_name.Font = New System.Drawing.Font("Ebrima", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_stock_in_name.Location = New System.Drawing.Point(52, 123)
+        Me.txt_stock_in_name.Location = New System.Drawing.Point(49, 136)
         Me.txt_stock_in_name.MaxLength = 35
         Me.txt_stock_in_name.Name = "txt_stock_in_name"
         Me.txt_stock_in_name.Size = New System.Drawing.Size(369, 33)
@@ -90,7 +90,7 @@ Partial Class Management_Inventory_Stock_In
         '
         Me.txt_stock_in_quntity.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txt_stock_in_quntity.Font = New System.Drawing.Font("Ebrima", 14.25!)
-        Me.txt_stock_in_quntity.Location = New System.Drawing.Point(52, 218)
+        Me.txt_stock_in_quntity.Location = New System.Drawing.Point(49, 231)
         Me.txt_stock_in_quntity.Name = "txt_stock_in_quntity"
         Me.txt_stock_in_quntity.Size = New System.Drawing.Size(369, 33)
         Me.txt_stock_in_quntity.TabIndex = 134
@@ -101,7 +101,7 @@ Partial Class Management_Inventory_Stock_In
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(49, 197)
+        Me.Label1.Location = New System.Drawing.Point(46, 210)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(120, 18)
         Me.Label1.TabIndex = 133
@@ -119,7 +119,7 @@ Partial Class Management_Inventory_Stock_In
         Me.btn_stock_in_cancel.ForeColor = System.Drawing.Color.White
         Me.btn_stock_in_cancel.Image = Global.Codebot_GMS.My.Resources.Resources.delete_24px
         Me.btn_stock_in_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btn_stock_in_cancel.Location = New System.Drawing.Point(249, 304)
+        Me.btn_stock_in_cancel.Location = New System.Drawing.Point(246, 317)
         Me.btn_stock_in_cancel.Name = "btn_stock_in_cancel"
         Me.btn_stock_in_cancel.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.btn_stock_in_cancel.Size = New System.Drawing.Size(128, 40)
@@ -133,7 +133,7 @@ Partial Class Management_Inventory_Stock_In
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(510, 400)
+        Me.ClientSize = New System.Drawing.Size(469, 400)
         Me.ControlBox = False
         Me.Controls.Add(Me.txt_stock_in_quntity)
         Me.Controls.Add(Me.Label1)

@@ -48,6 +48,6 @@
     End Sub
 
     Private Sub GMS_Message_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Location = New Point(Screen.PrimaryScreen.WorkingArea.Width - Me.Width, Screen.PrimaryScreen.WorkingArea.Height - Me.Height)
+        Me.Location = New Point(Screen.PrimaryScreen.WorkingArea.Width - Me.Width - 30, Screen.PrimaryScreen.WorkingArea.Height - Screen.PrimaryScreen.WorkingArea.Height + 50)
     End Sub
 End Class

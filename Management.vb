@@ -65,10 +65,7 @@ Public Class Management
         Management_Employees.txt_employee_name_filter.Clear()
         Management_Employees.cmb_employee_position_filter.SelectedIndex() = 0
     End Sub
-    '
-    Public Sub btn_statistics_Click(sender As Object, e As EventArgs) Handles btn_statistics.Click
-        sidebar_active(sender)
-    End Sub
+
     'CLICK EVENT FOR THE CALENDAR BUTTON ON THE SIDEBAR
     Private Sub btn_calenders_Click(sender As Object, e As EventArgs) Handles btn_calenders.Click
         sidebar_active(sender)
@@ -96,7 +93,6 @@ Public Class Management
             btn_employees.BackColor = Color.Teal
             btn_inventory.BackColor = Color.Teal
             btn_work_orders.BackColor = Color.Teal
-            btn_statistics.BackColor = Color.Teal
             btn_invoice.BackColor = Color.Teal
             btn_feedbacks.BackColor = Color.Teal
             btn.BackColor = Color.CadetBlue
@@ -126,24 +122,51 @@ Public Class Management
         End If
     End Sub
 
-    Private Sub tsmi_work_order_Click(sender As Object, e As EventArgs) Handles tsmi_work_order.Click
-        Management_Work_Order.btn_add_new_work_order_Click(Management_Work_Order.btn_add_new_work_order, EventArgs.Empty)
-    End Sub
-
-    Private Sub tsmi_part_Click(sender As Object, e As EventArgs) Handles tsmi_part.Click
-        Management_Inventory.btn_add_new_inventory_item_Click(Management_Inventory.btn_add_new_inventory_item, EventArgs.Empty)
-    End Sub
-
-    Private Sub tsmi_invoice_Click(sender As Object, e As EventArgs) Handles tsmi_invoice.Click
-        Management_Invoice.btn_add_new_invoice_Click(Management_Invoice.btn_add_new_invoice, EventArgs.Empty)
-    End Sub
-
-    Private Sub tsmi_employee_Click(sender As Object, e As EventArgs) Handles tsmi_employee.Click
-        Management_Employees.btn_add_new_employee_Click(Management_Employees.btn_add_new_employee, EventArgs.Empty)
-    End Sub
-
     Private Sub tsmi_exit_Click(sender As Object, e As EventArgs) Handles tsmi_exit.Click
         GMS_Main.Close()
     End Sub
 
+    Private Sub WorkOrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WorkOrderToolStripMenuItem.Click
+        Management_Work_Order.btn_add_new_work_order_Click(Management_Work_Order.btn_add_new_work_order, EventArgs.Empty)
+        sidebar_active(btn_work_orders)
+    End Sub
+
+    Private Sub PartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PartToolStripMenuItem.Click
+        Management_Inventory.btn_add_new_inventory_item_Click(Management_Inventory.btn_add_new_inventory_item, EventArgs.Empty)
+        sidebar_active(btn_inventory)
+    End Sub
+
+    Private Sub InvoiceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InvoiceToolStripMenuItem.Click
+        Management_Invoice.btn_add_new_invoice_Click(Management_Invoice.btn_add_new_invoice, EventArgs.Empty)
+        sidebar_active(btn_invoice)
+    End Sub
+
+    Private Sub EmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeeToolStripMenuItem.Click
+        Management_Employees.btn_add_new_employee_Click(Management_Employees.btn_add_new_employee, EventArgs.Empty)
+        sidebar_active(btn_employees)
+    End Sub
+
+    Private Sub PaymentAccountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PaymentAccountsToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub ServiceCenterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ServiceCenterToolStripMenuItem.Click
+        sql_da = New MySqlDataAdapter("SELECT * FROM `service_center` WHERE ID = '" & 1 & "'", sql_con)
+        sql_dt = New DataTable
+        sql_dt.Clear()
+        sql_da.Fill(sql_dt)
+        If sql_dt.Rows.Count() > 0 Then
+            With Management_Service_Center
+                .txt_name.Text = sql_dt.Rows(0).Item("Name").ToString
+                .txt_tin_number.Text = sql_dt.Rows(0).Item("TIN").ToString
+                .txt_email.Text = sql_dt.Rows(0).Item("Email").ToString
+                .txt_tel_number.Text = sql_dt.Rows(0).Item("Telephone_Number").ToString
+                .txt_phone_number.Text = sql_dt.Rows(0).Item("Mobile_Number").ToString
+                .txt_pobox.Text = sql_dt.Rows(0).Item("Post_Box_Number").ToString
+                .txt_location.Text = sql_dt.Rows(0).Item("Location").ToString
+            End With
+        End If
+        Management_Service_Center.btn_save.Text = "UPDATE"
+        Management_Service_Center.ShowDialog()
+    End Sub
 End Class
