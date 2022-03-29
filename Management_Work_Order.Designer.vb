@@ -52,6 +52,8 @@ Partial Class Management_Work_Order
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_add_new_work_order = New System.Windows.Forms.Button()
         Me.btn_edit_new_work_order = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button7 = New System.Windows.Forms.Button()
         CType(Me.WorkOrderDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -146,12 +148,14 @@ Partial Class Management_Work_Order
         Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label6)
@@ -171,7 +175,7 @@ Partial Class Management_Work_Order
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(299, 8)
+        Me.Button6.Location = New System.Drawing.Point(255, 8)
         Me.Button6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button6.Name = "Button6"
         Me.Button6.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -187,7 +191,7 @@ Partial Class Management_Work_Order
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(446, 37)
+        Me.Button8.Location = New System.Drawing.Point(402, 37)
         Me.Button8.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button8.Name = "Button8"
         Me.Button8.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -235,7 +239,7 @@ Partial Class Management_Work_Order
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(299, 35)
+        Me.Button3.Location = New System.Drawing.Point(255, 35)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
         Me.Button3.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -279,7 +283,7 @@ Partial Class Management_Work_Order
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(321, 8)
+        Me.Label8.Location = New System.Drawing.Point(277, 8)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(92, 19)
         Me.Label8.TabIndex = 2
@@ -289,7 +293,7 @@ Partial Class Management_Work_Order
         '
         Me.Label9.AutoSize = True
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(468, 35)
+        Me.Label9.Location = New System.Drawing.Point(424, 35)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(78, 19)
         Me.Label9.TabIndex = 2
@@ -319,7 +323,7 @@ Partial Class Management_Work_Order
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(321, 33)
+        Me.Label5.Location = New System.Drawing.Point(277, 33)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(69, 19)
         Me.Label5.TabIndex = 2
@@ -473,6 +477,32 @@ Partial Class Management_Work_Order
         Me.btn_edit_new_work_order.Text = "    Edit"
         Me.btn_edit_new_work_order.UseVisualStyleBackColor = False
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(424, 4)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(78, 19)
+        Me.Label10.TabIndex = 2
+        Me.Label10.Text = "In Progress"
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.Green
+        Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.Silver
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Ebrima", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.Location = New System.Drawing.Point(402, 6)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button7.Size = New System.Drawing.Size(16, 17)
+        Me.Button7.TabIndex = 45
+        Me.Button7.UseVisualStyleBackColor = False
+        '
         'Management_Work_Order
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -528,4 +558,6 @@ Partial Class Management_Work_Order
     Friend WithEvents Label9 As Label
     Friend WithEvents btn_terminate_work_order As Button
     Friend WithEvents btn_edit_new_work_order As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Label10 As Label
 End Class

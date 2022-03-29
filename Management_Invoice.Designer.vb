@@ -162,9 +162,9 @@ Partial Class Management_Invoice
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(861, 548)
+        Me.Panel1.Location = New System.Drawing.Point(838, 548)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(246, 63)
+        Me.Panel1.Size = New System.Drawing.Size(269, 63)
         Me.Panel1.TabIndex = 72
         '
         'Button5
@@ -265,11 +265,11 @@ Partial Class Management_Invoice
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(168, 8)
+        Me.Label1.Location = New System.Drawing.Point(168, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.Size = New System.Drawing.Size(90, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Pending"
+        Me.Label1.Text = "Pending Payment"
         '
         'Label3
         '

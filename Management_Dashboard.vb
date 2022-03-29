@@ -21,7 +21,7 @@ Public Class Management_Dashboard
         activebar_inventory.Visible = False
         activebar_events.Visible = False
         activebar_payments.Visible = True
-        datagrid_fill_flter_with_variable("invoice", Me.DashboardDataGridView, "Payment_Status", "<>", "'" & "Full Payment" & "'")
+        datagrid_fill_flter_with_variable("invoice", Me.DashboardDataGridView, "Payment_Status", "<>", "'" & "Paid" & "'")
         Management.lbl_current_tab.Text = "Dashboard | Invoice Payments"
     End Sub
     Private Sub lbl_work_orders_due_Click(sender As Object, e As EventArgs) Handles lbl_work_orders_due.Click
@@ -143,7 +143,7 @@ Public Class Management_Dashboard
         activebar_inventory.Visible = False
         activebar_events.Visible = False
         activebar_payments.Visible = True
-        datagrid_fill_flter_with_variable("invoice", Me.DashboardDataGridView, "Payment_Status", " LIKE ", "'" & "Partial Payment" & "'")
+        datagrid_fill_flter_with_variable("invoice", Me.DashboardDataGridView, "Payment_Status", " LIKE ", "'" & "Incomplete" & "'")
         Me.invoice_payments_incomplete.Text = DashboardDataGridView.Rows.Count & " Incomplete"
         Management.lbl_current_tab.Text = "Dashboard | Invoice Payments"
     End Sub

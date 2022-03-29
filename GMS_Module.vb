@@ -352,7 +352,7 @@ Module GMS_Module
                             If gridview_name.Rows(i).Cells(4).Value < 8 Then
                                 gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Gold
                                 If gridview_name.Rows(i).Cells(4).Value = 0 Then
-                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.LightGreen
+                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Green
                                 ElseIf gridview_name.Rows(i).Cells(4).Value < 0 Then
                                     gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Coral
                                 End If
@@ -362,7 +362,7 @@ Module GMS_Module
                             If gridview_name.Rows(i).Cells(4).Value < 8 Then
                                 gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Gold
                                 If gridview_name.Rows(i).Cells(4).Value = 0 Then
-                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.LightGreen
+                                    gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Green
                                 ElseIf gridview_name.Rows(i).Cells(4).Value < 0 Then
                                     gridview_name.Rows(i).Cells(4).Style.BackColor = Color.Coral
                                 End If
@@ -390,15 +390,15 @@ Module GMS_Module
                     Next
                 End If
                 If db_table = "invoice" Then
-                    'For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
-                    '    If gridview_name.Rows(i).Cells(1).Value < 8 And gridview_name.Rows(i).Cells(1).Value > 0 Then
-                    '        gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
-                    '    ElseIf gridview_name.Rows(i).Cells(1).Value = 0 Then
-                    '        gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
-                    '    ElseIf gridview_name.Rows(i).Cells(1).Value < 0 Then
-                    '        gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
-                    '    End If
-                    'Next
+                    For i As Integer = 0 To gridview_name.Rows.Count - 1 Step +1
+                        If gridview_name.Rows(i).Cells("Payment_Status").Value = "Paid" Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.LightGreen
+                        ElseIf gridview_name.Rows(i).Cells("Payment_Status").Value = "Pending" Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Coral
+                        ElseIf gridview_name.Rows(i).Cells("Payment_Status").Value = "Incomplete" Then
+                            gridview_name.Rows(i).DefaultCellStyle.BackColor = Color.Gold
+                        End If
+                    Next
                 End If
             End If
             clear_gridview_default_selection(gridview_name)
@@ -544,7 +544,7 @@ Module GMS_Module
         Try
             '
             Smtp_Server.UseDefaultCredentials = False
-            Smtp_Server.Credentials = New Net.NetworkCredential("allprojectstemporaryemail@gmail.com", "@Welcome98")
+            Smtp_Server.Credentials = New Net.NetworkCredential("allprojectstemporaryemail@gmail.com", "@AllWelcome98")
             Smtp_Server.Port = 587
             Smtp_Server.EnableSsl = True
             Smtp_Server.Host = "smtp.gmail.com"
